@@ -58,6 +58,7 @@ export default class CalendarConfigBuilder
   translations: Record<string, Language> | undefined
 
   showWeekNumbers: boolean | undefined
+  minuteBoudaries: number | undefined
 
   build(): CalendarConfigInternal {
     return new CalendarConfigImpl(
@@ -80,7 +81,8 @@ export default class CalendarConfigBuilder
       this.monthGridOptions,
       this.theme,
       this.translations,
-      this.showWeekNumbers
+      this.showWeekNumbers,
+      this.minuteBoudaries || 60
     )
   }
 
@@ -200,6 +202,14 @@ export default class CalendarConfigBuilder
 
   withWeekNumbers(showWeekNumbers: boolean | undefined) {
     this.showWeekNumbers = showWeekNumbers
+    return this
+  }
+  withMinuteBaundaries(
+    minuteBoudaries: number | undefined
+  ): CalendarConfigBuilder {
+    if (!minuteBoudaries) return this
+
+    this.minuteBoudaries = minuteBoudaries
     return this
   }
 }

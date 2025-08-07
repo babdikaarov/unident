@@ -1,6 +1,7 @@
 .sx__time-grid-day {
   position: relative;
-  width: 100%;
+  width: calc(calc(100% / 4) - 20px);
   height: 100%;
-  border-left: var(--sx-border);
+  border-inline: var(--sx-border);
+  // min-width: 200px;
 }

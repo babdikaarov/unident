@@ -4,8 +4,7 @@
   "private": true,
   "workspaces": [
     "packages/*",
-    "libs/*",
-    "websites/*"
+    "libs/*"
   ],
   "version": "0.0.0",
   "scripts": {
@@ -21,7 +20,7 @@
     "test:e2e:record": "./node_modules/.bin/cypress run --env type=base --config screenshotsFolder=cypress/snapshots/mac/base",
     "format": "prettier . --write",
     "format:changed": "lerna run format --since main",
-    "lint:all": "npx eslint packages website libs",
+    "lint:all": "npx eslint packages  libs",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix --formatter compact",
     "clean:deps": "lerna clean",
@@ -30,7 +29,8 @@
     "release:pre": "npm run build && lerna publish --no-commit-hooks --conventional-commits --conventional-prerelease --force-publish",
     "release:bump:pre": "npm run build && lerna publish --no-commit-hooks --conventional-commits --conventional-bump-prerelease --force-publish",
     "prepare": "husky install",
-    "seed": "npx tsx development/seeder/seed.ts"
+    "seed": "npx tsx development/seeder/seed.ts && npx tsx development/seeder/seedStaff.ts",
+    "seedStaff": "npx tsx development/seeder/seedStaff.ts"
   },
   "dependencies": {
     "@preact/signals": "^2.0.2",

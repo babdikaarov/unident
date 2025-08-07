@@ -24,3 +24,26 @@ export const getTimeAxisHours = (
 
   return hours
 }
+
+/**
+ * Returns an array of interval indices for an hour based on the interval length in minutes.
+ *
+ * @param intervalMinutes - number of minutes per interval (e.g., 5)
+ * @returns number[] - array of indices from 0 to count-1
+ */
+export const getIntervalsPerHour = (
+  intervalMinutes: number
+): {
+  array: number[]
+  minute: number
+} => {
+  const count = Math.floor(60 / intervalMinutes)
+  document.documentElement.style.setProperty(
+    '--sx-minute-interval',
+    count.toString()
+  )
+  return {
+    array: Array.from({ length: count }, (_, i) => i),
+    minute: intervalMinutes,
+  }
+}

@@ -5,12 +5,10 @@ import '@fontsource/open-sans/500-italic.css'
 import '@fontsource/open-sans/700.css'
 import '@fontsource/open-sans/700-italic.css'
 import '@fontsource/roboto-condensed'
-import {
-  createCalendar,
-} from '@schedule-x/calendar/src'
+import { createCalendar } from '@schedule-x/calendar/src'
 import '../../packages/theme-default/src/calendar.scss'
 import '../app.css'
-import { createDragAndDropPlugin } from '@schedule-x/drag-and-drop/src'
+// import { createDragAndDropPlugin } from '@schedule-x/drag-and-drop/src'
 import { createEventModalPlugin } from '@schedule-x/event-modal/src'
 import { seededEvents } from '../data/seeded-events.ts'
 import { createScrollControllerPlugin } from '@schedule-x/scroll-controller/src'
@@ -28,32 +26,136 @@ import { createViewMonthAgenda } from '@schedule-x/calendar/src/views/month-agen
 import { createViewList } from '@schedule-x/calendar/src/views/list'
 import { mergeLocales } from '@schedule-x/translations/src/utils/merge-locales.ts'
 import { translations } from '@schedule-x/translations/src'
-
+import { ZoomInPlugin } from '../../packages/zoom-in-out/src/index.ts'
+import { createDragAndDropPlugin } from '@schedule-x/drag-and-drop'
+import { staffSeed } from '../data/staff-seed.ts'
+// import { CopyEventPlugin } from '@starredev/schedule-x-plugins'
+// import { ZoomInPlugin } from '@starredev/schedule-x-plugins'
 const calendarElement = document.getElementById('calendar') as HTMLElement
-
+const calendarSiderElement = document.getElementById(
+  'siderCalendar'
+) as HTMLElement
+const calendarControls = createCalendarControlsPlugin()
+// const eventModalPlugin = createEventModalPlugin()
 const eventsServicePlugin = createEventsServicePlugin()
 
-const calendar = createCalendar({
-plugins: [
-  createEventRecurrencePlugin(),
-  eventsServicePlugin,
-  createDragAndDropPlugin(),
-  createEventModalPlugin(),
-  createResizePlugin(),
-],
+const sidebarCalendar = createCalendar({
+  views: [createViewMonthAgenda()],
+  events: seededEvents,
+  defaultView: 'monthly-agenda',
+  locale: 'ru-RU',
+  plugins: [],
+  callbacks: {
+    // Disable interactions in the sidebar
+    onClickDate() {},
+    onClickDateTime() {},
+    onEventClick() {},
+    onDoubleClickDate() {},
+    onDoubleClickDateTime() {},
+    onDoubleClickEvent() {},
+    onSelectedDateUpdate(date) {
+      console.log('onSelectedDateUpdate', date)
+      calendarControls.setDate(date)
+      // calendarControls.$app.config.minuteBoudaries.value = 10
+    },
+  },
+  calendars: {
+    abcent: {
+      colorName: 'abcent',
+      lightColors: {
+        main: '#f9d71c',
+        container: '#fff5aa',
+        onContainer: '#594800',
+      },
+      darkColors: {
+        main: '#fff5c0',
+        onContainer: '#fff5de',
+        container: '#a29742',
+      },
+    },
+    canceled: {
+      colorName: 'canceled',
+      lightColors: {
+        main: '#f91c45',
+        container: '#ffd2dc',
+        onContainer: '#59000d',
+      },
+      darkColors: {
+        main: '#ffc0cc',
+        onContainer: '#ffdee6',
+        container: '#a24258',
+      },
+    },
+    success: {
+      colorName: 'success',
+      lightColors: {
+        main: '#1cf9b0',
+        container: '#dafff0',
+        onContainer: '#004d3d',
+      },
+      darkColors: {
+        main: '#c0fff5',
+        onContainer: '#e6fff5',
+        container: '#42a297',
+      },
+    },
+    confirmed: {
+      colorName: 'confirmed',
+      lightColors: {
+        main: '#1c7df9',
+        container: '#d2e7ff',
+        onContainer: '#002859',
+      },
+      darkColors: {
+        main: '#c0dfff',
+        onContainer: '#dee6ff',
+        container: '#426aa2',
+      },
+    },
+  },
+})
 
-  translations: mergeLocales(
-    translations,
-    {
-      enUS: {}
-    }
-  ),
+const calendar = createCalendar({
+  staff: staffSeed,
+  minuteBoudaries: 30,
+  plugins: [
+    createViewMonthAgenda(),
+    createEventRecurrencePlugin(),
+    // createDragAndDropPlugin(),
+    createCurrentTimePlugin(),
+    createEventModalPlugin(),
+    // createResizePlugin(),
+    createScrollControllerPlugin(),
+    eventsServicePlugin,
+    // new CopyEventPlugin(eventsServicePlugin, (event) => {
+    //   console.log('CopyEventPlugin', event)
+    //   eventsServicePlugin.add(event)
+    // }),
+    calendarControls,
+    new ZoomInPlugin(calendarControls, {
+      zoomFactor: 1, // Initial zoom (default: 1)
+      minZoom: 1, // Minimum zoom (default: 0.5)
+      maxZoom: 6, // Maximum zoom (default: 2)
+      zoomStep: 0.05, // Step per scroll (default: 0.2)
+      baseGridHeight: 1200, // Base height in px (default: 900)
+    }),
+  ],
+
+  translations: mergeLocales(translations, {
+    enUS: {},
+  }),
   weekOptions: {
     eventWidth: 95,
   },
   firstDayOfWeek: 1,
-  views: [createViewMonthGrid(), createViewWeek(), createViewDay(), createViewMonthAgenda(), createViewList()],
-  defaultView: 'week',
+  views: [
+    createViewMonthGrid(),
+    createViewWeek(),
+    createViewDay(),
+    createViewMonthAgenda(),
+    createViewList(),
+  ],
+  defaultView: 'day',
   callbacks: {
     onScrollDayIntoView(date) {
       console.log('onScrollDayIntoView: ', date)
@@ -64,7 +166,7 @@ plugins: [
     },
 
     async onBeforeEventUpdateAsync(oldEvent, newEvent, $app) {
-        return Promise.resolve(true)
+      return Promise.resolve(true)
     },
 
     onEventClick(event, e) {
@@ -77,14 +179,17 @@ plugins: [
 
     onClickDate(date) {
       console.log('onClickDate', date)
+      console.log(calendarControls.$app.calendarState.range.value)
     },
 
     onClickDateTime(dateTime) {
       console.log('onClickDateTime', dateTime)
+      console.log(calendarControls.$app.calendarState.range.value)
     },
 
     onClickAgendaDate(date) {
       console.log('onClickAgendaDate', date)
+      console.log(calendarControls.$app.calendarState.range.value)
     },
 
     onDoubleClickAgendaDate(date) {
@@ -109,12 +214,12 @@ plugins: [
 
     onRangeUpdate(range) {
       console.log('onRangeUpdate', range)
-    }
+    },
   },
-  selectedDate: '2025-07-10',
+  selectedDate: '2025-08-06',
   calendars: {
-    personal: {
-      colorName: 'personal',
+    abcent: {
+      colorName: 'abcent',
       lightColors: {
         main: '#f9d71c',
         container: '#fff5aa',
@@ -126,8 +231,8 @@ plugins: [
         container: '#a29742',
       },
     },
-    work: {
-      colorName: 'work',
+    canceled: {
+      colorName: 'canceled',
       lightColors: {
         main: '#f91c45',
         container: '#ffd2dc',
@@ -139,8 +244,8 @@ plugins: [
         container: '#a24258',
       },
     },
-    leisure: {
-      colorName: 'leisure',
+    success: {
+      colorName: 'success',
       lightColors: {
         main: '#1cf9b0',
         container: '#dafff0',
@@ -152,8 +257,8 @@ plugins: [
         container: '#42a297',
       },
     },
-    school: {
-      colorName: 'school',
+    confirmed: {
+      colorName: 'confirmed',
       lightColors: {
         main: '#1c7df9',
         container: '#d2e7ff',
@@ -166,27 +271,13 @@ plugins: [
       },
     },
   },
-  backgroundEvents: [
-    {
-      title: 'Out of office',
-      start: '2025-07-07 00:00',
-      end: '2025-07-07 02:00',
-      style: {
-        // create tilted 5px thick gray lines
-        backgroundImage: 'repeating-linear-gradient(45deg, #ccc, #ccc 5px, transparent 5px, transparent 10px)',
-        opacity: 0.5,
-      },
-      rrule: 'FREQ=WEEKLY',
-      exdate: ['20250714T000000', '20250728T000000']
-    },
-  ],
-  /* dayBoundaries: {
-    start: '10:00',
-    end: '23:00'
-  }, */
-  locale: 'de-DE',
-  events: [
-    ...seededEvents
-  ],
+  dayBoundaries: {
+    start: '07:00',
+    end: '24:00',
+  },
+
+  locale: 'ru-RU',
+  events: seededEvents,
 })
 calendar.render(calendarElement)
+sidebarCalendar.render(calendarSiderElement)

@@ -1,13 +1,14 @@
 .sx__week-wrapper {
   position: relative;
+  // display: flex;
 }
 
 .sx__week-grid {
   position: relative;
-  padding-left: var(--sx-calendar-week-grid-padding-left);
+  padding-inline: var(--sx-calendar-week-grid-padding-left);
   display: flex;
   height: var(--sx-week-grid-height);
-  overflow: hidden;
+  top: 20px;
 }
 
 .sx__week-header {
@@ -27,4 +28,43 @@
   bottom: 0;
   border-bottom: var(--sx-border);
   border-left: 250px solid transparent;
+}
+
+.sx__week-grid-staff {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.sx__time-grid-day-staff {
+  // position: absolute;
+  // top: -100px;
+  height: 100px;
+  // min-width: calc(calc(100% / 5) - 20px);
+  // border: solid 1px grey;
+  width: 100%;
+}
+.sx__time-grid-day-staff-wrapper {
+  display: flex;
+  padding-inline: var(--sx-calendar-week-grid-padding-left);
+  position: relative;
+  width: 100%;
+}
+
+.sx__time-grid-day-staff-prev {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translate(-50%, -50%);
+}
+.sx__time-grid-day-staff-next {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translate(-50%, -50%);
+}
+
+.sx__time-grid-day-staff-card {
+  display: flex;
+  width: 100%;
 }

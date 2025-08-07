@@ -26,5 +26,6 @@ export const createInternalConfig = (
     .withTheme(config.theme)
     .withTranslations(config.translations || translations)
     .withWeekNumbers(config.showWeekNumbers)
+    .withMinuteBaundaries(config.minuteBoudaries)
     .build()
 }

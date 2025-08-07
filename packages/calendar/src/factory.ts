@@ -39,10 +39,12 @@ export const createCalendarAppSingleton = (
     config.backgroundEvents || [],
     internalConfig
   )
+  const staffList = config.staff || []
   return new CalendarAppSingletonBuilder()
     .withConfig(internalConfig)
     .withTimeUnitsImpl(timeUnitsImpl)
     .withDatePickerState(datePickerState)
+    .withStaffList(staffList)
     .withCalendarEvents(calendarEvents)
     .withDatePickerConfig(datePickerConfig)
     .withCalendarState(calendarState)

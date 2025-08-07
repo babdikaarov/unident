@@ -20,6 +20,13 @@
   align-items: center;
   gap: var(--sx-spacing-padding4);
 }
+.sx__calendar-header-content-agenda {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  gap: var(--sx-spacing-padding4);
+}
 
 .sx__forward-backward-navigation {
   height: 45px;
@@ -28,6 +35,14 @@
   .is-list-view & {
     display: none;
   }
+}
+
+.sx__forward-backward-navigation-agenda {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .sx__calendar-header__week-number {

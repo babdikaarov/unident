@@ -13,7 +13,6 @@ import {
 import { useSignalEffect } from '@preact/signals'
 import { InternalViewName } from '@schedule-x/shared/src/enums/calendar/internal-view.enum'
 import CalendarHeaderAgenda from './header/calendar-header-agenda'
-import CalendarHeader from './header/calendar-header'
 
 type props = {
   $app: CalendarAppSingleton
@@ -85,25 +84,14 @@ export default function CalendarWrapperAgenda({ $app }: props) {
   useSignalEffect(() => {
     $app.datePickerConfig.locale.value = $app.config.locale.value
   })
-  const renderAgendaHeader = () => {
-    if ($app.config.defaultView === 'monthly-agenda') {
-      return true
-    }
-    return false
-  }
   return (
     <>
       <div className={wrapperClasses.join(' ')} id={calendarId}>
         <div className={'sx__calendar'}>
           <AppContext.Provider value={$app}>
-            {
-              renderAgendaHeader() ? (
-                <CalendarHeaderAgenda />
-              ) : (
-                <CalendarHeader />
-              )
-              // null
-            }
+            {$app.calendarState.view.value === 'monthly-agenda' ? null : (
+              <CalendarHeaderAgenda />
+            )}
             <div
               className={['sx__view-container', transitionClass].join(' ')}
               id={viewContainerId}

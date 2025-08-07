@@ -1,28 +1,16 @@
-import AppWrapper from '@schedule-x/date-picker/src/components/app-wrapper'
 import { useContext, useEffect, useMemo, useState } from 'preact/hooks'
 import { AppContext } from '../../utils/stateful/app-context'
-import DatePickerAppSingletonBuilder from '@schedule-x/shared/src/utils/stateful/date-picker/app-singleton/date-picker-app-singleton.builder'
 import RangeHeading from './range-heading'
-import TodayButton from './today-button'
-import ViewSelection from './view-selection'
-import ForwardBackwardNavigation from './forward-backward-navigation'
 import { randomStringId } from '@schedule-x/shared/src'
 import { getElementByCCID } from '../../utils/stateless/dom/getters'
 import { viewWeek } from '../../views/week'
 import { viewDay } from '../../views/day'
 import WeekNumber from './week-number'
-// import { useSignalEffect } from '@preact/signals'
-// import { useSignalEffect } from '@preact/signals'
+import ForwardBackwardNavigationAgenda from './forward-backward-navigation-agenda'
 
-export default function CalendarHeader() {
+export default function CalendarHeaderAgenda() {
   const $app = useContext(AppContext)
-  const datePickerAppSingleton = new DatePickerAppSingletonBuilder()
-    .withDatePickerState($app.datePickerState)
-    .withConfig($app.datePickerConfig)
-    .withTranslate($app.translate)
-    .withTimeUnitsImpl($app.timeUnitsImpl)
-    .build()
-  const minuteBoudaries = $app.config.minuteBoudaries
+
   const headerContent = $app.config._customComponentFns.headerContent
   const headerContentId = useState(
     headerContent ? randomStringId() : undefined
@@ -79,80 +67,20 @@ export default function CalendarHeader() {
     $app.calendarState.isCalendarSmall.value,
   ])
 
-  // useSignalEffect(() => {
-  //   if (minuteBoudaries.value == 5) {
-  //     $app.config.plugins.zoomInPlugin?.setMinZoom!(3)
-  //   } else {
-  //     $app.config.plugins.zoomInPlugin?.setMinZoom!(1)
-  //   }
-  //   console.log(minuteBoudaries.value == 5)
-  //   console.log($app.config.plugins.zoomInPlugin)
-  // })
-
-  const keyForRerenderingOnLocaleChange = $app.config.locale.value
-
   const isDayOrWeekView = useMemo(() => {
     return [viewWeek.name, viewDay.name].includes($app.calendarState.view.value)
   }, [$app.calendarState.view.value])
-
-  const handleChangeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    minuteBoudaries.value = Number(e.currentTarget.value)
-  }
 
   return (
     <header className={'sx__calendar-header'} data-ccid={headerContentId}>
       {!headerContent && (
         <>
-          <div className={'sx__calendar-header-content'}>
-            {headerContentLeftPrependId && (
-              <div data-ccid={headerContentLeftPrependId} />
-            )}
-
-            <TodayButton />
-
-            <ForwardBackwardNavigation />
-
+          <div className={'sx__calendar-header-content-agenda'}>
             <RangeHeading key={$app.config.locale.value} />
+            <ForwardBackwardNavigationAgenda />
 
             {$app.config.showWeekNumbers.value && isDayOrWeekView && (
               <WeekNumber />
-            )}
-
-            {headerContentLeftAppendId && (
-              <div data-ccid={headerContentLeftAppendId} />
-            )}
-          </div>
-
-          <div className={'sx__calendar-header-content'}>
-            {headerContentRightPrependId && (
-              <div data-ccid={headerContentRightPrependId} />
-            )}
-            <div>
-              <label htmlFor="interval">Select interval: </label>
-              <select
-                id="interval"
-                name="interval"
-                value={minuteBoudaries.value}
-                onChange={handleChangeSelect}
-              >
-                <option value={10}>10</option>
-                <option value={15}>15</option>
-                <option value={20}>20</option>
-                <option value={30}>30</option>
-                <option value={60}>60</option>
-              </select>
-            </div>
-
-            {$app.config.views.value.length > 1 && (
-              <ViewSelection
-                key={keyForRerenderingOnLocaleChange + '-view-selection'}
-              />
-            )}
-
-            <AppWrapper $app={datePickerAppSingleton}></AppWrapper>
-
-            {headerContentRightAppendId && (
-              <div data-ccid={headerContentRightAppendId} />
             )}
           </div>
         </>

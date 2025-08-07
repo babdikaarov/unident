@@ -30,6 +30,10 @@ export default class CalendarEventImpl implements CalendarEventInternal {
     public id: EventId,
     public start: string,
     public end: string,
+    public withStaff: {
+      id: string
+      name: string
+    },
     public title?: string,
     public people?: string[],
     public location?: string,
@@ -128,6 +132,7 @@ export default class CalendarEventImpl implements CalendarEventInternal {
       location: this.location,
       description: this.description,
       calendarId: this.calendarId,
+      withStaff: this.withStaff,
       _options: this._options,
       ...this._getForeignProperties(),
     }

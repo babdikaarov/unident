@@ -33,6 +33,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
   translations: Signal<Record<string, Language>>
   showWeekNumbers: Signal<boolean> = signal(false)
   direction: 'ltr' | 'rtl' = 'ltr'
+  minuteBoudaries: Signal<number>
 
   constructor(
     locale: string = DEFAULT_LOCALE,
@@ -54,7 +55,8 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     },
     theme: string | undefined = undefined,
     translations: Record<string, Language> = {},
-    showWeekNumbers: boolean = false
+    showWeekNumbers: boolean = false,
+    minuteBoudaries: number = 60
   ) {
     this.locale = signal(locale)
     this.firstDayOfWeek = signal(firstDayOfWeek)
@@ -70,6 +72,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     this.translations = signal(translations)
     this.showWeekNumbers = signal(showWeekNumbers)
     this.direction = getDirection()
+    this.minuteBoudaries = signal(minuteBoudaries)
   }
 
   get isHybridDay(): boolean {

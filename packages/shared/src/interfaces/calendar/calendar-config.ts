@@ -18,6 +18,7 @@ import { Signal } from '@preact/signals'
 import { WeekDay } from '../../enums/time/week-day.enum'
 import { BackgroundEvent } from './background-event'
 import { Language } from '../../types/translations/language.translations'
+import { ZoomInPlugin } from '../zoomInPlugin/zoomInplugin.interface'
 
 export type WeekOptions = {
   gridHeight: number
@@ -50,6 +51,7 @@ export type Plugins = {
   scrollController?: PluginBase<string>
   eventRecurrence?: EventRecurrencePlugin
   resize?: ResizePlugin
+  zoomInPlugin?: ZoomInPlugin
   [key: string]: PluginBase<string> | undefined
 }
 
@@ -76,6 +78,7 @@ export default interface CalendarConfigInternal extends Config {
   _customComponentFns: CustomComponentFns
   translations: Signal<Record<string, Language>>
   direction: 'ltr' | 'rtl'
+  minuteBoudaries: Signal<number>
 
   // Getters
   isHybridDay: boolean
@@ -105,12 +108,15 @@ interface ReducedCalendarConfigInternal
     | 'translations'
     | 'showWeekNumbers'
     | 'direction'
+    | 'minuteBoudaries'
+    | 'staff'
   > {}
 
 export interface CalendarConfigExternal
   extends Partial<ReducedCalendarConfigInternal> {
   datePicker?: CalendarDatePickerConfigExternal
   events?: CalendarEventExternal[]
+
   backgroundEvents?: BackgroundEvent[]
   dayBoundaries?: DayBoundariesExternal
   views: [View, ...View[]]
@@ -127,4 +133,6 @@ export interface CalendarConfigExternal
   skipValidation?: boolean
   translations?: Record<string, Language>
   showWeekNumbers?: boolean
+  minuteBoudaries?: number
+  staff?: { id: string; name: string }[]
 }

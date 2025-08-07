@@ -2,9 +2,9 @@
   display: flex;
   flex-flow: column;
   position: absolute;
-  right: 0;
+  // right: 0;
   top: var(--sx-week-grid-offset-top);
-  width: calc(100% - 60px);
+  width: calc(100% - 150px);
 }
 
 .sx__week-grid__hour {
@@ -12,15 +12,49 @@
   height: var(--sx-week-grid-hour-height);
   border-top: var(--sx-border);
   font-size: var(--sx-font-extra-small);
-
-  &:first-child {
-    visibility: hidden;
-  }
+  // z-index: 9999;
+  // &:first-child {
+  // visibility: hidden;
+  // }
 }
-
-.sx__week-grid__hour-text {
+.sx__week-grid__time-cover {
+  position: absolute;
+  width: 52px;
+  height: 100%;
+  left: -60px;
+  top: -0.75em;
+  color: var(--sx-color-neutral);
+  z-index: 1;
+  background-color: white;
+}
+.sx__week-grid__hour-text-left {
   position: absolute;
   left: -43px;
   top: -0.75em;
+  color: var(--sx-color-neutral);
+  z-index: 1;
+  background-color: white;
+}
+.sx__week-grid__hour-text-right {
+  position: absolute;
+  right: -43px;
+  top: -0.75em;
+  color: var(--sx-color-neutral);
+  z-index: 1;
+  background-color: white;
+}
+
+.sx__week-grid__minute-indicator {
+  height: calc(var(--sx-week-grid-hour-height) / var(--sx-minute-interval));
+  border-top: var(--sx-border);
+  position: relative;
+  width: 100%;
+}
+
+.sx__minute-label {
+  font-size: 10px;
+  position: absolute;
+  left: -25px;
+  top: -0.5em;
   color: var(--sx-color-neutral);
 }

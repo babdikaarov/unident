@@ -7,6 +7,7 @@ import CalendarState from '@schedule-x/shared/src/interfaces/calendar/calendar-s
 import DatePickerConfigInternal from '@schedule-x/shared/src/interfaces/date-picker/config.interface'
 import CalendarEvents from '@schedule-x/shared/src/interfaces/calendar/calendar-events.interface'
 import CalendarElements from '@schedule-x/shared/src/interfaces/calendar/calendar-elements.interface'
+import CalendarStaff from '@schedule-x/shared/src/interfaces/calendar/calendar-staff.interface'
 
 export default class CalendarAppSingletonImpl implements CalendarAppSingleton {
   constructor(
@@ -17,6 +18,7 @@ export default class CalendarAppSingletonImpl implements CalendarAppSingleton {
     public translate: TranslateFn,
     public datePickerConfig: DatePickerConfigInternal,
     public calendarEvents: CalendarEvents,
-    public elements: CalendarElements = { calendarWrapper: undefined }
+    public elements: CalendarElements = { calendarWrapper: undefined },
+    public staffList: CalendarStaff
   ) {}
 }

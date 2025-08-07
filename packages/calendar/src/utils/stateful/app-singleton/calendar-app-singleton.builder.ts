@@ -8,6 +8,8 @@ import CalendarConfigInternal from '@schedule-x/shared/src/interfaces/calendar/c
 import CalendarState from '@schedule-x/shared/src/interfaces/calendar/calendar-state.interface'
 import DatePickerConfigInternal from '@schedule-x/shared/src/interfaces/date-picker/config.interface'
 import CalendarEvents from '@schedule-x/shared/src/interfaces/calendar/calendar-events.interface'
+import { createCalendarStaff } from '../calendar-staffList/calendar-staffList.impl'
+import CalendarStaff from '@schedule-x/shared/src/interfaces/calendar/calendar-staff.interface'
 
 export default class CalendarAppSingletonBuilder
   implements Builder<CalendarAppSingleton>
@@ -19,6 +21,7 @@ export default class CalendarAppSingletonBuilder
   private translate: TranslateFn | undefined
   private datePickerConfig: DatePickerConfigInternal | undefined
   private calendarEvents: CalendarEvents | undefined
+  private staffList: CalendarStaff | undefined
 
   build(): CalendarAppSingleton {
     return new CalendarAppSingletonImpl(
@@ -28,7 +31,9 @@ export default class CalendarAppSingletonBuilder
       this.datePickerState!,
       this.translate!,
       this.datePickerConfig!,
-      this.calendarEvents!
+      this.calendarEvents!,
+      { calendarWrapper: undefined }, // ← this fills `elements`
+      this.staffList!
     )
   }
 
@@ -70,6 +75,12 @@ export default class CalendarAppSingletonBuilder
     calendarEvents: CalendarEvents
   ): CalendarAppSingletonBuilder {
     this.calendarEvents = calendarEvents
+    return this
+  }
+  withStaffList(
+    staff: { id: string; name: string }[]
+  ): CalendarAppSingletonBuilder {
+    this.staffList = createCalendarStaff(staff)
     return this
   }
 }

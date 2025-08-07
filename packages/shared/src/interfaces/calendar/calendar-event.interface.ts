@@ -11,6 +11,10 @@ export default interface CalendarEventExternal {
   id: EventId
   start: string
   end: string
+  withStaff: {
+    id: string
+    name: string
+  }
   title?: string
   people?: string[]
   location?: string

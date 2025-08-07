@@ -15,15 +15,29 @@ export const createEvents = (monthArg: string | null = null) => {
   const events = []
   const times = getListOfTimePropertiesForEvents(monthArg)
 
+  const nameIdMap = new Map<string, string>()
+
   while (events.length < NUMBER_OF_EVENTS) {
     const time = getRandomElementOfArray(times) as {
       start: string
       end: string
     }
 
+    const name = getRandomElementOfArray(names) as string
+
+    // Always generate same ID for same name
+    if (!nameIdMap.has(name)) {
+      nameIdMap.set(name, Math.random().toString(16).substring(2, 8))
+    }
+
+    const id = nameIdMap.get(name)!
+
     const event = {
       title: getRandomElementOfArray(eventTitles),
-      with: getRandomElementOfArray(names),
+      with: {
+        id,
+        name,
+      },
       start: time.start,
       end: time.end,
       color: getRandomElementOfArray(colors),
@@ -38,17 +52,15 @@ export const createEvents = (monthArg: string | null = null) => {
     if (Math.random() < 0.5)
       event.location = getRandomElementOfArray(locations) as string
     if (Math.random() < 0.4) event.topic = getRandomElementOfArray(topics)
-    if (Math.random() < 0.3)
-      event.calendarId = getRandomElementOfArray(calendarIds) as string
+    event.calendarId = getRandomElementOfArray(calendarIds) as string
 
     events.push(event)
   }
 
-  // Sort events according to start, for easier debugging, if something breaks
+  // Sort events by start time
   return events.sort((a, b) => {
     if (a.start > b.start) return 1
     if (a.start < b.start) return -1
-
     return 0
   })
 }

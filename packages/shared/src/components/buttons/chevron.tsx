@@ -5,6 +5,7 @@ type props = {
   onClick: () => void
   buttonText?: string
   disabled?: boolean
+  className?: string
 }
 
 export default function Chevron({
@@ -12,6 +13,7 @@ export default function Chevron({
   onClick,
   buttonText,
   disabled = false,
+  className,
 }: props) {
   const handleKeyDown = (keyboardEvent: KeyboardEvent) => {
     if (isKeyEnterOrSpace(keyboardEvent)) onClick()
@@ -21,7 +23,7 @@ export default function Chevron({
     <button
       type="button"
       disabled={disabled}
-      className="sx__chevron-wrapper sx__ripple"
+      className={`sx__chevron-wrapper sx__ripple ${className}`}
       onMouseUp={onClick}
       onKeyDown={handleKeyDown}
       tabIndex={0}

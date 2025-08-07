@@ -26,6 +26,7 @@ type ICalTime = {
 type ICalOccurrence = {
   eventId: string
   item: {
+    withStaff: { id: string; name: string }
     summary: string
     description: string
     location: string
@@ -33,6 +34,7 @@ type ICalOccurrence = {
 } & ICalTime
 
 type ICalEvent = {
+  withStaff: { id: string; name: string }
   eventId: string
   summary: string
   description: string
@@ -108,6 +110,7 @@ class IcalendarPluginImpl implements PluginBase<string> {
         title: occurrence.item.summary,
         description: occurrence.item.description,
         location: occurrence.item.location,
+        withStaff: occurrence.item.withStaff,
         start: toDateTimeString(occurrence.startDate.toJSDate()),
         end: toDateTimeString(occurrence.endDate.toJSDate()),
       },
@@ -122,6 +125,7 @@ class IcalendarPluginImpl implements PluginBase<string> {
         title: event.summary,
         description: event.description,
         location: event.location,
+        withStaff: event.withStaff,
         start: toDateTimeString(event.startDate.toJSDate()),
         end: toDateTimeString(event.endDate.toJSDate()),
       },

@@ -23,7 +23,11 @@ export default class CalendarEventBuilder
     private _config: CalendarConfigInternal,
     private id: EventId,
     private start: string,
-    private end: string
+    private end: string,
+    private withStaff: {
+      id: string
+      name: string
+    }
   ) {}
 
   build(): CalendarEventInternal {
@@ -32,6 +36,7 @@ export default class CalendarEventBuilder
       this.id,
       this.start,
       this.end,
+      this.withStaff,
       this.title,
       this.people,
       this.location,

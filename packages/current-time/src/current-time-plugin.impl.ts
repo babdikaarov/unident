@@ -3,7 +3,7 @@ import CurrentTimePlugin, {
 } from '@schedule-x/shared/src/interfaces/current-time/current-time-plugin.interface'
 import { CalendarAppSingleton } from '@schedule-x/shared/src'
 import {
-  toDateString,
+  // toDateString,
   toDateTimeString,
 } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
 import { getYCoordinateInTimeGrid } from '@schedule-x/shared/src/utils/stateless/calendar/get-y-coordinate-in-time-grid'
@@ -46,7 +46,7 @@ class CurrentTimePluginImpl implements CurrentTimePlugin {
   }
 
   private setIndicator(isRecursion = false) {
-    const todayDateString = toDateString(new Date())
+    // const todayDateString = toDateString(new Date())
     let nowDateTimeString = toDateTimeString(new Date())
 
     if (this.config.timeZoneOffset) {
@@ -57,17 +57,18 @@ class CurrentTimePluginImpl implements CurrentTimePlugin {
     }
 
     const todayElement = this.$app.elements.calendarWrapper!.querySelector(
-      `[data-time-grid-date="${todayDateString}"]`
+      // `[data-time-grid-date="${todayDateString}"]`
+      `.sx__week-grid__time-axis`
     )
 
     if (!todayElement) return
-
     const existingIndicator = todayElement.querySelector(
       '.sx__current-time-indicator'
     )
     if (existingIndicator && isRecursion) existingIndicator.remove()
 
     if (todayElement && !existingIndicator) {
+      // if (todayElement && !existingIndicator) {
       const currentTimeIndicator = document.createElement('div')
       currentTimeIndicator.classList.add('sx__current-time-indicator')
       const top =
@@ -94,6 +95,7 @@ class CurrentTimePluginImpl implements CurrentTimePlugin {
     const fullWeekTimeIndicator = document.createElement('div')
     fullWeekTimeIndicator.classList.add('sx__current-time-indicator-full-week')
     fullWeekTimeIndicator.style.top = top
+
     const weekGridWrapper = document.querySelector('.sx__week-grid')
 
     const existingFullWeekIndicator = weekGridWrapper?.querySelector(
@@ -102,7 +104,6 @@ class CurrentTimePluginImpl implements CurrentTimePlugin {
     if (existingFullWeekIndicator) {
       existingFullWeekIndicator.remove()
     }
-
     if (weekGridWrapper) {
       weekGridWrapper.appendChild(fullWeekTimeIndicator)
     }
