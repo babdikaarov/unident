@@ -1,5 +1,5 @@
 {
-  "name": "@schedule-x/e2e-testing",
+  "name": "@unimed-x/e2e-testing",
   "publishConfig": {
     "access": "public"
   },

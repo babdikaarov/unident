@@ -1,5 +1,5 @@
 {
-  "name": "@schedule-x/assertions",
+  "name": "@unimed-x/assertions",
   "publishConfig": {
     "access": "public"
   },

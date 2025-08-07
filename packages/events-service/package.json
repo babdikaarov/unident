@@ -1,5 +1,5 @@
 {
-  "name": "@schedule-x/events-service",
+  "name": "@unimed-x/events-service",
   "umdName": "SXEventsService",
   "version": "2.36.0",
   "publishConfig": {

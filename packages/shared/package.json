@@ -1,5 +1,5 @@
 {
-  "name": "@schedule-x/shared",
+  "name": "@unimed-x/shared",
   "umdName": "SXShared",
   "version": "2.36.0",
   "publishConfig": {

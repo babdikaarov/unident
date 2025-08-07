@@ -1,5 +1,5 @@
 {
-  "name": "@schedule-x/drag-and-drop",
+  "name": "@unimed-x/drag-and-drop",
   "umdName": "SXDragAndDrop",
   "version": "2.36.0",
   "description": "Drag & drop plugin for Schedule-X calendar",
