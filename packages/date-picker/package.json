@@ -1,7 +1,7 @@
 {
   "name": "@unimed-x/date-picker",
   "umdName": "SXDatePicker",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Schedule-X date picker component",
   "author": {
     "name": "Tom Österlund",

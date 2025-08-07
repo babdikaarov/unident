@@ -1,7 +1,7 @@
 {
   "name": "@unimed-x/calendar-controls",
   "umdName": "SXCalendarControls",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Plugin for extra controls for the Schedule-X calendar",
   "author": {
     "name": "Tom Österlund",
