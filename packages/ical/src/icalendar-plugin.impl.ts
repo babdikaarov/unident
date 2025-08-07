@@ -5,14 +5,14 @@ import {
   toDateTimeString,
   toJSDate,
   addDays,
-} from '@schedule-x/shared/src'
+} from '@unimed-x/shared/src'
 import { IcalExpander } from './ical-expander/IcalExpander'
-import { externalEventToInternal } from '@schedule-x/shared/src/utils/stateless/calendar/external-event-to-internal'
-import { definePlugin } from '@schedule-x/shared/src/utils/stateless/calendar/define-plugin'
+import { externalEventToInternal } from '@unimed-x/shared/src/utils/stateless/calendar/external-event-to-internal'
+import { definePlugin } from '@unimed-x/shared/src/utils/stateless/calendar/define-plugin'
 import {
   dateFromDateTime,
   timeFromDateTime,
-} from '@schedule-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
+} from '@unimed-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
 
 type ICalendarPluginOptions = {
   data: string

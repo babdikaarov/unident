@@ -1,9 +1,9 @@
 import { getWeekForDate } from './get-week-for-date'
-import { toJSDate } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
-import { toDateString } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
+import { toJSDate } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
+import { toDateString } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
 import { RRuleOptions } from '../../types/rrule-options'
 import { getJSDayFromByday } from './byday-jsday-map'
-import { timeFromDateTime } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
+import { timeFromDateTime } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
 import { isCountReached, isDatePastUntil } from './iterator-utils'
 
 const weeklyIterator = (dtstart: string, rruleOptions: RRuleOptions) => {

@@ -2,14 +2,14 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { createTimePickerAppContext } from '../../factory'
 import { cleanup, fireEvent, render } from '@testing-library/preact'
 import { AppContext } from '../../utils/stateful/app-context'
 import AppPopup from '../app-popup'
 import { assertElementType } from '../../../../../libs/assertions/src'
 import { afterEach, vi } from 'vitest'
-import { translate, translations } from '@schedule-x/translations/src'
+import { translate, translations } from '@unimed-x/translations/src'
 import { signal } from '@preact/signals'
 
 describe('Time picker popup', () => {

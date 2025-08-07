@@ -4,7 +4,7 @@ import {
   it,
   expect,
   afterEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import {
   cleanup,
   fireEvent,
@@ -12,11 +12,11 @@ import {
   screen,
   waitFor,
 } from '@testing-library/preact'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
 import { MonthAgendaWrapper } from '../month-agenda-wrapper'
 import { __createAppWithViews__ } from '../../../../utils/stateless/testing/__create-app-with-views__'
-import CalendarEventBuilder from '@schedule-x/shared/src/utils/stateless/calendar/calendar-event/calendar-event.builder'
-import { CalendarEventInternal } from '@schedule-x/shared/src'
+import CalendarEventBuilder from '@unimed-x/shared/src/utils/stateless/calendar/calendar-event/calendar-event.builder'
+import { CalendarEventInternal } from '@unimed-x/shared/src'
 import { vi } from 'vitest'
 
 const renderComponent = ($app: CalendarAppSingleton) => {

@@ -9,7 +9,7 @@
     },
     {
       "groupName": "Schedule-X updates",
-      "packagePatterns": ["^@schedule-x.*"]
+      "packagePatterns": ["^@unimed-x.*"]
     }
   ],
   "schedule": ["before 7am every weekday"],

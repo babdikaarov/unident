@@ -3,14 +3,14 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
-import TimeUnitsBuilder from '@schedule-x/shared/src/utils/stateful/time-units/time-units.builder'
-import { WeekDay } from '@schedule-x/shared/src/enums/time/week-day.enum'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+import TimeUnitsBuilder from '@unimed-x/shared/src/utils/stateful/time-units/time-units.builder'
+import { WeekDay } from '@unimed-x/shared/src/enums/time/week-day.enum'
 import { createAgendaMonth } from '../../utils/stateless/create-agenda-month'
 import { cleanup, render } from '@testing-library/preact'
 import MonthAgendaDayNames from '../month-agenda-day-names'
 import { MonthAgendaWeek } from '../../types/month-agenda'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
 import { AppContext } from '../../../../utils/stateful/app-context'
 import { __createAppWithViews__ } from '../../../../utils/stateless/testing/__create-app-with-views__'
 import { createBaseConfig } from '../../../../__test__/utils'

@@ -8,7 +8,7 @@ operates entirely in UTC
 */
 
 import * as ICAL from 'ical.js'
-import { randomStringId } from '@schedule-x/shared/src'
+import { randomStringId } from '@unimed-x/shared/src'
 
 export class IcalExpander {
   constructor(opts) {

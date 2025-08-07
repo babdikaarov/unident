@@ -1,10 +1,10 @@
-import { CalendarAppSingleton } from '@schedule-x/shared/src'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
-import { getTimePointsPerPixel } from '@schedule-x/shared/src/utils/stateless/calendar/time-points-per-pixel'
-import { DayBoundariesDateTime } from '@schedule-x/shared/src/types/day-boundaries-date-time'
-import { addTimePointsToDateTime } from '@schedule-x/shared/src/utils/stateless/time/time-points/string-conversion'
+import { CalendarAppSingleton } from '@unimed-x/shared/src'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { getTimePointsPerPixel } from '@unimed-x/shared/src/utils/stateless/calendar/time-points-per-pixel'
+import { DayBoundariesDateTime } from '@unimed-x/shared/src/types/day-boundaries-date-time'
+import { addTimePointsToDateTime } from '@unimed-x/shared/src/utils/stateless/time/time-points/string-conversion'
 import { updateEventsList } from './utils/stateless/update-events-list'
-import { getEventCoordinates } from '@schedule-x/shared/src/utils/stateless/dom/get-event-coordinates'
+import { getEventCoordinates } from '@unimed-x/shared/src/utils/stateless/dom/get-event-coordinates'
 
 export class TimeGridEventResizer {
   private readonly originalEventEnd: string

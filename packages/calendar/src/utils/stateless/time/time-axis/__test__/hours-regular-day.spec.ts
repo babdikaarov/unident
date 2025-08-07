@@ -2,9 +2,9 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { getTimeAxisHours } from '../time-axis'
-import { timePointsFromString } from '@schedule-x/shared/src/utils/stateless/time/time-points/string-conversion'
+import { timePointsFromString } from '@unimed-x/shared/src/utils/stateless/time/time-points/string-conversion'
 
 describe('TimeAxis', () => {
   describe('getting hours for non-hybrid days', () => {

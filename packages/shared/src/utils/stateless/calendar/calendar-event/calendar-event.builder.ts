@@ -15,6 +15,12 @@ export default class CalendarEventBuilder
   private description: string | undefined
   private title: string | undefined
   private calendarId: string | undefined
+  private withStaff:
+    | {
+        id: string
+        name: string
+      }
+    | undefined
   private _foreignProperties: Record<string, unknown> = {}
   private _options: CalendarEventOptions | undefined = undefined
   private _customContent: CalendarEventInternal['_customContent'] = {}
@@ -23,11 +29,11 @@ export default class CalendarEventBuilder
     private _config: CalendarConfigInternal,
     private id: EventId,
     private start: string,
-    private end: string,
-    private withStaff: {
-      id: string
-      name: string
-    }
+    private end: string
+    // private withStaff: {
+    //   id: string
+    //   name: string
+    // }
   ) {}
 
   build(): CalendarEventInternal {
@@ -47,7 +53,10 @@ export default class CalendarEventBuilder
       this._foreignProperties
     )
   }
-
+  withStaffBuild(withStaff: { id: string; name: string } | undefined) {
+    this.withStaff = withStaff
+    return this
+  }
   withTitle(title: string | undefined): CalendarEventBuilder {
     this.title = title
     return this

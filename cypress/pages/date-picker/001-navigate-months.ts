@@ -1,5 +1,5 @@
-import { createDatePicker } from '@schedule-x/date-picker'
-import '@schedule-x/theme-default/dist/date-picker.css'
+import { createDatePicker } from '@unimed-x/date-picker'
+import '@unimed-x/theme-default/dist/date-picker.css'
 
 const datePicker = createDatePicker({
   selectedDate: '2020-01-01',

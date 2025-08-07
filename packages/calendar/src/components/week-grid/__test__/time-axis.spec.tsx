@@ -3,13 +3,13 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { cleanup, render, screen, waitFor } from '@testing-library/preact'
 import TimeAxis from '../time-axis'
 import { AppContext } from '../../../utils/stateful/app-context'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
 import { __createAppWithViews__ } from '../../../utils/stateless/testing/__create-app-with-views__'
-import { createCalendarControlsPlugin } from '@schedule-x/calendar-controls/src'
+import { createCalendarControlsPlugin } from '@unimed-x/calendar-controls/src'
 
 const renderComponent = ($app: CalendarAppSingleton) => {
   render(

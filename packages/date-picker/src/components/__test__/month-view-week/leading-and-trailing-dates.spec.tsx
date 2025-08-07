@@ -2,10 +2,10 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
-import { Month } from '@schedule-x/shared/src/enums/time/month.enum'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+import { Month } from '@unimed-x/shared/src/enums/time/month.enum'
 import { renderComponent } from './utils'
-import { toDateString } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
+import { toDateString } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
 import { createAppSingleton } from '../../../factory'
 
 const SELECTOR = '.sx__date-picker__day.is-leading-or-trailing'

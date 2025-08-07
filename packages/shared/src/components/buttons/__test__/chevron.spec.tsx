@@ -3,7 +3,7 @@ import {
   it,
   expect,
   beforeEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { cleanup, render } from '@testing-library/preact'
 import Chevron from '../chevron'
 import { vi } from 'vitest'

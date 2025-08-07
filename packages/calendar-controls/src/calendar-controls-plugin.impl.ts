@@ -1,20 +1,20 @@
-import CalendarControlsPlugin from '@schedule-x/shared/src/interfaces/calendar-controls/calendar-controls-plugin.interface'
-import { CalendarAppSingleton, View } from '@schedule-x/shared/src'
-import { PluginName } from '@schedule-x/shared/src/enums/plugin-name.enum'
-import { dateStringRegex } from '@schedule-x/shared/src/utils/stateless/time/validation/regex'
-import { DateRange } from '@schedule-x/shared/src/types/date-range'
-import { WeekDay } from '@schedule-x/shared/src/enums/time/week-day.enum'
-import { DayBoundariesExternal } from '@schedule-x/shared/src/types/calendar/day-boundaries'
+import CalendarControlsPlugin from '@unimed-x/shared/src/interfaces/calendar-controls/calendar-controls-plugin.interface'
+import { CalendarAppSingleton, View } from '@unimed-x/shared/src'
+import { PluginName } from '@unimed-x/shared/src/enums/plugin-name.enum'
+import { dateStringRegex } from '@unimed-x/shared/src/utils/stateless/time/validation/regex'
+import { DateRange } from '@unimed-x/shared/src/types/date-range'
+import { WeekDay } from '@unimed-x/shared/src/enums/time/week-day.enum'
+import { DayBoundariesExternal } from '@unimed-x/shared/src/types/calendar/day-boundaries'
 import {
   CalendarType,
   MonthGridOptions,
   WeekOptions,
-} from '@schedule-x/shared/src/interfaces/calendar/calendar-config'
+} from '@unimed-x/shared/src/interfaces/calendar/calendar-config'
 import {
   timePointsFromString,
   timeStringFromTimePoints,
-} from '@schedule-x/shared/src/utils/stateless/time/time-points/string-conversion'
-import { definePlugin } from '@schedule-x/shared/src/utils/stateless/calendar/define-plugin'
+} from '@unimed-x/shared/src/utils/stateless/time/time-points/string-conversion'
+import { definePlugin } from '@unimed-x/shared/src/utils/stateless/calendar/define-plugin'
 
 class CalendarControlsPluginImpl implements CalendarControlsPlugin {
   name = PluginName.CalendarControls

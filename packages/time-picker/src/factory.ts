@@ -2,7 +2,7 @@ import { TimePickerConfigExternal } from './types/time-picker-config'
 import TimePickerApp from './time-picker.app'
 import { computed, effect, signal } from '@preact/signals'
 import { TimePickerState } from './types/time-picker-state'
-import { TranslateFn } from '@schedule-x/shared/src/types/translations'
+import { TranslateFn } from '@unimed-x/shared/src/types/translations'
 import { TimePickerAppContext } from './types/time-picker-app.context'
 
 const getTimePickerState = (

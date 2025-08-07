@@ -1,13 +1,9 @@
-import {
-  addDays,
-  addMinutes,
-  CalendarAppSingleton,
-} from '@schedule-x/shared/src'
+import { addDays, addMinutes, CalendarAppSingleton } from '@unimed-x/shared/src'
 import { AugmentedEvent } from '../../types/augmented-event'
-import { dateTimeStringRegex } from '@schedule-x/shared/src/utils/stateless/time/validation/regex'
-import { getDurationInMinutes } from '@schedule-x/recurrence/src/rrule/utils/stateless/duration-in-minutes'
-import { calculateDaysDifference } from '@schedule-x/shared/src/utils/stateless/time/days-difference'
-import { EventId } from '@schedule-x/shared/src/types/event-id'
+import { dateTimeStringRegex } from '@unimed-x/shared/src/utils/stateless/time/validation/regex'
+import { getDurationInMinutes } from '@unimed-x/recurrence/src/rrule/utils/stateless/duration-in-minutes'
+import { calculateDaysDifference } from '@unimed-x/shared/src/utils/stateless/time/days-difference'
+import { EventId } from '@unimed-x/shared/src/types/event-id'
 
 export class ResizeUpdater {
   constructor(private $app: CalendarAppSingleton) {}

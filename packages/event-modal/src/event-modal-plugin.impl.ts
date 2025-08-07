@@ -1,9 +1,9 @@
-import EventModalPlugin from '@schedule-x/shared/src/interfaces/event-modal/event-modal.plugin'
-import { PluginName } from '@schedule-x/shared/src/enums/plugin-name.enum'
+import EventModalPlugin from '@unimed-x/shared/src/interfaces/event-modal/event-modal.plugin'
+import { PluginName } from '@unimed-x/shared/src/enums/plugin-name.enum'
 import EventModal from './event-modal'
 import { batch, signal } from '@preact/signals'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
-import { definePlugin } from '@schedule-x/shared/src/utils/stateless/calendar/define-plugin'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { definePlugin } from '@unimed-x/shared/src/utils/stateless/calendar/define-plugin'
 
 class EventModalPluginImpl implements EventModalPlugin {
   name = PluginName.EventModal

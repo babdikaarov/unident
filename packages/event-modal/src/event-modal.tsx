@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'preact/hooks'
-import { randomStringId } from '@schedule-x/shared/src/utils/stateless/strings/random'
+import { randomStringId } from '@unimed-x/shared/src/utils/stateless/strings/random'
 import EventModalPlugin, {
   EventModalProps,
-} from '@schedule-x/shared/src/interfaces/event-modal/event-modal.plugin'
+} from '@unimed-x/shared/src/interfaces/event-modal/event-modal.plugin'
 import { createClickOutsideListener } from './utils/stateless/click-outside'
 import { setPosition } from './utils/stateless/set-position'
-import TimeIcon from '@schedule-x/shared/src/components/icons/time-icon'
-import UserIcon from '@schedule-x/shared/src/components/icons/user-icon'
-import { concatenatePeople } from '@schedule-x/shared/src/utils/stateless/strings/concatenate-people'
-import LocationPinIcon from '@schedule-x/shared/src/components/icons/location-pin-icon'
-import DescriptionIcon from '@schedule-x/shared/src/components/icons/description-icon'
-import { getTimeStamp } from '@schedule-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
+import TimeIcon from '@unimed-x/shared/src/components/icons/time-icon'
+import UserIcon from '@unimed-x/shared/src/components/icons/user-icon'
+import { concatenatePeople } from '@unimed-x/shared/src/utils/stateless/strings/concatenate-people'
+import LocationPinIcon from '@unimed-x/shared/src/components/icons/location-pin-icon'
+import DescriptionIcon from '@unimed-x/shared/src/components/icons/description-icon'
+import { getTimeStamp } from '@unimed-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
 import { useIconColors } from './utils/stateful/use-icon-colors'
 import { Fragment } from 'preact/jsx-runtime'
-import { getScrollableParents } from '@schedule-x/shared/src/utils/stateless/dom/scrolling'
-import { nextTick } from '@schedule-x/shared/src/utils/stateless/next-tick'
+import { getScrollableParents } from '@unimed-x/shared/src/utils/stateless/dom/scrolling'
+import { nextTick } from '@unimed-x/shared/src/utils/stateless/next-tick'
 
 export default function EventModal({ $app }: EventModalProps) {
   const [modalId] = useState(randomStringId())

@@ -1,8 +1,8 @@
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import DateGridEvent from './date-grid-event'
 import { DATE_GRID_BLOCKER } from '../../constants'
-import { BackgroundEvent } from '@schedule-x/shared/src/interfaces/calendar/background-event'
-import { dateStringRegex } from '@schedule-x/shared/src'
+import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
+import { dateStringRegex } from '@unimed-x/shared/src'
 import { useContext } from 'preact/hooks'
 import { AppContext } from '../../utils/stateful/app-context'
 

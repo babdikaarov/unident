@@ -10,8 +10,7 @@ export const deepCloneEvent = (
     $app.config,
     calendarEvent.id,
     calendarEvent.start,
-    calendarEvent.end,
-    calendarEvent.withStaff
+    calendarEvent.end
   )
     .withTitle(calendarEvent.title)
     .withPeople(calendarEvent.people)

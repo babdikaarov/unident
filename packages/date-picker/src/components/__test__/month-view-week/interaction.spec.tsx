@@ -4,9 +4,9 @@ import {
   expect,
   spyOn,
   beforeEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { cleanup, screen } from '@testing-library/preact'
-import { Month } from '@schedule-x/shared/src/enums/time/month.enum'
+import { Month } from '@unimed-x/shared/src/enums/time/month.enum'
 import { clickByDate, renderComponent } from './utils'
 import { createAppSingleton } from '../../../factory'
 

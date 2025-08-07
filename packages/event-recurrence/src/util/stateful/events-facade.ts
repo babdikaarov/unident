@@ -1,8 +1,8 @@
-import EventsFacade from '@schedule-x/shared/src/utils/stateful/events-facade/events-facade.interface'
-import CalendarEventExternal from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
-import { EventId } from '@schedule-x/shared/src/types/event-id'
-import { CalendarAppSingleton } from '@schedule-x/shared/src'
-import { externalEventToInternal } from '@schedule-x/shared/src/utils/stateless/calendar/external-event-to-internal'
+import EventsFacade from '@unimed-x/shared/src/utils/stateful/events-facade/events-facade.interface'
+import CalendarEventExternal from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { EventId } from '@unimed-x/shared/src/types/event-id'
+import { CalendarAppSingleton } from '@unimed-x/shared/src'
+import { externalEventToInternal } from '@unimed-x/shared/src/utils/stateless/calendar/external-event-to-internal'
 import { createRecurrencesForEvent } from '../stateless/create-recurrences-for-event'
 import { AugmentedEvent } from '../../types/augmented-event'
 

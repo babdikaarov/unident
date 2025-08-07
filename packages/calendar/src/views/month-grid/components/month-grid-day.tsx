@@ -2,18 +2,18 @@ import { MonthDay as MonthDayType } from '../types/month'
 import {
   toIntegers,
   toJSDate,
-} from '@schedule-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
-import { getDayNameShort } from '@schedule-x/shared/src/utils/stateless/time/date-time-localization/date-time-localization'
+} from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
+import { getDayNameShort } from '@unimed-x/shared/src/utils/stateless/time/date-time-localization/date-time-localization'
 import { useContext, useEffect, useState } from 'preact/hooks'
 import { AppContext } from '../../../utils/stateful/app-context'
 import MonthGridEvent from './month-grid-event'
-import { InternalViewName } from '@schedule-x/shared/src/enums/calendar/internal-view.enum'
+import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-view.enum'
 import { DATE_GRID_BLOCKER } from '../../../constants'
-import { isToday } from '@schedule-x/shared/src/utils/stateless/time/comparison'
-import { getLocalizedDate } from '@schedule-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
+import { isToday } from '@unimed-x/shared/src/utils/stateless/time/comparison'
+import { getLocalizedDate } from '@unimed-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
 import { getClassNameForWeekday } from '../../../utils/stateless/get-class-name-for-weekday'
-import { dateStringRegex } from '@schedule-x/shared/src'
-import { randomStringId } from '@schedule-x/shared/src'
+import { dateStringRegex } from '@unimed-x/shared/src'
+import { randomStringId } from '@unimed-x/shared/src'
 
 type props = {
   day: MonthDayType

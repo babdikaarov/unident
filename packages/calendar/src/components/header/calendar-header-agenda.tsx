@@ -1,7 +1,7 @@
 import { useContext, useEffect, useMemo, useState } from 'preact/hooks'
 import { AppContext } from '../../utils/stateful/app-context'
 import RangeHeading from './range-heading'
-import { randomStringId } from '@schedule-x/shared/src'
+import { randomStringId } from '@unimed-x/shared/src'
 import { getElementByCCID } from '../../utils/stateless/dom/getters'
 import { viewWeek } from '../../views/week'
 import { viewDay } from '../../views/day'

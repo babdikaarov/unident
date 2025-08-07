@@ -1,7 +1,7 @@
 import { useContext } from 'preact/hooks'
 import { AppContext } from '../utils/stateful/app-context'
-import { getOneLetterOrShortDayNames } from '@schedule-x/shared/src/utils/stateless/time/date-time-localization/date-time-localization'
-import { toJSDate } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
+import { getOneLetterOrShortDayNames } from '@unimed-x/shared/src/utils/stateless/time/date-time-localization/date-time-localization'
+import { toJSDate } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
 
 export default function DayNames() {
   const $app = useContext(AppContext)

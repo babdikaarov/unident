@@ -1,9 +1,9 @@
 import { useContext, useEffect, useMemo, useState } from 'preact/hooks'
-import { DatePickerView } from '@schedule-x/shared/src/interfaces/date-picker/date-picker-view.enum'
+import { DatePickerView } from '@unimed-x/shared/src/interfaces/date-picker/date-picker-view.enum'
 import MonthView from './month-view'
 import YearsView from './years-view'
 import { AppContext } from '../utils/stateful/app-context'
-import { getScrollableParents } from '@schedule-x/shared/src/utils/stateless/dom/scrolling'
+import { getScrollableParents } from '@unimed-x/shared/src/utils/stateless/dom/scrolling'
 
 const POPUP_CLASS_NAME = 'sx__date-picker-popup'
 

@@ -6,7 +6,7 @@ import '@fontsource/open-sans/700-italic.css'
 import '@fontsource/roboto-condensed'
 import '../app.css'
 import '../../packages/theme-default/src/date-picker.scss'
-import { createDatePicker } from '@schedule-x/date-picker/src'
+import { createDatePicker } from '@unimed-x/date-picker/src'
 
 const datePicker = createDatePicker({
   teleportTo: document.body,

@@ -2,9 +2,9 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { createAgendaMonth } from '../create-agenda-month'
-import TimeUnitsBuilder from '@schedule-x/shared/src/utils/stateful/time-units/time-units.builder'
+import TimeUnitsBuilder from '@unimed-x/shared/src/utils/stateful/time-units/time-units.builder'
 import { MonthAgendaDay } from '../../../types/month-agenda'
 import { createBaseConfig } from '../../../../../__test__/utils'
 

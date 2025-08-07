@@ -2,14 +2,14 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { cleanup, render, screen } from '@testing-library/preact'
 import EventModal from '../event-modal'
 import { getDescriptionEl, getLocationEl, getPeopleEl, setup } from './utils'
 import { beforeEach, vi } from 'vitest'
 import { createEventModalPlugin } from '../event-modal-plugin.impl'
 import { stubInterface } from 'ts-sinon'
-import { CalendarEventInternal } from '@schedule-x/shared/src'
+import { CalendarEventInternal } from '@unimed-x/shared/src'
 
 describe('EventModal', () => {
   beforeEach(() => {

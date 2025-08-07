@@ -1,12 +1,12 @@
 import { createElement, render } from 'preact'
 import CalendarWrapper from './components/calendar-wrapper'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
-import EventsFacade from '@schedule-x/shared/src/utils/stateful/events-facade/events-facade.interface'
-import EventsFacadeImpl from '@schedule-x/shared/src/utils/stateful/events-facade/events-facade.impl'
-import { CustomComponentFn } from '@schedule-x/shared/src/interfaces/calendar/calendar-config'
-import { CustomComponentFns } from '@schedule-x/shared/src/interfaces/calendar/custom-component-fns'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import EventsFacade from '@unimed-x/shared/src/utils/stateful/events-facade/events-facade.interface'
+import EventsFacadeImpl from '@unimed-x/shared/src/utils/stateful/events-facade/events-facade.impl'
+import { CustomComponentFn } from '@unimed-x/shared/src/interfaces/calendar/calendar-config'
+import { CustomComponentFns } from '@unimed-x/shared/src/interfaces/calendar/custom-component-fns'
 import { invokePluginsBeforeRender } from './utils/stateless/plugins-lifecycle'
-import { PluginBase } from '@schedule-x/shared/src'
+import { PluginBase } from '@unimed-x/shared/src'
 
 export default class CalendarApp {
   public events: EventsFacade

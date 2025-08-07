@@ -1,4 +1,4 @@
-import { TimePickerTranslations } from '@schedule-x/shared/src/types/translations/time-picker.translations'
+import { TimePickerTranslations } from '@unimed-x/shared/src/types/translations/time-picker.translations'
 
 export const timePickerKoKR: TimePickerTranslations = {
   Time: '시간',

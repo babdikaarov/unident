@@ -1,14 +1,10 @@
-import {
-  addDays,
-  addMinutes,
-  CalendarAppSingleton,
-} from '@schedule-x/shared/src'
+import { addDays, addMinutes, CalendarAppSingleton } from '@unimed-x/shared/src'
 import { RecurrenceSet } from '../../../../recurrence/src'
-import { dateTimeStringRegex } from '@schedule-x/shared/src/utils/stateless/time/validation/regex'
+import { dateTimeStringRegex } from '@unimed-x/shared/src/utils/stateless/time/validation/regex'
 import { getDurationInMinutes } from '../../../../recurrence/src/rrule/utils/stateless/duration-in-minutes'
-import { calculateDaysDifference } from '@schedule-x/shared/src/utils/stateless/time/days-difference'
+import { calculateDaysDifference } from '@unimed-x/shared/src/utils/stateless/time/days-difference'
 import { parseRFC5545ToSX } from '../../../../recurrence/src/parsers/rrule/parse-rrule'
-import { EventId } from '@schedule-x/shared/src/types/event-id'
+import { EventId } from '@unimed-x/shared/src/types/event-id'
 
 export class DndUpdater {
   constructor(private $app: CalendarAppSingleton) {}

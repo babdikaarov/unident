@@ -1,5 +1,5 @@
 {
-  "extends": "@schedule-x/shared/src/config/package.tsconfig.json",
+  "extends": "@unimed-x/shared/src/config/package.tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/types",
     "jsx": "react-jsx",

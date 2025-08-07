@@ -3,10 +3,10 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { cleanup } from '@testing-library/preact'
 import { __createAppWithViews__ } from '../../../../utils/stateless/testing/__create-app-with-views__'
-import { InternalViewName } from '@schedule-x/shared/src/enums/calendar/internal-view.enum'
+import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-view.enum'
 import { renderComponent } from './utils'
 
 const tab = () => {

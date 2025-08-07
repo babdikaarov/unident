@@ -2,8 +2,8 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
-import CalendarConfigBuilder from '@schedule-x/calendar/src/utils/stateful/config/calendar-config.builder'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+import CalendarConfigBuilder from '@unimed-x/calendar/src/utils/stateful/config/calendar-config.builder'
 import CalendarEventBuilder from '../calendar-event.builder'
 
 describe('an internal calendar event', () => {

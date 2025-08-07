@@ -1,6 +1,6 @@
-import { BackgroundEvent } from '@schedule-x/shared/src/interfaces/calendar/background-event'
-import { DateRange } from '@schedule-x/shared/src/types/date-range'
-import { dateStringRegex } from '@schedule-x/shared/src'
+import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
+import { DateRange } from '@unimed-x/shared/src/types/date-range'
+import { dateStringRegex } from '@unimed-x/shared/src'
 
 export const filterByRange = (
   events: BackgroundEvent[],

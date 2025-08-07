@@ -10,14 +10,14 @@ import {
   viewMonthAgenda,
   viewMonthGrid,
   viewWeek,
-} from '@schedule-x/calendar'
-import '@schedule-x/theme-default/dist/index.css'
+} from '../../../packages/calendar/src'
+import '../../../packages/theme-default/dist/index.css'
 import '../index.css'
-import { createDragAndDropPlugin } from '@schedule-x/drag-and-drop'
-import { createEventModalPlugin } from '@schedule-x/event-modal'
-import { createResizePlugin } from '../../../packages/resize'
+import { createDragAndDropPlugin } from '../../../packages/drag-and-drop/src'
+import { createEventModalPlugin } from '../../../packages/event-modal/src'
+import { createResizePlugin } from '../../../packages/resize/src'
 import { smokeTestEvents } from './__data__/smoke-data.ts'
-import { createScrollControllerPlugin } from '@schedule-x/scroll-controller'
+import { createScrollControllerPlugin } from '../../../packages/scroll-controller/src'
 
 const calendarElement = document.getElementById('calendar') as HTMLElement
 
@@ -26,7 +26,12 @@ const calendar = createCalendar({
   locale: 'en-US',
   views: [viewWeek, viewMonthGrid, viewMonthAgenda, viewDay],
   defaultView: 'week',
-  plugins: [createDragAndDropPlugin(), createEventModalPlugin(), createScrollControllerPlugin(), createResizePlugin()],
+  plugins: [
+    createDragAndDropPlugin(),
+    createEventModalPlugin(),
+    createScrollControllerPlugin(),
+    createResizePlugin(),
+  ],
   events: smokeTestEvents,
 })
 

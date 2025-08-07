@@ -1,4 +1,4 @@
-import { PreactViewComponent } from '@schedule-x/shared/src/types/calendar/preact-view-component'
+import { PreactViewComponent } from '@unimed-x/shared/src/types/calendar/preact-view-component'
 import { useState } from 'preact/hooks'
 import { createMonth } from '../utils/stateless/create-month'
 import { Month } from '../types/month'

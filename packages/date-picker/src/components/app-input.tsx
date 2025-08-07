@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'preact/hooks'
 import { AppContext } from '../utils/stateful/app-context'
-import { toJSDate } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
-import { toLocalizedDateString } from '@schedule-x/shared/src/utils/stateless/time/date-time-localization/date-time-localization'
+import { toJSDate } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
+import { toLocalizedDateString } from '@unimed-x/shared/src/utils/stateless/time/date-time-localization/date-time-localization'
 import chevronIcon from '../assets/chevron-input.svg'
-import { randomStringId } from '@schedule-x/shared/src/utils/stateless/strings/random'
-import { isKeyEnterOrSpace } from '@schedule-x/shared/src/utils/stateless/dom/events'
+import { randomStringId } from '@unimed-x/shared/src/utils/stateless/strings/random'
+import { isKeyEnterOrSpace } from '@unimed-x/shared/src/utils/stateless/dom/events'
 
 export default function AppInput() {
   const datePickerInputId = randomStringId()

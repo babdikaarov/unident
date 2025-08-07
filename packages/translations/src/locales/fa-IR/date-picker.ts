@@ -1,4 +1,4 @@
-import { DatePickerTranslations } from '@schedule-x/shared/src/types/translations/date-picker.translations'
+import { DatePickerTranslations } from '@unimed-x/shared/src/types/translations/date-picker.translations'
 
 export const datePickerFaIR: DatePickerTranslations = {
   Date: 'تاریخ',

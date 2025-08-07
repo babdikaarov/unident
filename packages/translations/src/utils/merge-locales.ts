@@ -1,4 +1,4 @@
-import { Language } from '@schedule-x/shared/src/types/translations/language.translations'
+import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 
 /**
  * A function which can take an endless lists of arguments, all with the type Record<string, Language>

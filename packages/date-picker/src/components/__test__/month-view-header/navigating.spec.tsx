@@ -2,7 +2,7 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { fireEvent, waitFor } from '@testing-library/preact'
 import { createAppSingleton } from '../../../factory'
 import { renderComponent } from './utils'

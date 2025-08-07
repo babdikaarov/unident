@@ -1,5 +1,5 @@
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { render, screen } from '@testing-library/preact'
 import { AppContext } from '../../../../utils/stateful/app-context'
 import DateGridEvent from '../../date-grid-event'

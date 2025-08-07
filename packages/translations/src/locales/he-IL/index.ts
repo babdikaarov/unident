@@ -1,4 +1,4 @@
-import { Language } from '@schedule-x/shared/src/types/translations/language.translations'
+import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 import { datePickerHeIL } from './date-picker'
 import { calendarHeIL } from './calendar'
 import { timePickerHeIL } from './time-picker'

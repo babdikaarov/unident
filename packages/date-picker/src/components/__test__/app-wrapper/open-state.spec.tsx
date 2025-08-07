@@ -3,10 +3,10 @@ import {
   it,
   beforeEach,
   afterEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { render, screen, cleanup } from '@testing-library/preact'
 import AppWrapper from '../../app-wrapper'
-import DatePickerAppSingleton from '@schedule-x/shared/src/interfaces/date-picker/date-picker-app.singleton'
+import DatePickerAppSingleton from '@unimed-x/shared/src/interfaces/date-picker/date-picker-app.singleton'
 import {
   assertIsNotShowingPopup,
   assertIsShowingPopup,

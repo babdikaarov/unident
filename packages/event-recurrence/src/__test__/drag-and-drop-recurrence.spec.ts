@@ -2,9 +2,9 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
-import CalendarEventExternal from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
-import { __createAppWithViews__ } from '@schedule-x/calendar/src/utils/stateless/testing/__create-app-with-views__'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+import CalendarEventExternal from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { __createAppWithViews__ } from '@unimed-x/calendar/src/utils/stateless/testing/__create-app-with-views__'
 import { createEventRecurrencePlugin } from '../event-recurrence-plugin.impl'
 
 describe('Drag and drop recurring events', () => {

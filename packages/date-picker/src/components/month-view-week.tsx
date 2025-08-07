@@ -1,15 +1,15 @@
-import { WeekWithDates } from '@schedule-x/shared/src/types/time'
+import { WeekWithDates } from '@unimed-x/shared/src/types/time'
 import { DATE_PICKER_WEEK } from '../constants/test-ids'
 import { useContext } from 'preact/hooks'
 import { AppContext } from '../utils/stateful/app-context'
-import { toDateString } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
+import { toDateString } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
 import {
   isSameMonth,
   isToday,
-} from '@schedule-x/shared/src/utils/stateless/time/comparison'
-import { toJSDate } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
-import { addDays } from '@schedule-x/shared/src'
-import { getLocalizedDate } from '@schedule-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
+} from '@unimed-x/shared/src/utils/stateless/time/comparison'
+import { toJSDate } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
+import { addDays } from '@unimed-x/shared/src'
+import { getLocalizedDate } from '@unimed-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
 
 type props = {
   week: WeekWithDates

@@ -1,10 +1,10 @@
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { useContext, useEffect, useMemo } from 'preact/hooks'
 import { AppContext } from '../../utils/stateful/app-context'
-import { deepCloneEvent } from '@schedule-x/shared/src/utils/stateless/calendar/deep-clone-event'
-import { dateFromDateTime } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
-import { DateRange } from '@schedule-x/shared/src/types/date-range'
-import { getTimeGridEventCopyElementId } from '@schedule-x/shared/src/utils/stateless/strings/selector-generators'
+import { deepCloneEvent } from '@unimed-x/shared/src/utils/stateless/calendar/deep-clone-event'
+import { dateFromDateTime } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
+import { DateRange } from '@unimed-x/shared/src/types/date-range'
+import { getTimeGridEventCopyElementId } from '@unimed-x/shared/src/utils/stateless/strings/selector-generators'
 import {
   getBorderRadius,
   getWidthToSubtract,
@@ -14,17 +14,17 @@ import { getElementByCCID } from '../../utils/stateless/dom/getters'
 import { Fragment } from 'preact'
 import { invokeOnEventClickCallback } from '../../utils/stateless/events/invoke-on-event-click-callback'
 import { invokeOnEventDoubleClickCallback } from '../../utils/stateless/events/invoke-on-event-double-click-callback'
-import { getEventCoordinates } from '@schedule-x/shared/src/utils/stateless/dom/get-event-coordinates'
-import { isUIEventTouchEvent } from '@schedule-x/shared/src/utils/stateless/dom/is-touch-event'
+import { getEventCoordinates } from '@unimed-x/shared/src/utils/stateless/dom/get-event-coordinates'
+import { isUIEventTouchEvent } from '@unimed-x/shared/src/utils/stateless/dom/is-touch-event'
 import {
   getTimeStamp,
   timeFn,
-} from '@schedule-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
-import { ResizePlugin } from '@schedule-x/shared/src/interfaces/resize/resize-plugin.interface'
-import { randomStringId } from '@schedule-x/shared/src/utils/stateless/strings/random'
-import { nextTick } from '@schedule-x/shared/src/utils/stateless/next-tick'
+} from '@unimed-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
+import { ResizePlugin } from '@unimed-x/shared/src/interfaces/resize/resize-plugin.interface'
+import { randomStringId } from '@unimed-x/shared/src/utils/stateless/strings/random'
+import { nextTick } from '@unimed-x/shared/src/utils/stateless/next-tick'
 import { focusModal } from '../../utils/stateless/events/focus-modal'
-import { dateTimeStringRegex } from '@schedule-x/shared/src/utils/stateless/time/validation/regex'
+import { dateTimeStringRegex } from '@unimed-x/shared/src/utils/stateless/time/validation/regex'
 import { wasEventAddedInLastSecond } from '../../views/month-agenda/utils/stateless/was-event-added-in-last-second'
 
 type props = {

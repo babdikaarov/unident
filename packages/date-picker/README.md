@@ -13,8 +13,8 @@ npm install @schedule-x/date-picker @schedule-x/theme-default
 ## Setup
 
 ```js copy
-import { createDatePicker } from '@schedule-x/date-picker'
-import '@schedule-x/theme-default/dist/date-picker.css'
+import { createDatePicker } from '@unimed-x/date-picker'
+import '@unimed-x/theme-default/dist/date-picker.css'
 
 const datePicker = createDatePicker({
   listeners: {
@@ -53,8 +53,8 @@ The `getTheme` method is used to get the current theme of the date picker
 Below is an example of how to configure the date picker, containing all the currently available options.
 
 ```js copy
-import { createDatePicker } from '@schedule-x/date-picker'
-import '@schedule-x/theme-default/dist/date-picker.css'
+import { createDatePicker } from '@unimed-x/date-picker'
+import '@unimed-x/theme-default/dist/date-picker.css'
 
 const config = {
   /**

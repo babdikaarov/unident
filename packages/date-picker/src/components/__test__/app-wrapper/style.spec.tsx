@@ -4,10 +4,10 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { cleanup, render, waitFor } from '@testing-library/preact'
 import AppWrapper from '../../app-wrapper'
-import DatePickerAppSingleton from '@schedule-x/shared/src/interfaces/date-picker/date-picker-app.singleton'
+import DatePickerAppSingleton from '@unimed-x/shared/src/interfaces/date-picker/date-picker-app.singleton'
 import { getAppWrapper } from './utils'
 import { createAppSingleton } from '../../../factory'
 

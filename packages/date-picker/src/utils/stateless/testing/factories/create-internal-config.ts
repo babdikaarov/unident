@@ -1,9 +1,9 @@
-import { WeekDay } from '@schedule-x/shared/src/enums/time/week-day.enum'
+import { WeekDay } from '@unimed-x/shared/src/enums/time/week-day.enum'
 import {
   DEFAULT_FIRST_DAY_OF_WEEK,
   DEFAULT_LOCALE,
-} from '@schedule-x/shared/src/values'
-import { Placement } from '@schedule-x/shared/src/interfaces/date-picker/placement.enum'
+} from '@unimed-x/shared/src/values'
+import { Placement } from '@unimed-x/shared/src/interfaces/date-picker/placement.enum'
 import { signal } from '@preact/signals'
 
 export const __createInternalConfig__ = (

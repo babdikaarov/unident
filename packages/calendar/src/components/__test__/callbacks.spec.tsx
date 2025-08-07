@@ -5,11 +5,11 @@ import {
   expect,
   afterEach,
   beforeEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { vi } from 'vitest'
 import { __createAppWithViews__ } from '../../utils/stateless/testing/__create-app-with-views__'
-import { InternalViewName } from '@schedule-x/shared/src/enums/calendar/internal-view.enum'
-import { setNewDateAndPressEnter } from '@schedule-x/date-picker/src/components/__test__/app-input/utils'
+import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-view.enum'
+import { setNewDateAndPressEnter } from '@unimed-x/date-picker/src/components/__test__/app-input/utils'
 import { cleanup, fireEvent, waitFor } from '@testing-library/preact'
 import { openViewSelection } from '../../utils/stateless/testing/page-objects/view-selection'
 import { renderComponent } from './utils'

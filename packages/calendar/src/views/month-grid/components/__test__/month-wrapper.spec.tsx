@@ -2,8 +2,8 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
 import { cleanup, render, waitFor } from '@testing-library/preact'
 import { MonthGridWrapper } from '../month-grid-wrapper'
 import { __createAppWithViews__ } from '../../../../utils/stateless/testing/__create-app-with-views__'

@@ -1,7 +1,7 @@
 import { MonthAgendaWeek as MonthAgendaWeekType } from '../types/month-agenda'
 import MonthAgendaDay from './month-agenda-day'
 import { getWeekNumber } from '../../../utils/stateless/time/get-week-number'
-import { toJSDate } from '@schedule-x/shared/src'
+import { toJSDate } from '@unimed-x/shared/src'
 import { useContext } from 'preact/hooks'
 import { AppContext } from '../../../utils/stateful/app-context'
 

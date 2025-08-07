@@ -4,10 +4,10 @@ import '@fontsource/open-sans/500-italic.css'
 import '@fontsource/open-sans/700.css'
 import '@fontsource/open-sans/700-italic.css'
 import '@fontsource/roboto-condensed'
-import { createCalendar, viewWeek } from '../../../packages/calendar'
+import { createCalendar, viewWeek } from '../../../packages/calendar/src'
 import '../../../packages/theme-default/src/calendar.scss'
 import '../index.css'
-import { createDragAndDropPlugin } from '../../../packages/drag-and-drop'
+import { createDragAndDropPlugin } from '../../../packages/drag-and-drop/src'
 
 const calendarElement = document.getElementById('calendar') as HTMLElement
 
@@ -23,6 +23,10 @@ const calendar = createCalendar({
       title: 'Event 1',
       start: '2023-09-21 00:15',
       end: '2023-09-21 01:15',
+      withStaff: {
+        id: '',
+        name: '',
+      },
     },
   ],
 })

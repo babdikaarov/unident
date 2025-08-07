@@ -3,9 +3,9 @@ import {
   it,
   expect,
   beforeEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { createScrollControllerPlugin } from '../scroll-controller.plugin'
-import { __createAppWithViews__ } from '@schedule-x/calendar/src/utils/stateless/testing/__create-app-with-views__'
+import { __createAppWithViews__ } from '@unimed-x/calendar/src/utils/stateless/testing/__create-app-with-views__'
 import { Mock, vi } from 'vitest'
 import { cleanup, waitFor } from '@testing-library/preact'
 

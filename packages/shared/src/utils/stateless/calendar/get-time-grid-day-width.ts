@@ -1,4 +1,4 @@
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
 
 export const getTimeGridDayWidth = ($app: CalendarAppSingleton) => {
   return (

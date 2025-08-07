@@ -10,10 +10,10 @@ import {
   viewMonthAgenda,
   viewMonthGrid,
   viewWeek,
-} from '@schedule-x/calendar'
-import '@schedule-x/theme-default/dist/index.css'
+} from '../../../packages/calendar/src'
+import '../../../packages/theme-default/dist/index.css'
 import '../index.css'
-import { createEventModalPlugin } from '@schedule-x/event-modal'
+import { createEventModalPlugin } from '../../../packages/event-modal/src'
 
 const calendarElement = document.getElementById('calendar') as HTMLElement
 
@@ -31,39 +31,67 @@ const calendar = createCalendar({
       description: 'פגישה עם הצוות',
       start: '2023-09-18 03:10',
       end: '2023-09-18 04:30',
+      withStaff: {
+        id: '',
+        name: ''
+      }
     },
     {
       id: 2,
       title: 'פגישה עם הלקוח',
       start: '2023-09-21 00:00',
       end: '2023-09-21 01:00',
+      withStaff: {
+        id: '',
+        name: ''
+      }
     },
     {
       id: 3,
       title: 'פגישה עם המועמד',
       start: '2023-09-19 07:00',
       end: '2023-09-19 09:00',
+      withStaff: {
+        id: '',
+        name: ''
+      }
     },
     {
       id: 4,
       start: '2023-09-21 04:00',
       end: '2023-09-21 04:30',
+      withStaff: {
+        id: '',
+        name: ''
+      }
     },
     {
       id: 5,
       start: '2023-09-21 16:00',
       end: '2023-09-21 18:00',
+      withStaff: {
+        id: '',
+        name: ''
+      }
     },
     {
       id: 6,
       start: '2023-09-21 18:00',
       end: '2023-09-21 20:00',
+      withStaff: {
+        id: '',
+        name: ''
+      }
     },
     {
       id: 7,
       start: '2023-09-21 20:00',
       end: '2023-09-21 22:00',
-    }
+      withStaff: {
+        id: '',
+        name: ''
+      }
+    },
   ],
 })
 

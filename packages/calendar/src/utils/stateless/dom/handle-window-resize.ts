@@ -1,5 +1,5 @@
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
-import { View } from '@schedule-x/shared/src/types/calendar/view'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import { View } from '@unimed-x/shared/src/types/calendar/view'
 
 const setScreenSizeCompatibleView = (
   $app: CalendarAppSingleton,

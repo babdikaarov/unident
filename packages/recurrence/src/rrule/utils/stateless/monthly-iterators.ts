@@ -1,7 +1,7 @@
 import { RRuleOptions } from '../../types/rrule-options'
-import { addMonths } from '@schedule-x/shared/src'
+import { addMonths } from '@unimed-x/shared/src'
 import { isCountReached, isDatePastUntil } from './iterator-utils'
-import { toIntegers } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
+import { toIntegers } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
 
 const monthlyIteratorBymonthday = (dtstart: string, options: RRuleOptions) => {
   let currentDate = dtstart

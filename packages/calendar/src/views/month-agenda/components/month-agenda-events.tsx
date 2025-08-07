@@ -1,4 +1,4 @@
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import MonthAgendaEvent from './month-agenda-event'
 import { useContext } from 'preact/hooks'
 import { AppContext } from '../../../utils/stateful/app-context'

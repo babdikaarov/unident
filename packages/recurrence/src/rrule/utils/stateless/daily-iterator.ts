@@ -1,8 +1,8 @@
 import { RRuleOptions } from '../../types/rrule-options'
 import { getJSDayFromByday } from './byday-jsday-map'
-import { toJSDate } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
+import { toJSDate } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
 import { isCountReached, isDatePastUntil } from './iterator-utils'
-import { addDays } from '@schedule-x/shared/src'
+import { addDays } from '@unimed-x/shared/src'
 
 const dailyIterator = (dtstart: string, rruleOptions: RRuleOptions) => {
   let currentDate = dtstart

@@ -2,11 +2,11 @@ import { MonthAgendaDay as MonthAgendaDayType } from '../types/month-agenda'
 import {
   toIntegers,
   toJSDate,
-} from '@schedule-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
+} from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
 import { useContext } from 'preact/hooks'
 import { AppContext } from '../../../utils/stateful/app-context'
-import { getLocalizedDate } from '@schedule-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
-import { addDays } from '@schedule-x/shared/src'
+import { getLocalizedDate } from '@unimed-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
+import { addDays } from '@unimed-x/shared/src'
 import { getClassNameForWeekday } from '../../../utils/stateless/get-class-name-for-weekday'
 
 type props = {

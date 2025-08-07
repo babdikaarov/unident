@@ -4,33 +4,35 @@ import '@fontsource/open-sans/500-italic.css'
 import '@fontsource/open-sans/700.css'
 import '@fontsource/open-sans/700-italic.css'
 import '@fontsource/roboto-condensed'
-import { createCalendar, createViewList } from '@schedule-x/calendar'
-import '@schedule-x/theme-default/dist/index.css'
+import { createCalendar, createViewList } from '../../../packages/calendar/src'
+import '../../../packages/theme-default/dist/index.css'
 import '../index.css'
-import { addDays, CalendarEvent } from '@schedule-x/shared'
+import { addDays, CalendarEvent } from '../../../packages/shared/src'
 import { eventsDB } from './007-list-view-db.ts'
-import { createEventsServicePlugin } from '@schedule-x/events-service'
+import { createEventsServicePlugin } from '../../../packages/events-service/src'
 
 const calendarElement = document.getElementById('calendar') as HTMLElement
 
 const eventsService = createEventsServicePlugin()
 
 const getEventsBetween = (start: string, end: string): CalendarEvent[] => {
-  return eventsDB.filter((event => {
+  return eventsDB.filter((event) => {
     const eventStart = new Date(event.start)
     const eventEnd = new Date(event.end)
     const rangeStart = new Date(start)
     const rangeEnd = new Date(end)
 
-    return (eventStart >= rangeStart && eventStart <= rangeEnd) ||
+    return (
+      (eventStart >= rangeStart && eventStart <= rangeEnd) ||
       (eventEnd >= rangeStart && eventEnd <= rangeEnd) ||
       (eventStart <= rangeStart && eventEnd >= rangeEnd)
-  }))
+    )
+  })
 }
 
 let currentStart = '2026-06-23'
 let currentEnd = '2026-06-25'
-let currentNOfEvents = 0
+const currentNOfEvents = 0
 
 const initialEvents = getEventsBetween(currentStart, currentEnd)
 console.log('Initial events count:', initialEvents.length)
@@ -56,8 +58,8 @@ const calendar = createCalendar({
       if (newEvents.length === currentNOfEvents) return
 
       eventsService.set(newEvents)
-    }
-  }
+    },
+  },
 })
 
 calendar.render(calendarElement)

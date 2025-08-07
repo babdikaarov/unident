@@ -1,14 +1,14 @@
-import { BackgroundEvent } from '@schedule-x/shared/src/interfaces/calendar/background-event'
-import { dateStringRegex } from '@schedule-x/shared/src'
-import { dateFromDateTime } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
+import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
+import { dateStringRegex } from '@unimed-x/shared/src'
+import { dateFromDateTime } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
 import { AppContext } from '../../utils/stateful/app-context'
 import { useContext } from 'preact/hooks'
-import { getYCoordinateInTimeGrid } from '@schedule-x/shared/src/utils/stateless/calendar/get-y-coordinate-in-time-grid'
+import { getYCoordinateInTimeGrid } from '@unimed-x/shared/src/utils/stateless/calendar/get-y-coordinate-in-time-grid'
 import { getEventHeight } from '../../utils/stateless/events/event-styles'
 import {
   timePointsFromString,
   timeStringFromTimePoints,
-} from '@schedule-x/shared/src/utils/stateless/time/time-points/string-conversion'
+} from '@unimed-x/shared/src/utils/stateless/time/time-points/string-conversion'
 
 type props = {
   backgroundEvent: BackgroundEvent

@@ -2,13 +2,13 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { createMonth } from '../create-month'
-import TimeUnitsBuilder from '@schedule-x/shared/src/utils/stateful/time-units/time-units.builder'
+import TimeUnitsBuilder from '@unimed-x/shared/src/utils/stateful/time-units/time-units.builder'
 import CalendarEventBuilder from '../../../../../../../shared/src/utils/stateless/calendar/calendar-event/calendar-event.builder'
 import { __createAppWithViews__ } from '../../../../../utils/stateless/testing/__create-app-with-views__'
 import { positionInMonth } from '../position-in-month'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { createBaseConfig } from '../../../../../__test__/utils'
 
 describe('Positioning events for in month view', () => {

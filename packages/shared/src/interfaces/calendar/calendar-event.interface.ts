@@ -11,7 +11,7 @@ export default interface CalendarEventExternal {
   id: EventId
   start: string
   end: string
-  withStaff: {
+  withStaff?: {
     id: string
     name: string
   }

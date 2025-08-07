@@ -2,7 +2,7 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { stubInterface } from 'ts-sinon'
 import { TimePickerAppContext } from '../../../types/time-picker-app.context'
 import { TimePickerState } from '../../../types/time-picker-state'

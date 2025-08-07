@@ -1,7 +1,7 @@
 import { MonthAgenda, MonthAgendaDay } from '../../types/month-agenda'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
-import { dateFromDateTime } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
-import { addDays } from '@schedule-x/shared/src/utils/stateless/time/date-time-mutation/adding'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { dateFromDateTime } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
+import { addDays } from '@unimed-x/shared/src/utils/stateless/time/date-time-mutation/adding'
 
 const getAllEventDates = (startDate: string, endDate: string): string[] => {
   let currentDate = startDate

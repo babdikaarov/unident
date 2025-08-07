@@ -3,13 +3,13 @@ import {
   it,
   expect,
   beforeEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { cleanup } from '@testing-library/preact'
-import TimeUnitsBuilder from '@schedule-x/shared/src/utils/stateful/time-units/time-units.builder'
-import { Month } from '@schedule-x/shared/src/enums/time/month.enum'
+import TimeUnitsBuilder from '@unimed-x/shared/src/utils/stateful/time-units/time-units.builder'
+import { Month } from '@unimed-x/shared/src/enums/time/month.enum'
 import { createAppSingleton } from '../../../factory'
 import { renderComponent } from './utils'
-import { createBaseConfig } from '@schedule-x/calendar/src/__test__/utils'
+import { createBaseConfig } from '@unimed-x/calendar/src/__test__/utils'
 
 describe('MonthViewWeek', () => {
   beforeEach(() => {

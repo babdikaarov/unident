@@ -10,11 +10,11 @@ import {
   viewMonthAgenda,
   viewMonthGrid,
   viewWeek,
-} from '@schedule-x/calendar'
-import '@schedule-x/theme-default/dist/index.css'
+} from '../../../packages/calendar/src'
+import '../../../packages/theme-default/dist/index.css'
 import '../index.css'
-import { createDragAndDropPlugin } from '@schedule-x/drag-and-drop'
-import { createEventModalPlugin } from '@schedule-x/event-modal'
+import { createDragAndDropPlugin } from '../../../packages/drag-and-drop/src'
+import { createEventModalPlugin } from '../../../packages/event-modal/src'
 import { smokeTestEvents } from './__data__/smoke-data.ts'
 
 const calendarElement = document.getElementById('calendar') as HTMLElement

@@ -1,10 +1,10 @@
 import { Week } from '../../../types/week'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
-import { dateFromDateTime } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
-import { timeStringFromTimePoints } from '@schedule-x/shared/src/utils/stateless/time/time-points/string-conversion'
-import { addDays } from '@schedule-x/shared/src/utils/stateless/time/date-time-mutation/adding'
-import { DateRange } from '@schedule-x/shared/src/types/date-range'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import { dateFromDateTime } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
+import { timeStringFromTimePoints } from '@unimed-x/shared/src/utils/stateless/time/time-points/string-conversion'
+import { addDays } from '@unimed-x/shared/src/utils/stateless/time/date-time-mutation/adding'
+import { DateRange } from '@unimed-x/shared/src/types/date-range'
 
 export const positionInTimeGrid = (
   timeGridEvents: CalendarEventInternal[],

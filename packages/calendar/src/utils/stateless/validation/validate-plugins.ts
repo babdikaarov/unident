@@ -1,4 +1,4 @@
-import { PluginBase } from '@schedule-x/shared/src'
+import { PluginBase } from '@unimed-x/shared/src'
 
 /**
  * TODO v3: remove this when removing plugin over the config object

@@ -2,11 +2,11 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { createCalendarState } from '../calendar-state.impl'
 import CalendarConfigBuilder from '../../config/calendar-config.builder'
-import TimeUnitsBuilder from '@schedule-x/shared/src/utils/stateful/time-units/time-units.builder'
-import { InternalViewName } from '@schedule-x/shared/src/enums/calendar/internal-view.enum'
+import TimeUnitsBuilder from '@unimed-x/shared/src/utils/stateful/time-units/time-units.builder'
+import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-view.enum'
 import { viewWeek } from '../../../../views/week'
 import { viewMonthGrid } from '../../../../views/month-grid'
 import { viewDay } from '../../../../views/day'

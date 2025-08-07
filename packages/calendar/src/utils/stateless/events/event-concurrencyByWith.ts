@@ -1,4 +1,4 @@
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { areEvents0MinutesAndConcurrent } from './is-event-0-minutes'
 
 export const handleEventConcurrencyByWith = (

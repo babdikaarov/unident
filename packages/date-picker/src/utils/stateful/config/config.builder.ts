@@ -1,10 +1,10 @@
-import Builder from '@schedule-x/shared/src/interfaces/builder.interface'
-import DatePickerConfigInternal from '@schedule-x/shared/src/interfaces/date-picker/config.interface'
+import Builder from '@unimed-x/shared/src/interfaces/builder.interface'
+import DatePickerConfigInternal from '@unimed-x/shared/src/interfaces/date-picker/config.interface'
 import { ConfigImpl } from './config.impl'
-import { WeekDay } from '@schedule-x/shared/src/enums/time/week-day.enum'
-import { Placement } from '@schedule-x/shared/src/interfaces/date-picker/placement.enum'
-import { DatePickerListeners } from '@schedule-x/shared/src/interfaces/date-picker/listeners.interface'
-import { DatePickerStyle } from '@schedule-x/shared/src/interfaces/date-picker/style.interface'
+import { WeekDay } from '@unimed-x/shared/src/enums/time/week-day.enum'
+import { Placement } from '@unimed-x/shared/src/interfaces/date-picker/placement.enum'
+import { DatePickerListeners } from '@unimed-x/shared/src/interfaces/date-picker/listeners.interface'
+import { DatePickerStyle } from '@unimed-x/shared/src/interfaces/date-picker/style.interface'
 
 export class ConfigBuilder implements Builder<DatePickerConfigInternal> {
   locale: string | undefined

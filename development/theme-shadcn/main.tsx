@@ -15,9 +15,9 @@ import {
 // import '../../packages/theme-default/src/index.scss'
 import '../../packages/theme-shadcn/src/index.scss'
 import './app.css'
-import { calendars } from "./calendars.ts";
-import { createEventModalPlugin } from '@schedule-x/event-modal'
-import { createDragAndDropPlugin } from '@schedule-x/drag-and-drop'
+import { calendars } from './calendars.ts'
+import { createEventModalPlugin } from '@unimed-x/event-modal'
+import { createDragAndDropPlugin } from '@unimed-x/drag-and-drop'
 
 const calendarElement = document.getElementById('calendar') as HTMLElement
 
@@ -31,7 +31,7 @@ const calendar = createCalendar({
       start: '2024-05-11 10:00',
       end: '2024-05-11 12:00',
       calendarId: 'internal',
-      rrule: 'FREQ=WEEKLY;BYDAY=MO,WE,FR;COUNT=10'
+      rrule: 'FREQ=WEEKLY;BYDAY=MO,WE,FR;COUNT=10',
     },
     {
       id: 2,
@@ -74,7 +74,7 @@ const calendar = createCalendar({
       start: '2024-05-08',
       end: '2024-05-08',
       calendarId: 'teamBuilding',
-    }
+    },
   ],
   views: [viewMonthGrid, viewWeek, viewDay, viewMonthAgenda],
   defaultView: viewWeek.name,
@@ -100,10 +100,7 @@ const calendar = createCalendar({
     },
   },
   calendars,
-  plugins: [
-    createEventModalPlugin(),
-    createDragAndDropPlugin()
-  ],
+  plugins: [createEventModalPlugin(), createDragAndDropPlugin()],
 })
 calendar.render(calendarElement)
 

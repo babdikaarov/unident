@@ -1,6 +1,6 @@
 import CalendarEventBuilder from '../../../../../../shared/src/utils/stateless/calendar/calendar-event/calendar-event.builder'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
-import { randomStringId } from '@schedule-x/shared/src/utils/stateless/strings/random'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import { randomStringId } from '@unimed-x/shared/src/utils/stateless/strings/random'
 
 export const getTestEvent = ($app: CalendarAppSingleton) => {
   return new CalendarEventBuilder(

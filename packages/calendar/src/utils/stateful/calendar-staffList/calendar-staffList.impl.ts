@@ -1,7 +1,7 @@
 import { signal, computed } from '@preact/signals'
 import CalendarStaff, {
   StaffMember,
-} from '@schedule-x/shared/src/interfaces/calendar/calendar-staff.interface'
+} from '@unimed-x/shared/src/interfaces/calendar/calendar-staff.interface'
 
 export const createCalendarStaff = (
   staff: StaffMember[],

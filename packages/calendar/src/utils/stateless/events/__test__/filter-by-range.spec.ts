@@ -2,8 +2,8 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
-import { BackgroundEvent } from '@schedule-x/shared/src/interfaces/calendar/background-event'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 import { filterByRange } from '../filter-by-range'
 
 describe('filterByRange', () => {

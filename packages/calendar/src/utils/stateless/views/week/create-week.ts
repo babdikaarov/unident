@@ -1,9 +1,9 @@
-import { toJSDate } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
-import { toDateString } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
+import { toJSDate } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
+import { toDateString } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
 import { Week } from '../../../../types/week'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
-import { DateRange } from '@schedule-x/shared/src/types/date-range'
-import { InternalViewName } from '@schedule-x/shared/src/enums/calendar/internal-view.enum'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import { DateRange } from '@unimed-x/shared/src/types/date-range'
+import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-view.enum'
 
 const createOneDay = (week: Week, date: Date) => {
   const dateString = toDateString(date)

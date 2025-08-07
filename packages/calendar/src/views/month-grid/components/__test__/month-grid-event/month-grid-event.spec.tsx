@@ -2,7 +2,7 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { __createAppWithViews__ } from '../../../../../utils/stateless/testing/__create-app-with-views__'
 import { beforeEach, vi } from 'vitest'
 import { renderComponent } from './utils'

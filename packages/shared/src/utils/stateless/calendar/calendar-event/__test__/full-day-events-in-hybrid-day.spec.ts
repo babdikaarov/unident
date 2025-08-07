@@ -3,7 +3,7 @@ import {
   expect,
   it,
 } from '../../../testing/unit/unit-testing-library.impl'
-import CalendarConfigBuilder from '@schedule-x/calendar/src/utils/stateful/config/calendar-config.builder'
+import CalendarConfigBuilder from '@unimed-x/calendar/src/utils/stateful/config/calendar-config.builder'
 import CalendarEventBuilder from '../calendar-event.builder'
 
 describe('CalendarEventImpl', () => {

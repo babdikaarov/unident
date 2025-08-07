@@ -7,22 +7,25 @@ import '@fontsource/roboto-condensed'
 import '../app.css'
 import '../../packages/theme-default/src/time-picker.scss'
 import { createTimePicker } from '../../packages/time-picker/src/factory.ts'
-import { translate } from '@schedule-x/translations/src'
+import { translate } from '@unimed-x/translations/src'
 import { signal } from '@preact/signals'
-import { translations } from '@schedule-x/translations/src'
+import { translations } from '@unimed-x/translations/src'
 
 const onChange = (time: string) => {
   console.log('Time changed:', time)
 }
 
-const timePicker = createTimePicker({
-  onChange,
-  teleportTo: document.body,
-  is12Hour: true,
-  // dark: true,
-  initialValue: '23:59',
-  onEscapeKeyDown: ($app) => {
-    $app.timePickerState.isOpen.value = false
-  }
-}, translate(signal('mk-MK'), signal(translations)))
+const timePicker = createTimePicker(
+  {
+    onChange,
+    teleportTo: document.body,
+    is12Hour: true,
+    // dark: true,
+    initialValue: '23:59',
+    onEscapeKeyDown: ($app) => {
+      $app.timePickerState.isOpen.value = false
+    },
+  },
+  translate(signal('mk-MK'), signal(translations))
+)
 timePicker.render(document.querySelector('#app') as HTMLElement)

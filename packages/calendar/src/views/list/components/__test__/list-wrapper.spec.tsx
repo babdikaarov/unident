@@ -5,7 +5,7 @@ import {
   it,
   beforeEach,
   afterEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import {
   cleanup,
   render,
@@ -14,12 +14,12 @@ import {
   fireEvent,
 } from '@testing-library/preact'
 import { ListWrapper } from '../list-wrapper'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { signal } from '@preact/signals'
 import { vi } from 'vitest'
 import { __createAppWithViews__ } from '../../../../utils/stateless/testing/__create-app-with-views__'
 import { stubInterface } from 'ts-sinon'
-import EventModalPlugin from '@schedule-x/shared/src/interfaces/event-modal/event-modal.plugin'
+import EventModalPlugin from '@unimed-x/shared/src/interfaces/event-modal/event-modal.plugin'
 
 const createCalendarEvent = (
   start: string,

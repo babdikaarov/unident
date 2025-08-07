@@ -3,11 +3,11 @@ import {
   it,
   expect,
   beforeEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { renderComponent } from './utils'
 import { cleanup, screen, waitFor } from '@testing-library/preact'
 import { __createAppWithViews__ } from '../../../../utils/stateless/testing/__create-app-with-views__'
-import { createCalendarControlsPlugin } from '@schedule-x/calendar-controls/src'
+import { createCalendarControlsPlugin } from '@unimed-x/calendar-controls/src'
 
 describe('CalendarHeader', () => {
   beforeEach(() => {

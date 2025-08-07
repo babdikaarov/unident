@@ -1,4 +1,4 @@
-import { DayBoundariesInternal } from '@schedule-x/shared/src/types/calendar/day-boundaries'
+import { DayBoundariesInternal } from '@unimed-x/shared/src/types/calendar/day-boundaries'
 
 export const getTimeAxisHours = (
   { start, end }: DayBoundariesInternal,

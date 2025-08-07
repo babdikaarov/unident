@@ -5,23 +5,23 @@ import {
   it,
   expect,
   beforeEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
-import CalendarEventBuilder from '@schedule-x/shared/src/utils/stateless/calendar/calendar-event/calendar-event.builder'
-import { __createAppWithViews__ } from '@schedule-x/calendar/src/utils/stateless/testing/__create-app-with-views__'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+import CalendarEventBuilder from '@unimed-x/shared/src/utils/stateless/calendar/calendar-event/calendar-event.builder'
+import { __createAppWithViews__ } from '@unimed-x/calendar/src/utils/stateless/testing/__create-app-with-views__'
 import { DateGridEventResizer } from '../date-grid-event-resizer'
-import { CalendarAppSingleton } from '@schedule-x/shared/src'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { CalendarAppSingleton } from '@unimed-x/shared/src'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { Mock, vi } from 'vitest'
-import { deepCloneEvent } from '@schedule-x/shared/src/utils/stateless/calendar/deep-clone-event'
+import { deepCloneEvent } from '@unimed-x/shared/src/utils/stateless/calendar/deep-clone-event'
 import { createResizePlugin } from '../resize.plugin'
-import { ResizePlugin } from '@schedule-x/shared/src/interfaces/resize/resize-plugin.interface'
+import { ResizePlugin } from '@unimed-x/shared/src/interfaces/resize/resize-plugin.interface'
 import { waitFor } from '@testing-library/preact'
 import { stubInterface } from 'ts-sinon'
-import CalendarConfigInternal from '@schedule-x/shared/src/interfaces/calendar/calendar-config'
-import CalendarState from '@schedule-x/shared/src/interfaces/calendar/calendar-state.interface'
-import CalendarEvents from '@schedule-x/shared/src/interfaces/calendar/calendar-events.interface'
+import CalendarConfigInternal from '@unimed-x/shared/src/interfaces/calendar/calendar-config'
+import CalendarState from '@unimed-x/shared/src/interfaces/calendar/calendar-state.interface'
+import CalendarEvents from '@unimed-x/shared/src/interfaces/calendar/calendar-events.interface'
 import { signal } from '@preact/signals'
-import { DateRange } from '@schedule-x/shared/src/types/date-range'
+import { DateRange } from '@unimed-x/shared/src/types/date-range'
 
 describe('Resizing events in the date grid', () => {
   let $app: CalendarAppSingleton

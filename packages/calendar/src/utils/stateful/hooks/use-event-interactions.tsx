@@ -1,8 +1,8 @@
 import { useState } from 'preact/hooks'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { deepCloneEvent } from '../../../../../shared/src/utils/stateless/calendar/deep-clone-event'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
-import { isUIEventTouchEvent } from '@schedule-x/shared/src/utils/stateless/dom/is-touch-event'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import { isUIEventTouchEvent } from '@unimed-x/shared/src/utils/stateless/dom/is-touch-event'
 
 export default function useEventInteractions($app: CalendarAppSingleton) {
   const [eventCopy, setEventCopy] = useState<CalendarEventInternal>()

@@ -1,4 +1,4 @@
-import { toJSDate } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
+import { toJSDate } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
 
 export const getDurationInMinutes = (
   dtstart: string,

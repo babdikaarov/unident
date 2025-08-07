@@ -1,5 +1,5 @@
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
-import { BackgroundEvent } from '@schedule-x/shared/src/interfaces/calendar/background-event'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 
 export type MonthDay = {
   date: string

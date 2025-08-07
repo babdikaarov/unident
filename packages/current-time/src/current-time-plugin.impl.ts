@@ -1,14 +1,14 @@
 import CurrentTimePlugin, {
   CurrentTimePluginConfig,
-} from '@schedule-x/shared/src/interfaces/current-time/current-time-plugin.interface'
-import { CalendarAppSingleton } from '@schedule-x/shared/src'
+} from '@unimed-x/shared/src/interfaces/current-time/current-time-plugin.interface'
+import { CalendarAppSingleton } from '@unimed-x/shared/src'
 import {
   // toDateString,
   toDateTimeString,
-} from '@schedule-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
-import { getYCoordinateInTimeGrid } from '@schedule-x/shared/src/utils/stateless/calendar/get-y-coordinate-in-time-grid'
-import { addMinutes } from '@schedule-x/shared/src'
-import { definePlugin } from '@schedule-x/shared/src/utils/stateless/calendar/define-plugin'
+} from '@unimed-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
+import { getYCoordinateInTimeGrid } from '@unimed-x/shared/src/utils/stateless/calendar/get-y-coordinate-in-time-grid'
+import { addMinutes } from '@unimed-x/shared/src'
+import { definePlugin } from '@unimed-x/shared/src/utils/stateless/calendar/define-plugin'
 
 class CurrentTimePluginImpl implements CurrentTimePlugin {
   name = 'currentTime'

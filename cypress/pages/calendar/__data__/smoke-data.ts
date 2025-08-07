@@ -2,7 +2,10 @@
 export const smokeTestEvents = [
   {
     title: 'Meeting: John w. parents',
-    with: 'Ted Mosby',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Ted Mosby',
+    },
     start: '2023-09-01 06:55',
     end: '2023-09-01 08:25',
     color: 'brown',
@@ -13,7 +16,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'DEADLINE - english essay',
-    with: 'Ted Mosby',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Ted Mosby',
+    },
     start: '2023-09-01 07:35',
     end: '2023-09-01 09:05',
     color: 'blue',
@@ -24,7 +30,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Introduction to algebra',
-    with: 'Barney Stinson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Barney Stinson',
+    },
     start: '2023-09-01 14:30',
     end: '2023-09-01 16:00',
     color: 'blue',
@@ -34,7 +43,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Max Mustermann',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Max Mustermann',
+    },
     start: '2023-09-01 15:52',
     end: '2023-09-01 17:22',
     color: 'turquoise',
@@ -44,7 +56,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting with Dora',
-    with: 'Ross Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Ross Geller',
+    },
     start: '2023-09-01 15:52',
     end: '2023-09-01 17:22',
     color: 'pink',
@@ -55,7 +70,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Janina Elisabeth Parker Larson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Janina Elisabeth Parker Larson',
+    },
     start: '2023-09-01 18:00',
     end: '2023-09-01 19:30',
     color: 'blue',
@@ -65,7 +83,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Introduction to algebra',
-    with: 'Max Mustermann',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Max Mustermann',
+    },
     start: '2023-09-03',
     end: '2023-11-02',
     color: 'purple',
@@ -75,7 +96,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting with Dora',
-    with: 'John Doe',
+    withStaff: {
+      id: 'asdasd',
+      name: 'John Doe',
+    },
     start: '2023-09-03 03:47',
     end: '2023-09-03 04:47',
     color: 'yellow',
@@ -86,7 +110,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Ted Mosby',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Ted Mosby',
+    },
     start: '2023-09-03 17:10',
     end: '2023-09-03 17:55',
     color: 'blue',
@@ -95,7 +122,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Call with Karo',
-    with: 'Tom Österlund',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Tom Österlund',
+    },
     start: '2023-09-03 19:45',
     end: '2023-09-03 21:45',
     color: 'blue',
@@ -107,7 +137,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting with Dora',
-    with: 'Chandler Bing',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Chandler Bing',
+    },
     start: '2023-09-04',
     end: '2023-09-09',
     color: 'turquoise',
@@ -117,7 +150,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'English essay deadline',
-    with: 'Monica Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Monica Geller',
+    },
     start: '2023-09-04 02:50',
     end: '2023-09-04 03:20',
     color: 'purple',
@@ -128,7 +164,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Introduction to algebra',
-    with: 'Barney Stinson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Barney Stinson',
+    },
     start: '2023-09-04 07:15',
     end: '2023-09-04 09:15',
     color: 'pink',
@@ -139,7 +178,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting: John w. parents',
-    with: 'Barney Stinson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Barney Stinson',
+    },
     start: '2023-09-04 11:10',
     end: '2023-09-04 12:10',
     color: 'purple',
@@ -150,7 +192,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Call with Karo',
-    with: 'Ted Mosby',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Ted Mosby',
+    },
     start: '2023-09-04 12:00',
     end: '2023-09-04 13:30',
     color: 'turquoise',
@@ -160,7 +205,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting: John w. parents',
-    with: 'Erika Musterfrau',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Erika Musterfrau',
+    },
     start: '2023-09-04 13:00',
     end: '2023-09-04 14:30',
     color: 'yellow',
@@ -169,7 +217,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting: John w. parents',
-    with: 'Max Mustermann',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Max Mustermann',
+    },
     start: '2023-09-04 22:25',
     end: '2023-09-04 23:15',
     color: 'red',
@@ -179,7 +230,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'DEADLINE - english essay',
-    with: 'Lily Aldrin',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Lily Aldrin',
+    },
     start: '2023-09-05 00:55',
     end: '2023-09-05 02:55',
     color: 'yellow',
@@ -190,7 +244,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Monica Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Monica Geller',
+    },
     start: '2023-09-05 18:20',
     end: '2023-09-05 19:20',
     color: 'blue',
@@ -203,7 +260,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting with Dora',
-    with: 'Joey Tribiani',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Joey Tribiani',
+    },
     start: '2023-09-05 20:00',
     end: '2023-09-05 22:00',
     color: 'blue',
@@ -212,7 +272,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Call with Karo',
-    with: 'Lily Aldrin',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Lily Aldrin',
+    },
     start: '2023-09-05 20:05',
     end: '2023-09-05 20:20',
     color: 'blue',
@@ -221,7 +284,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'DEADLINE - english essay',
-    with: 'Alejandro Montes Oca de Munós',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Alejandro Montes Oca de Munós',
+    },
     start: '2023-09-05 22:00',
     end: '2023-09-05 23:30',
     color: 'yellow',
@@ -233,7 +299,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Outdoor sports',
-    with: 'Martin Gruber',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Martin Gruber',
+    },
     start: '2023-09-05 22:00',
     end: '2023-09-05 23:30',
     color: 'blue',
@@ -244,7 +313,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Outdoor sports',
-    with: 'John Doe',
+    withStaff: {
+      id: 'asdasd',
+      name: 'John Doe',
+    },
     start: '2023-09-06',
     end: '2023-09-06',
     color: 'pink',
@@ -255,7 +327,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Introduction to algebra',
-    with: 'Chandler Bing',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Chandler Bing',
+    },
     start: '2023-09-06 20:35',
     end: '2023-09-06 22:35',
     color: 'blue',
@@ -265,7 +340,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'DEADLINE - english essay',
-    with: 'Barney Stinson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Barney Stinson',
+    },
     start: '2023-09-07 01:14',
     end: '2023-09-07 02:04',
     color: 'green',
@@ -275,7 +353,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'DEADLINE - english essay',
-    with: 'Robin Scherbatsky',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Robin Scherbatsky',
+    },
     start: '2023-09-07 17:10',
     end: '2023-09-07 17:55',
     color: 'blue',
@@ -286,7 +367,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting: John w. parents',
-    with: 'Tom Österlund',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Tom Österlund',
+    },
     start: '2023-09-07 18:15',
     end: '2023-09-07 20:15',
     color: 'blue',
@@ -298,7 +382,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting with Dora',
-    with: 'Tom Österlund',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Tom Österlund',
+    },
     start: '2023-09-07 21:55',
     end: '2023-09-07 22:10',
     color: 'yellow',
@@ -310,7 +397,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting: John w. parents',
-    with: 'Erika Musterfrau',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Erika Musterfrau',
+    },
     start: '2023-09-08 00:52',
     end: '2023-09-08 02:22',
     color: 'pink',
@@ -320,7 +410,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting with Dora',
-    with: 'Monica Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Monica Geller',
+    },
     start: '2023-09-08 18:00',
     end: '2023-09-08 18:45',
     color: 'yellow',
@@ -330,7 +423,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting with Dora',
-    with: 'Pheobe Buffay',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Pheobe Buffay',
+    },
     start: '2023-09-09 01:20',
     end: '2023-09-09 02:20',
     color: 'blue',
@@ -340,7 +436,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting: John w. parents',
-    with: 'Pheobe Buffay',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Pheobe Buffay',
+    },
     start: '2023-09-09 05:14',
     end: '2023-09-09 06:44',
     color: 'blue',
@@ -352,7 +451,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Introduction to algebra',
-    with: 'Monica Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Monica Geller',
+    },
     start: '2023-09-09 06:00',
     end: '2023-09-09 06:50',
     color: 'green',
@@ -362,7 +464,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting: John w. parents',
-    with: 'Rachel Greene',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Rachel Greene',
+    },
     start: '2023-09-09 14:50',
     end: '2023-09-09 15:50',
     color: 'red',
@@ -373,7 +478,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Introduction to algebra',
-    with: 'Janina Elisabeth Parker Larson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Janina Elisabeth Parker Larson',
+    },
     start: '2023-09-10 00:00',
     end: '2023-09-10 01:30',
     color: 'blue',
@@ -385,7 +493,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Pheobe Buffay',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Pheobe Buffay',
+    },
     start: '2023-09-10 05:30',
     end: '2023-09-10 07:00',
     color: 'blue',
@@ -397,7 +508,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'DEADLINE - english essay',
-    with: 'Rachel Greene',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Rachel Greene',
+    },
     start: '2023-09-10 09:14',
     end: '2023-09-10 11:14',
     color: 'blue',
@@ -408,7 +522,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'English essay deadline',
-    with: 'Tom Österlund',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Tom Österlund',
+    },
     start: '2023-09-10 15:50',
     end: '2023-09-10 17:20',
     color: 'green',
@@ -419,7 +536,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Erika Musterfrau',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Erika Musterfrau',
+    },
     start: '2023-09-10 18:00',
     end: '2023-09-10 18:15',
     color: 'turquoise',
@@ -428,7 +548,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Max Mustermann',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Max Mustermann',
+    },
     start: '2023-09-11 00:52',
     end: '2023-09-11 02:52',
     color: 'blue',
@@ -437,7 +560,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Outdoor sports',
-    with: 'Erika Musterfrau',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Erika Musterfrau',
+    },
     start: '2023-09-11 01:30',
     end: '2023-09-11 03:30',
     color: 'purple',
@@ -449,7 +575,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'English essay deadline',
-    with: 'Chandler Bing',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Chandler Bing',
+    },
     start: '2023-09-11 10:00',
     end: '2023-09-11 11:00',
     color: 'blue',
@@ -460,7 +589,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Monica Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Monica Geller',
+    },
     start: '2023-09-11 20:40',
     end: '2023-09-11 22:40',
     color: 'red',
@@ -471,7 +603,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Call with Karo',
-    with: 'Marshall Eriksen',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Marshall Eriksen',
+    },
     start: '2023-09-12 12:45',
     end: '2023-09-12 14:15',
     color: 'yellow',
@@ -481,7 +616,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting: John w. parents',
-    with: 'Alejandro Montes Oca de Munós',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Alejandro Montes Oca de Munós',
+    },
     start: '2023-09-13 14:00',
     end: '2023-09-13 14:50',
     color: 'green',
@@ -492,7 +630,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Erika Musterfrau',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Erika Musterfrau',
+    },
     start: '2023-09-13 21:05',
     end: '2023-09-13 22:35',
     color: 'brown',
@@ -502,7 +643,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Joey Tribiani',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Joey Tribiani',
+    },
     start: '2023-09-15 23:00',
     end: '2023-09-16 00:30',
     color: 'blue',
@@ -512,7 +656,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Ted Mosby',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Ted Mosby',
+    },
     start: '2023-09-16 22:40',
     end: '2023-09-16 22:55',
     color: 'red',
@@ -523,7 +670,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'English essay deadline',
-    with: 'Monica Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Monica Geller',
+    },
     start: '2023-09-17 13:35',
     end: '2023-09-17 14:20',
     color: 'pink',
@@ -533,7 +683,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Robin Scherbatsky',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Robin Scherbatsky',
+    },
     start: '2023-09-17 15:00',
     end: '2023-09-17 17:00',
     color: 'pink',
@@ -546,7 +699,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Tom Österlund',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Tom Österlund',
+    },
     start: '2023-09-17 21:00',
     end: '2023-09-17 22:30',
     color: 'brown',
@@ -556,7 +712,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Chandler Bing',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Chandler Bing',
+    },
     start: '2023-09-18 05:30',
     end: '2023-09-18 07:00',
     color: 'red',
@@ -568,7 +727,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting with Dora',
-    with: 'Barney Stinson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Barney Stinson',
+    },
     start: '2023-09-19 05:05',
     end: '2023-09-19 06:05',
     color: 'red',
@@ -579,7 +741,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'English essay deadline',
-    with: 'Barney Stinson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Barney Stinson',
+    },
     start: '2023-09-19 12:35',
     end: '2023-09-19 14:05',
     color: 'blue',
@@ -589,7 +754,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Outdoor sports',
-    with: 'Max Mustermann',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Max Mustermann',
+    },
     start: '2023-09-19 13:50',
     end: '2023-09-19 14:50',
     color: 'yellow',
@@ -600,7 +768,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting with Dora',
-    with: 'Erika Musterfrau',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Erika Musterfrau',
+    },
     start: '2023-09-19 16:14',
     end: '2023-09-19 17:04',
     color: 'turquoise',
@@ -610,7 +781,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'DEADLINE - english essay',
-    with: 'Joey Tribiani',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Joey Tribiani',
+    },
     start: '2023-09-19 21:00',
     end: '2023-09-19 21:45',
     color: 'purple',
@@ -620,7 +794,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'DEADLINE - english essay',
-    with: 'Elisabeth Gruber',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Elisabeth Gruber',
+    },
     start: '2023-09-20',
     end: '2023-09-27',
     color: 'purple',
@@ -631,7 +808,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Janina Elisabeth Parker Larson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Janina Elisabeth Parker Larson',
+    },
     start: '2023-09-20 02:00',
     end: '2023-09-20 03:00',
     color: 'blue',
@@ -643,7 +823,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Alejandro Montes Oca de Munós',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Alejandro Montes Oca de Munós',
+    },
     start: '2023-09-20 10:30',
     end: '2023-09-20 11:15',
     color: 'brown',
@@ -654,7 +837,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Rachel Greene',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Rachel Greene',
+    },
     start: '2023-09-20 14:15',
     end: '2023-09-20 15:45',
     color: 'yellow',
@@ -664,7 +850,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Call with Karo',
-    with: 'Erika Musterfrau',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Erika Musterfrau',
+    },
     start: '2023-09-20 19:00',
     end: '2023-09-20 19:15',
     color: 'blue',
@@ -675,7 +864,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Intro to physics',
-    with: 'Max Mustermann',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Max Mustermann',
+    },
     start: '2023-09-21 01:00',
     end: '2023-09-21 02:30',
     color: 'green',
@@ -686,7 +878,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Pheobe Buffay',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Pheobe Buffay',
+    },
     start: '2023-09-21 02:45',
     end: '2023-09-21 03:30',
     color: 'green',
@@ -695,7 +890,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting with Daphne',
-    with: 'Pheobe Buffay',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Pheobe Buffay',
+    },
     start: '2023-09-21 06:10',
     end: '2023-09-21 07:00',
     color: 'blue',
@@ -707,7 +905,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Ross Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Ross Geller',
+    },
     start: '2023-09-21 09:00',
     end: '2023-09-21 10:30',
     color: 'turquoise',
@@ -718,7 +919,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Introduction to algebra',
-    with: 'Monica Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Monica Geller',
+    },
     start: '2023-09-21 09:00',
     end: '2023-09-21 10:30',
     color: 'blue',
@@ -729,7 +933,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Ross Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Ross Geller',
+    },
     start: '2023-09-21 09:35',
     end: '2023-09-21 10:20',
     color: 'turquoise',
@@ -741,7 +948,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Chandler Bing',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Chandler Bing',
+    },
     start: '2023-09-22 19:30',
     end: '2023-09-22 20:30',
     color: 'blue',
@@ -753,7 +963,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'John Doe',
+    withStaff: {
+      id: 'asdasd',
+      name: 'John Doe',
+    },
     start: '2023-09-23 07:00',
     end: '2023-09-23 08:30',
     color: 'red',
@@ -764,7 +977,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Max Mustermann',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Max Mustermann',
+    },
     start: '2023-09-23 07:05',
     end: '2023-09-23 08:35',
     color: 'turquoise',
@@ -774,7 +990,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'DEADLINE - english essay',
-    with: 'Monica Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Monica Geller',
+    },
     start: '2023-09-23 15:50',
     end: '2023-09-23 16:05',
     color: 'yellow',
@@ -784,7 +1003,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Monica Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Monica Geller',
+    },
     start: '2023-09-24 00:20',
     end: '2023-09-24 00:35',
     color: 'turquoise',
@@ -796,7 +1018,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Outdoor sports',
-    with: 'Elisabeth Gruber',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Elisabeth Gruber',
+    },
     start: '2023-09-24 02:40',
     end: '2023-09-24 04:40',
     color: 'pink',
@@ -808,7 +1033,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Outdoor sports',
-    with: 'Albert Einstein',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Albert Einstein',
+    },
     start: '2023-09-25 02:00',
     end: '2023-09-25 04:00',
     color: 'red',
@@ -818,7 +1046,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting with Dora',
-    with: 'Chandler Bing',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Chandler Bing',
+    },
     start: '2023-09-25 07:14',
     end: '2023-09-25 08:14',
     color: 'pink',
@@ -828,7 +1059,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'English essay deadline',
-    with: 'Lily Aldrin',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Lily Aldrin',
+    },
     start: '2023-09-25 10:30',
     end: '2023-09-25 11:20',
     color: 'blue',
@@ -838,7 +1072,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Introduction to algebra',
-    with: 'Rachel Greene',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Rachel Greene',
+    },
     start: '2023-09-25 11:20',
     end: '2023-09-25 12:05',
     color: 'turquoise',
@@ -851,7 +1088,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Call with Karo',
-    with: 'Monica Geller',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Monica Geller',
+    },
     start: '2023-09-26',
     end: '2023-09-26',
     color: 'blue',
@@ -863,7 +1103,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'English essay deadline',
-    with: 'Erika Musterfrau',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Erika Musterfrau',
+    },
     start: '2023-09-26 17:35',
     end: '2023-09-26 17:50',
     color: 'blue',
@@ -873,7 +1116,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Janina Elisabeth Parker Larson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Janina Elisabeth Parker Larson',
+    },
     start: '2023-09-27 11:52',
     end: '2023-09-27 13:22',
     color: 'pink',
@@ -885,7 +1131,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting: John w. parents',
-    with: 'Elisabeth Gruber',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Elisabeth Gruber',
+    },
     start: '2023-09-27 14:00',
     end: '2023-09-27 15:30',
     color: 'green',
@@ -896,7 +1145,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Joey Tribiani',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Joey Tribiani',
+    },
     start: '2023-09-28 03:00',
     end: '2023-09-28 04:00',
     color: 'blue',
@@ -907,7 +1159,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Introduction to algebra',
-    with: 'John Doe',
+    withStaff: {
+      id: 'asdasd',
+      name: 'John Doe',
+    },
     start: '2023-09-28 05:10',
     end: '2023-09-28 06:10',
     color: 'red',
@@ -916,7 +1171,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Call with Karo',
-    with: 'Janina Elisabeth Parker Larson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Janina Elisabeth Parker Larson',
+    },
     start: '2023-09-28 09:00',
     end: '2023-09-28 10:30',
     color: 'brown',
@@ -926,7 +1184,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting: John w. parents',
-    with: 'Barney Stinson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Barney Stinson',
+    },
     start: '2023-09-29 10:40',
     end: '2023-09-29 11:40',
     color: 'brown',
@@ -938,7 +1199,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Call with Karo',
-    with: 'Marshall Eriksen',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Marshall Eriksen',
+    },
     start: '2023-09-29 11:05',
     end: '2023-09-29 12:35',
     color: 'red',
@@ -948,7 +1212,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Introduction to algebra',
-    with: 'John Doe',
+    withStaff: {
+      id: 'asdasd',
+      name: 'John Doe',
+    },
     start: '2023-09-29 16:35',
     end: '2023-09-29 18:35',
     color: 'blue',
@@ -958,7 +1225,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Call with Karo',
-    with: 'Robin Scherbatsky',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Robin Scherbatsky',
+    },
     start: '2023-09-29 17:30',
     end: '2023-09-29 19:00',
     color: 'green',
@@ -967,7 +1237,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Break',
-    with: 'Janina Elisabeth Parker Larson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Janina Elisabeth Parker Larson',
+    },
     start: '2023-09-30 05:05',
     end: '2023-09-30 06:35',
     color: 'green',
@@ -978,7 +1251,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Meeting: John w. parents',
-    with: 'Ted Mosby',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Ted Mosby',
+    },
     start: '2023-09-30 05:05',
     end: '2023-09-30 06:35',
     color: 'blue',
@@ -988,7 +1264,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Call with Karo',
-    with: 'Janina Elisabeth Parker Larson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Janina Elisabeth Parker Larson',
+    },
     start: '2023-09-30 08:00',
     end: '2023-09-30 09:30',
     color: 'green',
@@ -998,7 +1277,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Call with Karo',
-    with: 'Martin Gruber',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Martin Gruber',
+    },
     start: '2023-09-30 10:30',
     end: '2023-09-30 11:15',
     color: 'yellow',
@@ -1010,7 +1292,10 @@ export const smokeTestEvents = [
   },
   {
     title: 'Advanced algebra',
-    with: 'Janina Elisabeth Parker Larson',
+    withStaff: {
+      id: 'asdasd',
+      name: 'Janina Elisabeth Parker Larson',
+    },
     start: '2023-10-01 11:47',
     end: '2023-10-01 13:17',
     color: 'red',

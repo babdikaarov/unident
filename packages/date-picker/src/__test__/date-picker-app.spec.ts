@@ -3,10 +3,10 @@ import {
   it,
   expect,
   mockFn,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import DatePickerApp from '../date-picker.app'
 import { createAppSingleton } from '../factory'
-import { DatePickerListeners } from '@schedule-x/shared/src/interfaces/date-picker/listeners.interface'
+import { DatePickerListeners } from '@unimed-x/shared/src/interfaces/date-picker/listeners.interface'
 
 const createApp = (
   initialSelectedDate?: string,

@@ -1,7 +1,7 @@
-import { InvalidLocaleError } from '@schedule-x/shared/src/utils/stateless/errors/InvalidLocale.error'
-import { TranslationVariables } from '@schedule-x/shared/src/types/translations'
+import { InvalidLocaleError } from '@unimed-x/shared/src/utils/stateless/errors/InvalidLocale.error'
+import { TranslationVariables } from '@unimed-x/shared/src/types/translations'
 import { Signal } from '@preact/signals'
-import { Language } from '@schedule-x/shared/src/types/translations/language.translations'
+import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 
 export const translate =
   (locale: Signal<string>, languages: Signal<Record<string, Language>>) =>

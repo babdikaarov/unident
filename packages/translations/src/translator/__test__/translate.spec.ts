@@ -2,12 +2,12 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { translate } from '../translate'
-import { InvalidLocaleError } from '@schedule-x/shared/src/utils/stateless/errors/InvalidLocale.error'
+import { InvalidLocaleError } from '@unimed-x/shared/src/utils/stateless/errors/InvalidLocale.error'
 import { signal } from '@preact/signals'
 import { stubInterface } from 'ts-sinon'
-import { Language } from '@schedule-x/shared/src/types/translations/language.translations'
+import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 
 describe('translate', () => {
   it('should return the key if the locale is en-US', () => {

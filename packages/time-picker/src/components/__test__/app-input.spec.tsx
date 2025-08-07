@@ -3,13 +3,13 @@ import {
   it,
   expect,
   afterEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { cleanup, render, waitFor } from '@testing-library/preact'
 import AppInput from '../app-input'
 import { createTimePickerAppContext } from '../../factory'
 import { AppContext } from '../../utils/stateful/app-context'
 import { assertElementType } from '../../../../../libs/assertions/src'
-import { translate, translations } from '@schedule-x/translations/src'
+import { translate, translations } from '@unimed-x/translations/src'
 import { signal } from '@preact/signals'
 
 describe('The time picker input (readonly, value display field)', () => {

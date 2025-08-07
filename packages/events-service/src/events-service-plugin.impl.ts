@@ -1,13 +1,13 @@
-import { CalendarAppSingleton } from '@schedule-x/shared/src'
-import EventsFacade from '@schedule-x/shared/src/utils/stateful/events-facade/events-facade.interface'
-import EventsFacadeImpl from '@schedule-x/shared/src/utils/stateful/events-facade/events-facade.impl'
-import CalendarEventExternal from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
-import { EventId } from '@schedule-x/shared/src/types/event-id'
-import { definePlugin } from '@schedule-x/shared/src/utils/stateless/calendar/define-plugin'
-import { EventsService } from '@schedule-x/shared/src/interfaces/events-service/events-service.interface'
-import { BackgroundEvent } from '@schedule-x/shared/src/interfaces/calendar/background-event'
+import { CalendarAppSingleton } from '@unimed-x/shared/src'
+import EventsFacade from '@unimed-x/shared/src/utils/stateful/events-facade/events-facade.interface'
+import EventsFacadeImpl from '@unimed-x/shared/src/utils/stateful/events-facade/events-facade.impl'
+import CalendarEventExternal from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { EventId } from '@unimed-x/shared/src/types/event-id'
+import { definePlugin } from '@unimed-x/shared/src/utils/stateless/calendar/define-plugin'
+import { EventsService } from '@unimed-x/shared/src/interfaces/events-service/events-service.interface'
+import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 
-import { validateEvents } from '@schedule-x/shared/src/utils/stateless/validation/validate-events'
+import { validateEvents } from '@unimed-x/shared/src/utils/stateless/validation/validate-events'
 
 class EventsServicePluginImpl implements EventsService {
   name = 'EventsServicePlugin'

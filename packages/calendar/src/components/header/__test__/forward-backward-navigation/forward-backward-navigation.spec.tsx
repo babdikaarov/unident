@@ -3,12 +3,12 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { __createAppWithViews__ } from '../../../../utils/stateless/testing/__create-app-with-views__'
 import { vi } from 'vitest'
 import { cleanup } from '@testing-library/preact'
 import { clickNext, clickPrevious, renderComponent } from './utils'
-import { InternalViewName } from '@schedule-x/shared/src/enums/calendar/internal-view.enum'
+import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-view.enum'
 
 const getApp = (onRangeUpdate: () => void, defaultView: InternalViewName) =>
   __createAppWithViews__({

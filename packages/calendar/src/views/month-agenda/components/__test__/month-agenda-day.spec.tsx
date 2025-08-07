@@ -3,14 +3,14 @@ import {
   it,
   expect,
   afterEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { cleanup, fireEvent, render } from '@testing-library/preact'
 import MonthAgendaDay from '../month-agenda-day'
 import { MonthAgendaDay as MonthAgendaDayType } from '../../types/month-agenda'
 import { StateUpdater } from 'preact/hooks'
 import { vi } from 'vitest'
 import { __createAppWithViews__ } from '../../../../utils/stateless/testing/__create-app-with-views__'
-import { CalendarAppSingleton } from '@schedule-x/shared/src'
+import { CalendarAppSingleton } from '@unimed-x/shared/src'
 import { AppContext } from '../../../../utils/stateful/app-context'
 
 const renderComponent = (

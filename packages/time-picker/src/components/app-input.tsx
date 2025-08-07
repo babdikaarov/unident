@@ -1,4 +1,4 @@
-import { randomStringId } from '@schedule-x/shared/src/utils/stateless/strings/random'
+import { randomStringId } from '@unimed-x/shared/src/utils/stateless/strings/random'
 import { useContext, useEffect } from 'preact/compat'
 import { AppContext } from '../utils/stateful/app-context'
 import { useState } from 'preact/hooks'

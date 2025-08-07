@@ -1,8 +1,8 @@
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
 import { AppContext } from '../utils/stateful/app-context'
 import { useEffect, useState } from 'preact/hooks'
-import { View } from '@schedule-x/shared/src/types/calendar/view'
-import { randomStringId } from '@schedule-x/shared/src/utils/stateless/strings/random'
+import { View } from '@unimed-x/shared/src/types/calendar/view'
+import { randomStringId } from '@unimed-x/shared/src/utils/stateless/strings/random'
 import { setWrapperElement } from '../utils/stateless/dom/set-wrapper-element'
 import { handleWindowResize } from '../utils/stateless/dom/handle-window-resize'
 import useWrapperClasses from '../utils/stateful/hooks/use-wrapper-classes'
@@ -11,7 +11,7 @@ import {
   initPlugins,
 } from '../utils/stateless/plugins-lifecycle'
 import { useSignalEffect } from '@preact/signals'
-import { InternalViewName } from '@schedule-x/shared/src/enums/calendar/internal-view.enum'
+import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-view.enum'
 import CalendarHeaderAgenda from './header/calendar-header-agenda'
 
 type props = {

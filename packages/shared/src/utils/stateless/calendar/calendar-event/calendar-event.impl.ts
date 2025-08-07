@@ -30,7 +30,7 @@ export default class CalendarEventImpl implements CalendarEventInternal {
     public id: EventId,
     public start: string,
     public end: string,
-    public withStaff: {
+    public withStaff?: {
       id: string
       name: string
     },

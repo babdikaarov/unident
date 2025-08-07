@@ -1,4 +1,4 @@
-import { CalendarTranslations } from '@schedule-x/shared/src/types/translations/calendar.translations'
+import { CalendarTranslations } from '@unimed-x/shared/src/types/translations/calendar.translations'
 
 export const calendarHrHR: CalendarTranslations = {
   Today: 'Danas',

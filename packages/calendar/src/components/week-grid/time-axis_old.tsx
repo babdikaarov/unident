@@ -2,7 +2,7 @@ import { useContext, useEffect, useMemo, useState } from 'preact/hooks'
 import { AppContext } from '../../utils/stateful/app-context'
 import { getTimeAxisHours } from '../../utils/stateless/time/time-axis/time-axis'
 import { useSignalEffect } from '@preact/signals'
-import { randomStringId } from '@schedule-x/shared/src'
+import { randomStringId } from '@unimed-x/shared/src'
 
 export default function TimeAxis() {
   const $app = useContext(AppContext)

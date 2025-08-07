@@ -2,9 +2,9 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { stubInterface } from 'ts-sinon'
-import { CalendarAppSingleton } from '@schedule-x/shared/src'
+import { CalendarAppSingleton } from '@unimed-x/shared/src'
 import { viewDay } from '../../../../views/day'
 import { viewMonthGrid } from '../../../../views/month-grid'
 import { signal } from '@preact/signals'

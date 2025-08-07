@@ -1,9 +1,9 @@
 import { stubInterface } from 'ts-sinon'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
-import EventModalPlugin from '@schedule-x/shared/src/interfaces/event-modal/event-modal.plugin'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import EventModalPlugin from '@unimed-x/shared/src/interfaces/event-modal/event-modal.plugin'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { signal } from '@preact/signals'
-import { CustomComponentFn } from '@schedule-x/shared/src/interfaces/calendar/calendar-config'
+import { CustomComponentFn } from '@unimed-x/shared/src/interfaces/calendar/calendar-config'
 
 const createCalendarEvent = () => {
   const calendarEvent = stubInterface<CalendarEventInternal>()

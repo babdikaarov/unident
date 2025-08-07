@@ -3,7 +3,7 @@ import {
   it,
   expect,
   beforeEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { __createAppWithViews__ } from '../../../../../utils/stateless/testing/__create-app-with-views__'
 import { scrollOnDateSelection } from '../scroll-on-date-selection'
 import { vi } from 'vitest'

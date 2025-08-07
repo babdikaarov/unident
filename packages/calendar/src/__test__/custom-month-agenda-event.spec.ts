@@ -4,7 +4,7 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { createCalendar } from '../factory'
 import { cleanup, waitFor } from '@testing-library/preact'
 import CalendarApp from '../calendar.app'

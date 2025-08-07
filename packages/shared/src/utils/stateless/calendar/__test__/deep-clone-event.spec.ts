@@ -3,7 +3,7 @@ import {
   it,
   expect,
   beforeEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { deepCloneEvent } from '../deep-clone-event'
 import CalendarEventBuilder from '../calendar-event/calendar-event.builder'
 import CalendarAppSingleton from '../../../../interfaces/calendar/calendar-app-singleton'

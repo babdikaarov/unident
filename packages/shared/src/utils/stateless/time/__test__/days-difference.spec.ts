@@ -2,7 +2,7 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { calculateDaysDifference } from '../days-difference'
 
 describe('calculating difference between 2 days', () => {

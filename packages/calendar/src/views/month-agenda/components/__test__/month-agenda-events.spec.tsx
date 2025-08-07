@@ -3,12 +3,12 @@ import {
   it,
   expect,
   afterEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
 import { cleanup, render, screen } from '@testing-library/preact'
 import { AppContext } from '../../../../utils/stateful/app-context'
 import MonthAgendaEvents from '../month-agenda-events'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { __createAppWithViews__ } from '../../../../utils/stateless/testing/__create-app-with-views__'
 
 const renderComponent = (

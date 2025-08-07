@@ -4,7 +4,7 @@ import {
   expect,
   beforeEach,
   afterEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { __createAppWithViews__ } from '../../../testing/__create-app-with-views__'
 import { getClickDateTime } from '../grid-click-to-datetime'
 import { cleanup } from '@testing-library/preact'

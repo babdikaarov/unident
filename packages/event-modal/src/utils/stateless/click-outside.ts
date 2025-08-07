@@ -1,5 +1,5 @@
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
-import EventModalPlugin from '@schedule-x/shared/src/interfaces/event-modal/event-modal.plugin'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import EventModalPlugin from '@unimed-x/shared/src/interfaces/event-modal/event-modal.plugin'
 
 export const createClickOutsideListener = (
   $app: CalendarAppSingleton,

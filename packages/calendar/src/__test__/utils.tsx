@@ -1,10 +1,10 @@
-import { WeekDay } from '@schedule-x/shared/src/enums/time/week-day.enum'
+import { WeekDay } from '@unimed-x/shared/src/enums/time/week-day.enum'
 import { signal } from '@preact/signals'
 import {
   DEFAULT_FIRST_DAY_OF_WEEK,
   DEFAULT_LOCALE,
-} from '@schedule-x/shared/src/values'
-import Config from '@schedule-x/shared/src/interfaces/config.interface'
+} from '@unimed-x/shared/src/values'
+import Config from '@unimed-x/shared/src/interfaces/config.interface'
 
 export const getFirstEventElement = (calendarEl: HTMLDivElement) =>
   calendarEl.querySelector('.sx__event') as HTMLDivElement

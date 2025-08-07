@@ -2,11 +2,11 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
-import CalendarEventExternal from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
-import { __createAppWithViews__ } from '@schedule-x/calendar/src/utils/stateless/testing/__create-app-with-views__'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+import CalendarEventExternal from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { __createAppWithViews__ } from '@unimed-x/calendar/src/utils/stateless/testing/__create-app-with-views__'
 import { createEventRecurrencePlugin } from '../event-recurrence-plugin.impl'
-import { BackgroundEvent } from '@schedule-x/shared/src/interfaces/calendar/background-event'
+import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 
 describe('limiting infinite events to the current calendar range', () => {
   describe('when rendering the calendar in month view', () => {

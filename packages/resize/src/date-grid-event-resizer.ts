@@ -1,12 +1,12 @@
-import { CalendarAppSingleton } from '@schedule-x/shared/src'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
-import { DateRange } from '@schedule-x/shared/src/types/date-range'
-import { getTimeGridDayWidth } from '@schedule-x/shared/src/utils/stateless/calendar/get-time-grid-day-width'
-import { addDays } from '@schedule-x/shared/src'
-import { toDateString } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
-import { toJSDate } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
+import { CalendarAppSingleton } from '@unimed-x/shared/src'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { DateRange } from '@unimed-x/shared/src/types/date-range'
+import { getTimeGridDayWidth } from '@unimed-x/shared/src/utils/stateless/calendar/get-time-grid-day-width'
+import { addDays } from '@unimed-x/shared/src'
+import { toDateString } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
+import { toJSDate } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
 import { updateEventsList } from './utils/stateless/update-events-list'
-import { getEventCoordinates } from '@schedule-x/shared/src/utils/stateless/dom/get-event-coordinates'
+import { getEventCoordinates } from '@unimed-x/shared/src/utils/stateless/dom/get-event-coordinates'
 
 export class DateGridEventResizer {
   private readonly dayWidth: number = 0

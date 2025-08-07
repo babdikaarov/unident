@@ -1,11 +1,11 @@
-import { CalendarAppSingleton } from '@schedule-x/shared/src'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { CalendarAppSingleton } from '@unimed-x/shared/src'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { TimeGridEventResizer } from './time-grid-event-resizer'
-import { ResizePlugin } from '@schedule-x/shared/src/interfaces/resize/resize-plugin.interface'
-import { PluginName } from '@schedule-x/shared/src/enums/plugin-name.enum'
+import { ResizePlugin } from '@unimed-x/shared/src/interfaces/resize/resize-plugin.interface'
+import { PluginName } from '@unimed-x/shared/src/enums/plugin-name.enum'
 import { DateGridEventResizer } from './date-grid-event-resizer'
-import { definePlugin } from '@schedule-x/shared/src/utils/stateless/calendar/define-plugin'
-import { getEventCoordinates } from '@schedule-x/shared/src/utils/stateless/dom/get-event-coordinates'
+import { definePlugin } from '@unimed-x/shared/src/utils/stateless/calendar/define-plugin'
+import { getEventCoordinates } from '@unimed-x/shared/src/utils/stateless/dom/get-event-coordinates'
 
 class ResizePluginImpl implements ResizePlugin {
   name = PluginName.Resize

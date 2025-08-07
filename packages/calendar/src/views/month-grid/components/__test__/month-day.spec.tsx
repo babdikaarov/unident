@@ -4,16 +4,16 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { MonthDay as MonthDayType } from '../../types/month'
 import CalendarEventBuilder from '../../../../../../shared/src/utils/stateless/calendar/calendar-event/calendar-event.builder'
 import { __createAppWithViews__ } from '../../../../utils/stateless/testing/__create-app-with-views__'
-import CalendarAppSingleton from '@schedule-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
 import { cleanup, render, screen, waitFor } from '@testing-library/preact'
 import MonthGridDay from '../month-grid-day'
 import { AppContext } from '../../../../utils/stateful/app-context'
 import { getTestEvent } from './test-events'
-import { InternalViewName } from '@schedule-x/shared/src/enums/calendar/internal-view.enum'
+import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-view.enum'
 import { beforeEach, vi } from 'vitest'
 
 const renderComponent = ($app: CalendarAppSingleton, day: MonthDayType) => {

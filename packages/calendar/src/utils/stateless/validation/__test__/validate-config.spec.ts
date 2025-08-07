@@ -2,11 +2,11 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 
 import { validateConfig } from '../validate-config'
-import { CalendarConfigExternal } from '@schedule-x/shared/src'
-import { DayBoundariesExternal } from '@schedule-x/shared/src/types/calendar/day-boundaries'
+import { CalendarConfigExternal } from '@unimed-x/shared/src'
+import { DayBoundariesExternal } from '@unimed-x/shared/src/types/calendar/day-boundaries'
 
 describe('validating the config', () => {
   describe('validating the selected date', () => {

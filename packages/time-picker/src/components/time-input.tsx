@@ -1,7 +1,7 @@
 import { Ref } from 'preact'
 import { useState } from 'preact/hooks'
 import { useEffect } from 'preact/compat'
-import { nextTick } from '@schedule-x/shared/src/utils/stateless/next-tick'
+import { nextTick } from '@unimed-x/shared/src/utils/stateless/next-tick'
 
 type props = {
   initialValue: string

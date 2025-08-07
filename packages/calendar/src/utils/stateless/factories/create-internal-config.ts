@@ -1,7 +1,7 @@
-import { CalendarConfigExternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-config'
+import { CalendarConfigExternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-config'
 import CalendarConfigBuilder from '../../stateful/config/calendar-config.builder'
-import { PluginBase } from '@schedule-x/shared/src'
-import { translations } from '@schedule-x/translations/src'
+import { PluginBase } from '@unimed-x/shared/src'
+import { translations } from '@unimed-x/translations/src'
 
 export const createInternalConfig = (
   config: CalendarConfigExternal,

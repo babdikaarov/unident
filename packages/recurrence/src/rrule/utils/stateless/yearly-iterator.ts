@@ -1,6 +1,6 @@
 import { RRuleOptions } from '../../types/rrule-options'
 import { isCountReached, isDatePastUntil } from './iterator-utils'
-import { addYears } from '@schedule-x/shared/src/utils/stateless/time/date-time-mutation/adding'
+import { addYears } from '@unimed-x/shared/src/utils/stateless/time/date-time-mutation/adding'
 
 const yearlyIterator = (dtstart: string, rruleOptions: RRuleOptions) => {
   const allDateTimes: string[] = []

@@ -1,5 +1,5 @@
 import { datePickerLtLT } from './date-picker'
-import { Language } from '@schedule-x/shared/src/types/translations/language.translations'
+import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 import { calendarLtLT } from './calendar'
 import { timePickerLtLT } from './time-picker'
 

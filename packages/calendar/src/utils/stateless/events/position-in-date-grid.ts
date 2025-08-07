@@ -1,6 +1,6 @@
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import { Week } from '../../../types/week'
-import { dateFromDateTime } from '@schedule-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
+import { dateFromDateTime } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
 import { DATE_GRID_BLOCKER } from '../../../constants'
 
 /**

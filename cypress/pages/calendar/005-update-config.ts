@@ -10,33 +10,39 @@ import {
   viewMonthAgenda,
   viewMonthGrid,
   viewWeek,
-} from '@schedule-x/calendar'
-import '@schedule-x/theme-default/dist/index.css'
+} from '../../../packages/calendar/src'
+import '../../../packages/theme-default/dist/index.css'
 import '../index.css'
-import { createDragAndDropPlugin } from '@schedule-x/drag-and-drop'
-import { createEventModalPlugin } from '@schedule-x/event-modal'
-import {createCalendarControlsPlugin} from "@schedule-x/calendar-controls";
+import { createDragAndDropPlugin } from '../../../packages/drag-and-drop/src'
+import { createEventModalPlugin } from '../../../packages/event-modal/src'
+import { createCalendarControlsPlugin } from '../../../packages/calendar-controls/src'
 
 const calendarElement = document.getElementById('calendar') as HTMLElement
 
-const calendarControls = createCalendarControlsPlugin();
+const calendarControls = createCalendarControlsPlugin()
 const calendar = createCalendar({
   selectedDate: '2023-09-21',
   locale: 'en-US',
   views: [viewWeek, viewMonthGrid, viewMonthAgenda, viewDay],
   defaultView: 'week',
-  plugins: [createDragAndDropPlugin(), createEventModalPlugin(), calendarControls],
+  plugins: [
+    createDragAndDropPlugin(),
+    createEventModalPlugin(),
+    calendarControls,
+  ],
   events: [],
 })
 
 calendar.render(calendarElement)
 
-const setNDaysButton = document.getElementById('set-n-days-5') as HTMLButtonElement
+const setNDaysButton = document.getElementById(
+  'set-n-days-5'
+) as HTMLButtonElement
 setNDaysButton.addEventListener('click', () => {
   calendarControls.setWeekOptions({
     ...calendarControls.getWeekOptions(),
-    nDays: 5
-  });
+    nDays: 5,
+  })
 })
 
 const setFirstDayOfWeek = document.getElementById(
@@ -46,7 +52,9 @@ setFirstDayOfWeek.addEventListener('click', () => {
   calendarControls.setFirstDayOfWeek(2)
 })
 
-const setGermanLocale = document.getElementById('set-german') as HTMLButtonElement
+const setGermanLocale = document.getElementById(
+  'set-german'
+) as HTMLButtonElement
 setGermanLocale.addEventListener('click', () => {
   calendarControls.setLocale('de-DE')
 })

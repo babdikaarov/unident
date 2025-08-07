@@ -2,14 +2,14 @@ import {
   describe,
   expect,
   it,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { cleanup, waitFor } from '@testing-library/preact'
 import { afterEach } from 'vitest'
 import { getEventByText, renderComponent } from './utils'
-import { createDragAndDropPlugin } from '@schedule-x/drag-and-drop/src'
+import { createDragAndDropPlugin } from '@unimed-x/drag-and-drop/src'
 import { __createAppWithViews__ } from '../../../../utils/stateless/testing/__create-app-with-views__'
 import { stubInterface } from 'ts-sinon'
-import { ResizePlugin } from '@schedule-x/shared/src/interfaces/resize/resize-plugin.interface'
+import { ResizePlugin } from '@unimed-x/shared/src/interfaces/resize/resize-plugin.interface'
 
 describe('style attribute "display" of date grid event element', () => {
   afterEach(() => {

@@ -2,13 +2,13 @@ import {
   describe,
   it,
   expect,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { render } from '@testing-library/preact'
 import { AppContext } from '../../../utils/stateful/app-context'
-import { CalendarAppSingleton } from '@schedule-x/shared/src'
+import { CalendarAppSingleton } from '@unimed-x/shared/src'
 import DateGridDay from '../date-grid-day'
 import { __createAppWithViews__ } from '../../../utils/stateless/testing/__create-app-with-views__'
-import { BackgroundEvent } from '@schedule-x/shared/src/interfaces/calendar/background-event'
+import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 
 const renderComponent = (
   $app: CalendarAppSingleton,

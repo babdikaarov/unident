@@ -1,21 +1,21 @@
-import Builder from '@schedule-x/shared/src/interfaces/builder.interface'
+import Builder from '@unimed-x/shared/src/interfaces/builder.interface'
 import CalendarConfigInternal, {
   CalendarType,
   MonthGridOptions,
   Plugins,
   WeekOptions,
-} from '@schedule-x/shared/src/interfaces/calendar/calendar-config'
+} from '@unimed-x/shared/src/interfaces/calendar/calendar-config'
 import CalendarConfigImpl from './calendar-config.impl'
-import { WeekDay } from '@schedule-x/shared/src/enums/time/week-day.enum'
-import { ViewName } from '@schedule-x/shared/src/types/calendar/view-name'
-import { View } from '@schedule-x/shared/src/types/calendar/view'
+import { WeekDay } from '@unimed-x/shared/src/enums/time/week-day.enum'
+import { ViewName } from '@unimed-x/shared/src/types/calendar/view-name'
+import { View } from '@unimed-x/shared/src/types/calendar/view'
 import {
   DayBoundariesExternal,
   DayBoundariesInternal,
-} from '@schedule-x/shared/src/types/calendar/day-boundaries'
-import { timePointsFromString } from '@schedule-x/shared/src/utils/stateless/time/time-points/string-conversion'
-import PluginBase from '@schedule-x/shared/src/interfaces/plugin.interface'
-import { CalendarCallbacks } from '@schedule-x/shared/src/interfaces/calendar/listeners.interface'
+} from '@unimed-x/shared/src/types/calendar/day-boundaries'
+import { timePointsFromString } from '@unimed-x/shared/src/utils/stateless/time/time-points/string-conversion'
+import PluginBase from '@unimed-x/shared/src/interfaces/plugin.interface'
+import { CalendarCallbacks } from '@unimed-x/shared/src/interfaces/calendar/listeners.interface'
 import {
   DEFAULT_DAY_BOUNDARIES,
   DEFAULT_WEEK_GRID_HEIGHT,
@@ -23,10 +23,10 @@ import {
 import {
   DEFAULT_FIRST_DAY_OF_WEEK,
   DEFAULT_LOCALE,
-} from '@schedule-x/shared/src/values'
-import { InternalViewName } from '@schedule-x/shared/src/enums/calendar/internal-view.enum'
-import { BackgroundEvent } from '@schedule-x/shared/src/interfaces/calendar/background-event'
-import { Language } from '@schedule-x/shared/src/types/translations/language.translations'
+} from '@unimed-x/shared/src/values'
+import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-view.enum'
+import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
+import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 
 export default class CalendarConfigBuilder
   implements Builder<CalendarConfigInternal>

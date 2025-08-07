@@ -3,10 +3,10 @@ import {
   it,
   expect,
   beforeEach,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
-import { CalendarAppSingleton } from '@schedule-x/shared/src'
-import { CalendarEventInternal } from '@schedule-x/shared/src/interfaces/calendar/calendar-event.interface'
-import { __createAppWithViews__ } from '@schedule-x/calendar/src/utils/stateless/testing/__create-app-with-views__'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+import { CalendarAppSingleton } from '@unimed-x/shared/src'
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import { __createAppWithViews__ } from '@unimed-x/calendar/src/utils/stateless/testing/__create-app-with-views__'
 import MonthGridDragHandlerImpl from '../../month-grid-drag-handler.impl'
 import { getEventWithId } from '../time-grid-drag-handler/utils'
 import { vi } from 'vitest'

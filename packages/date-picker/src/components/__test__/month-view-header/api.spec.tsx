@@ -4,7 +4,7 @@ import {
   expect,
   beforeEach,
   mockFn,
-} from '@schedule-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
+} from '@unimed-x/shared/src/utils/stateless/testing/unit/unit-testing-library.impl'
 import { cleanup, fireEvent } from '@testing-library/preact'
 import { createAppSingleton } from '../../../factory'
 import { renderComponent } from './utils'

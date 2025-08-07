@@ -1,5 +1,5 @@
-import CalendarState from '@schedule-x/shared/src/interfaces/calendar/calendar-state.interface'
-import { CalendarConfigExternal } from '@schedule-x/shared/src'
+import CalendarState from '@unimed-x/shared/src/interfaces/calendar/calendar-state.interface'
+import { CalendarConfigExternal } from '@unimed-x/shared/src'
 
 export const createDateSelectionCallback = (
   calendarState: CalendarState,
