@@ -33,7 +33,7 @@ const calendar = createCalendar({
       end: '2023-09-18 04:30',
       withStaff: {
         id: '',
-        name: ''
+        firstName: ''
       }
     },
     {
@@ -43,7 +43,7 @@ const calendar = createCalendar({
       end: '2023-09-21 01:00',
       withStaff: {
         id: '',
-        name: ''
+        firstName: ''
       }
     },
     {
@@ -53,7 +53,7 @@ const calendar = createCalendar({
       end: '2023-09-19 09:00',
       withStaff: {
         id: '',
-        name: ''
+        firstName: ''
       }
     },
     {
@@ -62,7 +62,7 @@ const calendar = createCalendar({
       end: '2023-09-21 04:30',
       withStaff: {
         id: '',
-        name: ''
+        firstName: ''
       }
     },
     {
@@ -71,7 +71,7 @@ const calendar = createCalendar({
       end: '2023-09-21 18:00',
       withStaff: {
         id: '',
-        name: ''
+        firstName: ''
       }
     },
     {
@@ -80,7 +80,7 @@ const calendar = createCalendar({
       end: '2023-09-21 20:00',
       withStaff: {
         id: '',
-        name: ''
+        firstName: ''
       }
     },
     {
@@ -89,7 +89,7 @@ const calendar = createCalendar({
       end: '2023-09-21 22:00',
       withStaff: {
         id: '',
-        name: ''
+        firstName: ''
       }
     },
   ],

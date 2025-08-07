@@ -1,7 +1,7 @@
 export const seededEvents = [
   {
     title: 'Almaz T.',
-    withStaff: { id: '5a3c17', name: 'Dr. Anara kyzy Zhyldyz' },
+    withStaff: { id: '5a3c17', firstName: 'Dr. Anara kyzy Zhyldyz' },
     start: '2025-08-01 01:30',
     end: '2025-08-01 03:00',
     color: 'green',
@@ -13,7 +13,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '193e06', name: 'Dr. Meerim kyzy Gulzat' },
+    withStaff: { id: '193e06', firstName: 'Dr. Meerim kyzy Gulzat' },
     start: '2025-08-01 04:30',
     end: '2025-08-01 06:00',
     color: 'turquoise',
@@ -25,7 +25,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: 'a85f40', name: 'Dr. Azamat uulu Timurlan' },
+    withStaff: { id: 'a85f40', firstName: 'Dr. Azamat uulu Timurlan' },
     start: '2025-08-01 10:30',
     end: '2025-08-01 11:20',
     color: 'blue',
@@ -38,7 +38,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-01 14:40',
     end: '2025-08-01 15:10',
     color: 'yellow',
@@ -49,7 +49,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: 'b767a4', name: 'Dr. Elmira kyzy Ainura' },
+    withStaff: { id: 'b767a4', firstName: 'Dr. Elmira kyzy Ainura' },
     start: '2025-08-01 16:00',
     end: '2025-08-01 16:45',
     color: 'yellow',
@@ -60,7 +60,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '5782c0', name: 'Dr. Nurkyz kyzy Aisuluu' },
+    withStaff: { id: '5782c0', firstName: 'Dr. Nurkyz kyzy Aisuluu' },
     start: '2025-08-01 17:52',
     end: '2025-08-01 19:22',
     color: 'brown',
@@ -73,7 +73,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-02 04:00',
     end: '2025-08-02 06:00',
     color: 'blue',
@@ -84,7 +84,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-02 09:50',
     end: '2025-08-02 11:20',
     color: 'green',
@@ -94,7 +94,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: '193e06', name: 'Dr. Meerim kyzy Gulzat' },
+    withStaff: { id: '193e06', firstName: 'Dr. Meerim kyzy Gulzat' },
     start: '2025-08-02 09:50',
     end: '2025-08-02 11:20',
     color: 'red',
@@ -104,7 +104,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-02 12:45',
     end: '2025-08-02 13:00',
     color: 'brown',
@@ -118,7 +118,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-02 16:00',
     end: '2025-08-02 18:00',
     color: 'turquoise',
@@ -132,7 +132,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: 'cd9540', name: 'Dr. Aibek uulu Nursultan' },
+    withStaff: { id: 'cd9540', firstName: 'Dr. Aibek uulu Nursultan' },
     start: '2025-08-02 19:20',
     end: '2025-08-02 20:50',
     color: 'blue',
@@ -142,7 +142,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '244c98', name: 'Dr. Kanat uulu Ruslan' },
+    withStaff: { id: '244c98', firstName: 'Dr. Kanat uulu Ruslan' },
     start: '2025-08-02 19:55',
     end: '2025-08-02 20:25',
     color: 'yellow',
@@ -153,7 +153,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '7cd217', name: 'Dr. Nazgul kyzy Begimai' },
+    withStaff: { id: '7cd217', firstName: 'Dr. Nazgul kyzy Begimai' },
     start: '2025-08-03 00:10',
     end: '2025-08-03 01:40',
     color: 'blue',
@@ -164,7 +164,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '303bde', name: 'Dr. Kanykey kyzy Aygerim' },
+    withStaff: { id: '303bde', firstName: 'Dr. Kanykey kyzy Aygerim' },
     start: '2025-08-03 18:00',
     end: '2025-08-03 19:30',
     color: 'green',
@@ -174,7 +174,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '244c98', name: 'Dr. Kanat uulu Ruslan' },
+    withStaff: { id: '244c98', firstName: 'Dr. Kanat uulu Ruslan' },
     start: '2025-08-03 19:15',
     end: '2025-08-03 20:15',
     color: 'green',
@@ -187,7 +187,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-03 20:30',
     end: '2025-08-03 22:00',
     color: 'red',
@@ -199,7 +199,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: 'cd9540', name: 'Dr. Aibek uulu Nursultan' },
+    withStaff: { id: 'cd9540', firstName: 'Dr. Aibek uulu Nursultan' },
     start: '2025-08-04 02:15',
     end: '2025-08-04 03:15',
     color: 'blue',
@@ -211,7 +211,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-04 02:15',
     end: '2025-08-04 03:15',
     color: 'yellow',
@@ -224,7 +224,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-04 09:14',
     end: '2025-08-04 10:44',
     color: 'blue',
@@ -234,7 +234,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: 'a85f40', name: 'Dr. Azamat uulu Timurlan' },
+    withStaff: { id: 'a85f40', firstName: 'Dr. Azamat uulu Timurlan' },
     start: '2025-08-04 11:10',
     end: '2025-08-04 12:40',
     color: 'blue',
@@ -247,7 +247,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '7cd217', name: 'Dr. Nazgul kyzy Begimai' },
+    withStaff: { id: '7cd217', firstName: 'Dr. Nazgul kyzy Begimai' },
     start: '2025-08-04 14:14',
     end: '2025-08-04 15:44',
     color: 'blue',
@@ -259,7 +259,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-04 14:14',
     end: '2025-08-04 15:44',
     color: 'red',
@@ -272,7 +272,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-04 14:14',
     end: '2025-08-04 15:44',
     color: 'red',
@@ -283,7 +283,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-04 23:00',
     end: '2025-08-05 00:00',
     color: 'green',
@@ -296,7 +296,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '392b80', name: 'Dr. Aizada kyzy Nazira' },
+    withStaff: { id: '392b80', firstName: 'Dr. Aizada kyzy Nazira' },
     start: '2025-08-05 01:00',
     end: '2025-08-05 01:50',
     color: 'purple',
@@ -310,7 +310,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '0085ce', name: 'Dr. Marat uulu Emil' },
+    withStaff: { id: '0085ce', firstName: 'Dr. Marat uulu Emil' },
     start: '2025-08-05 03:52',
     end: '2025-08-05 04:52',
     color: 'pink',
@@ -322,7 +322,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '244c98', name: 'Dr. Kanat uulu Ruslan' },
+    withStaff: { id: '244c98', firstName: 'Dr. Kanat uulu Ruslan' },
     start: '2025-08-05 05:00',
     end: '2025-08-05 05:15',
     color: 'red',
@@ -334,7 +334,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-05 05:25',
     end: '2025-08-05 06:55',
     color: 'blue',
@@ -347,7 +347,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-05 07:00',
     end: '2025-08-05 08:30',
     color: 'yellow',
@@ -357,7 +357,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: 'c5f111', name: 'Dr. Damir uulu Nurlan' },
+    withStaff: { id: 'c5f111', firstName: 'Dr. Damir uulu Nurlan' },
     start: '2025-08-05 07:00',
     end: '2025-08-05 08:30',
     color: 'turquoise',
@@ -368,7 +368,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-05 10:20',
     end: '2025-08-05 11:10',
     color: 'yellow',
@@ -380,7 +380,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '5a3c17', name: 'Dr. Anara kyzy Zhyldyz' },
+    withStaff: { id: '5a3c17', firstName: 'Dr. Anara kyzy Zhyldyz' },
     start: '2025-08-05 11:00',
     end: '2025-08-05 12:30',
     color: 'yellow',
@@ -391,7 +391,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: 'a85f40', name: 'Dr. Azamat uulu Timurlan' },
+    withStaff: { id: 'a85f40', firstName: 'Dr. Azamat uulu Timurlan' },
     start: '2025-08-05 11:00',
     end: '2025-08-05 12:30',
     color: 'green',
@@ -402,7 +402,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: 'c5f111', name: 'Dr. Damir uulu Nurlan' },
+    withStaff: { id: 'c5f111', firstName: 'Dr. Damir uulu Nurlan' },
     start: '2025-08-05 20:05',
     end: '2025-08-05 21:35',
     color: 'yellow',
@@ -414,7 +414,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '5782c0', name: 'Dr. Nurkyz kyzy Aisuluu' },
+    withStaff: { id: '5782c0', firstName: 'Dr. Nurkyz kyzy Aisuluu' },
     start: '2025-08-05 21:30',
     end: '2025-08-05 22:30',
     color: 'red',
@@ -427,7 +427,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: 'b767a4', name: 'Dr. Elmira kyzy Ainura' },
+    withStaff: { id: 'b767a4', firstName: 'Dr. Elmira kyzy Ainura' },
     start: '2025-08-06 02:00',
     end: '2025-08-06 02:45',
     color: 'turquoise',
@@ -440,7 +440,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-06 02:10',
     end: '2025-08-06 03:10',
     color: 'green',
@@ -451,7 +451,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-06 07:52',
     end: '2025-08-06 08:42',
     color: 'purple',
@@ -464,7 +464,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-06 18:20',
     end: '2025-08-06 19:20',
     color: 'yellow',
@@ -476,7 +476,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-06 20:30',
     end: '2025-08-06 21:30',
     color: 'green',
@@ -487,7 +487,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-07',
     end: '2025-08-14',
     color: 'red',
@@ -499,7 +499,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '7c0069', name: 'Dr. Akmaral kyzy Ayzada' },
+    withStaff: { id: '7c0069', firstName: 'Dr. Akmaral kyzy Ayzada' },
     start: '2025-08-07 02:15',
     end: '2025-08-07 04:15',
     color: 'purple',
@@ -512,7 +512,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '7cd217', name: 'Dr. Nazgul kyzy Begimai' },
+    withStaff: { id: '7cd217', firstName: 'Dr. Nazgul kyzy Begimai' },
     start: '2025-08-07 04:35',
     end: '2025-08-07 05:25',
     color: 'blue',
@@ -526,7 +526,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '303bde', name: 'Dr. Kanykey kyzy Aygerim' },
+    withStaff: { id: '303bde', firstName: 'Dr. Kanykey kyzy Aygerim' },
     start: '2025-08-07 11:45',
     end: '2025-08-07 13:15',
     color: 'blue',
@@ -539,7 +539,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '7c0069', name: 'Dr. Akmaral kyzy Ayzada' },
+    withStaff: { id: '7c0069', firstName: 'Dr. Akmaral kyzy Ayzada' },
     start: '2025-08-08 01:30',
     end: '2025-08-08 01:45',
     color: 'turquoise',
@@ -550,7 +550,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-08 04:00',
     end: '2025-08-08 04:15',
     color: 'blue',
@@ -562,7 +562,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-08 16:35',
     end: '2025-08-08 17:20',
     color: 'pink',
@@ -574,7 +574,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-08 17:25',
     end: '2025-08-08 18:55',
     color: 'pink',
@@ -588,7 +588,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-08 21:00',
     end: '2025-08-08 22:00',
     color: 'green',
@@ -601,7 +601,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '0085ce', name: 'Dr. Marat uulu Emil' },
+    withStaff: { id: '0085ce', firstName: 'Dr. Marat uulu Emil' },
     start: '2025-08-09',
     end: '2025-08-09',
     color: 'blue',
@@ -613,7 +613,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-09 06:05',
     end: '2025-08-09 06:35',
     color: 'yellow',
@@ -624,7 +624,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-09 07:55',
     end: '2025-08-09 08:55',
     color: 'yellow',
@@ -635,7 +635,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-09 07:55',
     end: '2025-08-09 08:55',
     color: 'blue',
@@ -645,7 +645,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-09 13:25',
     end: '2025-08-09 14:10',
     color: 'brown',
@@ -657,7 +657,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '7cd217', name: 'Dr. Nazgul kyzy Begimai' },
+    withStaff: { id: '7cd217', firstName: 'Dr. Nazgul kyzy Begimai' },
     start: '2025-08-09 17:20',
     end: '2025-08-09 18:10',
     color: 'blue',
@@ -667,7 +667,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '5782c0', name: 'Dr. Nurkyz kyzy Aisuluu' },
+    withStaff: { id: '5782c0', firstName: 'Dr. Nurkyz kyzy Aisuluu' },
     start: '2025-08-09 21:00',
     end: '2025-08-09 22:30',
     color: 'purple',
@@ -678,7 +678,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-10 05:30',
     end: '2025-08-10 07:00',
     color: 'turquoise',
@@ -688,7 +688,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: 'b767a4', name: 'Dr. Elmira kyzy Ainura' },
+    withStaff: { id: 'b767a4', firstName: 'Dr. Elmira kyzy Ainura' },
     start: '2025-08-10 05:30',
     end: '2025-08-10 07:00',
     color: 'red',
@@ -700,7 +700,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-10 11:35',
     end: '2025-08-10 13:05',
     color: 'red',
@@ -710,7 +710,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '7cd217', name: 'Dr. Nazgul kyzy Begimai' },
+    withStaff: { id: '7cd217', firstName: 'Dr. Nazgul kyzy Begimai' },
     start: '2025-08-10 18:40',
     end: '2025-08-10 20:40',
     color: 'blue',
@@ -720,7 +720,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: 'cd9540', name: 'Dr. Aibek uulu Nursultan' },
+    withStaff: { id: 'cd9540', firstName: 'Dr. Aibek uulu Nursultan' },
     start: '2025-08-11 01:50',
     end: '2025-08-11 02:35',
     color: 'red',
@@ -731,7 +731,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: 'cf20b4', name: 'Dr. Asel kyzy Aigerim' },
+    withStaff: { id: 'cf20b4', firstName: 'Dr. Asel kyzy Aigerim' },
     start: '2025-08-11 03:10',
     end: '2025-08-11 03:40',
     color: 'turquoise',
@@ -742,7 +742,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: 'a85f40', name: 'Dr. Azamat uulu Timurlan' },
+    withStaff: { id: 'a85f40', firstName: 'Dr. Azamat uulu Timurlan' },
     start: '2025-08-11 03:10',
     end: '2025-08-11 03:40',
     color: 'turquoise',
@@ -754,7 +754,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-11 07:05',
     end: '2025-08-11 07:50',
     color: 'purple',
@@ -765,7 +765,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-11 10:52',
     end: '2025-08-11 12:22',
     color: 'yellow',
@@ -776,7 +776,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: '392b80', name: 'Dr. Aizada kyzy Nazira' },
+    withStaff: { id: '392b80', firstName: 'Dr. Aizada kyzy Nazira' },
     start: '2025-08-11 12:10',
     end: '2025-08-11 13:10',
     color: 'brown',
@@ -787,7 +787,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: 'a85f40', name: 'Dr. Azamat uulu Timurlan' },
+    withStaff: { id: 'a85f40', firstName: 'Dr. Azamat uulu Timurlan' },
     start: '2025-08-11 14:10',
     end: '2025-08-11 16:10',
     color: 'blue',
@@ -799,7 +799,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '303bde', name: 'Dr. Kanykey kyzy Aygerim' },
+    withStaff: { id: '303bde', firstName: 'Dr. Kanykey kyzy Aygerim' },
     start: '2025-08-11 15:00',
     end: '2025-08-11 16:30',
     color: 'blue',
@@ -812,7 +812,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '193e06', name: 'Dr. Meerim kyzy Gulzat' },
+    withStaff: { id: '193e06', firstName: 'Dr. Meerim kyzy Gulzat' },
     start: '2025-08-11 15:00',
     end: '2025-08-11 16:30',
     color: 'blue',
@@ -822,7 +822,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-11 18:45',
     end: '2025-08-11 20:15',
     color: 'turquoise',
@@ -835,7 +835,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-12 00:25',
     end: '2025-08-12 01:55',
     color: 'yellow',
@@ -845,7 +845,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-12 02:30',
     end: '2025-08-12 04:30',
     color: 'pink',
@@ -857,7 +857,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: '392b80', name: 'Dr. Aizada kyzy Nazira' },
+    withStaff: { id: '392b80', firstName: 'Dr. Aizada kyzy Nazira' },
     start: '2025-08-12 03:00',
     end: '2025-08-12 03:30',
     color: 'green',
@@ -869,7 +869,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: '193e06', name: 'Dr. Meerim kyzy Gulzat' },
+    withStaff: { id: '193e06', firstName: 'Dr. Meerim kyzy Gulzat' },
     start: '2025-08-13',
     end: '2025-08-14',
     color: 'yellow',
@@ -880,7 +880,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: 'cd9540', name: 'Dr. Aibek uulu Nursultan' },
+    withStaff: { id: 'cd9540', firstName: 'Dr. Aibek uulu Nursultan' },
     start: '2025-08-13 01:20',
     end: '2025-08-13 03:20',
     color: 'green',
@@ -893,7 +893,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: '5a3c17', name: 'Dr. Anara kyzy Zhyldyz' },
+    withStaff: { id: '5a3c17', firstName: 'Dr. Anara kyzy Zhyldyz' },
     start: '2025-08-13 03:30',
     end: '2025-08-13 03:45',
     color: 'yellow',
@@ -906,7 +906,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-13 05:14',
     end: '2025-08-13 07:14',
     color: 'purple',
@@ -918,7 +918,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '0085ce', name: 'Dr. Marat uulu Emil' },
+    withStaff: { id: '0085ce', firstName: 'Dr. Marat uulu Emil' },
     start: '2025-08-13 06:05',
     end: '2025-08-13 07:35',
     color: 'blue',
@@ -929,7 +929,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: 'b767a4', name: 'Dr. Elmira kyzy Ainura' },
+    withStaff: { id: 'b767a4', firstName: 'Dr. Elmira kyzy Ainura' },
     start: '2025-08-13 09:40',
     end: '2025-08-13 11:10',
     color: 'brown',
@@ -940,7 +940,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-13 09:40',
     end: '2025-08-13 11:10',
     color: 'yellow',
@@ -950,7 +950,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '7cd217', name: 'Dr. Nazgul kyzy Begimai' },
+    withStaff: { id: '7cd217', firstName: 'Dr. Nazgul kyzy Begimai' },
     start: '2025-08-13 13:40',
     end: '2025-08-13 15:10',
     color: 'green',
@@ -963,7 +963,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '193e06', name: 'Dr. Meerim kyzy Gulzat' },
+    withStaff: { id: '193e06', firstName: 'Dr. Meerim kyzy Gulzat' },
     start: '2025-08-13 13:40',
     end: '2025-08-13 15:10',
     color: 'brown',
@@ -975,7 +975,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-13 15:30',
     end: '2025-08-13 16:30',
     color: 'purple',
@@ -985,7 +985,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '0085ce', name: 'Dr. Marat uulu Emil' },
+    withStaff: { id: '0085ce', firstName: 'Dr. Marat uulu Emil' },
     start: '2025-08-13 19:47',
     end: '2025-08-13 21:47',
     color: 'yellow',
@@ -996,7 +996,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-13 22:55',
     end: '2025-08-13 23:55',
     color: 'green',
@@ -1006,7 +1006,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: 'c5f111', name: 'Dr. Damir uulu Nurlan' },
+    withStaff: { id: 'c5f111', firstName: 'Dr. Damir uulu Nurlan' },
     start: '2025-08-14',
     end: '2025-08-29',
     color: 'turquoise',
@@ -1020,7 +1020,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-14',
     end: '2025-08-19',
     color: 'red',
@@ -1033,7 +1033,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: 'c5f111', name: 'Dr. Damir uulu Nurlan' },
+    withStaff: { id: 'c5f111', firstName: 'Dr. Damir uulu Nurlan' },
     start: '2025-08-14',
     end: '2025-08-21',
     color: 'yellow',
@@ -1046,7 +1046,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: 'cd9540', name: 'Dr. Aibek uulu Nursultan' },
+    withStaff: { id: 'cd9540', firstName: 'Dr. Aibek uulu Nursultan' },
     start: '2025-08-14 04:45',
     end: '2025-08-14 05:30',
     color: 'purple',
@@ -1057,7 +1057,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '0085ce', name: 'Dr. Marat uulu Emil' },
+    withStaff: { id: '0085ce', firstName: 'Dr. Marat uulu Emil' },
     start: '2025-08-14 04:47',
     end: '2025-08-14 06:17',
     color: 'yellow',
@@ -1069,7 +1069,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: 'c5f111', name: 'Dr. Damir uulu Nurlan' },
+    withStaff: { id: 'c5f111', firstName: 'Dr. Damir uulu Nurlan' },
     start: '2025-08-14 05:14',
     end: '2025-08-14 05:59',
     color: 'blue',
@@ -1080,7 +1080,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-14 09:55',
     end: '2025-08-14 11:25',
     color: 'yellow',
@@ -1090,7 +1090,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: 'cd9540', name: 'Dr. Aibek uulu Nursultan' },
+    withStaff: { id: 'cd9540', firstName: 'Dr. Aibek uulu Nursultan' },
     start: '2025-08-14 10:05',
     end: '2025-08-14 10:35',
     color: 'turquoise',
@@ -1101,7 +1101,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '7c0069', name: 'Dr. Akmaral kyzy Ayzada' },
+    withStaff: { id: '7c0069', firstName: 'Dr. Akmaral kyzy Ayzada' },
     start: '2025-08-14 19:47',
     end: '2025-08-14 20:32',
     color: 'blue',
@@ -1113,7 +1113,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-14 23:14',
     end: '2025-08-15 00:14',
     color: 'turquoise',
@@ -1124,7 +1124,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: 'a85f40', name: 'Dr. Azamat uulu Timurlan' },
+    withStaff: { id: 'a85f40', firstName: 'Dr. Azamat uulu Timurlan' },
     start: '2025-08-15',
     end: '2025-08-15',
     color: 'yellow',
@@ -1135,7 +1135,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-15',
     end: '2025-09-14',
     color: 'purple',
@@ -1148,7 +1148,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-15 00:00',
     end: '2025-08-15 01:30',
     color: 'brown',
@@ -1158,7 +1158,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-15 00:05',
     end: '2025-08-15 01:35',
     color: 'brown',
@@ -1171,7 +1171,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: '244c98', name: 'Dr. Kanat uulu Ruslan' },
+    withStaff: { id: '244c98', firstName: 'Dr. Kanat uulu Ruslan' },
     start: '2025-08-15 04:45',
     end: '2025-08-15 06:45',
     color: 'yellow',
@@ -1183,7 +1183,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '5782c0', name: 'Dr. Nurkyz kyzy Aisuluu' },
+    withStaff: { id: '5782c0', firstName: 'Dr. Nurkyz kyzy Aisuluu' },
     start: '2025-08-16 05:10',
     end: '2025-08-16 06:10',
     color: 'blue',
@@ -1196,7 +1196,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-16 06:30',
     end: '2025-08-16 08:00',
     color: 'blue',
@@ -1209,7 +1209,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-16 11:47',
     end: '2025-08-16 12:02',
     color: 'blue',
@@ -1222,7 +1222,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: 'a85f40', name: 'Dr. Azamat uulu Timurlan' },
+    withStaff: { id: 'a85f40', firstName: 'Dr. Azamat uulu Timurlan' },
     start: '2025-08-16 13:30',
     end: '2025-08-16 15:00',
     color: 'pink',
@@ -1234,7 +1234,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-16 16:25',
     end: '2025-08-16 17:55',
     color: 'blue',
@@ -1246,7 +1246,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '244c98', name: 'Dr. Kanat uulu Ruslan' },
+    withStaff: { id: '244c98', firstName: 'Dr. Kanat uulu Ruslan' },
     start: '2025-08-16 18:52',
     end: '2025-08-16 20:22',
     color: 'blue',
@@ -1258,7 +1258,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-16 20:52',
     end: '2025-08-16 22:22',
     color: 'green',
@@ -1268,7 +1268,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-16 21:40',
     end: '2025-08-16 22:40',
     color: 'pink',
@@ -1279,7 +1279,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-16 21:45',
     end: '2025-08-16 23:15',
     color: 'red',
@@ -1292,7 +1292,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-16 21:45',
     end: '2025-08-16 23:15',
     color: 'purple',
@@ -1303,7 +1303,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '5782c0', name: 'Dr. Nurkyz kyzy Aisuluu' },
+    withStaff: { id: '5782c0', firstName: 'Dr. Nurkyz kyzy Aisuluu' },
     start: '2025-08-17',
     end: '2025-10-16',
     color: 'brown',
@@ -1313,7 +1313,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: 'c5f111', name: 'Dr. Damir uulu Nurlan' },
+    withStaff: { id: 'c5f111', firstName: 'Dr. Damir uulu Nurlan' },
     start: '2025-08-17',
     end: '2025-10-16',
     color: 'pink',
@@ -1324,7 +1324,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-17 05:00',
     end: '2025-08-17 05:45',
     color: 'yellow',
@@ -1336,7 +1336,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-17 05:52',
     end: '2025-08-17 06:37',
     color: 'green',
@@ -1347,7 +1347,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-17 08:05',
     end: '2025-08-17 09:35',
     color: 'yellow',
@@ -1361,7 +1361,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: 'a85f40', name: 'Dr. Azamat uulu Timurlan' },
+    withStaff: { id: 'a85f40', firstName: 'Dr. Azamat uulu Timurlan' },
     start: '2025-08-17 10:05',
     end: '2025-08-17 11:05',
     color: 'brown',
@@ -1373,7 +1373,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: '392b80', name: 'Dr. Aizada kyzy Nazira' },
+    withStaff: { id: '392b80', firstName: 'Dr. Aizada kyzy Nazira' },
     start: '2025-08-17 15:00',
     end: '2025-08-17 16:00',
     color: 'purple',
@@ -1384,7 +1384,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '193e06', name: 'Dr. Meerim kyzy Gulzat' },
+    withStaff: { id: '193e06', firstName: 'Dr. Meerim kyzy Gulzat' },
     start: '2025-08-17 17:47',
     end: '2025-08-17 18:37',
     color: 'blue',
@@ -1397,7 +1397,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: 'cd9540', name: 'Dr. Aibek uulu Nursultan' },
+    withStaff: { id: 'cd9540', firstName: 'Dr. Aibek uulu Nursultan' },
     start: '2025-08-18',
     end: '2025-08-23',
     color: 'blue',
@@ -1410,7 +1410,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '303bde', name: 'Dr. Kanykey kyzy Aygerim' },
+    withStaff: { id: '303bde', firstName: 'Dr. Kanykey kyzy Aygerim' },
     start: '2025-08-18 04:47',
     end: '2025-08-18 05:02',
     color: 'blue',
@@ -1421,7 +1421,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '193e06', name: 'Dr. Meerim kyzy Gulzat' },
+    withStaff: { id: '193e06', firstName: 'Dr. Meerim kyzy Gulzat' },
     start: '2025-08-18 05:05',
     end: '2025-08-18 07:05',
     color: 'blue',
@@ -1434,7 +1434,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-18 06:20',
     end: '2025-08-18 07:50',
     color: 'blue',
@@ -1446,7 +1446,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '5a3c17', name: 'Dr. Anara kyzy Zhyldyz' },
+    withStaff: { id: '5a3c17', firstName: 'Dr. Anara kyzy Zhyldyz' },
     start: '2025-08-18 16:05',
     end: '2025-08-18 17:35',
     color: 'blue',
@@ -1460,7 +1460,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '303bde', name: 'Dr. Kanykey kyzy Aygerim' },
+    withStaff: { id: '303bde', firstName: 'Dr. Kanykey kyzy Aygerim' },
     start: '2025-08-18 19:55',
     end: '2025-08-18 20:25',
     color: 'blue',
@@ -1471,7 +1471,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-18 20:00',
     end: '2025-08-18 20:45',
     color: 'brown',
@@ -1482,7 +1482,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '244c98', name: 'Dr. Kanat uulu Ruslan' },
+    withStaff: { id: '244c98', firstName: 'Dr. Kanat uulu Ruslan' },
     start: '2025-08-19',
     end: '2025-09-18',
     color: 'yellow',
@@ -1494,7 +1494,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-19 04:40',
     end: '2025-08-19 06:10',
     color: 'blue',
@@ -1506,7 +1506,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-19 04:50',
     end: '2025-08-19 05:20',
     color: 'yellow',
@@ -1519,7 +1519,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '392b80', name: 'Dr. Aizada kyzy Nazira' },
+    withStaff: { id: '392b80', firstName: 'Dr. Aizada kyzy Nazira' },
     start: '2025-08-19 06:30',
     end: '2025-08-19 08:00',
     color: 'yellow',
@@ -1531,7 +1531,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-19 09:40',
     end: '2025-08-19 11:10',
     color: 'turquoise',
@@ -1541,7 +1541,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-19 15:00',
     end: '2025-08-19 17:00',
     color: 'pink',
@@ -1551,7 +1551,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-20',
     end: '2025-08-21',
     color: 'blue',
@@ -1563,7 +1563,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: 'cd9540', name: 'Dr. Aibek uulu Nursultan' },
+    withStaff: { id: 'cd9540', firstName: 'Dr. Aibek uulu Nursultan' },
     start: '2025-08-20 02:05',
     end: '2025-08-20 02:20',
     color: 'brown',
@@ -1574,7 +1574,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '303bde', name: 'Dr. Kanykey kyzy Aygerim' },
+    withStaff: { id: '303bde', firstName: 'Dr. Kanykey kyzy Aygerim' },
     start: '2025-08-20 14:15',
     end: '2025-08-20 15:15',
     color: 'brown',
@@ -1586,7 +1586,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '303bde', name: 'Dr. Kanykey kyzy Aygerim' },
+    withStaff: { id: '303bde', firstName: 'Dr. Kanykey kyzy Aygerim' },
     start: '2025-08-20 19:52',
     end: '2025-08-20 21:22',
     color: 'turquoise',
@@ -1597,7 +1597,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-20 23:50',
     end: '2025-08-21 01:50',
     color: 'purple',
@@ -1610,7 +1610,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: 'cf20b4', name: 'Dr. Asel kyzy Aigerim' },
+    withStaff: { id: 'cf20b4', firstName: 'Dr. Asel kyzy Aigerim' },
     start: '2025-08-21 01:47',
     end: '2025-08-21 02:02',
     color: 'blue',
@@ -1622,7 +1622,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '392b80', name: 'Dr. Aizada kyzy Nazira' },
+    withStaff: { id: '392b80', firstName: 'Dr. Aizada kyzy Nazira' },
     start: '2025-08-21 08:40',
     end: '2025-08-21 10:10',
     color: 'brown',
@@ -1635,7 +1635,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '303bde', name: 'Dr. Kanykey kyzy Aygerim' },
+    withStaff: { id: '303bde', firstName: 'Dr. Kanykey kyzy Aygerim' },
     start: '2025-08-21 10:52',
     end: '2025-08-21 12:22',
     color: 'blue',
@@ -1648,7 +1648,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-21 20:14',
     end: '2025-08-21 20:29',
     color: 'turquoise',
@@ -1660,7 +1660,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-21 22:52',
     end: '2025-08-21 23:22',
     color: 'purple',
@@ -1672,7 +1672,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-21 23:25',
     end: '2025-08-22 01:25',
     color: 'pink',
@@ -1683,7 +1683,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '5782c0', name: 'Dr. Nurkyz kyzy Aisuluu' },
+    withStaff: { id: '5782c0', firstName: 'Dr. Nurkyz kyzy Aisuluu' },
     start: '2025-08-21 23:25',
     end: '2025-08-22 01:25',
     color: 'blue',
@@ -1694,7 +1694,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-22 06:40',
     end: '2025-08-22 07:40',
     color: 'green',
@@ -1707,7 +1707,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '5a3c17', name: 'Dr. Anara kyzy Zhyldyz' },
+    withStaff: { id: '5a3c17', firstName: 'Dr. Anara kyzy Zhyldyz' },
     start: '2025-08-22 13:00',
     end: '2025-08-22 15:00',
     color: 'green',
@@ -1718,7 +1718,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: 'c5f111', name: 'Dr. Damir uulu Nurlan' },
+    withStaff: { id: 'c5f111', firstName: 'Dr. Damir uulu Nurlan' },
     start: '2025-08-22 14:00',
     end: '2025-08-22 14:50',
     color: 'yellow',
@@ -1731,7 +1731,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '7c0069', name: 'Dr. Akmaral kyzy Ayzada' },
+    withStaff: { id: '7c0069', firstName: 'Dr. Akmaral kyzy Ayzada' },
     start: '2025-08-22 23:14',
     end: '2025-08-22 23:59',
     color: 'green',
@@ -1745,7 +1745,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '0085ce', name: 'Dr. Marat uulu Emil' },
+    withStaff: { id: '0085ce', firstName: 'Dr. Marat uulu Emil' },
     start: '2025-08-23',
     end: '2025-09-07',
     color: 'brown',
@@ -1756,7 +1756,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: 'c5f111', name: 'Dr. Damir uulu Nurlan' },
+    withStaff: { id: 'c5f111', firstName: 'Dr. Damir uulu Nurlan' },
     start: '2025-08-23 00:00',
     end: '2025-08-23 01:30',
     color: 'brown',
@@ -1768,7 +1768,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: 'a85f40', name: 'Dr. Azamat uulu Timurlan' },
+    withStaff: { id: 'a85f40', firstName: 'Dr. Azamat uulu Timurlan' },
     start: '2025-08-23 01:00',
     end: '2025-08-23 01:15',
     color: 'yellow',
@@ -1778,7 +1778,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '193e06', name: 'Dr. Meerim kyzy Gulzat' },
+    withStaff: { id: '193e06', firstName: 'Dr. Meerim kyzy Gulzat' },
     start: '2025-08-23 01:00',
     end: '2025-08-23 02:00',
     color: 'green',
@@ -1791,7 +1791,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-23 03:00',
     end: '2025-08-23 04:00',
     color: 'purple',
@@ -1802,7 +1802,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: 'c5f111', name: 'Dr. Damir uulu Nurlan' },
+    withStaff: { id: 'c5f111', firstName: 'Dr. Damir uulu Nurlan' },
     start: '2025-08-23 03:05',
     end: '2025-08-23 05:05',
     color: 'yellow',
@@ -1814,7 +1814,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-23 08:20',
     end: '2025-08-23 09:50',
     color: 'red',
@@ -1825,7 +1825,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '7c0069', name: 'Dr. Akmaral kyzy Ayzada' },
+    withStaff: { id: '7c0069', firstName: 'Dr. Akmaral kyzy Ayzada' },
     start: '2025-08-23 14:14',
     end: '2025-08-23 16:14',
     color: 'blue',
@@ -1837,7 +1837,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '7c0069', name: 'Dr. Akmaral kyzy Ayzada' },
+    withStaff: { id: '7c0069', firstName: 'Dr. Akmaral kyzy Ayzada' },
     start: '2025-08-24',
     end: '2025-08-24',
     color: 'yellow',
@@ -1848,7 +1848,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: '7cd217', name: 'Dr. Nazgul kyzy Begimai' },
+    withStaff: { id: '7cd217', firstName: 'Dr. Nazgul kyzy Begimai' },
     start: '2025-08-24 01:00',
     end: '2025-08-24 02:30',
     color: 'brown',
@@ -1859,7 +1859,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: '7cd217', name: 'Dr. Nazgul kyzy Begimai' },
+    withStaff: { id: '7cd217', firstName: 'Dr. Nazgul kyzy Begimai' },
     start: '2025-08-24 08:10',
     end: '2025-08-24 09:40',
     color: 'turquoise',
@@ -1869,7 +1869,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '0085ce', name: 'Dr. Marat uulu Emil' },
+    withStaff: { id: '0085ce', firstName: 'Dr. Marat uulu Emil' },
     start: '2025-08-24 11:55',
     end: '2025-08-24 12:10',
     color: 'brown',
@@ -1880,7 +1880,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: '7c0069', name: 'Dr. Akmaral kyzy Ayzada' },
+    withStaff: { id: '7c0069', firstName: 'Dr. Akmaral kyzy Ayzada' },
     start: '2025-08-24 14:47',
     end: '2025-08-24 15:32',
     color: 'blue',
@@ -1891,7 +1891,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '7cd217', name: 'Dr. Nazgul kyzy Begimai' },
+    withStaff: { id: '7cd217', firstName: 'Dr. Nazgul kyzy Begimai' },
     start: '2025-08-25',
     end: '2025-08-26',
     color: 'brown',
@@ -1902,7 +1902,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-25 07:30',
     end: '2025-08-25 08:15',
     color: 'pink',
@@ -1915,7 +1915,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '0085ce', name: 'Dr. Marat uulu Emil' },
+    withStaff: { id: '0085ce', firstName: 'Dr. Marat uulu Emil' },
     start: '2025-08-25 10:15',
     end: '2025-08-25 11:45',
     color: 'green',
@@ -1926,7 +1926,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: 'cf20b4', name: 'Dr. Asel kyzy Aigerim' },
+    withStaff: { id: 'cf20b4', firstName: 'Dr. Asel kyzy Aigerim' },
     start: '2025-08-25 14:00',
     end: '2025-08-25 14:45',
     color: 'turquoise',
@@ -1936,7 +1936,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-25 14:30',
     end: '2025-08-25 16:30',
     color: 'green',
@@ -1948,7 +1948,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: 'b767a4', name: 'Dr. Elmira kyzy Ainura' },
+    withStaff: { id: 'b767a4', firstName: 'Dr. Elmira kyzy Ainura' },
     start: '2025-08-25 22:15',
     end: '2025-08-25 23:45',
     color: 'purple',
@@ -1958,7 +1958,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-26',
     end: '2025-09-02',
     color: 'purple',
@@ -1970,7 +1970,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: 'cd9540', name: 'Dr. Aibek uulu Nursultan' },
+    withStaff: { id: 'cd9540', firstName: 'Dr. Aibek uulu Nursultan' },
     start: '2025-08-26 08:00',
     end: '2025-08-26 08:15',
     color: 'yellow',
@@ -1981,7 +1981,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '392b80', name: 'Dr. Aizada kyzy Nazira' },
+    withStaff: { id: '392b80', firstName: 'Dr. Aizada kyzy Nazira' },
     start: '2025-08-26 13:14',
     end: '2025-08-26 13:59',
     color: 'green',
@@ -1991,7 +1991,7 @@ export const seededEvents = [
   },
   {
     title: 'Ermek S.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-26 14:47',
     end: '2025-08-26 15:47',
     color: 'yellow',
@@ -2002,7 +2002,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-26 16:55',
     end: '2025-08-26 17:10',
     color: 'green',
@@ -2016,7 +2016,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '244c98', name: 'Dr. Kanat uulu Ruslan' },
+    withStaff: { id: '244c98', firstName: 'Dr. Kanat uulu Ruslan' },
     start: '2025-08-26 17:50',
     end: '2025-08-26 18:50',
     color: 'blue',
@@ -2026,7 +2026,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '392b80', name: 'Dr. Aizada kyzy Nazira' },
+    withStaff: { id: '392b80', firstName: 'Dr. Aizada kyzy Nazira' },
     start: '2025-08-27 02:30',
     end: '2025-08-27 04:00',
     color: 'yellow',
@@ -2038,7 +2038,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '193e06', name: 'Dr. Meerim kyzy Gulzat' },
+    withStaff: { id: '193e06', firstName: 'Dr. Meerim kyzy Gulzat' },
     start: '2025-08-27 06:40',
     end: '2025-08-27 06:55',
     color: 'blue',
@@ -2051,7 +2051,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: 'b767a4', name: 'Dr. Elmira kyzy Ainura' },
+    withStaff: { id: 'b767a4', firstName: 'Dr. Elmira kyzy Ainura' },
     start: '2025-08-27 10:00',
     end: '2025-08-27 11:00',
     color: 'green',
@@ -2063,7 +2063,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '193e06', name: 'Dr. Meerim kyzy Gulzat' },
+    withStaff: { id: '193e06', firstName: 'Dr. Meerim kyzy Gulzat' },
     start: '2025-08-27 10:47',
     end: '2025-08-27 11:47',
     color: 'green',
@@ -2074,7 +2074,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '303bde', name: 'Dr. Kanykey kyzy Aygerim' },
+    withStaff: { id: '303bde', firstName: 'Dr. Kanykey kyzy Aygerim' },
     start: '2025-08-27 11:50',
     end: '2025-08-27 12:50',
     color: 'pink',
@@ -2087,7 +2087,7 @@ export const seededEvents = [
   },
   {
     title: 'Gulzat A.',
-    withStaff: { id: '5782c0', name: 'Dr. Nurkyz kyzy Aisuluu' },
+    withStaff: { id: '5782c0', firstName: 'Dr. Nurkyz kyzy Aisuluu' },
     start: '2025-08-27 21:50',
     end: '2025-08-27 23:20',
     color: 'green',
@@ -2098,7 +2098,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '7cd217', name: 'Dr. Nazgul kyzy Begimai' },
+    withStaff: { id: '7cd217', firstName: 'Dr. Nazgul kyzy Begimai' },
     start: '2025-08-27 21:50',
     end: '2025-08-27 23:20',
     color: 'green',
@@ -2108,7 +2108,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-27 21:50',
     end: '2025-08-27 23:20',
     color: 'blue',
@@ -2119,7 +2119,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '5782c0', name: 'Dr. Nurkyz kyzy Aisuluu' },
+    withStaff: { id: '5782c0', firstName: 'Dr. Nurkyz kyzy Aisuluu' },
     start: '2025-08-28 11:15',
     end: '2025-08-28 12:05',
     color: 'blue',
@@ -2132,7 +2132,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-28 12:40',
     end: '2025-08-28 13:30',
     color: 'yellow',
@@ -2144,7 +2144,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: '39da18', name: 'Dr. Kubanychbek uulu Ermek' },
+    withStaff: { id: '39da18', firstName: 'Dr. Kubanychbek uulu Ermek' },
     start: '2025-08-28 20:55',
     end: '2025-08-28 21:10',
     color: 'red',
@@ -2155,7 +2155,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '303bde', name: 'Dr. Kanykey kyzy Aygerim' },
+    withStaff: { id: '303bde', firstName: 'Dr. Kanykey kyzy Aygerim' },
     start: '2025-08-28 22:14',
     end: '2025-08-28 23:44',
     color: 'yellow',
@@ -2167,7 +2167,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-28 22:35',
     end: '2025-08-28 23:25',
     color: 'yellow',
@@ -2179,7 +2179,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '9ccedb', name: 'Dr. Tilek uulu Almaz' },
+    withStaff: { id: '9ccedb', firstName: 'Dr. Tilek uulu Almaz' },
     start: '2025-08-29 05:40',
     end: '2025-08-29 07:10',
     color: 'green',
@@ -2191,7 +2191,7 @@ export const seededEvents = [
   },
   {
     title: 'Diana M.',
-    withStaff: { id: '392b80', name: 'Dr. Aizada kyzy Nazira' },
+    withStaff: { id: '392b80', firstName: 'Dr. Aizada kyzy Nazira' },
     start: '2025-08-29 14:15',
     end: '2025-08-29 15:00',
     color: 'purple',
@@ -2202,7 +2202,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: 'a5949a', name: 'Dr. Bakytbek uulu Taalay' },
+    withStaff: { id: 'a5949a', firstName: 'Dr. Bakytbek uulu Taalay' },
     start: '2025-08-29 19:20',
     end: '2025-08-29 21:20',
     color: 'blue',
@@ -2213,7 +2213,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-29 19:20',
     end: '2025-08-29 21:20',
     color: 'blue',
@@ -2224,7 +2224,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: 'b767a4', name: 'Dr. Elmira kyzy Ainura' },
+    withStaff: { id: 'b767a4', firstName: 'Dr. Elmira kyzy Ainura' },
     start: '2025-08-30',
     end: '2025-08-30',
     color: 'purple',
@@ -2235,7 +2235,7 @@ export const seededEvents = [
   },
   {
     title: 'Kubat Z.',
-    withStaff: { id: '5a3c17', name: 'Dr. Anara kyzy Zhyldyz' },
+    withStaff: { id: '5a3c17', firstName: 'Dr. Anara kyzy Zhyldyz' },
     start: '2025-08-30 09:15',
     end: '2025-08-30 09:45',
     color: 'turquoise',
@@ -2246,7 +2246,7 @@ export const seededEvents = [
   },
   {
     title: 'Fatima N.',
-    withStaff: { id: '479aed', name: 'Dr. Zhyrgal uulu Talant' },
+    withStaff: { id: '479aed', firstName: 'Dr. Zhyrgal uulu Talant' },
     start: '2025-08-30 10:50',
     end: '2025-08-30 11:05',
     color: 'red',
@@ -2256,7 +2256,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '244c98', name: 'Dr. Kanat uulu Ruslan' },
+    withStaff: { id: '244c98', firstName: 'Dr. Kanat uulu Ruslan' },
     start: '2025-08-30 22:47',
     end: '2025-08-30 23:37',
     color: 'green',
@@ -2267,7 +2267,7 @@ export const seededEvents = [
   },
   {
     title: 'Bakyt K.',
-    withStaff: { id: 'b767a4', name: 'Dr. Elmira kyzy Ainura' },
+    withStaff: { id: 'b767a4', firstName: 'Dr. Elmira kyzy Ainura' },
     start: '2025-08-31 03:00',
     end: '2025-08-31 05:00',
     color: 'brown',
@@ -2278,7 +2278,7 @@ export const seededEvents = [
   },
   {
     title: 'Aigerim B.',
-    withStaff: { id: 'b767a4', name: 'Dr. Elmira kyzy Ainura' },
+    withStaff: { id: 'b767a4', firstName: 'Dr. Elmira kyzy Ainura' },
     start: '2025-08-31 06:00',
     end: '2025-08-31 07:30',
     color: 'red',
@@ -2292,7 +2292,7 @@ export const seededEvents = [
   },
   {
     title: 'Nurzhan O.',
-    withStaff: { id: '7cd217', name: 'Dr. Nazgul kyzy Begimai' },
+    withStaff: { id: '7cd217', firstName: 'Dr. Nazgul kyzy Begimai' },
     start: '2025-08-31 10:00',
     end: '2025-08-31 12:00',
     color: 'green',
@@ -2304,7 +2304,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '09e23e', name: 'Dr. Erkin uulu Bakyt' },
+    withStaff: { id: '09e23e', firstName: 'Dr. Erkin uulu Bakyt' },
     start: '2025-08-31 15:25',
     end: '2025-08-31 15:55',
     color: 'green',
@@ -2315,7 +2315,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '6668a5', name: 'Dr. Cholpon kyzy Saltanat' },
+    withStaff: { id: '6668a5', firstName: 'Dr. Cholpon kyzy Saltanat' },
     start: '2025-08-31 18:05',
     end: '2025-08-31 20:05',
     color: 'blue',
@@ -2326,7 +2326,7 @@ export const seededEvents = [
   },
   {
     title: 'Almaz T.',
-    withStaff: { id: '5a3c17', name: 'Dr. Anara kyzy Zhyldyz' },
+    withStaff: { id: '5a3c17', firstName: 'Dr. Anara kyzy Zhyldyz' },
     start: '2025-08-31 19:00',
     end: '2025-08-31 20:30',
     color: 'green',

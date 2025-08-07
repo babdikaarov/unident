@@ -20,7 +20,6 @@ export default function TimeAxis() {
       $app.config.dayBoundaries.value,
       $app.config.isHybridDay
     )
-    console.log('Generated Hours:', newHours)
     setHours(newHours)
 
     setMinutesInterval(getIntervalsPerHour($app.config.minuteBoudaries.value))

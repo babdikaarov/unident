@@ -13,6 +13,7 @@ import {
   dateFromDateTime,
   timeFromDateTime,
 } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/string-to-string'
+import { StaffBase } from '@unimed-x/shared/src/interfaces/calendar/calendar-staff.interface'
 
 type ICalendarPluginOptions = {
   data: string
@@ -26,7 +27,7 @@ type ICalTime = {
 type ICalOccurrence = {
   eventId: string
   item: {
-    withStaff: { id: string; name: string }
+    withStaff: StaffBase
     summary: string
     description: string
     location: string
@@ -34,7 +35,7 @@ type ICalOccurrence = {
 } & ICalTime
 
 type ICalEvent = {
-  withStaff: { id: string; name: string }
+  withStaff: StaffBase
   eventId: string
   summary: string
   description: string

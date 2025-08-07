@@ -9,11 +9,9 @@ import CalendarState from '@unimed-x/shared/src/interfaces/calendar/calendar-sta
 import DatePickerConfigInternal from '@unimed-x/shared/src/interfaces/date-picker/config.interface'
 import CalendarEvents from '@unimed-x/shared/src/interfaces/calendar/calendar-events.interface'
 import { createCalendarStaff } from '../calendar-staffList/calendar-staffList.impl'
-import CalendarStaff from '@unimed-x/shared/src/interfaces/calendar/calendar-staff.interface'
+import CalendarStaff, { StaffBase } from '@unimed-x/shared/src/interfaces/calendar/calendar-staff.interface'
 
-export default class CalendarAppSingletonBuilder
-  implements Builder<CalendarAppSingleton>
-{
+export default class CalendarAppSingletonBuilder implements Builder<CalendarAppSingleton> {
   private config: CalendarConfigInternal | undefined
   private timeUnitsImpl: TimeUnits | undefined
   private datePickerState: DatePickerState | undefined
@@ -77,10 +75,8 @@ export default class CalendarAppSingletonBuilder
     this.calendarEvents = calendarEvents
     return this
   }
-  withStaffList(
-    staff: { id: string; name: string }[]
-  ): CalendarAppSingletonBuilder {
-    this.staffList = createCalendarStaff(staff)
+  withStaffList(staff: StaffBase[], staffPerView: number): CalendarAppSingletonBuilder {
+    this.staffList = createCalendarStaff(staff, staffPerView)
     return this
   }
 }

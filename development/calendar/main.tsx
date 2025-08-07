@@ -8,7 +8,7 @@ import '@fontsource/roboto-condensed'
 import { createCalendar } from '@unimed-x/calendar/src'
 import '../../packages/theme-default/src/calendar.scss'
 import '../app.css'
-// import { createDragAndDropPlugin } from '@unimed-x/drag-and-drop/src'
+import { createDragAndDropPlugin } from '@unimed-x/drag-and-drop/src'
 import { createEventModalPlugin } from '@unimed-x/event-modal/src'
 import { seededEvents } from '../data/seeded-events.ts'
 import { createScrollControllerPlugin } from '@unimed-x/scroll-controller/src'
@@ -27,12 +27,10 @@ import { createViewList } from '@unimed-x/calendar/src/views/list'
 import { mergeLocales } from '@unimed-x/translations/src/utils/merge-locales.ts'
 import { translations } from '@unimed-x/translations/src'
 import { ZoomInPlugin } from '../../packages/zoom-in-out/src/index.ts'
-import { createDragAndDropPlugin } from '@unimed-x/drag-and-drop'
+// import { createDragAndDropPlugin } from '@unimed-x/drag-and-drop'
 import { staffSeed } from '../data/staff-seed.ts'
 import { colors } from './colors.ts'
 import { mainCalendatCallbacks } from './callbacks.ts'
-// import { CopyEventPlugin } from '@starredev/schedule-x-plugins'
-// import { ZoomInPlugin } from '@starredev/schedule-x-plugins'
 const calendarElement = document.getElementById('calendar') as HTMLElement
 const calendarSiderElement = document.getElementById(
   'siderCalendar'
@@ -68,22 +66,19 @@ const sidebarCalendar = createCalendar({
 const calendar = createCalendar({
   // staff: [],
   staff: staffSeed,
-  events: [],
-  // events: seededEvents,
-  minuteBoudaries: 30,
+  // events: [],
+  // isLoading: true,
+  events: seededEvents,
+  minuteBoudaries: 10,
   plugins: [
     createViewMonthAgenda(),
     createEventRecurrencePlugin(),
-    // createDragAndDropPlugin(),
+    createDragAndDropPlugin(),
     createCurrentTimePlugin(),
     createEventModalPlugin(),
-    // createResizePlugin(),
+    createResizePlugin(),
     createScrollControllerPlugin(),
     eventsServicePlugin,
-    // new CopyEventPlugin(eventsServicePlugin, (event) => {
-    //   console.log('CopyEventPlugin', event)
-    //   eventsServicePlugin.add(event)
-    // }),
     calendarControls,
     new ZoomInPlugin(calendarControls, {
       zoomFactor: 1, // Initial zoom (default: 1)
@@ -118,6 +113,8 @@ const calendar = createCalendar({
   },
 
   locale: 'ru-RU',
+  
 })
+
 calendar.render(calendarElement)
 sidebarCalendar.render(calendarSiderElement)

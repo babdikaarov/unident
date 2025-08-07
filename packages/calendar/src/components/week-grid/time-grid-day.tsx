@@ -118,7 +118,6 @@ export default function TimeGridDay({
           <TimeGridBackgroundEvent backgroundEvent={event} date={date} />
         </>
       ))}
-
       {eventsWithConcurrency.map((event) => (
         <TimeGridEvent
           key={event.id}

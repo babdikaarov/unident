@@ -6,6 +6,7 @@ import Builder from '../../../../interfaces/builder.interface'
 import CalendarEventImpl from './calendar-event.impl'
 import { EventId } from '../../../../types/event-id'
 import CalendarConfigInternal from '../../../../interfaces/calendar/calendar-config'
+import { StaffBase } from '../../../../interfaces/calendar/calendar-staff.interface'
 
 export default class CalendarEventBuilder
   implements Builder<CalendarEventInternal>
@@ -15,12 +16,7 @@ export default class CalendarEventBuilder
   private description: string | undefined
   private title: string | undefined
   private calendarId: string | undefined
-  private withStaff:
-    | {
-        id: string
-        name: string
-      }
-    | undefined
+  private withStaff: StaffBase | undefined
   private _foreignProperties: Record<string, unknown> = {}
   private _options: CalendarEventOptions | undefined = undefined
   private _customContent: CalendarEventInternal['_customContent'] = {}
@@ -53,7 +49,7 @@ export default class CalendarEventBuilder
       this._foreignProperties
     )
   }
-  withStaffBuild(withStaff: { id: string; name: string } | undefined) {
+  withStaffBuild(withStaff: StaffBase | undefined) {
     this.withStaff = withStaff
     return this
   }

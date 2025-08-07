@@ -117,7 +117,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                             key={staff.id}
                             className="sx__time-grid-day-staff"
                           >
-                            {staff.name}
+                            {staff.firstName}
                           </div>
                         ))}
                     </div>

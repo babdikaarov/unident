@@ -1,15 +1,16 @@
 import * as fs from 'fs'
 import { seededEvents } from '../data/seeded-events'
+import { StaffBase } from '@unimed-x/shared/src/interfaces/calendar/calendar-staff.interface'
 
 export const generateStaffSeed = () => {
-  const staffMap = new Map<string, { id: string; name: string }>()
+  const staffMap = new Map<string, StaffBase>()
 
   // Loop through all events
   for (const event of seededEvents) {
     if (event.withStaff && !staffMap.has(event.withStaff.id)) {
       staffMap.set(event.withStaff.id, {
         id: event.withStaff.id,
-        name: event.withStaff.name,
+        firstName: event.withStaff.firstName,
       })
     }
   }

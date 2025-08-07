@@ -19,6 +19,7 @@ import { WeekDay } from '../../enums/time/week-day.enum'
 import { BackgroundEvent } from './background-event'
 import { Language } from '../../types/translations/language.translations'
 import { ZoomInPlugin } from '../zoomInPlugin/zoomInplugin.interface'
+import { StaffBase } from './calendar-staff.interface'
 
 export type WeekOptions = {
   gridHeight: number
@@ -68,6 +69,8 @@ export default interface CalendarConfigInternal extends Config {
   weekOptions: Signal<WeekOptions>
   calendars: Signal<Record<string, CalendarType>>
   isDark: Signal<boolean>
+  isLoading: Signal<boolean>
+  staffPerView: Signal<number>
   minDate: Signal<string | undefined>
   maxDate: Signal<string | undefined>
   monthGridOptions: Signal<MonthGridOptions>
@@ -110,15 +113,18 @@ interface ReducedCalendarConfigInternal
     | 'direction'
     | 'minuteBoudaries'
     | 'staff'
+    | 'isLoading'
+    | 'staffPerView'
   > {}
 
 export interface CalendarConfigExternal
   extends Partial<ReducedCalendarConfigInternal> {
   datePicker?: CalendarDatePickerConfigExternal
   events?: CalendarEventExternal[]
-
+  staffPerView?: number
   backgroundEvents?: BackgroundEvent[]
   dayBoundaries?: DayBoundariesExternal
+  isLoading?: boolean
   views: [View, ...View[]]
   selectedDate?: string
   plugins?: PluginBase<string>[]
@@ -134,5 +140,6 @@ export interface CalendarConfigExternal
   translations?: Record<string, Language>
   showWeekNumbers?: boolean
   minuteBoudaries?: number
-  staff?: { id: string; name: string }[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  staff?: StaffBase[]
 }

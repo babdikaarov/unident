@@ -25,7 +25,7 @@ const calendar = createCalendar({
       end: '2023-09-21 01:15',
       withStaff: {
         id: '',
-        name: '',
+        firstName: '',
       },
     },
   ],

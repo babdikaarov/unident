@@ -1,4 +1,5 @@
 import { EventId } from '../../types/event-id'
+import { StaffBase } from './calendar-staff.interface'
 import { EventFragments } from './event-fragments'
 
 export type CalendarEventOptions = {
@@ -11,10 +12,7 @@ export default interface CalendarEventExternal {
   id: EventId
   start: string
   end: string
-  withStaff?: {
-    id: string
-    name: string
-  }
+  withStaff?: StaffBase
   title?: string
   people?: string[]
   location?: string

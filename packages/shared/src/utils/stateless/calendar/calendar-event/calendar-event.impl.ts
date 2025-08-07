@@ -17,6 +17,7 @@ import {
 } from '../../time/format-conversion/string-to-string'
 import { EventFragments } from '../../../../interfaces/calendar/event-fragments'
 import { DEFAULT_EVENT_COLOR_NAME } from '../../../../values'
+import { StaffBase } from '../../../../interfaces/calendar/calendar-staff.interface'
 
 export default class CalendarEventImpl implements CalendarEventInternal {
   _previousConcurrentEvents: number | undefined
@@ -30,10 +31,7 @@ export default class CalendarEventImpl implements CalendarEventInternal {
     public id: EventId,
     public start: string,
     public end: string,
-    public withStaff?: {
-      id: string
-      name: string
-    },
+    public withStaff?: StaffBase,
     public title?: string,
     public people?: string[],
     public location?: string,

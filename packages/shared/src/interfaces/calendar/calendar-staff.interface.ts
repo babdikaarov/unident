@@ -1,15 +1,19 @@
 import { computed, signal } from '@preact/signals'
 
-export type StaffMember = {
+export type StaffBase = {
   id: string
-  name: string
+  firstName: string
 }
 
 export default interface CalendarStaff {
-  list: ReturnType<typeof signal<StaffMember[]>>
-  listOnView: ReturnType<typeof computed<StaffMember[]>>
+  list: ReturnType<typeof signal<StaffBase[]>>
+  listOnView: ReturnType<typeof computed<StaffBase[]>>
+  currentStartIndex: ReturnType<typeof signal<number>>
+  staffPerView: ReturnType<typeof signal<number>>
+  hasList: ReturnType<typeof computed<boolean>>
   next: () => void
   prev: () => void
-  currentStartIndex: ReturnType<typeof signal<number>>
-  staffPerView: number
+  setStaffPerView: (count: number) => void
+  setStaffList: (staffList: StaffBase[]) => void
+  addStaffList: (staff: StaffBase) => void
 }

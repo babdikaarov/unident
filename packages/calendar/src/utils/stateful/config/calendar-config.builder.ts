@@ -28,9 +28,7 @@ import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-v
 import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 
-export default class CalendarConfigBuilder
-  implements Builder<CalendarConfigInternal>
-{
+export default class CalendarConfigBuilder implements Builder<CalendarConfigInternal> {
   locale: string | undefined
   firstDayOfWeek: WeekDay | undefined
   defaultView: ViewName | undefined
@@ -47,6 +45,7 @@ export default class CalendarConfigBuilder
   calendars: Record<string, CalendarType> | undefined
   plugins: Plugins = {}
   isDark: boolean | undefined = false
+  isLoading: boolean | undefined 
   isResponsive: boolean | undefined = true
   callbacks: CalendarCallbacks | undefined
   minDate: string | undefined
@@ -73,6 +72,7 @@ export default class CalendarConfigBuilder
       this.calendars,
       this.plugins,
       this.isDark,
+      this.isLoading,
       this.isResponsive,
       this.callbacks,
       {},
@@ -158,6 +158,10 @@ export default class CalendarConfigBuilder
 
   withIsDark(isDark: boolean | undefined): CalendarConfigBuilder {
     this.isDark = isDark
+    return this
+  }
+  withIsLoading(isLoading: boolean | undefined): CalendarConfigBuilder {
+    this.isLoading = isLoading
     return this
   }
 

@@ -18,6 +18,7 @@ export const createCalendarState = (
       (view) => view.name === calendarConfig.defaultView
     )?.name || calendarConfig.views.value[0].name
   )
+
   const view = computed(() => {
     return _view.value
   })
@@ -79,7 +80,7 @@ export const createCalendarState = (
 
   const isCalendarSmall = signal<boolean | undefined>(undefined)
   const isDark = signal<boolean>(calendarConfig.isDark.value || false)
-
+  const isLoading = signal<boolean>(calendarConfig.isLoading.value || false)
   effect(() => {
     const eventColors = new EventColors(calendarConfig)
     if (isDark.value) {
@@ -88,8 +89,10 @@ export const createCalendarState = (
       eventColors.setLight()
     }
   })
+ 
 
   return {
+    isLoading,
     view,
     isDark,
     setRange,

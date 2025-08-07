@@ -25,6 +25,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
   weekOptions: Signal<WeekOptions>
   calendars: Signal<Record<string, CalendarType>>
   isDark: Signal<boolean>
+  isLoading: Signal<boolean>
   minDate: Signal<string | undefined>
   maxDate: Signal<string | undefined>
   monthGridOptions: Signal<MonthGridOptions>
@@ -34,6 +35,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
   showWeekNumbers: Signal<boolean> = signal(false)
   direction: 'ltr' | 'rtl' = 'ltr'
   minuteBoudaries: Signal<number>
+  staffPerView: Signal<number> = signal(1)
 
   constructor(
     locale: string = DEFAULT_LOCALE,
@@ -45,6 +47,8 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     calendars = {},
     public plugins = {},
     isDark: boolean = false,
+    isLoading: boolean = false,
+
     public isResponsive: boolean = true,
     public callbacks = {},
     public _customComponentFns = {},
@@ -56,7 +60,8 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     theme: string | undefined = undefined,
     translations: Record<string, Language> = {},
     showWeekNumbers: boolean = false,
-    minuteBoudaries: number = 60
+    minuteBoudaries: number = 60,
+    staffPerView: number = 1
   ) {
     this.locale = signal(locale)
     this.firstDayOfWeek = signal(firstDayOfWeek)
@@ -65,6 +70,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     this.weekOptions = signal(weekOptions)
     this.calendars = signal(calendars)
     this.isDark = signal(isDark)
+    this.isLoading = signal(isLoading)
     this.minDate = signal(minDate)
     this.maxDate = signal(maxDate)
     this.monthGridOptions = signal(monthGridOptions)
@@ -73,6 +79,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     this.showWeekNumbers = signal(showWeekNumbers)
     this.direction = getDirection()
     this.minuteBoudaries = signal(minuteBoudaries)
+    this.staffPerView = signal(staffPerView)
   }
 
   get isHybridDay(): boolean {

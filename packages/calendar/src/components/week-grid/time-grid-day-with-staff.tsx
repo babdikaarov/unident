@@ -119,7 +119,6 @@ export default function TimeGridDayWithStaff({
             <TimeGridBackgroundEvent backgroundEvent={event} date={date} />
           </>
         ))}
-
         {eventsWithConcurrency.map((event) => {
           if (event.withStaff && event.withStaff.id === staff.id) {
             return (
