@@ -33,3 +33,5 @@ export {
   addMinutes,
 } from './utils/stateless/time/date-time-mutation/adding'
 export type { DateRange } from './types/date-range'
+export type { StaffBase } from './interfaces/calendar/calendar-staff.interface'
+export type { CalendarCallbacks } from '@unimed-x/shared/src/interfaces/calendar/listeners.interface'

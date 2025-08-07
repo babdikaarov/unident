@@ -140,6 +140,5 @@ export interface CalendarConfigExternal
   translations?: Record<string, Language>
   showWeekNumbers?: boolean
   minuteBoudaries?: number
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   staff?: StaffBase[]
 }
