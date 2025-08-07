@@ -1,5 +1,8 @@
 {
   "name": "@unimed-x/event-recurrence",
+  "publishConfig": {
+    "access": "public"
+  },
   "umdName": "SXEventRecurrence",
   "version": "3.0.3",
   "description": "Create recurring events for the Schedule-X calendar",
@@ -26,5 +29,5 @@
     "directory": "packages/event-recurrence"
   },
   "homepage": "https://schedule-x.dev",
-  "gitHead": "4599b842c2441b1793e3b508db88138f5aac1d91"
+  "gitHead": "742936f1cb7c321764cc5d347c2781a8bc413346"
 }

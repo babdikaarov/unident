@@ -1,5 +1,8 @@
 {
   "name": "@unimed-x/theme-shadcn",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "3.0.3",
   "license": "MIT",
   "author": {
@@ -18,7 +21,7 @@
   "files": [
     "dist"
   ],
-  "gitHead": "4599b842c2441b1793e3b508db88138f5aac1d91",
+  "gitHead": "742936f1cb7c321764cc5d347c2781a8bc413346",
   "repository": {
     "type": "git",
     "url": "https://github.com/schedule-x/schedule-x",
