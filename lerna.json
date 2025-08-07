@@ -2,5 +2,10 @@
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "version": "3.0.0",
   "useNx": true,
-  "packages": ["packages/*", "libs/*"]
+  "packages": ["packages/*", "libs/*"],
+  "command": {
+    "publish": {
+      "access": "public"
+    }
+  }
 }
