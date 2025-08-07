@@ -1,5 +1,5 @@
-![Schedule-X](https://schedule-x.s3.eu-west-1.amazonaws.com/schedule-x-logo.png)
+# This is the forked version and might not reflect the real documentation please use official package link below
 
-# @schedule-x/event-modal
+## @schedule-x/event-modal
 
 This is the event modal plugin for the Schedule-X calendar. For documentation, please refer to: https://schedule-x.dev/
