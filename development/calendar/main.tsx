@@ -29,6 +29,8 @@ import { translations } from '@unimed-x/translations/src'
 import { ZoomInPlugin } from '../../packages/zoom-in-out/src/index.ts'
 import { createDragAndDropPlugin } from '@unimed-x/drag-and-drop'
 import { staffSeed } from '../data/staff-seed.ts'
+import { colors } from './colors.ts'
+import { mainCalendatCallbacks } from './callbacks.ts'
 // import { CopyEventPlugin } from '@starredev/schedule-x-plugins'
 // import { ZoomInPlugin } from '@starredev/schedule-x-plugins'
 const calendarElement = document.getElementById('calendar') as HTMLElement
@@ -41,7 +43,8 @@ const eventsServicePlugin = createEventsServicePlugin()
 
 const sidebarCalendar = createCalendar({
   views: [createViewMonthAgenda()],
-  events: seededEvents,
+  events: [],
+  // events: seededEvents,
   defaultView: 'monthly-agenda',
   locale: 'ru-RU',
   plugins: [],
@@ -59,64 +62,14 @@ const sidebarCalendar = createCalendar({
       // calendarControls.$app.config.minuteBoudaries.value = 10
     },
   },
-  calendars: {
-    abcent: {
-      colorName: 'abcent',
-      lightColors: {
-        main: '#f9d71c',
-        container: '#fff5aa',
-        onContainer: '#594800',
-      },
-      darkColors: {
-        main: '#fff5c0',
-        onContainer: '#fff5de',
-        container: '#a29742',
-      },
-    },
-    canceled: {
-      colorName: 'canceled',
-      lightColors: {
-        main: '#f91c45',
-        container: '#ffd2dc',
-        onContainer: '#59000d',
-      },
-      darkColors: {
-        main: '#ffc0cc',
-        onContainer: '#ffdee6',
-        container: '#a24258',
-      },
-    },
-    success: {
-      colorName: 'success',
-      lightColors: {
-        main: '#1cf9b0',
-        container: '#dafff0',
-        onContainer: '#004d3d',
-      },
-      darkColors: {
-        main: '#c0fff5',
-        onContainer: '#e6fff5',
-        container: '#42a297',
-      },
-    },
-    confirmed: {
-      colorName: 'confirmed',
-      lightColors: {
-        main: '#1c7df9',
-        container: '#d2e7ff',
-        onContainer: '#002859',
-      },
-      darkColors: {
-        main: '#c0dfff',
-        onContainer: '#dee6ff',
-        container: '#426aa2',
-      },
-    },
-  },
+  calendars: colors,
 })
 
 const calendar = createCalendar({
+  // staff: [],
   staff: staffSeed,
+  events: [],
+  // events: seededEvents,
   minuteBoudaries: 30,
   plugins: [
     createViewMonthAgenda(),
@@ -156,128 +109,15 @@ const calendar = createCalendar({
     createViewList(),
   ],
   defaultView: 'day',
-  callbacks: {
-    onScrollDayIntoView(date) {
-      console.log('onScrollDayIntoView: ', date)
-    },
-
-    onEventUpdate(event) {
-      console.log('onEventUpdate', event)
-    },
-
-    async onBeforeEventUpdateAsync(oldEvent, newEvent, $app) {
-      return Promise.resolve(true)
-    },
-
-    onEventClick(event, e) {
-      console.log('onEventClick', event, e)
-    },
-
-    onDoubleClickEvent(event, e) {
-      console.log('onDoubleClickEvent', event, e)
-    },
-
-    onClickDate(date) {
-      console.log('onClickDate', date)
-      console.log(calendarControls.$app.calendarState.range.value)
-    },
-
-    onClickDateTime(dateTime) {
-      console.log('onClickDateTime', dateTime)
-      console.log(calendarControls.$app.calendarState.range.value)
-    },
-
-    onClickAgendaDate(date) {
-      console.log('onClickAgendaDate', date)
-      console.log(calendarControls.$app.calendarState.range.value)
-    },
-
-    onDoubleClickAgendaDate(date) {
-      console.log('onDoubleClickAgendaDate', date)
-    },
-
-    onClickPlusEvents(date) {
-      console.log('onClickPlusEvents', date)
-    },
-
-    onSelectedDateUpdate(date) {
-      console.log('onSelectedDateUpdate', date)
-    },
-
-    onDoubleClickDateTime(dateTime) {
-      console.log('onDoubleClickDateTime', dateTime)
-    },
-
-    onDoubleClickDate(date) {
-      console.log('onDoubleClickDate', date)
-    },
-
-    onRangeUpdate(range) {
-      console.log('onRangeUpdate', range)
-    },
-  },
+  callbacks: mainCalendatCallbacks(calendarControls as any),
   selectedDate: '2025-08-06',
-  calendars: {
-    abcent: {
-      colorName: 'abcent',
-      lightColors: {
-        main: '#f9d71c',
-        container: '#fff5aa',
-        onContainer: '#594800',
-      },
-      darkColors: {
-        main: '#fff5c0',
-        onContainer: '#fff5de',
-        container: '#a29742',
-      },
-    },
-    canceled: {
-      colorName: 'canceled',
-      lightColors: {
-        main: '#f91c45',
-        container: '#ffd2dc',
-        onContainer: '#59000d',
-      },
-      darkColors: {
-        main: '#ffc0cc',
-        onContainer: '#ffdee6',
-        container: '#a24258',
-      },
-    },
-    success: {
-      colorName: 'success',
-      lightColors: {
-        main: '#1cf9b0',
-        container: '#dafff0',
-        onContainer: '#004d3d',
-      },
-      darkColors: {
-        main: '#c0fff5',
-        onContainer: '#e6fff5',
-        container: '#42a297',
-      },
-    },
-    confirmed: {
-      colorName: 'confirmed',
-      lightColors: {
-        main: '#1c7df9',
-        container: '#d2e7ff',
-        onContainer: '#002859',
-      },
-      darkColors: {
-        main: '#c0dfff',
-        onContainer: '#dee6ff',
-        container: '#426aa2',
-      },
-    },
-  },
+  calendars: colors,
   dayBoundaries: {
     start: '07:00',
     end: '24:00',
   },
 
   locale: 'ru-RU',
-  events: seededEvents,
 })
 calendar.render(calendarElement)
 sidebarCalendar.render(calendarSiderElement)
