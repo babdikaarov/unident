@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- **calendar-controls:** enable overriding parts of week options ([#707](https://github.com/schedule-x/schedule-x/issues/707)) ([5ce464e](https://github.com/schedule-x/schedule-x/commit/5ce464e434c9069aca212a6cc947e495f8f2f5e6))
+- **calendar-controls:** update range when setting view ([#463](https://github.com/schedule-x/schedule-x/issues/463)) ([ebfb4a6](https://github.com/schedule-x/schedule-x/commit/ebfb4a65b7152b39af6dcfc60dda18ae86fb9104))
+- **calendar:** update range automatically when setting view ([#506](https://github.com/schedule-x/schedule-x/issues/506)) ([1ca4928](https://github.com/schedule-x/schedule-x/commit/1ca4928e17de382159e6d01f5035dd5068021ed5))
+- plugin type declarations ([#705](https://github.com/schedule-x/schedule-x/issues/705)) ([53e3796](https://github.com/schedule-x/schedule-x/commit/53e379692d4ba253dc696868af74490cc49e39a0))
+- set names for globals in umd bundle ([#606](https://github.com/schedule-x/schedule-x/issues/606)) ([d36a6a2](https://github.com/schedule-x/schedule-x/commit/d36a6a2d6ce638ef3ac36c32dcbc289602b3a43b))
+- **theme-default:** remove source maps ([#613](https://github.com/schedule-x/schedule-x/issues/613)) ([929a290](https://github.com/schedule-x/schedule-x/commit/929a29049ba09e46ffea6ad0baecce5c41d94b7d))
+- update events only when needed ([#452](https://github.com/schedule-x/schedule-x/issues/452)) ([b7f153c](https://github.com/schedule-x/schedule-x/commit/b7f153cd8f6ed1010f710193dcb69ce7fb86e72f))
+
+### Features
+
+- add calendar controls plugin ([#253](https://github.com/schedule-x/schedule-x/issues/253)) ([db414d6](https://github.com/schedule-x/schedule-x/commit/db414d69b2fc95b6699b40699c0a546168a82f30))
+- add event updater plugin ([#349](https://github.com/schedule-x/schedule-x/issues/349)) ([0e81005](https://github.com/schedule-x/schedule-x/commit/0e8100569e9781a993915ceff1f0196fa4d846d0))
+- add getDate and onSelectedDateUpdate apis ([#419](https://github.com/schedule-x/schedule-x/issues/419)) ([adfd5e6](https://github.com/schedule-x/schedule-x/commit/adfd5e60a6cb2c85c6cfeb31fc70b427205f87d5))
+- add new plugin api on calendar instance ([#702](https://github.com/schedule-x/schedule-x/issues/702)) ([5b8caa2](https://github.com/schedule-x/schedule-x/commit/5b8caa2e09baf33a0f7151b3ac19c198301f93b6))
+- add option to prevent event overlap in week/day views ([#897](https://github.com/schedule-x/schedule-x/issues/897)) ([b39690a](https://github.com/schedule-x/schedule-x/commit/b39690a4b79ce02f79484a72bd569d1b0d5c2f35))
+- changes on ui of events and calendar header ([2dea946](https://github.com/schedule-x/schedule-x/commit/2dea9467f6c2e5afbbec714555a16a1f064a721f))
+- **date-picker:** add onEscapeKeyDown ([#564](https://github.com/schedule-x/schedule-x/issues/564)) ([01add2b](https://github.com/schedule-x/schedule-x/commit/01add2b7a5a52320e0d3adcce9d606b82389f810))
+- enable navigating month views with screen reader ([#523](https://github.com/schedule-x/schedule-x/issues/523)) ([6577fe0](https://github.com/schedule-x/schedule-x/commit/6577fe096bcac1fa81fb8ed79bbb0d67e9492114))
+- enable using calendar controls plugin before calendar has rendered ([#519](https://github.com/schedule-x/schedule-x/issues/519)) ([8e60f9e](https://github.com/schedule-x/schedule-x/commit/8e60f9ea7b2abf155021b16f39fcb80c3d29f0d1))
+- make config values reactive ([#662](https://github.com/schedule-x/schedule-x/issues/662)) ([0ad317d](https://github.com/schedule-x/schedule-x/commit/0ad317dcb7b831cd82de9d33b154000f4dfc1182))
+- rename APIs on plugins ([17aaa5d](https://github.com/schedule-x/schedule-x/commit/17aaa5d274bf437271a8752a7a7507a78249c6af))
+
+### BREAKING CHANGES
+
+- add time, if existing, to month grid events
+- add time, if existing, to date grid events
+- view location in time grid events by default, removing showLocation option
+- hide view selection when only one view is available
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 **Note:** Version bump only for package @schedule-x/calendar-controls

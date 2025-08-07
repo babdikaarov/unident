@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- **calendar-controls:** update range when setting view ([#463](https://github.com/schedule-x/schedule-x/issues/463)) ([ebfb4a6](https://github.com/schedule-x/schedule-x/commit/ebfb4a65b7152b39af6dcfc60dda18ae86fb9104))
+- **calendar:** event bubbling order in firefox ([#550](https://github.com/schedule-x/schedule-x/issues/550)) ([0d496ea](https://github.com/schedule-x/schedule-x/commit/0d496ea1c8e4e0e6d13d90372c1fd2535e4d3134))
+- month grid and time picker in rtl ([#1008](https://github.com/schedule-x/schedule-x/issues/1008)) ([2c82386](https://github.com/schedule-x/schedule-x/commit/2c823860c4adb3fd62b0e43bd9d5101166e57f9d))
+- popup positions when teleported ([#1015](https://github.com/schedule-x/schedule-x/issues/1015)) ([9b27843](https://github.com/schedule-x/schedule-x/commit/9b27843a6cb6b03ff4ee860cc4f387db2f9da545))
+- set names for globals in umd bundle ([#606](https://github.com/schedule-x/schedule-x/issues/606)) ([d36a6a2](https://github.com/schedule-x/schedule-x/commit/d36a6a2d6ce638ef3ac36c32dcbc289602b3a43b))
+- **theme-default:** remove source maps ([#613](https://github.com/schedule-x/schedule-x/issues/613)) ([929a290](https://github.com/schedule-x/schedule-x/commit/929a29049ba09e46ffea6ad0baecce5c41d94b7d))
+- **time-picker:** add missing translations ([#1009](https://github.com/schedule-x/schedule-x/issues/1009)) ([f7c2b52](https://github.com/schedule-x/schedule-x/commit/f7c2b52bdf1d3c0deed7d826ad40d8730c2ec147))
+- **time-picker:** fix dark theme for teleported popup ([#510](https://github.com/schedule-x/schedule-x/issues/510)) ([9caa34b](https://github.com/schedule-x/schedule-x/commit/9caa34bcbbbc148b883a9cafac396a8220d94970))
+- update events only when needed ([#452](https://github.com/schedule-x/schedule-x/issues/452)) ([b7f153c](https://github.com/schedule-x/schedule-x/commit/b7f153cd8f6ed1010f710193dcb69ce7fb86e72f))
+
+### Features
+
+- add event updater plugin ([#349](https://github.com/schedule-x/schedule-x/issues/349)) ([0e81005](https://github.com/schedule-x/schedule-x/commit/0e8100569e9781a993915ceff1f0196fa4d846d0))
+- add name option to date- and time picker configs ([#533](https://github.com/schedule-x/schedule-x/issues/533)) ([56357e5](https://github.com/schedule-x/schedule-x/commit/56357e59950c1b637a1e4ae391298e66129fd46d))
+- add time picker component ([#337](https://github.com/schedule-x/schedule-x/issues/337)) ([f5605fc](https://github.com/schedule-x/schedule-x/commit/f5605fccd17c69f76a8a19c33ce1718d3fc1a451))
+- close popups on escape press ([#557](https://github.com/schedule-x/schedule-x/issues/557)) ([eff1036](https://github.com/schedule-x/schedule-x/commit/eff1036bea065083b68d11ac0acca57232160778))
+- **date-picker:** add onEscapeKeyDown ([#564](https://github.com/schedule-x/schedule-x/issues/564)) ([01add2b](https://github.com/schedule-x/schedule-x/commit/01add2b7a5a52320e0d3adcce9d606b82389f810))
+- enable navigating month views with screen reader ([#523](https://github.com/schedule-x/schedule-x/issues/523)) ([6577fe0](https://github.com/schedule-x/schedule-x/commit/6577fe096bcac1fa81fb8ed79bbb0d67e9492114))
+- reposition popups and modals on scroll ([#408](https://github.com/schedule-x/schedule-x/issues/408)) ([de0d92d](https://github.com/schedule-x/schedule-x/commit/de0d92d7a2adc1783adfee515cfccb9379ceba8b))
+- **time-picker:** 12-hour clock ([#528](https://github.com/schedule-x/schedule-x/issues/528)) ([9d469d9](https://github.com/schedule-x/schedule-x/commit/9d469d9550cf6cdf249ba556753e58b93d9b94eb))
+- **time-picker:** add arrow key incrementing and decrementing ([#531](https://github.com/schedule-x/schedule-x/issues/531)) ([23c1cdb](https://github.com/schedule-x/schedule-x/commit/23c1cdb7ae70b796a4947dae67d1dfb6e519a1b6))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 **Note:** Version bump only for package @schedule-x/time-picker

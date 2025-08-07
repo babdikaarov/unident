@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- broken bundling of dependencies ([#79](https://github.com/schedule-x/schedule-x/issues/79)) ([dd24893](https://github.com/schedule-x/schedule-x/commit/dd2489360c25a0bbc4e454323b15ff1a61069b89))
+- **calendar-controls:** update range when setting view ([#463](https://github.com/schedule-x/schedule-x/issues/463)) ([ebfb4a6](https://github.com/schedule-x/schedule-x/commit/ebfb4a65b7152b39af6dcfc60dda18ae86fb9104))
+- **event-modal:** fix positioning at the bottom of calendar ([#690](https://github.com/schedule-x/schedule-x/issues/690)) ([960378b](https://github.com/schedule-x/schedule-x/commit/960378b98ab2249439c4fff14b3870a4e9d95064))
+- **event-modal:** make icon color in event modal reactive to theme changes ([#120](https://github.com/schedule-x/schedule-x/issues/120)) ([095abdc](https://github.com/schedule-x/schedule-x/commit/095abdc13381fd37cb6bcf99145afd8f3251e51c))
+- plugin type declarations ([#705](https://github.com/schedule-x/schedule-x/issues/705)) ([53e3796](https://github.com/schedule-x/schedule-x/commit/53e379692d4ba253dc696868af74490cc49e39a0))
+- prevent event modal from closing on click inside ([#235](https://github.com/schedule-x/schedule-x/issues/235)) ([39c9c3e](https://github.com/schedule-x/schedule-x/commit/39c9c3e34c48f1480880cbec3848988f07bb3893))
+- set names for globals in umd bundle ([#606](https://github.com/schedule-x/schedule-x/issues/606)) ([d36a6a2](https://github.com/schedule-x/schedule-x/commit/d36a6a2d6ce638ef3ac36c32dcbc289602b3a43b))
+- **theme-default:** remove source maps ([#613](https://github.com/schedule-x/schedule-x/issues/613)) ([929a290](https://github.com/schedule-x/schedule-x/commit/929a29049ba09e46ffea6ad0baecce5c41d94b7d))
+- update events only when needed ([#452](https://github.com/schedule-x/schedule-x/issues/452)) ([b7f153c](https://github.com/schedule-x/schedule-x/commit/b7f153cd8f6ed1010f710193dcb69ce7fb86e72f))
+
+### Features
+
+- add event updater plugin ([#349](https://github.com/schedule-x/schedule-x/issues/349)) ([0e81005](https://github.com/schedule-x/schedule-x/commit/0e8100569e9781a993915ceff1f0196fa4d846d0))
+- add new plugin api on calendar instance ([#702](https://github.com/schedule-x/schedule-x/issues/702)) ([5b8caa2](https://github.com/schedule-x/schedule-x/commit/5b8caa2e09baf33a0f7151b3ac19c198301f93b6))
+- add the ability to customize event modals ([#282](https://github.com/schedule-x/schedule-x/issues/282)) ([a053c3c](https://github.com/schedule-x/schedule-x/commit/a053c3c7144d6d3d8c3b8f30478672f8bebe49f2))
+- dark mode ([#71](https://github.com/schedule-x/schedule-x/issues/71)) ([93fe6bc](https://github.com/schedule-x/schedule-x/commit/93fe6bc4f6f07b8a84db11053edc1f44d1db066c))
+- **date-picker:** add onEscapeKeyDown ([#564](https://github.com/schedule-x/schedule-x/issues/564)) ([01add2b](https://github.com/schedule-x/schedule-x/commit/01add2b7a5a52320e0d3adcce9d606b82389f810))
+- enable drag and drop for touch devices ([#148](https://github.com/schedule-x/schedule-x/issues/148)) ([5441b49](https://github.com/schedule-x/schedule-x/commit/5441b4914cbb092890d0aa2b5e9b31d5193967b5))
+- enable navigating month views with screen reader ([#523](https://github.com/schedule-x/schedule-x/issues/523)) ([6577fe0](https://github.com/schedule-x/schedule-x/commit/6577fe096bcac1fa81fb8ed79bbb0d67e9492114))
+- event modal ([#48](https://github.com/schedule-x/schedule-x/issues/48)) ([5026be8](https://github.com/schedule-x/schedule-x/commit/5026be8ff514a8d7a3e134277f1d5b5d55b5f518))
+- **event-modal:** add close method ([#551](https://github.com/schedule-x/schedule-x/issues/551)) ([b691a57](https://github.com/schedule-x/schedule-x/commit/b691a57f697ca552c9b98ed8b80e03e52de109a8))
+- **event-modal:** set modal position on scroll ([#403](https://github.com/schedule-x/schedule-x/issues/403)) ([518aa63](https://github.com/schedule-x/schedule-x/commit/518aa631d25c2bbc9700f0f68cf0f04d7fe6d4be))
+- **event-modal:** use CSS var for modal icons in light mode ([#842](https://github.com/schedule-x/schedule-x/issues/842)) ([78668f2](https://github.com/schedule-x/schedule-x/commit/78668f24794fcc29ead54395838556dec9287816))
+- expose single ts declarations for packages ([#78](https://github.com/schedule-x/schedule-x/issues/78)) ([d4a5e43](https://github.com/schedule-x/schedule-x/commit/d4a5e437ab52a7643423ff59f377c8834422d89b))
+- focus modal when opening through keyboard ([#652](https://github.com/schedule-x/schedule-x/issues/652)) ([9749c1a](https://github.com/schedule-x/schedule-x/commit/9749c1ac73d217a740bc42f936f8507dd8f196e9))
+- improve type declaration files ([#87](https://github.com/schedule-x/schedule-x/issues/87)) ([afff37a](https://github.com/schedule-x/schedule-x/commit/afff37a259ad34a6696c3bd67f2c3c0736d399de))
+- make config values reactive ([#662](https://github.com/schedule-x/schedule-x/issues/662)) ([0ad317d](https://github.com/schedule-x/schedule-x/commit/0ad317dcb7b831cd82de9d33b154000f4dfc1182))
+- month agenda events ([#66](https://github.com/schedule-x/schedule-x/issues/66)) ([5e8e2b1](https://github.com/schedule-x/schedule-x/commit/5e8e2b17a641fced2458abc8bc82de572cb8b4f3))
+- position events in month ([#55](https://github.com/schedule-x/schedule-x/issues/55)) ([858f1be](https://github.com/schedule-x/schedule-x/commit/858f1beae063c119752cdb2d2c227434ddb3be10))
+- recurrence library ([#208](https://github.com/schedule-x/schedule-x/issues/208)) ([f7488bd](https://github.com/schedule-x/schedule-x/commit/f7488bd89862e6a04d81452c067cfec6866a8ea6))
+- reposition popups and modals on scroll ([#408](https://github.com/schedule-x/schedule-x/issues/408)) ([de0d92d](https://github.com/schedule-x/schedule-x/commit/de0d92d7a2adc1783adfee515cfccb9379ceba8b))
+- selected date option ([#98](https://github.com/schedule-x/schedule-x/issues/98)) ([a641a51](https://github.com/schedule-x/schedule-x/commit/a641a516569422383a1a7eb565894d5859da2f82))
+- simplify event interface ([#108](https://github.com/schedule-x/schedule-x/issues/108)) ([d7ce48c](https://github.com/schedule-x/schedule-x/commit/d7ce48ca84b7faa465099d7322d08b89564f0e91))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 **Note:** Version bump only for package @schedule-x/event-modal

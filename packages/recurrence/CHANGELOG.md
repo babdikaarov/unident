@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- **calendar-controls:** update range when setting view ([#463](https://github.com/schedule-x/schedule-x/issues/463)) ([ebfb4a6](https://github.com/schedule-x/schedule-x/commit/ebfb4a65b7152b39af6dcfc60dda18ae86fb9104))
+- fix DST recurrence calculation ([#317](https://github.com/schedule-x/schedule-x/issues/317)) ([5ec04b9](https://github.com/schedule-x/schedule-x/commit/5ec04b96f40efba6430aa102aa91f91aec8ea0ac))
+- set names for globals in umd bundle ([#606](https://github.com/schedule-x/schedule-x/issues/606)) ([d36a6a2](https://github.com/schedule-x/schedule-x/commit/d36a6a2d6ce638ef3ac36c32dcbc289602b3a43b))
+- **theme-default:** remove source maps ([#613](https://github.com/schedule-x/schedule-x/issues/613)) ([929a290](https://github.com/schedule-x/schedule-x/commit/929a29049ba09e46ffea6ad0baecce5c41d94b7d))
+- update events only when needed ([#452](https://github.com/schedule-x/schedule-x/issues/452)) ([b7f153c](https://github.com/schedule-x/schedule-x/commit/b7f153cd8f6ed1010f710193dcb69ce7fb86e72f))
+
+### Features
+
+- add event updater plugin ([#349](https://github.com/schedule-x/schedule-x/issues/349)) ([0e81005](https://github.com/schedule-x/schedule-x/commit/0e8100569e9781a993915ceff1f0196fa4d846d0))
+- add getDate and onSelectedDateUpdate apis ([#419](https://github.com/schedule-x/schedule-x/issues/419)) ([adfd5e6](https://github.com/schedule-x/schedule-x/commit/adfd5e60a6cb2c85c6cfeb31fc70b427205f87d5))
+- add support for freq=YEARLY, MONTHLY and DAILY in rrule ([#233](https://github.com/schedule-x/schedule-x/issues/233)) ([f3046ca](https://github.com/schedule-x/schedule-x/commit/f3046ca62fbe9cd6dee3d02d0f5270480b3d7b61))
+- **date-picker:** add onEscapeKeyDown ([#564](https://github.com/schedule-x/schedule-x/issues/564)) ([01add2b](https://github.com/schedule-x/schedule-x/commit/01add2b7a5a52320e0d3adcce9d606b82389f810))
+- enable navigating month views with screen reader ([#523](https://github.com/schedule-x/schedule-x/issues/523)) ([6577fe0](https://github.com/schedule-x/schedule-x/commit/6577fe096bcac1fa81fb8ed79bbb0d67e9492114))
+- enable showing weekly events through rrule ([#218](https://github.com/schedule-x/schedule-x/issues/218)) ([6f33d0f](https://github.com/schedule-x/schedule-x/commit/6f33d0f8c29f35115502a744b3dc6816b75f9495))
+- **event-recurrence:** enable using wkst in rrule ([#911](https://github.com/schedule-x/schedule-x/issues/911)) ([a237414](https://github.com/schedule-x/schedule-x/commit/a237414eca95f2c8000620fa05fcac6032b4fe08))
+- **event-recurrence:** recurrence exceptions ([#1038](https://github.com/schedule-x/schedule-x/issues/1038)) ([0ed6917](https://github.com/schedule-x/schedule-x/commit/0ed69173307bdbec6550576701579e1098393847))
+- recurrence library ([#208](https://github.com/schedule-x/schedule-x/issues/208)) ([f7488bd](https://github.com/schedule-x/schedule-x/commit/f7488bd89862e6a04d81452c067cfec6866a8ea6))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 **Note:** Version bump only for package @schedule-x/recurrence

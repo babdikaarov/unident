@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- **ical:** infer all-day events ([#724](https://github.com/schedule-x/schedule-x/issues/724)) ([af24a89](https://github.com/schedule-x/schedule-x/commit/af24a89cca2b0b122bf8f323f98eb217b48845ca))
+
+### Features
+
+- add new plugin api on calendar instance ([#702](https://github.com/schedule-x/schedule-x/issues/702)) ([5b8caa2](https://github.com/schedule-x/schedule-x/commit/5b8caa2e09baf33a0f7151b3ac19c198301f93b6))
+- ical source ([#668](https://github.com/schedule-x/schedule-x/issues/668)) ([6060760](https://github.com/schedule-x/schedule-x/commit/606076002ceda2194a899afeb25ade03a9e9128c))
+- set staff to view day ([caa2e3e](https://github.com/schedule-x/schedule-x/commit/caa2e3e55f969dd83a78f58b1082d23b378d9c92))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 **Note:** Version bump only for package @schedule-x/ical

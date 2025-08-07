@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- architecture breaks ([#42](https://github.com/schedule-x/schedule-x/issues/42)) ([331e541](https://github.com/schedule-x/schedule-x/commit/331e541283c734d61ccb67f2bcf7cbaf013d0fef))
+- broken bundling of dependencies ([#79](https://github.com/schedule-x/schedule-x/issues/79)) ([dd24893](https://github.com/schedule-x/schedule-x/commit/dd2489360c25a0bbc4e454323b15ff1a61069b89))
+- **calendar-controls:** update range when setting view ([#463](https://github.com/schedule-x/schedule-x/issues/463)) ([ebfb4a6](https://github.com/schedule-x/schedule-x/commit/ebfb4a65b7152b39af6dcfc60dda18ae86fb9104))
+- **drag-and-drop:** fix onBeforeEventUpdate in month grid ([#884](https://github.com/schedule-x/schedule-x/issues/884)) ([db84146](https://github.com/schedule-x/schedule-x/commit/db84146d29faab95c45d9c87037bef37f3fc752c))
+- **drag-and-drop:** improve date grid d&d ([#76](https://github.com/schedule-x/schedule-x/issues/76)) ([2a8ba83](https://github.com/schedule-x/schedule-x/commit/2a8ba8340d7871d582d38171055dcebc42baa31c))
+- **drag-and-drop:** remove event listener that remained after dnd ([#946](https://github.com/schedule-x/schedule-x/issues/946)) ([1df7042](https://github.com/schedule-x/schedule-x/commit/1df70420b0b381b6e97c191e39a767947b91bd04))
+- enable touch device users to scroll upon touching events ([#232](https://github.com/schedule-x/schedule-x/issues/232)) ([36e4818](https://github.com/schedule-x/schedule-x/commit/36e48187d509df664155c5aec1a9af13e8e10146))
+- plugin type declarations ([#705](https://github.com/schedule-x/schedule-x/issues/705)) ([53e3796](https://github.com/schedule-x/schedule-x/commit/53e379692d4ba253dc696868af74490cc49e39a0))
+- set names for globals in umd bundle ([#606](https://github.com/schedule-x/schedule-x/issues/606)) ([d36a6a2](https://github.com/schedule-x/schedule-x/commit/d36a6a2d6ce638ef3ac36c32dcbc289602b3a43b))
+- **theme-default:** remove source maps ([#613](https://github.com/schedule-x/schedule-x/issues/613)) ([929a290](https://github.com/schedule-x/schedule-x/commit/929a29049ba09e46ffea6ad0baecce5c41d94b7d))
+- time grid drag and drop for hybrid days ([#129](https://github.com/schedule-x/schedule-x/issues/129)) ([530ef0a](https://github.com/schedule-x/schedule-x/commit/530ef0a48c73eb07b506e4ddd4cacb4a11b41d91))
+- update events only when needed ([#452](https://github.com/schedule-x/schedule-x/issues/452)) ([b7f153c](https://github.com/schedule-x/schedule-x/commit/b7f153cd8f6ed1010f710193dcb69ce7fb86e72f))
+
+### Features
+
+- add callback onBeforeEventUpdate for aborting updates ([#796](https://github.com/schedule-x/schedule-x/issues/796)) ([23de9bf](https://github.com/schedule-x/schedule-x/commit/23de9bfb14a535589c88c579aeb65c72c92675c8))
+- add data-event-id attribute to all events ([#388](https://github.com/schedule-x/schedule-x/issues/388)) ([106833b](https://github.com/schedule-x/schedule-x/commit/106833b2079bbfb76e1f7a409b3cd9a40585daf9))
+- add event updater plugin ([#349](https://github.com/schedule-x/schedule-x/issues/349)) ([0e81005](https://github.com/schedule-x/schedule-x/commit/0e8100569e9781a993915ceff1f0196fa4d846d0))
+- add nDays to weekOptions ([#525](https://github.com/schedule-x/schedule-x/issues/525)) ([76589f6](https://github.com/schedule-x/schedule-x/commit/76589f654c1315eeffcb4bd98cf0d131644f8f40))
+- add new plugin api on calendar instance ([#702](https://github.com/schedule-x/schedule-x/issues/702)) ([5b8caa2](https://github.com/schedule-x/schedule-x/commit/5b8caa2e09baf33a0f7151b3ac19c198301f93b6))
+- add rtl support and hebrew translations ([#992](https://github.com/schedule-x/schedule-x/issues/992)) ([b77520c](https://github.com/schedule-x/schedule-x/commit/b77520cdf15d5f087eae014d939c803a64d68aaa))
+- **calendar:** position events in agenda ([#65](https://github.com/schedule-x/schedule-x/issues/65)) ([56c2419](https://github.com/schedule-x/schedule-x/commit/56c2419b1b272faa5a5652a8d72fe70b646284e4))
+- date grid drag and drop ([#47](https://github.com/schedule-x/schedule-x/issues/47)) ([38b9f7f](https://github.com/schedule-x/schedule-x/commit/38b9f7fceec4b02c192d0231744fb8ea1dc958e6))
+- **date-picker:** add onEscapeKeyDown ([#564](https://github.com/schedule-x/schedule-x/issues/564)) ([01add2b](https://github.com/schedule-x/schedule-x/commit/01add2b7a5a52320e0d3adcce9d606b82389f810))
+- detect screen size before initial rendering of view ([#70](https://github.com/schedule-x/schedule-x/issues/70)) ([6abb2eb](https://github.com/schedule-x/schedule-x/commit/6abb2eb4304f4ddd92f9612b4c0ed5cf2905dee8))
+- drag and drop month view ([#57](https://github.com/schedule-x/schedule-x/issues/57)) ([741ac17](https://github.com/schedule-x/schedule-x/commit/741ac172e97be349f0758a6d0ae7efdf871c17cc))
+- enable drag and drop for touch devices ([#148](https://github.com/schedule-x/schedule-x/issues/148)) ([5441b49](https://github.com/schedule-x/schedule-x/commit/5441b4914cbb092890d0aa2b5e9b31d5193967b5))
+- enable navigating month views with screen reader ([#523](https://github.com/schedule-x/schedule-x/issues/523)) ([6577fe0](https://github.com/schedule-x/schedule-x/commit/6577fe096bcac1fa81fb8ed79bbb0d67e9492114))
+- enable reacting to event updates with an onEventUpdate callback ([#75](https://github.com/schedule-x/schedule-x/issues/75)) ([47abd63](https://github.com/schedule-x/schedule-x/commit/47abd63e3426ca68bf027265fcc66aa901d2d5a8))
+- enable setting rrule for events ([#170](https://github.com/schedule-x/schedule-x/issues/170)) ([c770fc7](https://github.com/schedule-x/schedule-x/commit/c770fc71a0987861ab2e435325a48efc51f485e5))
+- enable updating recurrence sets ([#177](https://github.com/schedule-x/schedule-x/issues/177)) ([c10f12f](https://github.com/schedule-x/schedule-x/commit/c10f12fc6f6e770ba33ada6e978912eb16774514))
+- event modal ([#48](https://github.com/schedule-x/schedule-x/issues/48)) ([5026be8](https://github.com/schedule-x/schedule-x/commit/5026be8ff514a8d7a3e134277f1d5b5d55b5f518))
+- expose single ts declarations for packages ([#78](https://github.com/schedule-x/schedule-x/issues/78)) ([d4a5e43](https://github.com/schedule-x/schedule-x/commit/d4a5e437ab52a7643423ff59f377c8834422d89b))
+- improve type declaration files ([#87](https://github.com/schedule-x/schedule-x/issues/87)) ([afff37a](https://github.com/schedule-x/schedule-x/commit/afff37a259ad34a6696c3bd67f2c3c0736d399de))
+- make config values reactive ([#662](https://github.com/schedule-x/schedule-x/issues/662)) ([0ad317d](https://github.com/schedule-x/schedule-x/commit/0ad317dcb7b831cd82de9d33b154000f4dfc1182))
+- onBeforeEventUpdateAsync ([#1051](https://github.com/schedule-x/schedule-x/issues/1051)) ([1fd2f1a](https://github.com/schedule-x/schedule-x/commit/1fd2f1a61d2b34f75fe5a8300f8aeab1f108300d))
+- position events in month ([#55](https://github.com/schedule-x/schedule-x/issues/55)) ([858f1be](https://github.com/schedule-x/schedule-x/commit/858f1beae063c119752cdb2d2c227434ddb3be10))
+- recurrence library ([#208](https://github.com/schedule-x/schedule-x/issues/208)) ([f7488bd](https://github.com/schedule-x/schedule-x/commit/f7488bd89862e6a04d81452c067cfec6866a8ea6))
+- rename APIs on plugins ([17aaa5d](https://github.com/schedule-x/schedule-x/commit/17aaa5d274bf437271a8752a7a7507a78249c6af))
+- resize plugin ([#179](https://github.com/schedule-x/schedule-x/issues/179)) ([0f5859e](https://github.com/schedule-x/schedule-x/commit/0f5859e9a83ace95f3d81f2c2cc75a3fbc199c7b))
+- selected date option ([#98](https://github.com/schedule-x/schedule-x/issues/98)) ([a641a51](https://github.com/schedule-x/schedule-x/commit/a641a516569422383a1a7eb565894d5859da2f82))
+- simplify event interface ([#108](https://github.com/schedule-x/schedule-x/issues/108)) ([d7ce48c](https://github.com/schedule-x/schedule-x/commit/d7ce48ca84b7faa465099d7322d08b89564f0e91))
+- small calendar detection ([#59](https://github.com/schedule-x/schedule-x/issues/59)) ([e1bcaff](https://github.com/schedule-x/schedule-x/commit/e1bcaff5d53ebd738c4596f5532c07cfea0faebf))
+- time grid drag and drop ([#41](https://github.com/schedule-x/schedule-x/issues/41)) ([1505c70](https://github.com/schedule-x/schedule-x/commit/1505c702372354cc3c3b8706ad479623c9f6fb8e))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 **Note:** Version bump only for package @schedule-x/drag-and-drop

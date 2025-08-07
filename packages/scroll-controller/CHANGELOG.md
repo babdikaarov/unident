@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- **calendar-controls:** update range when setting view ([#463](https://github.com/schedule-x/schedule-x/issues/463)) ([ebfb4a6](https://github.com/schedule-x/schedule-x/commit/ebfb4a65b7152b39af6dcfc60dda18ae86fb9104))
+- js error in scroll controller plugin ([#289](https://github.com/schedule-x/schedule-x/issues/289)) ([2d40159](https://github.com/schedule-x/schedule-x/commit/2d40159e161a847bc8f655e46d42744fe771a10e))
+- memory leak week view ([#1121](https://github.com/schedule-x/schedule-x/issues/1121)) ([fcfb7aa](https://github.com/schedule-x/schedule-x/commit/fcfb7aa423cd6b6e0aa1b7a4ecca32de82ab87f8))
+- plugin type declarations ([#705](https://github.com/schedule-x/schedule-x/issues/705)) ([53e3796](https://github.com/schedule-x/schedule-x/commit/53e379692d4ba253dc696868af74490cc49e39a0))
+- **scroll-controller:** remove unwanted scroll after drag and drop ([#144](https://github.com/schedule-x/schedule-x/issues/144)) ([5c4cca1](https://github.com/schedule-x/schedule-x/commit/5c4cca1376598a84f242074262fdb5df74a3b4c2))
+- set names for globals in umd bundle ([#606](https://github.com/schedule-x/schedule-x/issues/606)) ([d36a6a2](https://github.com/schedule-x/schedule-x/commit/d36a6a2d6ce638ef3ac36c32dcbc289602b3a43b))
+- **theme-default:** remove source maps ([#613](https://github.com/schedule-x/schedule-x/issues/613)) ([929a290](https://github.com/schedule-x/schedule-x/commit/929a29049ba09e46ffea6ad0baecce5c41d94b7d))
+- update events only when needed ([#452](https://github.com/schedule-x/schedule-x/issues/452)) ([b7f153c](https://github.com/schedule-x/schedule-x/commit/b7f153cd8f6ed1010f710193dcb69ce7fb86e72f))
+
+### Features
+
+- add beforeInit lifecycle hook for plugins ([#456](https://github.com/schedule-x/schedule-x/issues/456)) ([61830dd](https://github.com/schedule-x/schedule-x/commit/61830dd0b89edf37a6e677c5f160dfb7e0707485))
+- add event updater plugin ([#349](https://github.com/schedule-x/schedule-x/issues/349)) ([0e81005](https://github.com/schedule-x/schedule-x/commit/0e8100569e9781a993915ceff1f0196fa4d846d0))
+- add new plugin api on calendar instance ([#702](https://github.com/schedule-x/schedule-x/issues/702)) ([5b8caa2](https://github.com/schedule-x/schedule-x/commit/5b8caa2e09baf33a0f7151b3ac19c198301f93b6))
+- **date-picker:** add onEscapeKeyDown ([#564](https://github.com/schedule-x/schedule-x/issues/564)) ([01add2b](https://github.com/schedule-x/schedule-x/commit/01add2b7a5a52320e0d3adcce9d606b82389f810))
+- enable navigating month views with screen reader ([#523](https://github.com/schedule-x/schedule-x/issues/523)) ([6577fe0](https://github.com/schedule-x/schedule-x/commit/6577fe096bcac1fa81fb8ed79bbb0d67e9492114))
+- enable setting rrule for events ([#170](https://github.com/schedule-x/schedule-x/issues/170)) ([c770fc7](https://github.com/schedule-x/schedule-x/commit/c770fc71a0987861ab2e435325a48efc51f485e5))
+- hover animation for button in date picker ([#135](https://github.com/schedule-x/schedule-x/issues/135)) ([12c196c](https://github.com/schedule-x/schedule-x/commit/12c196c631bbddccd7b3743fa40a6c0cbb857898))
+- make config values reactive ([#662](https://github.com/schedule-x/schedule-x/issues/662)) ([0ad317d](https://github.com/schedule-x/schedule-x/commit/0ad317dcb7b831cd82de9d33b154000f4dfc1182))
+- rename APIs on plugins ([17aaa5d](https://github.com/schedule-x/schedule-x/commit/17aaa5d274bf437271a8752a7a7507a78249c6af))
+- scroll plugin ([#134](https://github.com/schedule-x/schedule-x/issues/134)) ([ec9f225](https://github.com/schedule-x/schedule-x/commit/ec9f22554ce96ffafd10ed9d9e6dfd6a36ccf0d8))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 ### Bug Fixes

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- **calendar-controls:** update range when setting view ([#463](https://github.com/babdikaarov/schedule-x/issues/463)) ([ebfb4a6](https://github.com/babdikaarov/schedule-x/commit/ebfb4a65b7152b39af6dcfc60dda18ae86fb9104))
+- update events only when needed ([#452](https://github.com/babdikaarov/schedule-x/issues/452)) ([b7f153c](https://github.com/babdikaarov/schedule-x/commit/b7f153cd8f6ed1010f710193dcb69ce7fb86e72f))
+
+### Features
+
+- add event updater plugin ([#349](https://github.com/babdikaarov/schedule-x/issues/349)) ([0e81005](https://github.com/babdikaarov/schedule-x/commit/0e8100569e9781a993915ceff1f0196fa4d846d0))
+- **date-picker:** add onEscapeKeyDown ([#564](https://github.com/babdikaarov/schedule-x/issues/564)) ([01add2b](https://github.com/babdikaarov/schedule-x/commit/01add2b7a5a52320e0d3adcce9d606b82389f810))
+- enable navigating month views with screen reader ([#523](https://github.com/babdikaarov/schedule-x/issues/523)) ([6577fe0](https://github.com/babdikaarov/schedule-x/commit/6577fe096bcac1fa81fb8ed79bbb0d67e9492114))
+- improve type declaration files ([#87](https://github.com/babdikaarov/schedule-x/issues/87)) ([afff37a](https://github.com/babdikaarov/schedule-x/commit/afff37a259ad34a6696c3bd67f2c3c0736d399de))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 **Note:** Version bump only for package @schedule-x/prettier-config

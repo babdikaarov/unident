@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- **calendar-controls:** update range when setting view ([#463](https://github.com/schedule-x/schedule-x/issues/463)) ([ebfb4a6](https://github.com/schedule-x/schedule-x/commit/ebfb4a65b7152b39af6dcfc60dda18ae86fb9104))
+- event facade types for event ids ([#439](https://github.com/schedule-x/schedule-x/issues/439)) ([a100e47](https://github.com/schedule-x/schedule-x/commit/a100e47b5e90b836ce19826c08f922a827695e82))
+- improve tolerance for app interface in plugins ([#493](https://github.com/schedule-x/schedule-x/issues/493)) ([ed9790d](https://github.com/schedule-x/schedule-x/commit/ed9790de9b587445808ee2d2b34b6fb8e47acd9e))
+- set names for globals in umd bundle ([#606](https://github.com/schedule-x/schedule-x/issues/606)) ([d36a6a2](https://github.com/schedule-x/schedule-x/commit/d36a6a2d6ce638ef3ac36c32dcbc289602b3a43b))
+- **theme-default:** remove source maps ([#613](https://github.com/schedule-x/schedule-x/issues/613)) ([929a290](https://github.com/schedule-x/schedule-x/commit/929a29049ba09e46ffea6ad0baecce5c41d94b7d))
+- update events only when needed ([#452](https://github.com/schedule-x/schedule-x/issues/452)) ([b7f153c](https://github.com/schedule-x/schedule-x/commit/b7f153cd8f6ed1010f710193dcb69ce7fb86e72f))
+
+### Features
+
+- add beforeInit lifecycle hook for plugins ([#456](https://github.com/schedule-x/schedule-x/issues/456)) ([61830dd](https://github.com/schedule-x/schedule-x/commit/61830dd0b89edf37a6e677c5f160dfb7e0707485))
+- add new plugin api on calendar instance ([#702](https://github.com/schedule-x/schedule-x/issues/702)) ([5b8caa2](https://github.com/schedule-x/schedule-x/commit/5b8caa2e09baf33a0f7151b3ac19c198301f93b6))
+- background events ([#646](https://github.com/schedule-x/schedule-x/issues/646)) ([489f396](https://github.com/schedule-x/schedule-x/commit/489f396302c9f9d745dfc75128c3aa0e58ac80da))
+- **date-picker:** add onEscapeKeyDown ([#564](https://github.com/schedule-x/schedule-x/issues/564)) ([01add2b](https://github.com/schedule-x/schedule-x/commit/01add2b7a5a52320e0d3adcce9d606b82389f810))
+- enable navigating month views with screen reader ([#523](https://github.com/schedule-x/schedule-x/issues/523)) ([6577fe0](https://github.com/schedule-x/schedule-x/commit/6577fe096bcac1fa81fb8ed79bbb0d67e9492114))
+- **events-service:** rename package ([#364](https://github.com/schedule-x/schedule-x/issues/364)) ([830bfc1](https://github.com/schedule-x/schedule-x/commit/830bfc1f23c1c01133b93b208eba256ff903baf9))
+- rename APIs on plugins ([17aaa5d](https://github.com/schedule-x/schedule-x/commit/17aaa5d274bf437271a8752a7a7507a78249c6af))
+- validate events in event service plugins ([#937](https://github.com/schedule-x/schedule-x/issues/937)) ([6b45e09](https://github.com/schedule-x/schedule-x/commit/6b45e09db2a07d0159e7d9748c6601de7803cea9))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 **Note:** Version bump only for package @schedule-x/events-service

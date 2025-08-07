@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- **calendar-controls:** update range when setting view ([#463](https://github.com/babdikaarov/schedule-x/issues/463)) ([ebfb4a6](https://github.com/babdikaarov/schedule-x/commit/ebfb4a65b7152b39af6dcfc60dda18ae86fb9104))
+- events facade ([#107](https://github.com/babdikaarov/schedule-x/issues/107)) ([f529b4b](https://github.com/babdikaarov/schedule-x/commit/f529b4b089c2009831d72212ccf84b252c13e7fc))
+- update events only when needed ([#452](https://github.com/babdikaarov/schedule-x/issues/452)) ([b7f153c](https://github.com/babdikaarov/schedule-x/commit/b7f153cd8f6ed1010f710193dcb69ce7fb86e72f))
+
+### Features
+
+- add e2e testing lib ([#104](https://github.com/babdikaarov/schedule-x/issues/104)) ([c63be37](https://github.com/babdikaarov/schedule-x/commit/c63be37db2ce3083846e8d71f069aa8a6b5d7b42))
+- add event updater plugin ([#349](https://github.com/babdikaarov/schedule-x/issues/349)) ([0e81005](https://github.com/babdikaarov/schedule-x/commit/0e8100569e9781a993915ceff1f0196fa4d846d0))
+- add time picker component ([#337](https://github.com/babdikaarov/schedule-x/issues/337)) ([f5605fc](https://github.com/babdikaarov/schedule-x/commit/f5605fccd17c69f76a8a19c33ce1718d3fc1a451))
+- **date-picker:** add onEscapeKeyDown ([#564](https://github.com/babdikaarov/schedule-x/issues/564)) ([01add2b](https://github.com/babdikaarov/schedule-x/commit/01add2b7a5a52320e0d3adcce9d606b82389f810))
+- enable navigating month views with screen reader ([#523](https://github.com/babdikaarov/schedule-x/issues/523)) ([6577fe0](https://github.com/babdikaarov/schedule-x/commit/6577fe096bcac1fa81fb8ed79bbb0d67e9492114))
+- enable teleporting date picker ([#323](https://github.com/babdikaarov/schedule-x/issues/323)) ([f441e60](https://github.com/babdikaarov/schedule-x/commit/f441e606aaa5c1b0a49caa898e281acb72b1e3e4))
+- improve test lib ([#105](https://github.com/babdikaarov/schedule-x/issues/105)) ([b417a6c](https://github.com/babdikaarov/schedule-x/commit/b417a6c694f4663ad42e0bc6c52a0e317d7d381c))
+- make config values reactive ([#662](https://github.com/babdikaarov/schedule-x/issues/662)) ([0ad317d](https://github.com/babdikaarov/schedule-x/commit/0ad317dcb7b831cd82de9d33b154000f4dfc1182))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 **Note:** Version bump only for package @schedule-x/e2e-testing

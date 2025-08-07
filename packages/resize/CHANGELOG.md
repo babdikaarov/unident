@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- **calendar-controls:** update range when setting view ([#463](https://github.com/schedule-x/schedule-x/issues/463)) ([ebfb4a6](https://github.com/schedule-x/schedule-x/commit/ebfb4a65b7152b39af6dcfc60dda18ae86fb9104))
+- **calendar:** recurrence error ([#791](https://github.com/schedule-x/schedule-x/issues/791)) ([0d7cdc1](https://github.com/schedule-x/schedule-x/commit/0d7cdc146287a355858dccc548bd546e1b47337a))
+- event left property when using eventWidth config ([#569](https://github.com/schedule-x/schedule-x/issues/569)) ([0a78440](https://github.com/schedule-x/schedule-x/commit/0a78440a265d346778b5ccf294c36eeb513c476e))
+- plugin type declarations ([#705](https://github.com/schedule-x/schedule-x/issues/705)) ([53e3796](https://github.com/schedule-x/schedule-x/commit/53e379692d4ba253dc696868af74490cc49e39a0))
+- prevent redundant calls of onEventUpdate on resizing ([#189](https://github.com/schedule-x/schedule-x/issues/189)) ([6b7bf65](https://github.com/schedule-x/schedule-x/commit/6b7bf6544628793ef399862713a1c91c16bd7b2e))
+- prevent too frequent updates on resize ([#386](https://github.com/schedule-x/schedule-x/issues/386)) ([0a5a299](https://github.com/schedule-x/schedule-x/commit/0a5a2998bc12ce695c61fd6db13b14b2d4bd386f))
+- set names for globals in umd bundle ([#606](https://github.com/schedule-x/schedule-x/issues/606)) ([d36a6a2](https://github.com/schedule-x/schedule-x/commit/d36a6a2d6ce638ef3ac36c32dcbc289602b3a43b))
+- **theme-default:** remove source maps ([#613](https://github.com/schedule-x/schedule-x/issues/613)) ([929a290](https://github.com/schedule-x/schedule-x/commit/929a29049ba09e46ffea6ad0baecce5c41d94b7d))
+- update events only when needed ([#452](https://github.com/schedule-x/schedule-x/issues/452)) ([b7f153c](https://github.com/schedule-x/schedule-x/commit/b7f153cd8f6ed1010f710193dcb69ce7fb86e72f))
+
+### Features
+
+- add callback onBeforeEventUpdate for aborting updates ([#796](https://github.com/schedule-x/schedule-x/issues/796)) ([23de9bf](https://github.com/schedule-x/schedule-x/commit/23de9bfb14a535589c88c579aeb65c72c92675c8))
+- add event updater plugin ([#349](https://github.com/schedule-x/schedule-x/issues/349)) ([0e81005](https://github.com/schedule-x/schedule-x/commit/0e8100569e9781a993915ceff1f0196fa4d846d0))
+- add getDate and onSelectedDateUpdate apis ([#419](https://github.com/schedule-x/schedule-x/issues/419)) ([adfd5e6](https://github.com/schedule-x/schedule-x/commit/adfd5e60a6cb2c85c6cfeb31fc70b427205f87d5))
+- add new plugin api on calendar instance ([#702](https://github.com/schedule-x/schedule-x/issues/702)) ([5b8caa2](https://github.com/schedule-x/schedule-x/commit/5b8caa2e09baf33a0f7151b3ac19c198301f93b6))
+- add rtl support and hebrew translations ([#992](https://github.com/schedule-x/schedule-x/issues/992)) ([b77520c](https://github.com/schedule-x/schedule-x/commit/b77520cdf15d5f087eae014d939c803a64d68aaa))
+- **date-picker:** add onEscapeKeyDown ([#564](https://github.com/schedule-x/schedule-x/issues/564)) ([01add2b](https://github.com/schedule-x/schedule-x/commit/01add2b7a5a52320e0d3adcce9d606b82389f810))
+- enable configuring interval in resize plugin ([#384](https://github.com/schedule-x/schedule-x/issues/384)) ([49cd041](https://github.com/schedule-x/schedule-x/commit/49cd04173e33d9e2920330062f8c2735ba422adc))
+- enable navigating month views with screen reader ([#523](https://github.com/schedule-x/schedule-x/issues/523)) ([6577fe0](https://github.com/schedule-x/schedule-x/commit/6577fe096bcac1fa81fb8ed79bbb0d67e9492114))
+- enable resizing events in date grid ([#182](https://github.com/schedule-x/schedule-x/issues/182)) ([f84a6c5](https://github.com/schedule-x/schedule-x/commit/f84a6c56d7e5d1f690ba5fae69db8e935e4bf49f))
+- make config values reactive ([#662](https://github.com/schedule-x/schedule-x/issues/662)) ([0ad317d](https://github.com/schedule-x/schedule-x/commit/0ad317dcb7b831cd82de9d33b154000f4dfc1182))
+- onBeforeEventUpdateAsync ([#1051](https://github.com/schedule-x/schedule-x/issues/1051)) ([1fd2f1a](https://github.com/schedule-x/schedule-x/commit/1fd2f1a61d2b34f75fe5a8300f8aeab1f108300d))
+- rename APIs on plugins ([17aaa5d](https://github.com/schedule-x/schedule-x/commit/17aaa5d274bf437271a8752a7a7507a78249c6af))
+- resize plugin ([#179](https://github.com/schedule-x/schedule-x/issues/179)) ([0f5859e](https://github.com/schedule-x/schedule-x/commit/0f5859e9a83ace95f3d81f2c2cc75a3fbc199c7b))
+- **resize:** add compatibility for touch devices ([#1098](https://github.com/schedule-x/schedule-x/issues/1098)) ([927d9ae](https://github.com/schedule-x/schedule-x/commit/927d9ae801de7d521e2a801f3e1864f1758ccb62))
+- update recurrent events on resize ([#225](https://github.com/schedule-x/schedule-x/issues/225)) ([dd522d4](https://github.com/schedule-x/schedule-x/commit/dd522d422c53a247d3a8661a15214d0349679922))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 **Note:** Version bump only for package @schedule-x/resize

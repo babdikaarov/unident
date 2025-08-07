@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Features
+
+- shadcn theme ([#819](https://github.com/schedule-x/schedule-x/issues/819)) ([c397b5b](https://github.com/schedule-x/schedule-x/commit/c397b5b8250e39aacef04f8bd140277420ea624e))
+- **theme-default:** add top-level exports in package.json, to support non spec-confirming bundlers ([#873](https://github.com/schedule-x/schedule-x/issues/873)) ([8c42c1b](https://github.com/schedule-x/schedule-x/commit/8c42c1b9fe9aea74ec25d4684d6f647a9c0efc18))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 **Note:** Version bump only for package @schedule-x/theme-shadcn

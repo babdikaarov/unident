@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-08-07)
+
+### Bug Fixes
+
+- **calendar-controls:** update range when setting view ([#463](https://github.com/schedule-x/schedule-x/issues/463)) ([ebfb4a6](https://github.com/schedule-x/schedule-x/commit/ebfb4a65b7152b39af6dcfc60dda18ae86fb9104))
+- **calendar:** recurrence error ([#791](https://github.com/schedule-x/schedule-x/issues/791)) ([0d7cdc1](https://github.com/schedule-x/schedule-x/commit/0d7cdc146287a355858dccc548bd546e1b47337a))
+- event facade types for event ids ([#439](https://github.com/schedule-x/schedule-x/issues/439)) ([a100e47](https://github.com/schedule-x/schedule-x/commit/a100e47b5e90b836ce19826c08f922a827695e82))
+- event recurrence for background events ([#1110](https://github.com/schedule-x/schedule-x/issues/1110)) ([99644ac](https://github.com/schedule-x/schedule-x/commit/99644ac976450b5caabd8d9e2f91d3eae7e029cc))
+- event recurrence update fn ([#358](https://github.com/schedule-x/schedule-x/issues/358)) ([b229acb](https://github.com/schedule-x/schedule-x/commit/b229acb75b7a6957923559f51c68e06b6fe274fc))
+- **event-recurrence:** fix error for recurrence sets where no recurrences are within the range ([#1085](https://github.com/schedule-x/schedule-x/issues/1085)) ([02ef218](https://github.com/schedule-x/schedule-x/commit/02ef218c2f913280e40cc7293dea21bff4499c10))
+- **event-recurrence:** infinite events in events service ([#877](https://github.com/schedule-x/schedule-x/issues/877)) ([fe18d26](https://github.com/schedule-x/schedule-x/commit/fe18d267a88d8e884304bf66c4811c91e50abdf1))
+- **event-recurrence:** skipping first not aligned date when BYDAY is set ([#1063](https://github.com/schedule-x/schedule-x/issues/1063)) ([c2e5045](https://github.com/schedule-x/schedule-x/commit/c2e5045520785e25fe747599935f856e1bf9d400))
+- **event-recurrence:** support add and set exdate in event facade ([#1045](https://github.com/schedule-x/schedule-x/issues/1045)) ([c4ef2b5](https://github.com/schedule-x/schedule-x/commit/c4ef2b56f71569ef7bf3e66189745ac546e63391))
+- fix DST recurrence calculation ([#317](https://github.com/schedule-x/schedule-x/issues/317)) ([5ec04b9](https://github.com/schedule-x/schedule-x/commit/5ec04b96f40efba6430aa102aa91f91aec8ea0ac))
+- set names for globals in umd bundle ([#606](https://github.com/schedule-x/schedule-x/issues/606)) ([d36a6a2](https://github.com/schedule-x/schedule-x/commit/d36a6a2d6ce638ef3ac36c32dcbc289602b3a43b))
+- **theme-default:** remove source maps ([#613](https://github.com/schedule-x/schedule-x/issues/613)) ([929a290](https://github.com/schedule-x/schedule-x/commit/929a29049ba09e46ffea6ad0baecce5c41d94b7d))
+- update events only when needed ([#452](https://github.com/schedule-x/schedule-x/issues/452)) ([b7f153c](https://github.com/schedule-x/schedule-x/commit/b7f153cd8f6ed1010f710193dcb69ce7fb86e72f))
+
+### Features
+
+- add "set" API to events facade ([#295](https://github.com/schedule-x/schedule-x/issues/295)) ([a29b202](https://github.com/schedule-x/schedule-x/commit/a29b20215f346902348e8be6e353146386c4791a))
+- add animation for adding event via events service ([#983](https://github.com/schedule-x/schedule-x/issues/983)) ([95ed933](https://github.com/schedule-x/schedule-x/commit/95ed933c1cc19cba666dc940632df7e142e0726d))
+- add beforeInit lifecycle hook for plugins ([#456](https://github.com/schedule-x/schedule-x/issues/456)) ([61830dd](https://github.com/schedule-x/schedule-x/commit/61830dd0b89edf37a6e677c5f160dfb7e0707485))
+- add event updater plugin ([#349](https://github.com/schedule-x/schedule-x/issues/349)) ([0e81005](https://github.com/schedule-x/schedule-x/commit/0e8100569e9781a993915ceff1f0196fa4d846d0))
+- add events facade for recurrence plugin ([#220](https://github.com/schedule-x/schedule-x/issues/220)) ([dde1806](https://github.com/schedule-x/schedule-x/commit/dde180679d18f6ecf72a6616e824a9f9e321aa7a))
+- add new plugin api on calendar instance ([#702](https://github.com/schedule-x/schedule-x/issues/702)) ([5b8caa2](https://github.com/schedule-x/schedule-x/commit/5b8caa2e09baf33a0f7151b3ac19c198301f93b6))
+- background events ([#646](https://github.com/schedule-x/schedule-x/issues/646)) ([489f396](https://github.com/schedule-x/schedule-x/commit/489f396302c9f9d745dfc75128c3aa0e58ac80da))
+- **date-picker:** add onEscapeKeyDown ([#564](https://github.com/schedule-x/schedule-x/issues/564)) ([01add2b](https://github.com/schedule-x/schedule-x/commit/01add2b7a5a52320e0d3adcce9d606b82389f810))
+- enable dragging a recurring events ([#219](https://github.com/schedule-x/schedule-x/issues/219)) ([35441e7](https://github.com/schedule-x/schedule-x/commit/35441e74546f4a9fe7c41e3f321bf6ecf1a4fb2b))
+- enable excluding dates in recurrence set with exdate rule ([#173](https://github.com/schedule-x/schedule-x/issues/173)) ([ae1af76](https://github.com/schedule-x/schedule-x/commit/ae1af76ad02e558bde73dfbb3dbace43e95f00f8))
+- enable navigating month views with screen reader ([#523](https://github.com/schedule-x/schedule-x/issues/523)) ([6577fe0](https://github.com/schedule-x/schedule-x/commit/6577fe096bcac1fa81fb8ed79bbb0d67e9492114))
+- enable setting rrule for events ([#170](https://github.com/schedule-x/schedule-x/issues/170)) ([c770fc7](https://github.com/schedule-x/schedule-x/commit/c770fc71a0987861ab2e435325a48efc51f485e5))
+- enable showing weekly events through rrule ([#218](https://github.com/schedule-x/schedule-x/issues/218)) ([6f33d0f](https://github.com/schedule-x/schedule-x/commit/6f33d0f8c29f35115502a744b3dc6816b75f9495))
+- enable updating recurrence sets ([#177](https://github.com/schedule-x/schedule-x/issues/177)) ([c10f12f](https://github.com/schedule-x/schedule-x/commit/c10f12fc6f6e770ba33ada6e978912eb16774514))
+- enable using exdate with background events ([#1124](https://github.com/schedule-x/schedule-x/issues/1124)) ([92d9b36](https://github.com/schedule-x/schedule-x/commit/92d9b36f7a320763759b9051f2a95765745bdd0f))
+- **event-recurrence:** add method for updating the rrule with nDays ([#931](https://github.com/schedule-x/schedule-x/issues/931)) ([5d2f562](https://github.com/schedule-x/schedule-x/commit/5d2f562a63c7c517f1364a8ca6cb41abd84eed70))
+- **event-recurrence:** enable rrule for background events ([#923](https://github.com/schedule-x/schedule-x/issues/923)) ([83433c1](https://github.com/schedule-x/schedule-x/commit/83433c14f402442c8e8e6d975dec90d6a5ddfa71))
+- **event-recurrence:** enable usage of infinite events ([#869](https://github.com/schedule-x/schedule-x/issues/869)) ([2c8ebaf](https://github.com/schedule-x/schedule-x/commit/2c8ebafda36aaa9dcb05272db08d6526bead02c1))
+- **event-recurrence:** recurrence exceptions ([#1038](https://github.com/schedule-x/schedule-x/issues/1038)) ([0ed6917](https://github.com/schedule-x/schedule-x/commit/0ed69173307bdbec6550576701579e1098393847))
+- recurrence library ([#208](https://github.com/schedule-x/schedule-x/issues/208)) ([f7488bd](https://github.com/schedule-x/schedule-x/commit/f7488bd89862e6a04d81452c067cfec6866a8ea6))
+- release beta for event recurrence ([f01caaa](https://github.com/schedule-x/schedule-x/commit/f01caaaf9f3b1d8b2b5263ce4bbfb168cb48c596))
+- rename APIs on plugins ([17aaa5d](https://github.com/schedule-x/schedule-x/commit/17aaa5d274bf437271a8752a7a7507a78249c6af))
+- rename plugin ([#369](https://github.com/schedule-x/schedule-x/issues/369)) ([8e89b0f](https://github.com/schedule-x/schedule-x/commit/8e89b0f4658e80276510e4ce092c3a4132eaede3))
+- update recurrent events on resize ([#225](https://github.com/schedule-x/schedule-x/issues/225)) ([dd522d4](https://github.com/schedule-x/schedule-x/commit/dd522d422c53a247d3a8661a15214d0349679922))
+- validate events in event service plugins ([#937](https://github.com/schedule-x/schedule-x/issues/937)) ([6b45e09](https://github.com/schedule-x/schedule-x/commit/6b45e09db2a07d0159e7d9748c6601de7803cea9))
+
 # [2.36.0](https://github.com/schedule-x/schedule-x/compare/v2.35.0...v2.36.0) (2025-07-09)
 
 ### Bug Fixes
