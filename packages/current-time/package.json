@@ -4,7 +4,7 @@
     "access": "public"
   },
   "umdName": "SXCurrentTime",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Schedule-X plugin for displaying an indicator for the current time",
   "author": {
     "name": "Tom Österlund",
