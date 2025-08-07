@@ -1,7 +1,7 @@
 {
   "name": "@unimed-x/event-recurrence",
   "umdName": "SXEventRecurrence",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Create recurring events for the Schedule-X calendar",
   "author": {
     "name": "Tom Österlund",
@@ -26,5 +26,5 @@
     "directory": "packages/event-recurrence"
   },
   "homepage": "https://schedule-x.dev",
-  "gitHead": "bdf911a3eea2a92d010520456a696cd31666009b"
+  "gitHead": "4599b842c2441b1793e3b508db88138f5aac1d91"
 }

@@ -1,7 +1,7 @@
 {
   "name": "@unimed-x/ical",
   "umdName": "SXICalendar",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Plugin for Schedule-X to handle iCalendar sources",
   "author": {
     "name": "Tom Österlund",
@@ -29,5 +29,5 @@
     "directory": "packages/icalendar"
   },
   "homepage": "https://schedule-x.dev",
-  "gitHead": "bdf911a3eea2a92d010520456a696cd31666009b"
+  "gitHead": "4599b842c2441b1793e3b508db88138f5aac1d91"
 }

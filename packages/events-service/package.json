@@ -1,7 +1,7 @@
 {
   "name": "@unimed-x/events-service",
   "umdName": "SXEventsService",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "publishConfig": {
     "access": "public"
   },
@@ -29,5 +29,5 @@
     "directory": "packages/events-service"
   },
   "homepage": "https://schedule-x.dev",
-  "gitHead": "bdf911a3eea2a92d010520456a696cd31666009b"
+  "gitHead": "4599b842c2441b1793e3b508db88138f5aac1d91"
 }

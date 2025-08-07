@@ -4,7 +4,7 @@
     "access": "public"
   },
   "description": "Shared E2E testing utils for Schedule-X",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "module": "./dist/core.js",
   "main": "./dist/core.cjs.js",
   "umd": "./dist/core.umd.js",
@@ -15,5 +15,5 @@
   "scripts": {
     "format": "prettier . --write"
   },
-  "gitHead": "bdf911a3eea2a92d010520456a696cd31666009b"
+  "gitHead": "4599b842c2441b1793e3b508db88138f5aac1d91"
 }

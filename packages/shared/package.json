@@ -1,7 +1,7 @@
 {
   "name": "@unimed-x/shared",
   "umdName": "SXShared",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "publishConfig": {
     "access": "public"
   },
@@ -31,5 +31,5 @@
     "url": "https://github.com/schedule-x/schedule-x",
     "directory": "packages/shared"
   },
-  "gitHead": "bdf911a3eea2a92d010520456a696cd31666009b"
+  "gitHead": "4599b842c2441b1793e3b508db88138f5aac1d91"
 }
