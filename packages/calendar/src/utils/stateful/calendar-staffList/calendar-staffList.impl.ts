@@ -23,7 +23,7 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
 
     // If list length is less than 7, use list length
     if (currentList.length < 7) {
-      return Math.max(1, Math.min(currentList.length, defaultCount))
+      return Math.max(1, Math.max(currentList.length, defaultCount))
     }
 
     // If list length is 7 or more, limit to 7
@@ -63,20 +63,22 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
   // Helper function to update perView and index together
   const syncPerViewAndIndex = (newList: T[]) => {
     staffPerView.value = calculatePerView(newList, staffPerView.value)
+
     adjustCurrentIndex(newList)
   }
 
   const next = () => {
-    if (list.value.length > 0) {
-      currentStartIndex.value =
-        (currentStartIndex.value + 1) % list.value.length
+    if (
+      list.value.length > 0 &&
+      currentStartIndex.value < list.value.length - 1
+    ) {
+      currentStartIndex.value = currentStartIndex.value + 1
     }
   }
 
   const prev = () => {
-    if (list.value.length > 0) {
-      currentStartIndex.value =
-        (currentStartIndex.value - 1 + list.value.length) % list.value.length
+    if (list.value.length > 0 && currentStartIndex.value > 0) {
+      currentStartIndex.value = currentStartIndex.value - 1
     }
   }
 
@@ -148,6 +150,14 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
     return list.value.find((staff) => staff.id === id)
   }
 
+  const canNavigateNext = (): boolean => {
+    return currentStartIndex.value + staffPerView.value < list.value.length
+  }
+
+  const canNavigatePrev = (): boolean => {
+    return currentStartIndex.value > 0
+  }
+
   return {
     hasList,
     currentStartIndex,
@@ -157,6 +167,8 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
     setStaffPerView,
     setStaffList,
     addStaffList,
+    canNavigateNext,
+    canNavigatePrev,
     removeStaffById,
     searchStaff,
     filterStaff,

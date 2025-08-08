@@ -31,8 +31,8 @@ import { ZoomInPlugin } from '../../packages/zoom-in-out/src/index.ts'
 import { staffSeed } from '../data/staff-seed.ts'
 import { colors } from './colors.ts'
 import { mainCalendatCallbacks } from './callbacks.ts'
-import { StaffBase } from '@unimed-x/shared'
-import { createStaffServicePlugin } from '../../packages/staff-service/src/staff-service-plugin.impl.ts'
+import { StaffBase, toDateString } from '@unimed-x/shared'
+import { createStaffServicePlugin } from '../../packages/staff-service/dist/core.js'
 const calendarElement = document.getElementById('calendar') as HTMLElement
 const calendarSiderElement = document.getElementById(
   'siderCalendar'
@@ -64,7 +64,7 @@ const sidebarCalendar = createCalendar({
   events: seededEvents,
   defaultView: 'monthly-agenda',
   locale: 'ru-RU',
-  plugins: [],
+  // plugins: [calendarControls],
   callbacks: {
     // Disable interactions in the sidebar
     onClickDate() {},
@@ -128,22 +128,22 @@ const calendar = createCalendar({
   ],
   defaultView: 'day',
   callbacks: mainCalendatCallbacks(calendarControls as any),
-  selectedDate: '2025-08-14',
+  selectedDate: toDateString(new Date()),
   calendars: colors,
-  dayBoundaries: {
-    start: '07:00',
-    end: '24:00',
-  },
+  // dayBoundaries: {
+  //   start: '07:00',
+  //   end: '24:00',
+  // },
 
   locale: 'ru-RU',
 })
 
-// fetchStaff().then((staffData) => {
-//   if (staffService.$app) {
-//     staffService.setStaffList(staffData)
-//   } else {
-//     console.warn('Calendar instance does not support dynamic staff updates.')
-//   }
-// })
+fetchStaff().then((staffData) => {
+  if (staffService.$app) {
+    staffService.setStaffList(staffData)
+  } else {
+    console.warn('Calendar instance does not support dynamic staff updates.')
+  }
+})
 calendar.render(calendarElement)
 sidebarCalendar.render(calendarSiderElement)

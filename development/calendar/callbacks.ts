@@ -26,17 +26,17 @@ export const mainCalendatCallbacks = (
 
   onClickDate(date) {
     console.log('onClickDate', date)
-    console.log(control.$app.calendarState.range.value)
+    // console.log(control.$app.calendarState.range.value)
   },
 
   onClickDateTime(dateTime) {
     console.log('onClickDateTime', dateTime)
-    console.log(control.$app.calendarState.range.value)
+    // console.log(control.$app.calendarState.range.value)
   },
 
   onClickAgendaDate(date) {
     console.log('onClickAgendaDate', date)
-    console.log(control.$app.calendarState.range.value)
+    // console.log(control.$app.calendarState.range.value)
   },
 
   onDoubleClickAgendaDate(date) {
@@ -49,6 +49,7 @@ export const mainCalendatCallbacks = (
 
   onSelectedDateUpdate(date) {
     console.log('onSelectedDateUpdate', date)
+    control.setDate(date)
   },
 
   onDoubleClickDateTime(dateTime) {

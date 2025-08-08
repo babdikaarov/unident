@@ -26,10 +26,6 @@ export default class CalendarEventBuilder
     private id: EventId,
     private start: string,
     private end: string
-    // private withStaff: {
-    //   id: string
-    //   name: string
-    // }
   ) {}
 
   build(): CalendarEventInternal {

@@ -93,7 +93,8 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                   toJSDate(day.date)
                 )}
               />
-              {!$app.config.hasStaffList.value ? (
+              {!$app.config.hasStaffList.value ||
+              $app.calendarState.view.value !== 'day' ? (
                 <div
                   className="sx__date-grid"
                   aria-label={$app.translate(
@@ -115,6 +116,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                     <Chevron
                       className="sx__time-grid-day-staff-prev"
                       direction="previous"
+                      disabled={!$app.staffList.canNavigatePrev()}
                       onClick={$app.staffList.prev}
                     />
                     <div
@@ -122,7 +124,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                       data-ccid={timeGridDayStaffId}
                     >
                       {!timeGridDayStaffConent &&
-                        $app.staffList.getStaffList().map((staff) => (
+                        $app.staffList.getStaffListOnView().map((staff) => (
                           <div
                             key={staff.id}
                             className="sx__time-grid-day-staff"
@@ -141,6 +143,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                     <Chevron
                       className="sx__time-grid-day-staff-next"
                       direction="next"
+                      disabled={!$app.staffList.canNavigateNext()}
                       onClick={$app.staffList.next}
                     />
                   </>
@@ -156,7 +159,8 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
 
           <div className="sx__week-grid">
             <TimeAxis />
-            {!$app.config.hasStaffList.value ? (
+            {!$app.config.hasStaffList.value &&
+            $app.calendarState.view.value == 'day' ? (
               Object.values(week.value).map((day) => (
                 <TimeGridDay
                   calendarEvents={day.timeGridEvents}

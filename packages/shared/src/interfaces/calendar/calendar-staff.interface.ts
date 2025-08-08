@@ -27,4 +27,6 @@ export default interface CalendarStaff<T extends StaffBase = StaffBase> {
   getStaffList: () => T[]
   getStaffListOnView: () => T[]
   getStaffById: (id: string) => T | undefined
+  canNavigateNext: () => boolean
+  canNavigatePrev: () => boolean
 }
