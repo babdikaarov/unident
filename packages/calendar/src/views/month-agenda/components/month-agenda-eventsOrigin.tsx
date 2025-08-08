@@ -1,0 +1,25 @@
+import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
+import MonthAgendaEvent from './month-agenda-event'
+import { useContext } from 'preact/hooks'
+import { AppContext } from '../../../utils/stateful/app-context'
+
+type props = {
+  events: CalendarEventInternal[]
+}
+
+export default function MonthAgendaEventsOrigin({ events }: props) {
+  const $app = useContext(AppContext)
+  return (
+    <div className="sx__month-agenda-events">
+      {events.length ? (
+        events.map((event) => (
+          <MonthAgendaEvent calendarEvent={event} key={event.id} />
+        ))
+      ) : (
+        <div className="sx__month-agenda-events__empty">
+          {$app.translate('No events')}
+        </div>
+      )}
+    </div>
+  )
+}

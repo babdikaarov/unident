@@ -15,4 +15,6 @@ export interface CalendarTranslations {
   'Link to {{n}} more events on {{date}}': string
   'Link to 1 more event on {{date}}': string
   CW: string
+  'Hide Events'?: string
+  'Show Events'?: string
 }

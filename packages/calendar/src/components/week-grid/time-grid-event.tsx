@@ -172,6 +172,12 @@ export default function TimeGridEvent({
     setMouseDown(true)
     createDragStartTimeout(handleStartDrag, e)
   }
+  const stretchFullwidth = (className: string) => {
+    return $app.calendarState.view.value === 'day' &&
+      $app.staffList.hasList.value
+      ? ''
+      : className
+  }
 
   const handlePointerUp = (e: UIEvent) => {
     nextTick(() => setMouseDown(false))
@@ -218,13 +224,15 @@ export default function TimeGridEvent({
             $app.config.dayBoundaries.value,
             $app.config.timePointsPerDay
           )}%`,
-          insetInlineStart: `${insetInlineStart}%`,
-          width: `${getWidthRule(
-            insetInlineStart,
-            isCopy ? 100 : $app.config.weekOptions.value.eventWidth,
-            calendarEvent._maxConcurrentEvents,
-            $app.config.weekOptions.value.eventOverlap
-          )}%`,
+          insetInlineStart: stretchFullwidth(`${insetInlineStart}%`),
+          width: stretchFullwidth(
+            `${getWidthRule(
+              insetInlineStart,
+              isCopy ? 100 : $app.config.weekOptions.value.eventWidth,
+              calendarEvent._maxConcurrentEvents,
+              $app.config.weekOptions.value.eventOverlap
+            )}%`
+          ),
           backgroundColor: customComponent
             ? undefined
             : eventCSSVariables.backgroundColor,

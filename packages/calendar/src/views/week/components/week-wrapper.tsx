@@ -71,7 +71,6 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
     $app.calendarState.isDark.value,
     $app.calendarState.isCalendarSmall.value,
   ])
-
   return (
     <>
       <AppContext.Provider value={$app}>
@@ -83,7 +82,8 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                   toJSDate(day.date)
                 )}
               />
-              {$app.calendarState.view.value !== 'day' ? (
+              {!$app.staffList.hasList.value ||
+              $app.calendarState.view.value !== 'day' ? (
                 <div
                   className="sx__date-grid"
                   aria-label={$app.translate(
@@ -135,7 +135,8 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
 
           <div className="sx__week-grid">
             <TimeAxis />
-            {$app.calendarState.view.value !== 'day' ? (
+            {!$app.staffList.hasList.value ||
+            $app.calendarState.view.value !== 'day' ? (
               Object.values(week.value).map((day) => (
                 <TimeGridDay
                   calendarEvents={day.timeGridEvents}

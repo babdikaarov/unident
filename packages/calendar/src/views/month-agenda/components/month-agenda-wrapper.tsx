@@ -7,6 +7,7 @@ import MonthAgendaDayNames from './month-agenda-day-names'
 import { AppContext } from '../../../utils/stateful/app-context'
 import { positionEventsInAgenda } from '../utils/stateless/position-events-in-agenda'
 import { sortEventsByStartAndEnd } from '../../../utils/stateless/events/sort-by-start-date'
+import MonthAgendaEvents from './month-agenda-events'
 // import MonthAgendaEvents from './month-agenda-events'
 // import ForwardBackwardNavigation from '../../../components/header/forward-backward-navigation'
 
@@ -72,6 +73,16 @@ export const MonthAgendaWrapper: PreactViewComponent = ({ $app, id }) => {
             />
           ))}
         </div>
+        <MonthAgendaEvents
+          key={$app.datePickerState.selectedDate.value}
+          events={
+            agendaMonth.weeks
+              .flat()
+              .find(
+                (day) => day.date === $app.datePickerState.selectedDate.value
+              )?.events || []
+          }
+        />
       </div>
     </AppContext.Provider>
   )

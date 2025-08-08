@@ -4,7 +4,7 @@ import CalendarState from './calendar-state.interface'
 import DatePickerConfigInternal from '../date-picker/config.interface'
 import CalendarEvents from './calendar-events.interface'
 import CalendarElements from './calendar-elements.interface'
-import CalendarStaff from './calendar-staff.interface'
+import CalendarStaff, { StaffBase } from './calendar-staff.interface'
 
 export default interface CalendarAppSingleton extends AppSingleton {
   config: CalendarConfigInternal
@@ -12,5 +12,5 @@ export default interface CalendarAppSingleton extends AppSingleton {
   calendarState: CalendarState
   calendarEvents: CalendarEvents
   elements: CalendarElements
-  staffList: CalendarStaff
+  staffList: CalendarStaff<StaffBase>
 }

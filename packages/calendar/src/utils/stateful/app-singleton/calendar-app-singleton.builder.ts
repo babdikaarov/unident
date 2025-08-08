@@ -75,7 +75,10 @@ export default class CalendarAppSingletonBuilder implements Builder<CalendarAppS
     this.calendarEvents = calendarEvents
     return this
   }
-  withStaffList(staff: StaffBase[], staffPerView: number): CalendarAppSingletonBuilder {
+  withStaffList(
+    staff: StaffBase[],
+    staffPerView: number | undefined
+  ): CalendarAppSingletonBuilder {
     this.staffList = createCalendarStaff(staff, staffPerView)
     return this
   }

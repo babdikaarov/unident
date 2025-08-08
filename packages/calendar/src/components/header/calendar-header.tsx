@@ -79,15 +79,7 @@ export default function CalendarHeader() {
     $app.calendarState.isCalendarSmall.value,
   ])
 
-  // useSignalEffect(() => {
-  //   if (minuteBoudaries.value == 5) {
-  //     $app.config.plugins.zoomInPlugin?.setMinZoom!(3)
-  //   } else {
-  //     $app.config.plugins.zoomInPlugin?.setMinZoom!(1)
-  //   }
-  //   console.log(minuteBoudaries.value == 5)
-  //   console.log($app.config.plugins.zoomInPlugin)
-  // })
+ 
 
   const keyForRerenderingOnLocaleChange = $app.config.locale.value
 

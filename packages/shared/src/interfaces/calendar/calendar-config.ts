@@ -139,6 +139,6 @@ export interface CalendarConfigExternal
   skipValidation?: boolean
   translations?: Record<string, Language>
   showWeekNumbers?: boolean
-  minuteBoudaries?: number
+  minuteBoudaries?: 10 | 15 | 20 | 30 | 60
   staff?: StaffBase[]
 }

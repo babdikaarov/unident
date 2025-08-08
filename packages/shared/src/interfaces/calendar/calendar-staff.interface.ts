@@ -5,15 +5,23 @@ export type StaffBase = {
   firstName: string
 }
 
-export default interface CalendarStaff {
-  list: ReturnType<typeof signal<StaffBase[]>>
-  listOnView: ReturnType<typeof computed<StaffBase[]>>
+export default interface CalendarStaff<T extends StaffBase = StaffBase> {
+  list: ReturnType<typeof signal<T[]>>
+  listOnView: ReturnType<typeof computed<T[]>>
   currentStartIndex: ReturnType<typeof signal<number>>
   staffPerView: ReturnType<typeof signal<number>>
   hasList: ReturnType<typeof computed<boolean>>
+
   next: () => void
   prev: () => void
+
   setStaffPerView: (count: number) => void
-  setStaffList: (staffList: StaffBase[]) => void
-  addStaffList: (staff: StaffBase) => void
+
+  // Methods below are generic, to accept any subtype of StaffBase
+
+  setStaffList: (staffList: T[]) => void
+  addStaffList: (staff: T) => void
+
+  filterStaff: (predicate: (staff: T) => boolean) => void
+  searchStaff: (query: string, keys: (keyof T)[]) => void
 }

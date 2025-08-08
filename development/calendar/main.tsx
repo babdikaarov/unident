@@ -41,8 +41,8 @@ const eventsServicePlugin = createEventsServicePlugin()
 
 const sidebarCalendar = createCalendar({
   views: [createViewMonthAgenda()],
-  events: [],
-  // events: seededEvents,
+  // events: [],
+  events: seededEvents,
   defaultView: 'monthly-agenda',
   locale: 'ru-RU',
   plugins: [],
@@ -50,14 +50,15 @@ const sidebarCalendar = createCalendar({
     // Disable interactions in the sidebar
     onClickDate() {},
     onClickDateTime() {},
-    onEventClick() {},
+    onEventClick() {
+      console.log('event clicke agenda')
+    },
     onDoubleClickDate() {},
     onDoubleClickDateTime() {},
     onDoubleClickEvent() {},
     onSelectedDateUpdate(date) {
       console.log('onSelectedDateUpdate', date)
       calendarControls.setDate(date)
-      // calendarControls.$app.config.minuteBoudaries.value = 10
     },
   },
   calendars: colors,
@@ -68,8 +69,9 @@ const calendar = createCalendar({
   staff: staffSeed,
   // events: [],
   // isLoading: true,
+  // staffPerView: 4,
   events: seededEvents,
-  minuteBoudaries: 10,
+  minuteBoudaries: 60,
   plugins: [
     createViewMonthAgenda(),
     createEventRecurrencePlugin(),
@@ -105,7 +107,7 @@ const calendar = createCalendar({
   ],
   defaultView: 'day',
   callbacks: mainCalendatCallbacks(calendarControls as any),
-  selectedDate: '2025-08-06',
+  selectedDate: '2025-08-14',
   calendars: colors,
   dayBoundaries: {
     start: '07:00',
@@ -113,7 +115,6 @@ const calendar = createCalendar({
   },
 
   locale: 'ru-RU',
-  
 })
 
 calendar.render(calendarElement)

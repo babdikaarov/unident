@@ -20,6 +20,8 @@
   @include events.is-event-new;
 }
 
+
+
 [data-has-dnd='true'] {
   .sx__time-grid-event {
     touch-action: none;

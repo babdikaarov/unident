@@ -20,4 +20,6 @@ export const calendarRuRU: CalendarTranslations = {
   'Link to 1 more event on {{date}}':
     'Ссылка на 1 дополнительное событие на {{date}}',
   CW: 'Неделя {{week}}',
+  'Hide Events': 'Скрыть события',
+  'Show Events': 'Показать события',
 }
