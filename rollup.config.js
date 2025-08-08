@@ -22,6 +22,7 @@ async function getSortedPackages(scope, ignore) {
     '@unimed-x/eslint-config',
     '@unimed-x/prettier-config',
   ]
+
   filtered = filtered.filter((pkg) => !nonTSPackages.includes(pkg.name))
 
   return batchPackages(filtered).reduce((arr, batch) => arr.concat(batch), [])
@@ -29,7 +30,9 @@ async function getSortedPackages(scope, ignore) {
 
 async function build(commandLineArgs) {
   const config = []
-
+  const reactPackages = [
+    '@unimed-x/adapter-react', // React-specific, no UMD build needed
+  ]
   // Support --scope and --ignore globs if passed in via commandline
   const { scope, ignore } = minimist(process.argv.slice(2))
   const packages = await getSortedPackages(scope, ignore)
@@ -41,7 +44,8 @@ async function build(commandLineArgs) {
 
   packages.forEach((pkg) => {
     const basePath = path.relative(__dirname, pkg.location)
-    const input = path.join(basePath, 'src/index.ts')
+    const ext = reactPackages.includes(pkg.name) ? 'tsx' : 'ts'
+    const input = path.join(basePath, `src/index.${ext}`)
     const { name, main, umd, module, umdName } = pkg.toJSON()
 
     const basePlugins = [
@@ -54,33 +58,42 @@ async function build(commandLineArgs) {
       image(),
     ]
 
+    const outputs = []
+
+    // Only add UMD build if package is not in nonUmdPackages
+    if (!reactPackages.includes(name) && umd) {
+      outputs.push({
+        name: umdName || name,
+        file: path.join(basePath, umd),
+        format: 'umd',
+        globals: {
+          preact: 'preact',
+          '@preact/signals': 'preactSignals',
+          '@preact/signals-core': 'preactSignalsCore',
+          'preact/hooks': 'preactHooks',
+          'preact/compat': 'preactCompat',
+        },
+      })
+    }
+
+    // Always add CJS + ES builds
+    outputs.push(
+      {
+        name,
+        file: path.join(basePath, main),
+        format: 'cjs',
+        exports: 'auto',
+      },
+      {
+        name,
+        file: path.join(basePath, module),
+        format: 'es',
+      }
+    )
+
     config.push({
       input,
-      output: [
-        {
-          name: umdName || name,
-          file: path.join(basePath, umd),
-          format: 'umd',
-          globals: {
-            preact: 'preact',
-            '@preact/signals': 'preactSignals',
-            '@preact/signals-core': 'preactSignalsCore',
-            'preact/hooks': 'preactHooks',
-            'preact/compat': 'preactCompat',
-          },
-        },
-        {
-          name,
-          file: path.join(basePath, main),
-          format: 'cjs',
-          exports: 'auto',
-        },
-        {
-          name,
-          file: path.join(basePath, module),
-          format: 'es',
-        },
-      ],
+      output: outputs,
       plugins: [
         ...basePlugins,
         ts({

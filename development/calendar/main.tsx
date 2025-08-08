@@ -31,14 +31,33 @@ import { ZoomInPlugin } from '../../packages/zoom-in-out/src/index.ts'
 import { staffSeed } from '../data/staff-seed.ts'
 import { colors } from './colors.ts'
 import { mainCalendatCallbacks } from './callbacks.ts'
+import { StaffBase } from '@unimed-x/shared'
+import { createStaffServicePlugin } from '../../packages/staff-service/src/staff-service-plugin.impl.ts'
 const calendarElement = document.getElementById('calendar') as HTMLElement
 const calendarSiderElement = document.getElementById(
   'siderCalendar'
 ) as HTMLElement
 const calendarControls = createCalendarControlsPlugin()
 // const eventModalPlugin = createEventModalPlugin()
+const staffService = createStaffServicePlugin()
 const eventsServicePlugin = createEventsServicePlugin()
+const fetchStaff = async () => {
+  try {
+    const res = await fetch(
+      'https://api-dev.unimedx.ai/api/v1/staff-profiles?clinicId=8d3d0863-df4d-4ada-8cc0-1ba6adf019ec'
+    )
 
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`)
+    }
+
+    const data: { content: StaffBase[] } = await res.json()
+    return data.content // Assuming this is an array of staff
+  } catch (error) {
+    console.error('Failed to fetch staff:', error)
+    return []
+  }
+}
 const sidebarCalendar = createCalendar({
   views: [createViewMonthAgenda()],
   // events: [],
@@ -65,11 +84,12 @@ const sidebarCalendar = createCalendar({
 })
 
 const calendar = createCalendar({
-  // staff: [],
-  staff: staffSeed,
+  staff: [],
+  // staff: staffSeed,
   // events: [],
   // isLoading: true,
   // staffPerView: 4,
+  hasStaffList: true,
   events: seededEvents,
   minuteBoudaries: 60,
   plugins: [
@@ -82,6 +102,7 @@ const calendar = createCalendar({
     createScrollControllerPlugin(),
     eventsServicePlugin,
     calendarControls,
+    staffService,
     new ZoomInPlugin(calendarControls, {
       zoomFactor: 1, // Initial zoom (default: 1)
       minZoom: 1, // Minimum zoom (default: 0.5)
@@ -117,5 +138,12 @@ const calendar = createCalendar({
   locale: 'ru-RU',
 })
 
+// fetchStaff().then((staffData) => {
+//   if (staffService.$app) {
+//     staffService.setStaffList(staffData)
+//   } else {
+//     console.warn('Calendar instance does not support dynamic staff updates.')
+//   }
+// })
 calendar.render(calendarElement)
 sidebarCalendar.render(calendarSiderElement)

@@ -17,6 +17,7 @@ export const createInternalConfig = (
     .withCalendars(config.calendars)
     .withPlugins(plugins)
     .withIsDark(config.isDark)
+    .withHasStaffList(config.hasStaffList)
     .withIsLoading(config.isLoading)
     .withIsResponsive(config.isResponsive)
     .withCallbacks(config.callbacks)

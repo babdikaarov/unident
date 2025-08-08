@@ -45,7 +45,8 @@ export default class CalendarConfigBuilder implements Builder<CalendarConfigInte
   calendars: Record<string, CalendarType> | undefined
   plugins: Plugins = {}
   isDark: boolean | undefined = false
-  isLoading: boolean | undefined 
+  hasStaffList: boolean | undefined = false
+  isLoading: boolean | undefined
   isResponsive: boolean | undefined = true
   callbacks: CalendarCallbacks | undefined
   minDate: string | undefined
@@ -72,6 +73,7 @@ export default class CalendarConfigBuilder implements Builder<CalendarConfigInte
       this.calendars,
       this.plugins,
       this.isDark,
+      this.hasStaffList,
       this.isLoading,
       this.isResponsive,
       this.callbacks,
@@ -158,6 +160,10 @@ export default class CalendarConfigBuilder implements Builder<CalendarConfigInte
 
   withIsDark(isDark: boolean | undefined): CalendarConfigBuilder {
     this.isDark = isDark
+    return this
+  }
+  withHasStaffList(hasStaffList: boolean | undefined): CalendarConfigBuilder {
+    this.hasStaffList = hasStaffList
     return this
   }
   withIsLoading(isLoading: boolean | undefined): CalendarConfigBuilder {

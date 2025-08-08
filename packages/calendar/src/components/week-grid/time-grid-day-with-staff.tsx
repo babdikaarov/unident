@@ -99,7 +99,7 @@ export default function TimeGridDayWithStaff({
     return newClassNames
   })
 
-  return $app.staffList.listOnView.value.map((staff) => (
+  return $app.staffList.getStaffList().map((staff) => (
     <>
       <div
         className={classNames.value.join(' ')}

@@ -79,8 +79,6 @@ export default function CalendarHeader() {
     $app.calendarState.isCalendarSmall.value,
   ])
 
- 
-
   const keyForRerenderingOnLocaleChange = $app.config.locale.value
 
   const isDayOrWeekView = useMemo(() => {
@@ -134,6 +132,16 @@ export default function CalendarHeader() {
                 <option value={60}>60</option>
               </select>
             </div>
+            <button
+              onClick={() =>
+                $app.staffList.addStaffList({
+                  id: 'asd',
+                  firstName: 'asd',
+                })
+              }
+            >
+              add
+            </button>
 
             {$app.config.views.value.length > 1 && (
               <ViewSelection

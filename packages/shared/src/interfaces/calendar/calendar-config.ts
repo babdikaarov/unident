@@ -69,6 +69,7 @@ export default interface CalendarConfigInternal extends Config {
   weekOptions: Signal<WeekOptions>
   calendars: Signal<Record<string, CalendarType>>
   isDark: Signal<boolean>
+  hasStaffList: Signal<boolean>
   isLoading: Signal<boolean>
   staffPerView: Signal<number>
   minDate: Signal<string | undefined>
@@ -103,6 +104,7 @@ interface ReducedCalendarConfigInternal
     | 'calendars'
     | 'weekOptions'
     | 'isDark'
+    | 'hasStaffList'
     | 'minDate'
     | 'maxDate'
     | 'monthGridOptions'
@@ -131,6 +133,7 @@ export interface CalendarConfigExternal
   calendars?: Record<string, CalendarType>
   weekOptions?: Partial<WeekOptions>
   isDark?: boolean
+  hasStaffList?: boolean
   minDate?: string | undefined
   maxDate?: string | undefined
   monthGridOptions?: MonthGridOptions

@@ -80,6 +80,9 @@ export const createCalendarState = (
 
   const isCalendarSmall = signal<boolean | undefined>(undefined)
   const isDark = signal<boolean>(calendarConfig.isDark.value || false)
+  const hasStaffList = signal<boolean>(
+    calendarConfig.hasStaffList.value || false
+  )
   const isLoading = signal<boolean>(calendarConfig.isLoading.value || false)
   effect(() => {
     const eventColors = new EventColors(calendarConfig)
@@ -89,12 +92,12 @@ export const createCalendarState = (
       eventColors.setLight()
     }
   })
- 
 
   return {
     isLoading,
     view,
     isDark,
+    hasStaffList,
     setRange,
     range,
     isCalendarSmall,

@@ -6,8 +6,6 @@ export type StaffBase = {
 }
 
 export default interface CalendarStaff<T extends StaffBase = StaffBase> {
-  list: ReturnType<typeof signal<T[]>>
-  listOnView: ReturnType<typeof computed<T[]>>
   currentStartIndex: ReturnType<typeof signal<number>>
   staffPerView: ReturnType<typeof signal<number>>
   hasList: ReturnType<typeof computed<boolean>>
@@ -18,10 +16,15 @@ export default interface CalendarStaff<T extends StaffBase = StaffBase> {
   setStaffPerView: (count: number) => void
 
   // Methods below are generic, to accept any subtype of StaffBase
-
   setStaffList: (staffList: T[]) => void
   addStaffList: (staff: T) => void
+  removeStaffById: (id: string) => void
 
   filterStaff: (predicate: (staff: T) => boolean) => void
   searchStaff: (query: string, keys: (keyof T)[]) => void
+
+  // New getter methods instead of direct signal access
+  getStaffList: () => T[]
+  getStaffListOnView: () => T[]
+  getStaffById: (id: string) => T | undefined
 }

@@ -25,9 +25,14 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   )
   const timeGridDayStaffConent =
     $app.config._customComponentFns.timeGridDayStaffConent
+  const noStaffFound = $app.config._customComponentFns.noStaffFound
   const timeGridDayStaffId = useState(
     timeGridDayStaffConent ? randomStringId() : undefined
   )[0]
+  const noStaffFoundId = useState(
+    noStaffFound ? randomStringId() : undefined
+  )[0]
+
   const week = useComputed(() => {
     const rangeStart = $app.calendarState.range.value?.start
     const rangeEnd = $app.calendarState.range.value?.end
@@ -61,11 +66,17 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   useEffect(() => {
     if (timeGridDayStaffConent) {
       timeGridDayStaffConent(getElementByCCID(timeGridDayStaffId), {
-        staffOnView: $app.staffList.listOnView.value,
+        staffOnView: $app.staffList.getStaffListOnView(),
         className: 'sx__time-grid-day-staff',
       })
     }
+    if (noStaffFound) {
+      noStaffFound(getElementByCCID(noStaffFoundId), {
+        className: 'sx__time-grid-day-staff-wrapper',
+      })
+    }
   }, [
+    $app.calendarState.hasStaffList.value,
     $app.datePickerState.selectedDate.value,
     $app.calendarState.range.value,
     $app.calendarState.isDark.value,
@@ -82,8 +93,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                   toJSDate(day.date)
                 )}
               />
-              {!$app.staffList.hasList.value ||
-              $app.calendarState.view.value !== 'day' ? (
+              {!$app.config.hasStaffList.value ? (
                 <div
                   className="sx__date-grid"
                   aria-label={$app.translate(
@@ -99,7 +109,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                     />
                   ))}
                 </div>
-              ) : (
+              ) : $app.staffList.hasList.value ? (
                 <div className="sx__time-grid-day-staff-wrapper">
                   <>
                     <Chevron
@@ -112,12 +122,19 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                       data-ccid={timeGridDayStaffId}
                     >
                       {!timeGridDayStaffConent &&
-                        $app.staffList.listOnView.value.map((staff) => (
+                        $app.staffList.getStaffList().map((staff) => (
                           <div
                             key={staff.id}
                             className="sx__time-grid-day-staff"
                           >
                             {staff.firstName}
+                            <button
+                              onClick={() =>
+                                $app.staffList.removeStaffById(staff.id)
+                              }
+                            >
+                              remove
+                            </button>
                           </div>
                         ))}
                     </div>
@@ -128,6 +145,10 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                     />
                   </>
                 </div>
+              ) : (
+                <div className="sx__time-grid-day-staff-wrapper">
+                  {!noStaffFound && 'no staff privided'}
+                </div>
               )}
               <div className="sx__week-header-border" />
             </div>
@@ -135,8 +156,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
 
           <div className="sx__week-grid">
             <TimeAxis />
-            {!$app.staffList.hasList.value ||
-            $app.calendarState.view.value !== 'day' ? (
+            {!$app.config.hasStaffList.value ? (
               Object.values(week.value).map((day) => (
                 <TimeGridDay
                   calendarEvents={day.timeGridEvents}

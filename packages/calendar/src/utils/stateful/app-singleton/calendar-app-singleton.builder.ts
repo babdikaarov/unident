@@ -9,9 +9,13 @@ import CalendarState from '@unimed-x/shared/src/interfaces/calendar/calendar-sta
 import DatePickerConfigInternal from '@unimed-x/shared/src/interfaces/date-picker/config.interface'
 import CalendarEvents from '@unimed-x/shared/src/interfaces/calendar/calendar-events.interface'
 import { createCalendarStaff } from '../calendar-staffList/calendar-staffList.impl'
-import CalendarStaff, { StaffBase } from '@unimed-x/shared/src/interfaces/calendar/calendar-staff.interface'
+import CalendarStaff, {
+  StaffBase,
+} from '@unimed-x/shared/src/interfaces/calendar/calendar-staff.interface'
 
-export default class CalendarAppSingletonBuilder implements Builder<CalendarAppSingleton> {
+export default class CalendarAppSingletonBuilder
+  implements Builder<CalendarAppSingleton>
+{
   private config: CalendarConfigInternal | undefined
   private timeUnitsImpl: TimeUnits | undefined
   private datePickerState: DatePickerState | undefined

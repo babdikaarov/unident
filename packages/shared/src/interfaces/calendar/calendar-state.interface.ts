@@ -8,6 +8,7 @@ export default interface CalendarState {
   setView: (view: ViewName, selectedDate: string) => void
   range: Signal<DateRange | null>
   isDark: Signal<boolean>
+  hasStaffList: Signal<boolean>
   isLoading: Signal<boolean>
 
   setRange: (date: string) => void
