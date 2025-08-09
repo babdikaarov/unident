@@ -67,16 +67,8 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   })
 
   useEffect(() => {
-    if (timeGridDayStaffConent) {
-      timeGridDayStaffConent(getElementByCCID(timeGridDayStaffId), {
-        staffOnView: $app.staffList.getStaffListOnView(),
-        className: 'sx__time-grid-day-staff',
-      })
-    }
     if (noStaffFound) {
-      noStaffFound(getElementByCCID(noStaffFoundId), {
-        className: 'sx__time-grid-day-staff-wrapper',
-      })
+      noStaffFound(getElementByCCID(noStaffFoundId), { $app })
     }
   }, [
     $app.calendarState.hasStaffList.value,
@@ -131,12 +123,16 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                         className="sx__time-grid-day-staff-card"
                         data-ccid={timeGridDayStaffId}
                       >
-                        {!timeGridDayStaffConent &&
-                          $app.staffList.getStaffListOnView().map((staff) => (
-                            <div
-                              key={staff.id}
-                              className="sx__time-grid-day-staff"
-                            >
+                        {$app.staffList.getStaffListOnView().map((staff) => {
+                          if (timeGridDayStaffConent)
+                            return timeGridDayStaffConent(
+                              getElementByCCID(timeGridDayStaffId),
+                              {
+                                staffOnView: staff,
+                              }
+                            )
+                          return (
+                            <div key={staff.id}>
                               {staff.firstName}
 
                               <button
@@ -147,7 +143,8 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                                 remove
                               </button>
                             </div>
-                          ))}
+                          )
+                        })}
                       </div>
                       <Chevron
                         className="sx__time-grid-day-staff-next"
