@@ -4,7 +4,7 @@
     "access": "public"
   },
   "umdName": "SXDragAndDrop",
-  "version": "3.0.16",
+  "version": "3.0.17",
   "description": "Drag & drop plugin for Schedule-X calendar",
   "author": {
     "name": "Tom Österlund",
