@@ -67,6 +67,9 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   })
 
   useEffect(() => {
+    if (timeGridDayStaffConent) {
+      timeGridDayStaffConent(getElementByCCID(timeGridDayStaffId), { $app })
+    }
     if (noStaffFound) {
       noStaffFound(getElementByCCID(noStaffFoundId), { $app })
     }
@@ -123,15 +126,8 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                         className="sx__time-grid-day-staff-card"
                         data-ccid={timeGridDayStaffId}
                       >
-                        {$app.staffList.getStaffListOnView().map((staff) => {
-                          if (timeGridDayStaffConent)
-                            return timeGridDayStaffConent(
-                              getElementByCCID(timeGridDayStaffId),
-                              {
-                                staffOnView: staff,
-                              }
-                            )
-                          return (
+                        {!timeGridDayStaffConent &&
+                          $app.staffList.getStaffListOnView().map((staff) => (
                             <div key={staff.id}>
                               {staff.firstName}
 
@@ -143,8 +139,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                                 remove
                               </button>
                             </div>
-                          )
-                        })}
+                          ))}
                       </div>
                       <Chevron
                         className="sx__time-grid-day-staff-next"
