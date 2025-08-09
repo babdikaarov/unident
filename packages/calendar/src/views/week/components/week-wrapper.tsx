@@ -26,10 +26,12 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   )
   const timeGridDayStaffConent =
     $app.config._customComponentFns.timeGridDayStaffConent
-  const noStaffFound = $app.config._customComponentFns.noStaffFound
   const timeGridDayStaffId = useState(
     timeGridDayStaffConent ? randomStringId() : undefined
   )[0]
+
+  const noStaffFound = $app.config._customComponentFns.noStaffFound
+
   const noStaffFoundId = useState(
     noStaffFound ? randomStringId() : undefined
   )[0]
@@ -78,6 +80,8 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
     }
   }, [
     $app.calendarState.hasStaffList.value,
+    $app.staffList.hasList,
+    $app.staffList.currentStartIndex,
     $app.datePickerState.selectedDate.value,
     $app.calendarState.range.value,
     $app.calendarState.isDark.value,
