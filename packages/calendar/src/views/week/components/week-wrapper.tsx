@@ -17,6 +17,7 @@ import Chevron from '@unimed-x/shared/src/components/buttons/chevron'
 import { useEffect, useState } from 'preact/hooks'
 import { getElementByCCID } from '../../../utils/stateless/dom/getters'
 import { randomStringId } from '@unimed-x/shared/src'
+import TimeGridCurrentTimeIndicator from '../../../components/week-grid/time-grid-current-indicator'
 
 export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   document.documentElement.style.setProperty(
@@ -85,104 +86,117 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   return (
     <>
       <AppContext.Provider value={$app}>
-        <div className="sx__week-wrapper" id={id}>
-          <div className="sx__week-header">
-            <div className="sx__week-header-content">
-              <DateAxis
-                week={Object.values(week.value).map((day) =>
-                  toJSDate(day.date)
+        {$app.config.isLoading.value ? (
+          <div className="sx_spinner"></div>
+        ) : (
+          <div className="sx__week-wrapper" id={id}>
+            <div className="sx__week-header">
+              <div className="sx__week-header-content">
+                <DateAxis
+                  week={Object.values(week.value).map((day) =>
+                    toJSDate(day.date)
+                  )}
+                />
+                {!$app.config.hasStaffList.value ||
+                $app.calendarState.view.value !== 'day' ? (
+                  <div
+                    className="sx__date-grid"
+                    aria-label={$app.translate(
+                      'Full day- and multiple day events'
+                    )}
+                  >
+                    {Object.values(week.value).map((day) => (
+                      <DateGridDay
+                        key={day.date}
+                        date={day.date}
+                        calendarEvents={day.dateGridEvents}
+                        backgroundEvents={day.backgroundEvents}
+                      />
+                    ))}
+                  </div>
+                ) : $app.staffList.hasList.value ? (
+                  <div className="sx__time-grid-day-staff-wrapper">
+                    <>
+                      <Chevron
+                        className="sx__time-grid-day-staff-prev"
+                        direction="previous"
+                        disabled={!$app.staffList.canNavigatePrev()}
+                        onClick={$app.staffList.prev}
+                      />
+                      <div
+                        className="sx__time-grid-day-staff-card"
+                        data-ccid={timeGridDayStaffId}
+                      >
+                        {!timeGridDayStaffConent &&
+                          $app.staffList.getStaffListOnView().map((staff) => (
+                            <div
+                              key={staff.id}
+                              className="sx__time-grid-day-staff"
+                            >
+                              {staff.firstName}
+
+                              <button
+                                onClick={() =>
+                                  $app.staffList.removeStaffById(staff.id)
+                                }
+                              >
+                                remove
+                              </button>
+                            </div>
+                          ))}
+                      </div>
+                      <Chevron
+                        className="sx__time-grid-day-staff-next"
+                        direction="next"
+                        disabled={!$app.staffList.canNavigateNext()}
+                        onClick={$app.staffList.next}
+                      />
+                    </>
+                  </div>
+                ) : (
+                  <div className="sx__time-grid-day-staff-wrapper">
+                    {!noStaffFound && 'no staff privided'}
+                  </div>
                 )}
-              />
+                <div className="sx__week-header-border" />
+              </div>
+            </div>
+
+            <div className="sx__week-grid">
+              <TimeAxis />
               {!$app.config.hasStaffList.value ||
               $app.calendarState.view.value !== 'day' ? (
-                <div
-                  className="sx__date-grid"
-                  aria-label={$app.translate(
-                    'Full day- and multiple day events'
-                  )}
-                >
-                  {Object.values(week.value).map((day) => (
-                    <DateGridDay
-                      key={day.date}
-                      date={day.date}
-                      calendarEvents={day.dateGridEvents}
-                      backgroundEvents={day.backgroundEvents}
-                    />
-                  ))}
-                </div>
-              ) : $app.staffList.hasList.value ? (
-                <div className="sx__time-grid-day-staff-wrapper">
+                Object.values(week.value).map((day) => (
                   <>
-                    <Chevron
-                      className="sx__time-grid-day-staff-prev"
-                      direction="previous"
-                      disabled={!$app.staffList.canNavigatePrev()}
-                      onClick={$app.staffList.prev}
-                    />
-                    <div
-                      className="sx__time-grid-day-staff-card"
-                      data-ccid={timeGridDayStaffId}
-                    >
-                      {!timeGridDayStaffConent &&
-                        $app.staffList.getStaffListOnView().map((staff) => (
-                          <div
-                            key={staff.id}
-                            className="sx__time-grid-day-staff"
-                          >
-                            {staff.firstName}
-                            <button
-                              onClick={() =>
-                                $app.staffList.removeStaffById(staff.id)
-                              }
-                            >
-                              remove
-                            </button>
-                          </div>
-                        ))}
-                    </div>
-                    <Chevron
-                      className="sx__time-grid-day-staff-next"
-                      direction="next"
-                      disabled={!$app.staffList.canNavigateNext()}
-                      onClick={$app.staffList.next}
+                    <TimeGridDay
+                      calendarEvents={day.timeGridEvents}
+                      backgroundEvents={day.backgroundEvents}
+                      date={day.date}
+                      key={day.date}
                     />
                   </>
-                </div>
+                ))
               ) : (
-                <div className="sx__time-grid-day-staff-wrapper">
-                  {!noStaffFound && 'no staff privided'}
+                <div className="sx__week-grid-staff">
+                  {Object.values(week.value).map((day) => (
+                    <>
+                      <TimeGridCurrentTimeIndicator
+                        $app={$app}
+                        date={day.date}
+                      />
+                      <TimeGridDayWithStaff
+                        calendarEvents={day.timeGridEvents}
+                        backgroundEvents={day.backgroundEvents}
+                        date={day.date}
+                        key={day.date}
+                      />
+                    </>
+                  ))}
                 </div>
               )}
-              <div className="sx__week-header-border" />
             </div>
           </div>
-
-          <div className="sx__week-grid">
-            <TimeAxis />
-            {!$app.config.hasStaffList.value &&
-            $app.calendarState.view.value == 'day' ? (
-              Object.values(week.value).map((day) => (
-                <TimeGridDay
-                  calendarEvents={day.timeGridEvents}
-                  backgroundEvents={day.backgroundEvents}
-                  date={day.date}
-                  key={day.date}
-                />
-              ))
-            ) : (
-              <div className="sx__week-grid-staff">
-                {Object.values(week.value).map((day) => (
-                  <TimeGridDayWithStaff
-                    calendarEvents={day.timeGridEvents}
-                    backgroundEvents={day.backgroundEvents}
-                    date={day.date}
-                    key={day.date}
-                  />
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
+        )}
       </AppContext.Provider>
     </>
   )

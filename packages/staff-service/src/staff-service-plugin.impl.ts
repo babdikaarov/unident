@@ -29,13 +29,13 @@ class StaffServicePluginImpl implements StaffService {
   setStaffList<T extends StaffBase>(staffList: T[]) {
     // Cast to StaffBase[] since the underlying implementation expects StaffBase
     if (!this.$app) this.throwNotInitializedError()
-    this.$app.staffList.setStaffList(staffList as StaffBase[] || [])
+    this.$app.staffList.setStaffList((staffList as StaffBase[]) || [])
   }
 
-  addStaffList<T extends StaffBase>(staff: T) {
+  addStaff<T extends StaffBase>(staff: T) {
     // Cast to StaffBase since the underlying implementation expects StaffBase
     if (!this.$app) this.throwNotInitializedError()
-    this.$app.staffList.addStaffList(staff as StaffBase)
+    this.$app.staffList.addStaff(staff as StaffBase)
   }
 
   removeStaffById(id: string) {
@@ -81,7 +81,7 @@ class StaffServicePluginImpl implements StaffService {
 
   getStaffPerView(): number {
     if (!this.$app) this.throwNotInitializedError()
-    return this.$app.staffList.staffPerView.value || 0
+    return this.$app.staffList.staffPerView.value || 7
   }
 
   hasList(): boolean {

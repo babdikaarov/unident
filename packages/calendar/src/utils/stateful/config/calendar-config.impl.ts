@@ -27,6 +27,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
   isDark: Signal<boolean>
   hasStaffList: Signal<boolean>
   isLoading: Signal<boolean>
+  showCurrentTimeIndicator: Signal<boolean>
   minDate: Signal<string | undefined>
   maxDate: Signal<string | undefined>
   monthGridOptions: Signal<MonthGridOptions>
@@ -48,8 +49,9 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     calendars = {},
     public plugins = {},
     isDark: boolean = false,
-    hasStaffList: boolean = false,
     isLoading: boolean = false,
+    showCurrentTimeIndicator: boolean = false,
+    hasStaffList: boolean = false,
 
     public isResponsive: boolean = true,
     public callbacks = {},
@@ -73,7 +75,6 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     this.calendars = signal(calendars)
     this.isDark = signal(isDark)
     this.hasStaffList = signal(hasStaffList)
-    this.isLoading = signal(isLoading)
     this.minDate = signal(minDate)
     this.maxDate = signal(maxDate)
     this.monthGridOptions = signal(monthGridOptions)
@@ -81,6 +82,8 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     this.translations = signal(translations)
     this.showWeekNumbers = signal(showWeekNumbers)
     this.direction = getDirection()
+    this.isLoading = signal(isLoading)
+    this.showCurrentTimeIndicator = signal(showCurrentTimeIndicator)
     this.minuteBoudaries = signal(minuteBoudaries)
     this.staffPerView = signal(staffPerView)
   }

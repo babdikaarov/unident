@@ -11,7 +11,7 @@ export interface StaffService extends PluginBase<string> {
 
   // Staff management methods (generic)
   setStaffList<T extends StaffBase>(staffList: T[]): void
-  addStaffList<T extends StaffBase>(staff: T): void
+  addStaff<T extends StaffBase>(staff: T): void
   removeStaffById(id: string): void
 
   // Search and filter methods (generic)

@@ -18,7 +18,6 @@ import {
   createEventsServicePlugin,
 } from '@unimed-x/event-recurrence/src'
 import { createCalendarControlsPlugin } from '../../packages/calendar-controls/src'
-import { createCurrentTimePlugin } from '../../packages/current-time/src/current-time-plugin.impl.ts'
 import { createViewMonthGrid } from '@unimed-x/calendar/src/views/month-grid'
 import { createViewWeek } from '@unimed-x/calendar/src/views/week'
 import { createViewDay } from '@unimed-x/calendar/src/views/day'
@@ -69,34 +68,33 @@ const sidebarCalendar = createCalendar({
     // Disable interactions in the sidebar
     onClickDate() {},
     onClickDateTime() {},
-    onEventClick() {
-      console.log('event clicke agenda')
-    },
+    onEventClick() {},
     onDoubleClickDate() {},
     onDoubleClickDateTime() {},
     onDoubleClickEvent() {},
     onSelectedDateUpdate(date) {
-      console.log('onSelectedDateUpdate', date)
       calendarControls.setDate(date)
     },
   },
   calendars: colors,
 })
-
 const calendar = createCalendar({
-  staff: [],
+  // staff: [],
   // staff: staffSeed,
   // events: [],
-  // isLoading: true,
-  // staffPerView: 4,
-  hasStaffList: true,
   events: seededEvents,
+  // isLoading: true,
+  staffPerView: 7,
+  isLoading: true,
+  hasStaffList: true,
+  showCurrentTimeIndicator: true,
+  // events: seededEvents,
   minuteBoudaries: 60,
   plugins: [
     createViewMonthAgenda(),
     createEventRecurrencePlugin(),
     createDragAndDropPlugin(),
-    createCurrentTimePlugin(),
+   
     createEventModalPlugin(),
     createResizePlugin(),
     createScrollControllerPlugin(),
@@ -126,8 +124,20 @@ const calendar = createCalendar({
     createViewMonthAgenda(),
     createViewList(),
   ],
+
   defaultView: 'day',
-  callbacks: mainCalendatCallbacks(calendarControls as any),
+  callbacks: {
+    ...mainCalendatCallbacks(calendarControls as any),
+    beforeRender($app) {
+      fetchStaff().then((staffData) => {
+        // $app.staffList.setStaffList(staffData)
+        $app.staffList.setStaffList([...staffData, ...staffSeed])
+        setTimeout(() => {
+          $app.config.isLoading.value = false
+        }, 1000)
+      })
+    },
+  },
   selectedDate: toDateString(new Date()),
   calendars: colors,
   // dayBoundaries: {
@@ -138,12 +148,5 @@ const calendar = createCalendar({
   locale: 'ru-RU',
 })
 
-fetchStaff().then((staffData) => {
-  if (staffService.$app) {
-    staffService.setStaffList(staffData)
-  } else {
-    console.warn('Calendar instance does not support dynamic staff updates.')
-  }
-})
 calendar.render(calendarElement)
 sidebarCalendar.render(calendarSiderElement)

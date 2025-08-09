@@ -71,13 +71,17 @@ export default function CalendarWrapperAgenda({ $app }: props) {
 
     const newRangeStartIsLaterThanPrevious =
       ($app.calendarState.range.value?.start || '') > previousRangeStart
-    setTransitionClass(
-      newRangeStartIsLaterThanPrevious ? 'sx__slide-left' : 'sx__slide-right'
-    )
 
-    setTimeout(() => {
-      setTransitionClass('')
-    }, 300) // CORRELATION ID: 3
+    if (!$app.calendarState.isLoading.value) {
+      setTransitionClass(
+        newRangeStartIsLaterThanPrevious ? 'sx__slide-left' : 'sx__slide-right'
+      )
+
+      setTimeout(() => {
+        setTransitionClass('')
+      }, 300)
+    }
+    // CORRELATION ID: 3
     setPreviousRangeStart($app.calendarState.range.value?.start || '')
   })
 

@@ -15,7 +15,6 @@ class CurrentTimePluginImpl implements CurrentTimePlugin {
   $app!: CalendarAppSingleton
   observer: MutationObserver | null = null
   private todayDateString = toDateString(new Date())
-
   constructor(private config: CurrentTimePluginConfig = {}) {
     if (typeof config.timeZoneOffset === 'number') {
       if (config.timeZoneOffset < -720 || config.timeZoneOffset > 840) {
@@ -68,12 +67,11 @@ class CurrentTimePluginImpl implements CurrentTimePlugin {
       )
     }
 
-    const todayElement = this.$app.elements.calendarWrapper!.querySelector(
-      `[data-time-grid-date="${todayDateString}"]`
+    const todayElement = this.$app.elements.calendarWrapper?.querySelector(
+      `.sx__week-grid-staff[data-time-grid-date-wrapper="${todayDateString}"]`
     )
 
     if (!todayElement) return
-
     const existingIndicator = todayElement.querySelector(
       '.sx__current-time-indicator'
     )
@@ -106,6 +104,7 @@ class CurrentTimePluginImpl implements CurrentTimePlugin {
     const fullWeekTimeIndicator = document.createElement('div')
     fullWeekTimeIndicator.classList.add('sx__current-time-indicator-full-week')
     fullWeekTimeIndicator.style.top = top
+
     const weekGridWrapper = document.querySelector('.sx__week-grid')
 
     const existingFullWeekIndicator = weekGridWrapper?.querySelector(
@@ -114,7 +113,6 @@ class CurrentTimePluginImpl implements CurrentTimePlugin {
     if (existingFullWeekIndicator) {
       existingFullWeekIndicator.remove()
     }
-
     if (weekGridWrapper) {
       weekGridWrapper.appendChild(fullWeekTimeIndicator)
     }

@@ -11,10 +11,12 @@ import { DayBoundariesDateTime } from '@unimed-x/shared/src/types/day-boundaries
 import { getClickDateTime } from '../../utils/stateless/time/grid-click-to-datetime/grid-click-to-datetime'
 import { getLocalizedDate } from '@unimed-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
 import { getClassNameForWeekday } from '../../utils/stateless/get-class-name-for-weekday'
-import { toJSDate } from '@unimed-x/shared/src'
+import { toDateTimeString, toJSDate } from '@unimed-x/shared/src'
 import TimeGridBackgroundEvent from './background-event'
 import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 import { useComputed } from '@preact/signals'
+import { getYCoordinateInTimeGrid } from '@unimed-x/shared/src/utils/stateless/calendar/get-y-coordinate-in-time-grid'
+import TimeGridCurrentTimeIndicator from './time-grid-current-indicator'
 
 type props = {
   calendarEvents: CalendarEventInternal[]
@@ -33,7 +35,7 @@ export default function TimeGridDay({
    * */
   const [mouseDownOnChild, setMouseDownOnChild] = useState<boolean>(false)
   const $app = useContext(AppContext)
-
+  const nowDateTimeString = toDateTimeString(new Date())
   const timeStringFromDayBoundary = timeStringFromTimePoints(
     $app.config.dayBoundaries.value.start
   )
@@ -98,6 +100,15 @@ export default function TimeGridDay({
       newClassNames.push('is-selected')
     return newClassNames
   })
+  const currentTimeIndicator = document.createElement('div')
+  currentTimeIndicator.classList.add('sx__current-time-indicator')
+  const top =
+    getYCoordinateInTimeGrid(
+      nowDateTimeString,
+      $app.config.dayBoundaries.value,
+      $app.config.timePointsPerDay
+    ) + '%'
+  currentTimeIndicator.style.top = top
 
   return (
     <div
@@ -113,6 +124,7 @@ export default function TimeGridDay({
       onTouchEnd={handlePointerUp}
       onMouseDown={handleMouseDown}
     >
+      <TimeGridCurrentTimeIndicator $app={$app} date={date} />
       {backgroundEvents.map((event) => (
         <>
           <TimeGridBackgroundEvent backgroundEvent={event} date={date} />

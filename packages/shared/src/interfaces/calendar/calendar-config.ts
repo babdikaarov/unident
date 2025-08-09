@@ -70,7 +70,6 @@ export default interface CalendarConfigInternal extends Config {
   calendars: Signal<Record<string, CalendarType>>
   isDark: Signal<boolean>
   hasStaffList: Signal<boolean>
-  isLoading: Signal<boolean>
   staffPerView: Signal<number>
   minDate: Signal<string | undefined>
   maxDate: Signal<string | undefined>
@@ -82,6 +81,8 @@ export default interface CalendarConfigInternal extends Config {
   _customComponentFns: CustomComponentFns
   translations: Signal<Record<string, Language>>
   direction: 'ltr' | 'rtl'
+  isLoading: Signal<boolean>
+  showCurrentTimeIndicator: Signal<boolean>
   minuteBoudaries: Signal<number>
 
   // Getters
@@ -116,6 +117,7 @@ interface ReducedCalendarConfigInternal
     | 'minuteBoudaries'
     | 'staff'
     | 'isLoading'
+    | 'showCurrentTimeIndicator'
     | 'staffPerView'
   > {}
 
@@ -127,6 +129,7 @@ export interface CalendarConfigExternal
   backgroundEvents?: BackgroundEvent[]
   dayBoundaries?: DayBoundariesExternal
   isLoading?: boolean
+  showCurrentTimeIndicator?: boolean
   views: [View, ...View[]]
   selectedDate?: string
   plugins?: PluginBase<string>[]

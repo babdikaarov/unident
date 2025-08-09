@@ -6,6 +6,7 @@ import {
 } from '../../utils/stateless/time/time-axis/time-axis'
 import { useSignalEffect } from '@preact/signals'
 import { randomStringId } from '@unimed-x/shared/src'
+// import TimeGridCurrentTimeIndicator from './time-grid-current-indicator'
 
 export default function TimeAxis() {
   const $app = useContext(AppContext)
@@ -57,10 +58,12 @@ export default function TimeAxis() {
       })
     }
   }, [hours, hourCCIDs])
-
+  console.log($app.calendarState.range.value?.start)
   return (
     <>
       <div className="sx__week-grid__time-axis">
+        {/* fixme: add logic for fullweedth */}
+        {/* <TimeGridCurrentTimeIndicator $app={$app} date={$app.calendarState.range.value} isWeek /> */}
         <span className={'sx__week-grid__time-cover'} />
         {hours.map((hour, hourIndex) => (
           <div key={hourIndex} className="sx__week-grid__hour">

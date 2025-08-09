@@ -1,8 +1,8 @@
-import { useContext, useState } from 'preact/hooks'
+import { useContext } from 'preact/hooks'
 import { CalendarEventInternal } from '@unimed-x/shared/src/interfaces/calendar/calendar-event.interface'
 import MonthAgendaEvent from './month-agenda-event'
 import { AppContext } from '../../../utils/stateful/app-context'
-import { signal, useSignal } from '@preact/signals'
+import { signal } from '@preact/signals'
 
 type Props = {
   events: CalendarEventInternal[]

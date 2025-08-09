@@ -28,7 +28,9 @@ import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-v
 import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 
-export default class CalendarConfigBuilder implements Builder<CalendarConfigInternal> {
+export default class CalendarConfigBuilder
+  implements Builder<CalendarConfigInternal>
+{
   locale: string | undefined
   firstDayOfWeek: WeekDay | undefined
   defaultView: ViewName | undefined
@@ -46,13 +48,14 @@ export default class CalendarConfigBuilder implements Builder<CalendarConfigInte
   plugins: Plugins = {}
   isDark: boolean | undefined = false
   hasStaffList: boolean | undefined = false
-  isLoading: boolean | undefined
   isResponsive: boolean | undefined = true
   callbacks: CalendarCallbacks | undefined
   minDate: string | undefined
   maxDate: string | undefined
+  isLoading: boolean | undefined = false
+  showCurrentTimeIndicator: boolean | undefined = false
   backgroundEvents: BackgroundEvent[] | undefined
-
+  staffPerView: number | undefined
   theme: string | undefined
   // TODO: Change for V3. Should only be configured from outside
   translations: Record<string, Language> | undefined
@@ -73,8 +76,9 @@ export default class CalendarConfigBuilder implements Builder<CalendarConfigInte
       this.calendars,
       this.plugins,
       this.isDark,
-      this.hasStaffList,
       this.isLoading,
+      this.showCurrentTimeIndicator,
+      this.hasStaffList,
       this.isResponsive,
       this.callbacks,
       {},
@@ -84,7 +88,8 @@ export default class CalendarConfigBuilder implements Builder<CalendarConfigInte
       this.theme,
       this.translations,
       this.showWeekNumbers,
-      this.minuteBoudaries || 60
+      this.minuteBoudaries || 60,
+      this.staffPerView || 7
     )
   }
 
@@ -168,6 +173,12 @@ export default class CalendarConfigBuilder implements Builder<CalendarConfigInte
   }
   withIsLoading(isLoading: boolean | undefined): CalendarConfigBuilder {
     this.isLoading = isLoading
+    return this
+  }
+  withShowCurrentTimeIndicator(
+    showCurrentTimeIndicator: boolean | undefined
+  ): CalendarConfigBuilder {
+    this.showCurrentTimeIndicator = showCurrentTimeIndicator
     return this
   }
 

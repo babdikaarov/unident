@@ -134,7 +134,7 @@ export default function CalendarHeader() {
             </div>
             <button
               onClick={() =>
-                $app.staffList.addStaffList({
+                $app.staffList.addStaff({
                   id: 'asd',
                   firstName: 'asd',
                 })

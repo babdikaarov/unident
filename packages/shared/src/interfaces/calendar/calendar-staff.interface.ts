@@ -5,28 +5,28 @@ export type StaffBase = {
   firstName: string
 }
 
-export default interface CalendarStaff<T extends StaffBase = StaffBase> {
-  currentStartIndex: ReturnType<typeof signal<number>>
-  staffPerView: ReturnType<typeof signal<number>>
-  hasList: ReturnType<typeof computed<boolean>>
+export default abstract class CalendarStaff<T extends StaffBase = StaffBase> {
+  abstract currentStartIndex: ReturnType<typeof signal<number>>
+  abstract staffPerView: ReturnType<typeof signal<number>>
+  abstract hasList: ReturnType<typeof computed<boolean>>
 
-  next: () => void
-  prev: () => void
+  abstract next(): void
+  abstract prev(): void
 
-  setStaffPerView: (count: number) => void
+  abstract setStaffPerView(count: number): void
 
   // Methods below are generic, to accept any subtype of StaffBase
-  setStaffList: (staffList: T[]) => void
-  addStaffList: (staff: T) => void
-  removeStaffById: (id: string) => void
+  abstract setStaffList(staffList: T[]): void
+  abstract addStaff(staff: T): void
+  abstract removeStaffById(id: string): void
 
-  filterStaff: (predicate: (staff: T) => boolean) => void
-  searchStaff: (query: string, keys: (keyof T)[]) => void
+  abstract filterStaff(predicate: (staff: T) => boolean): void
+  abstract searchStaff(query: string, keys: (keyof T)[]): void
 
   // New getter methods instead of direct signal access
-  getStaffList: () => T[]
-  getStaffListOnView: () => T[]
-  getStaffById: (id: string) => T | undefined
-  canNavigateNext: () => boolean
-  canNavigatePrev: () => boolean
+  abstract getStaffList(): T[]
+  abstract getStaffListOnView(): T[]
+  abstract getStaffById(id: string): T | undefined
+  abstract canNavigateNext(): boolean
+  abstract canNavigatePrev(): boolean
 }

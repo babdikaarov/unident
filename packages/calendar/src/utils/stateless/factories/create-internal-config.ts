@@ -19,6 +19,7 @@ export const createInternalConfig = (
     .withIsDark(config.isDark)
     .withHasStaffList(config.hasStaffList)
     .withIsLoading(config.isLoading)
+    .withShowCurrentTimeIndicator(config.showCurrentTimeIndicator)
     .withIsResponsive(config.isResponsive)
     .withCallbacks(config.callbacks)
     .withMinDate(config.minDate)

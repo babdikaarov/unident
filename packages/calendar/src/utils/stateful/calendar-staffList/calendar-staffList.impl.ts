@@ -10,6 +10,7 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
   const originalList = signal<T[]>(staff)
   const list = signal<T[]>(staff)
   const currentStartIndex = signal<number>(0)
+  const initialViewCount = viewCount
 
   // Helper function to calculate proper perView based on current list
   const calculatePerView = (
@@ -23,7 +24,7 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
 
     // If list length is less than 7, use list length
     if (currentList.length < 7) {
-      return Math.max(1, Math.max(currentList.length, defaultCount))
+      return Math.min(currentList.length, defaultCount)
     }
 
     // If list length is 7 or more, limit to 7
@@ -62,7 +63,7 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
 
   // Helper function to update perView and index together
   const syncPerViewAndIndex = (newList: T[]) => {
-    staffPerView.value = calculatePerView(newList, staffPerView.value)
+    staffPerView.value = calculatePerView(newList, initialViewCount)
 
     adjustCurrentIndex(newList)
   }
@@ -94,7 +95,7 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
     syncPerViewAndIndex(staffList)
   }
 
-  const addStaffList = (staff: T) => {
+  const addStaff = (staff: T) => {
     const newOriginalList = [...originalList.value, staff]
     const newList = [...list.value, staff]
 
@@ -166,7 +167,7 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
     prev,
     setStaffPerView,
     setStaffList,
-    addStaffList,
+    addStaff,
     canNavigateNext,
     canNavigatePrev,
     removeStaffById,
