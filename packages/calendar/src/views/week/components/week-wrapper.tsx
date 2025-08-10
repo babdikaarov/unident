@@ -29,7 +29,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   // const timeGridDayStaffId = useState(
   //   timeGridDayStaffConent ? randomStringId() : undefined
   // )[0]
-
+  console.log($app.config.customReactComponent)
   // const noStaffFound = $app.config._customComponentFns.noStaffFound
 
   // const noStaffFoundId = useState(
@@ -118,18 +118,16 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                         className="sx__time-grid-day-staff-card"
                         // data-ccid={timeGridDayStaffId}
                       >
-                        {!TimeGridDayStaffConent ? (
-                          $app.staffList.getStaffListOnView().map((staff) => (
-                            <div
-                              className="sx__time-grid-day-staff"
-                              key={staff.id}
-                            >
-                              {staff.firstName}
-                            </div>
-                          ))
-                        ) : (
-                          <TimeGridDayStaffConent app={$app} />
-                        )}
+                        {!TimeGridDayStaffConent
+                          ? $app.staffList.getStaffListOnView().map((staff) => (
+                              <div
+                                className="sx__time-grid-day-staff"
+                                key={staff.id}
+                              >
+                                {staff.firstName}
+                              </div>
+                            ))
+                          : TimeGridDayStaffConent($app)}
                       </div>
                       <Chevron
                         className="sx__time-grid-day-staff-next"

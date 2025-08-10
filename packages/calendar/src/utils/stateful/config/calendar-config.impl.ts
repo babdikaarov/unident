@@ -39,8 +39,8 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
   direction: 'ltr' | 'rtl' = 'ltr'
   minuteBoudaries: Signal<number>
   staffPerView: Signal<number> = signal(1)
-  customReactComponent?: ReactComponentFns = {}
-  
+  customReactComponent: ReactComponentFns = {}
+
   constructor(
     locale: string = DEFAULT_LOCALE,
     firstDayOfWeek: WeekDay = DEFAULT_FIRST_DAY_OF_WEEK,
@@ -67,7 +67,8 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     translations: Record<string, Language> = {},
     showWeekNumbers: boolean = false,
     minuteBoudaries: number = 60,
-    staffPerView: number = 1
+    staffPerView: number = 1,
+    customReactComponent?: ReactComponentFns
   ) {
     this.locale = signal(locale)
     this.firstDayOfWeek = signal(firstDayOfWeek)
@@ -88,6 +89,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     this.showCurrentTimeIndicator = signal(showCurrentTimeIndicator)
     this.minuteBoudaries = signal(minuteBoudaries)
     this.staffPerView = signal(staffPerView)
+    this.customReactComponent = customReactComponent || {}
   }
 
   get isHybridDay(): boolean {

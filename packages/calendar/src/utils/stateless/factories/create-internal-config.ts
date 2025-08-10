@@ -17,6 +17,7 @@ export const createInternalConfig = (
     .withCalendars(config.calendars)
     .withPlugins(plugins)
     .withIsDark(config.isDark)
+    .withCustomReactComponent(config.customReactComponent)
     .withHasStaffList(config.hasStaffList)
     .withIsLoading(config.isLoading)
     .withShowCurrentTimeIndicator(config.showCurrentTimeIndicator)

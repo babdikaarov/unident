@@ -27,6 +27,7 @@ import {
 import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-view.enum'
 import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
+import { ReactComponentFns } from '@unimed-x/shared/src/interfaces/calendar/custom-component-fns'
 
 export default class CalendarConfigBuilder
   implements Builder<CalendarConfigInternal>
@@ -62,6 +63,7 @@ export default class CalendarConfigBuilder
 
   showWeekNumbers: boolean | undefined
   minuteBoudaries: number | undefined
+  customReactComponent: ReactComponentFns | undefined 
 
   build(): CalendarConfigInternal {
     return new CalendarConfigImpl(
@@ -89,7 +91,8 @@ export default class CalendarConfigBuilder
       this.translations,
       this.showWeekNumbers,
       this.minuteBoudaries || 60,
-      this.staffPerView || 7
+      this.staffPerView || 7,
+      this.customReactComponent  || {},
     )
   }
 
@@ -102,6 +105,13 @@ export default class CalendarConfigBuilder
     translation: Record<string, Language> | undefined
   ): CalendarConfigBuilder {
     this.translations = translation
+    return this
+  }
+
+  withCustomReactComponent(
+    customReactComponent: ReactComponentFns | undefined
+  ) {
+    this.customReactComponent = customReactComponent
     return this
   }
 

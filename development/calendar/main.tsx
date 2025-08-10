@@ -30,8 +30,9 @@ import { ZoomInPlugin } from '../../packages/zoom-in-out/src/index.ts'
 import { staffSeed } from '../data/staff-seed.ts'
 import { colors } from './colors.ts'
 import { mainCalendatCallbacks } from './callbacks.ts'
-import { StaffBase, toDateString } from '@unimed-x/shared'
+import { CalendarAppSingleton, StaffBase, toDateString } from '@unimed-x/shared'
 import { createStaffServicePlugin } from '../../packages/staff-service/dist/core.js'
+import { ComponentChild, VNode } from 'preact'
 const calendarElement = document.getElementById('calendar') as HTMLElement
 const calendarSiderElement = document.getElementById(
   'siderCalendar'
@@ -76,12 +77,26 @@ const sidebarCalendar = createCalendar({
       calendarControls.setDate(date)
     },
   },
+
   calendars: colors,
 })
 const calendar = createCalendar({
   // staff: [],
   // staff: staffSeed,
   // events: [],
+  customReactComponent: {
+    timeGridDayStaffConent: ($app: CalendarAppSingleton) => {
+      const staffs = $app.staffList.getStaffListOnView()
+      return staffs.map((staff: StaffBase, i) => (
+        <div key={i} className="sx__time-grid-day-staff">
+          <div className="staffOnView-info">
+            <span className="staffOnView-name">{staff.firstName}</span>
+            <span className="staffOnView-name">Staff</span>
+          </div>
+        </div>
+      ))
+    },
+  },
   events: seededEvents,
   // isLoading: true,
   staffPerView: 7,
