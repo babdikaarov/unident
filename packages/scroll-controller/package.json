@@ -4,7 +4,7 @@
     "access": "public"
   },
   "umdName": "SXScrollController",
-  "version": "3.0.27",
+  "version": "3.0.28",
   "description": "Schedule-X calendar scroll controller",
   "author": {
     "name": "Tom Österlund",
