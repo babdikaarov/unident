@@ -4,7 +4,7 @@
     "access": "public"
   },
   "umdName": "SXDatePicker",
-  "version": "3.0.23",
+  "version": "3.0.24",
   "description": "Schedule-X date picker component",
   "author": {
     "name": "Tom Österlund",

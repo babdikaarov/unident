@@ -85,17 +85,7 @@ const calendar = createCalendar({
   // staff: staffSeed,
   // events: [],
   customReactComponent: {
-    timeGridDayStaffConent: ($app: CalendarAppSingleton) => {
-      const staffs = $app.staffList.getStaffListOnView()
-      return staffs.map((staff: StaffBase, i) => (
-        <div key={i} className="sx__time-grid-day-staff">
-          <div className="staffOnView-info">
-            <span className="staffOnView-name">{staff.firstName}</span>
-            <span className="staffOnView-name">Staff</span>
-          </div>
-        </div>
-      ))
-    },
+    timeGridDayStaffConent: TimeGridDayStaffContent,
   },
   events: seededEvents,
   // isLoading: true,
@@ -165,3 +155,23 @@ const calendar = createCalendar({
 calendar.render(calendarElement)
 
 sidebarCalendar.render(calendarSiderElement)
+
+function TimeGridDayStaffContent({
+  list,
+}: {
+  staffList: { getStaffListOnView: () => any }
+}) {
+  const staffs = list
+  return (
+    <>
+      {staffs.map((staff, i) => (
+        <div key={i} className="sx__time-grid-day-staff">
+          <div className="staffOnView-info">
+            <span className="staffOnView-name">{staff.firstName}</span>
+            <span className="staffOnView-role">{'Staff'}</span>
+          </div>
+        </div>
+      ))}
+    </>
+  )
+}

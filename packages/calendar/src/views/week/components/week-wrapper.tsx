@@ -114,20 +114,21 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                         disabled={!$app.staffList.canNavigatePrev()}
                         onClick={$app.staffList.prev}
                       />
-                      <div
-                        className="sx__time-grid-day-staff-card"
-                        // data-ccid={timeGridDayStaffId}
-                      >
-                        {!TimeGridDayStaffConent
-                          ? $app.staffList.getStaffListOnView().map((staff) => (
-                              <div
-                                className="sx__time-grid-day-staff"
-                                key={staff.id}
-                              >
-                                {staff.firstName}
-                              </div>
-                            ))
-                          : TimeGridDayStaffConent($app)}
+                      <div className="sx__time-grid-day-staff-card">
+                        {!TimeGridDayStaffConent ? (
+                          $app.staffList.getStaffListOnView().map((staff) => (
+                            <div
+                              className="sx__time-grid-day-staff"
+                              key={staff.id}
+                            >
+                              {staff.firstName}
+                            </div>
+                          ))
+                        ) : (
+                          <TimeGridDayStaffConent
+                            list={$app.staffList.getStaffListOnView()}
+                          />
+                        )}
                       </div>
                       <Chevron
                         className="sx__time-grid-day-staff-next"
