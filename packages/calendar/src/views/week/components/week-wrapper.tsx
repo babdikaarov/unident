@@ -73,15 +73,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
     if (noStaffFound) {
       noStaffFound(getElementByCCID(noStaffFoundId), { $app })
     }
-  }, [
-    $app.calendarState.hasStaffList.value,
-    $app.staffList.hasList,
-    $app.staffList.currentStartIndex,
-    $app.datePickerState.selectedDate.value,
-    $app.calendarState.range.value,
-    $app.calendarState.isDark.value,
-    $app.calendarState.isCalendarSmall.value,
-  ])
+  })
   return (
     <>
       <AppContext.Provider value={$app}>
@@ -128,16 +120,11 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                       >
                         {!timeGridDayStaffConent &&
                           $app.staffList.getStaffListOnView().map((staff) => (
-                            <div key={staff.id}>
+                            <div
+                              className="sx__time-grid-day-staff"
+                              key={staff.id}
+                            >
                               {staff.firstName}
-
-                              <button
-                                onClick={() =>
-                                  $app.staffList.removeStaffById(staff.id)
-                                }
-                              >
-                                remove
-                              </button>
                             </div>
                           ))}
                       </div>

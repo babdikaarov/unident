@@ -32,7 +32,6 @@ import { colors } from './colors.ts'
 import { mainCalendatCallbacks } from './callbacks.ts'
 import { StaffBase, toDateString } from '@unimed-x/shared'
 import { createStaffServicePlugin } from '../../packages/staff-service/dist/core.js'
-import { render } from 'preact'
 const calendarElement = document.getElementById('calendar') as HTMLElement
 const calendarSiderElement = document.getElementById(
   'siderCalendar'

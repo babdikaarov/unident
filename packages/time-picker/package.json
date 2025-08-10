@@ -4,7 +4,7 @@
     "access": "public"
   },
   "umdName": "SXTimePicker",
-  "version": "3.0.20",
+  "version": "3.0.21",
   "description": "Schedule-X time picker component",
   "author": {
     "name": "Tom Österlund",
