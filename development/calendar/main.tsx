@@ -27,12 +27,9 @@ import { mergeLocales } from '@unimed-x/translations/src/utils/merge-locales.ts'
 import { translations } from '@unimed-x/translations/src'
 import { ZoomInPlugin } from '../../packages/zoom-in-out/src/index.ts'
 // import { createDragAndDropPlugin } from '@unimed-x/drag-and-drop'
-import { staffSeed } from '../data/staff-seed.ts'
 import { colors } from './colors.ts'
-import { mainCalendatCallbacks } from './callbacks.ts'
-import { CalendarAppSingleton, StaffBase, toDateString } from '@unimed-x/shared'
+import { StaffBase, toDateString } from '@unimed-x/shared'
 import { createStaffServicePlugin } from '../../packages/staff-service/dist/core.js'
-import { ComponentChild, VNode } from 'preact'
 const calendarElement = document.getElementById('calendar') as HTMLElement
 const calendarSiderElement = document.getElementById(
   'siderCalendar'
@@ -74,6 +71,7 @@ const sidebarCalendar = createCalendar({
     onDoubleClickDateTime() {},
     onDoubleClickEvent() {},
     onSelectedDateUpdate(date) {
+      console.log(date)
       calendarControls.setDate(date)
     },
   },
@@ -84,14 +82,11 @@ const calendar = createCalendar({
   // staff: [],
   // staff: staffSeed,
   // events: [],
-  customReactComponent: {
-    timeGridDayStaffConent: TimeGridDayStaffContent,
-  },
   events: seededEvents,
   // isLoading: true,
   staffPerView: 7,
-  isLoading: true,
-  hasStaffList: true,
+  // isLoading: true,
+  // hasStaffList: true,
   showCurrentTimeIndicator: true,
   // events: seededEvents,
   minuteBoudaries: 60,
@@ -132,15 +127,20 @@ const calendar = createCalendar({
 
   defaultView: 'day',
   callbacks: {
-    ...mainCalendatCallbacks(calendarControls as any),
     beforeRender($app) {
-      fetchStaff().then((staffData) => {
-        // $app.staffList.setStaffList(staffData)
-        $app.staffList.setStaffList([...staffData, ...staffSeed])
-        setTimeout(() => {
-          $app.config.isLoading.value = false
-        }, 1000)
-      })
+      // fetchStaff().then((staffData) => {
+      //   // $app.staffList.setStaffList(staffData)
+      //   $app.staffList.setStaffList([...staffData, ...staffSeed])
+      //   setTimeout(() => {
+      //     $app.config.isLoading.value = false
+      //   }, 1000)
+      // })
+    },
+    onEventClick(event, e) {
+      console.log(event)
+    },
+    onClickDateTime(dateTime, e) {
+      console.log(dateTime)
     },
   },
   selectedDate: toDateString(new Date()),
@@ -155,12 +155,3 @@ const calendar = createCalendar({
 calendar.render(calendarElement)
 
 sidebarCalendar.render(calendarSiderElement)
-
-function TimeGridDayStaffContent(staff) {
-  return (
-    <div className="staffOnView-info">
-      <span className="staffOnView-name">{staff.firstName}</span>
-      <span className="staffOnView-role">{'Staff'}</span>
-    </div>
-  )
-}

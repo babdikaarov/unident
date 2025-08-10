@@ -17,7 +17,6 @@ import { timePointsPerDay } from '@unimed-x/shared/src/utils/stateless/time/time
 import { Signal, signal } from '@preact/signals'
 import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 import { getDirection } from '../../stateless/get-direction'
-import { ReactComponentFns } from '@unimed-x/shared/src/interfaces/calendar/custom-component-fns'
 
 export default class CalendarConfigImpl implements CalendarConfigInternal {
   firstDayOfWeek: Signal<WeekDay>
@@ -39,7 +38,6 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
   direction: 'ltr' | 'rtl' = 'ltr'
   minuteBoudaries: Signal<number>
   staffPerView: Signal<number> = signal(1)
-  customReactComponent: ReactComponentFns = {}
 
   constructor(
     locale: string = DEFAULT_LOCALE,
@@ -68,7 +66,6 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     showWeekNumbers: boolean = false,
     minuteBoudaries: number = 60,
     staffPerView: number = 1,
-    customReactComponent?: ReactComponentFns
   ) {
     this.locale = signal(locale)
     this.firstDayOfWeek = signal(firstDayOfWeek)
@@ -89,7 +86,6 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     this.showCurrentTimeIndicator = signal(showCurrentTimeIndicator)
     this.minuteBoudaries = signal(minuteBoudaries)
     this.staffPerView = signal(staffPerView)
-    this.customReactComponent = customReactComponent || {}
   }
 
   get isHybridDay(): boolean {

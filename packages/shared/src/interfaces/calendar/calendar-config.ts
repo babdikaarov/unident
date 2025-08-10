@@ -11,7 +11,7 @@ import DragAndDropPlugin from '../drag-and-drop/drag-and-drop-plugin.interface'
 import PluginBase from '../plugin.interface'
 import EventModalPlugin from '../event-modal/event-modal.plugin'
 import { CalendarCallbacks } from './listeners.interface'
-import { CustomComponentFns, ReactComponentFns } from './custom-component-fns'
+import { CustomComponentFns } from './custom-component-fns'
 import { EventRecurrencePlugin } from '../event-recurrence/event-recurrence-plugin.interface'
 import { ResizePlugin } from '../resize/resize-plugin.interface'
 import { Signal } from '@preact/signals'
@@ -69,6 +69,7 @@ export default interface CalendarConfigInternal extends Config {
   weekOptions: Signal<WeekOptions>
   calendars: Signal<Record<string, CalendarType>>
   isDark: Signal<boolean>
+  isLoading: Signal<boolean>
   hasStaffList: Signal<boolean>
   staffPerView: Signal<number>
   minDate: Signal<string | undefined>
@@ -79,10 +80,8 @@ export default interface CalendarConfigInternal extends Config {
   showWeekNumbers: Signal<boolean>
   callbacks: CalendarCallbacks
   _customComponentFns: CustomComponentFns
-  customReactComponent: ReactComponentFns
   translations: Signal<Record<string, Language>>
   direction: 'ltr' | 'rtl'
-  isLoading: Signal<boolean>
   showCurrentTimeIndicator: Signal<boolean>
   minuteBoudaries: Signal<number>
 

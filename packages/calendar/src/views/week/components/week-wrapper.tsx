@@ -29,7 +29,6 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   const timeGridDayStaffId = useState(
     timeGridDayStaffConent ? randomStringId() : undefined
   )[0]
-  console.log($app.config._customComponentFns)
   // const noStaffFound = $app.config._customComponentFns.noStaffFound
 
   // const noStaffFoundId = useState(
@@ -69,13 +68,13 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   useEffect(() => {
     if (timeGridDayStaffConent) {
       $app.staffList.getStaffListOnView().forEach((staff) => {
-        timeGridDayStaffConent(getElementByCCID(staff.id), { $app })
+        timeGridDayStaffConent(getElementByCCID(staff.id), { staff })
       })
     }
     // if (noStaffFound) {
     //   noStaffFound(getElementByCCID(noStaffFoundId), { $app })
     // }
-  }, [$app.staffList])
+  }, [$app.staffList, $app.staffList.getStaffListOnView()])
   return (
     <>
       <AppContext.Provider value={$app}>

@@ -27,11 +27,8 @@ import {
 import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-view.enum'
 import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
-import { ReactComponentFns } from '@unimed-x/shared/src/interfaces/calendar/custom-component-fns'
 
-export default class CalendarConfigBuilder
-  implements Builder<CalendarConfigInternal>
-{
+export default class CalendarConfigBuilder implements Builder<CalendarConfigInternal> {
   locale: string | undefined
   firstDayOfWeek: WeekDay | undefined
   defaultView: ViewName | undefined
@@ -63,8 +60,34 @@ export default class CalendarConfigBuilder
 
   showWeekNumbers: boolean | undefined
   minuteBoudaries: number | undefined
-  customReactComponent: ReactComponentFns | undefined 
+  /* 
+  locale: string = DEFAULT_LOCALE,
+    firstDayOfWeek: WeekDay = DEFAULT_FIRST_DAY_OF_WEEK,
+    public defaultView: ViewName = InternalViewName.Week,
+    views: View[] = [],
+    dayBoundaries: DayBoundariesInternal = DEFAULT_DAY_BOUNDARIES,
+    weekOptions: WeekOptions,
+    calendars = {},
+    public plugins = {},
+    isDark: boolean = false,
+    isLoading: boolean = false,
+    showCurrentTimeIndicator: boolean = false,
+    hasStaffList: boolean = false,
 
+    public isResponsive: boolean = true,
+    public callbacks = {},
+    public _customComponentFns = {},
+    minDate: string | undefined = undefined,
+    maxDate: string | undefined = undefined,
+    monthGridOptions: MonthGridOptions = {
+      nEventsPerDay: 4,
+    },
+    theme: string | undefined = undefined,
+    translations: Record<string, Language> = {},
+    showWeekNumbers: boolean = false,
+    minuteBoudaries: number = 60,
+    staffPerView: number = 1,
+*/
   build(): CalendarConfigInternal {
     return new CalendarConfigImpl(
       this.locale || DEFAULT_LOCALE,
@@ -92,7 +115,6 @@ export default class CalendarConfigBuilder
       this.showWeekNumbers,
       this.minuteBoudaries || 60,
       this.staffPerView || 7,
-      this.customReactComponent  || {},
     )
   }
 
@@ -105,13 +127,6 @@ export default class CalendarConfigBuilder
     translation: Record<string, Language> | undefined
   ): CalendarConfigBuilder {
     this.translations = translation
-    return this
-  }
-
-  withCustomReactComponent(
-    customReactComponent: ReactComponentFns | undefined
-  ) {
-    this.customReactComponent = customReactComponent
     return this
   }
 

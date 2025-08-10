@@ -58,7 +58,6 @@ export default function TimeAxis() {
       })
     }
   }, [hours, hourCCIDs])
-  console.log($app.calendarState.range.value?.start)
   return (
     <>
       <div className="sx__week-grid__time-axis">

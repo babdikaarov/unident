@@ -4,7 +4,7 @@
     "access": "public"
   },
   "umdName": "SXCalendarControls",
-  "version": "3.0.28",
+  "version": "3.0.29",
   "description": "Plugin for extra controls for the Schedule-X calendar",
   "author": {
     "name": "Tom Österlund",

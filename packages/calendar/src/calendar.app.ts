@@ -6,7 +6,6 @@ import EventsFacadeImpl from '@unimed-x/shared/src/utils/stateful/events-facade/
 import { CustomComponentFn } from '@unimed-x/shared/src/interfaces/calendar/calendar-config'
 import {
   CustomComponentFns,
-  ReactComponentFns,
 } from '@unimed-x/shared/src/interfaces/calendar/custom-component-fns'
 import { invokePluginsBeforeRender } from './utils/stateless/plugins-lifecycle'
 import { PluginBase } from '@unimed-x/shared/src'
@@ -58,16 +57,6 @@ export default class CalendarApp {
     return this.$app.calendarState.isDark.value ? 'dark' : 'light'
   }
 
-  /**
-   * @public
-   * for react component
-   * */
-  setCustomReactComponent(reactComponents: ReactComponentFns) {
-    this.$app.config.customReactComponent = {
-      ...this.$app.config.customReactComponent,
-      ...reactComponents,
-    }
-  }
 
   /**
    * @internal

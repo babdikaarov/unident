@@ -1,3 +1,5 @@
+import { definePlugin } from '@unimed-x/shared/src/utils/stateless/calendar/define-plugin'
+
 /**
  * Configuration options for the ZoomInPlugin.
  * All options are optional and have sensible defaults.
@@ -153,4 +155,15 @@ export class ZoomInPlugin {
   setBaseGridHeight(value: number): void {
     this.baseGridHeight = value
   }
+}
+
+export const createZoomInPlugin = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  calendarControls: any,
+  options?: ZoomInPluginOptions
+) => {
+  return definePlugin(
+    'zoomInPlugin',
+    new ZoomInPlugin(calendarControls, options)
+  ) as ZoomInPlugin & { name: 'zoomInPlugin' }
 }
