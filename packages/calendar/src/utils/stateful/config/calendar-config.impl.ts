@@ -17,6 +17,7 @@ import { timePointsPerDay } from '@unimed-x/shared/src/utils/stateless/time/time
 import { Signal, signal } from '@preact/signals'
 import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 import { getDirection } from '../../stateless/get-direction'
+import { ReactComponentFns } from '@unimed-x/shared/src/interfaces/calendar/custom-component-fns'
 
 export default class CalendarConfigImpl implements CalendarConfigInternal {
   firstDayOfWeek: Signal<WeekDay>
@@ -38,7 +39,8 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
   direction: 'ltr' | 'rtl' = 'ltr'
   minuteBoudaries: Signal<number>
   staffPerView: Signal<number> = signal(1)
-
+  customReactComponent?: ReactComponentFns = {}
+  
   constructor(
     locale: string = DEFAULT_LOCALE,
     firstDayOfWeek: WeekDay = DEFAULT_FIRST_DAY_OF_WEEK,

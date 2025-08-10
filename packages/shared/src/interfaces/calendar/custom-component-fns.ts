@@ -18,8 +18,12 @@ export type CustomComponentName =
   | 'monthGridDate'
   | 'timeGridDayStaffConent'
   | 'noStaffFound'
-  | string
 
 export type CustomComponentFns = {
   [key in CustomComponentName]?: CustomComponentFn
+}
+
+export type ReactComponentFns = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key in CustomComponentName]?: React.FC<any>
 }
