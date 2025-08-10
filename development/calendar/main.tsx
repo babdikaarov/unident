@@ -156,22 +156,13 @@ calendar.render(calendarElement)
 
 sidebarCalendar.render(calendarSiderElement)
 
-function TimeGridDayStaffContent({
-  list,
-}: {
-  staffList: { getStaffListOnView: () => any }
-}) {
-  const staffs = list
+function TimeGridDayStaffContent(staff) {
   return (
-    <>
-      {staffs.map((staff, i) => (
-        <div key={i} className="sx__time-grid-day-staff">
-          <div className="staffOnView-info">
-            <span className="staffOnView-name">{staff.firstName}</span>
-            <span className="staffOnView-role">{'Staff'}</span>
-          </div>
-        </div>
-      ))}
-    </>
+    <div className="sx__time-grid-day-staff">
+      <div className="staffOnView-info">
+        <span className="staffOnView-name">{staff.firstName}</span>
+        <span className="staffOnView-role">{'Staff'}</span>
+      </div>
+    </div>
   )
 }
