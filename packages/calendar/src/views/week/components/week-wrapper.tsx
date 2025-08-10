@@ -24,12 +24,12 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
     '--sx-week-grid-height',
     `${$app.config.weekOptions.value.gridHeight}px`
   )
-  const TimeGridDayStaffConent =
-    $app.config.customReactComponent?.timeGridDayStaffConent
-  // const timeGridDayStaffId = useState(
-  //   timeGridDayStaffConent ? randomStringId() : undefined
-  // )[0]
-  console.log($app.config.customReactComponent)
+  const timeGridDayStaffConent =
+    $app.config._customComponentFns.timeGridDayStaffConent
+  const timeGridDayStaffId = useState(
+    timeGridDayStaffConent ? randomStringId() : undefined
+  )[0]
+  console.log($app.config._customComponentFns)
   // const noStaffFound = $app.config._customComponentFns.noStaffFound
 
   // const noStaffFoundId = useState(
@@ -66,14 +66,16 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
     return newWeek
   })
 
-  // useEffect(() => {
-  //   if (timeGridDayStaffConent) {
-  //     timeGridDayStaffConent(getElementByCCID(timeGridDayStaffId), { $app })
-  //   }
-  //   if (noStaffFound) {
-  //     noStaffFound(getElementByCCID(noStaffFoundId), { $app })
-  //   }
-  // },[])
+  useEffect(() => {
+    if (timeGridDayStaffConent) {
+      $app.staffList.getStaffListOnView().forEach((staff) => {
+        timeGridDayStaffConent(getElementByCCID(staff.id), { $app })
+      })
+    }
+    // if (noStaffFound) {
+    //   noStaffFound(getElementByCCID(noStaffFoundId), { $app })
+    // }
+  }, [$app.staffList])
   return (
     <>
       <AppContext.Provider value={$app}>
@@ -115,23 +117,17 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                         onClick={$app.staffList.prev}
                       />
                       <div className="sx__time-grid-day-staff-card">
-                        {!TimeGridDayStaffConent
-                          ? $app.staffList.getStaffListOnView().map((staff) => (
-                              <div
-                                className="sx__time-grid-day-staff"
-                                key={staff.id}
-                              >
-                                {staff.firstName}
-                              </div>
-                            ))
-                          : $app.staffList.getStaffListOnView().map((staff) => (
-                              <div
-                                className="sx__time-grid-day-staff"
-                                key={staff.id}
-                              >
-                                {TimeGridDayStaffConent(staff)}
-                              </div>
-                            ))}
+                        {$app.staffList.getStaffListOnView().map((staff) => {
+                          return (
+                            <div
+                              className="sx__time-grid-day-staff"
+                              key={staff.id}
+                              data-ccid={staff.id}
+                            >
+                              {!timeGridDayStaffConent && staff.firstName}
+                            </div>
+                          )
+                        })}
                       </div>
                       <Chevron
                         className="sx__time-grid-day-staff-next"

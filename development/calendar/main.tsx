@@ -158,11 +158,9 @@ sidebarCalendar.render(calendarSiderElement)
 
 function TimeGridDayStaffContent(staff) {
   return (
-    <div className="sx__time-grid-day-staff">
-      <div className="staffOnView-info">
-        <span className="staffOnView-name">{staff.firstName}</span>
-        <span className="staffOnView-role">{'Staff'}</span>
-      </div>
+    <div className="staffOnView-info">
+      <span className="staffOnView-name">{staff.firstName}</span>
+      <span className="staffOnView-role">{'Staff'}</span>
     </div>
   )
 }
