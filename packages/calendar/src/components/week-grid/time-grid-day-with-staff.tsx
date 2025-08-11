@@ -15,6 +15,7 @@ import { toJSDate } from '@unimed-x/shared/src'
 import TimeGridBackgroundEvent from './background-event'
 import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 import { useComputed } from '@preact/signals'
+import { StaffBase } from '@unimed-x/shared/src/interfaces/calendar/calendar-staff.interface'
 
 type props = {
   calendarEvents: CalendarEventInternal[]
@@ -60,13 +61,16 @@ export default function TimeGridDayWithStaff({
 
   const handleOnClick = (
     e: MouseEvent,
-    callback: ((dateTime: string, e?: UIEvent) => void) | undefined
+    staff: StaffBase,
+    callback:
+      | ((dateTime: string, e?: UIEvent, staff?: StaffBase) => void)
+      | undefined
   ) => {
     if (!callback || mouseDownOnChild) return
 
     const clickDateTime = getClickDateTime(e, $app, dayStartDateTime)
     if (clickDateTime) {
-      callback(clickDateTime, e)
+      callback(clickDateTime, e, staff)
     }
   }
 
@@ -104,9 +108,11 @@ export default function TimeGridDayWithStaff({
       <div
         className={classNames.value.join(' ')}
         data-time-grid-date={date}
-        onClick={(e) => handleOnClick(e, $app.config.callbacks.onClickDateTime)}
+        onClick={(e) =>
+          handleOnClick(e, staff, $app.config.callbacks.onClickDateTime)
+        }
         onDblClick={(e) =>
-          handleOnClick(e, $app.config.callbacks.onDoubleClickDateTime)
+          handleOnClick(e, staff, $app.config.callbacks.onDoubleClickDateTime)
         }
         aria-label={getLocalizedDate(date, $app.config.locale.value)}
         onMouseLeave={() => setMouseDownOnChild(false)}

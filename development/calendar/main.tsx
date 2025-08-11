@@ -30,6 +30,7 @@ import { ZoomInPlugin } from '../../packages/zoom-in-out/src/index.ts'
 import { colors } from './colors.ts'
 import { StaffBase, toDateString } from '@unimed-x/shared'
 import { createStaffServicePlugin } from '../../packages/staff-service/dist/core.js'
+import { staffSeed } from '../data/staff-seed.ts'
 const calendarElement = document.getElementById('calendar') as HTMLElement
 const calendarSiderElement = document.getElementById(
   'siderCalendar'
@@ -80,13 +81,13 @@ const sidebarCalendar = createCalendar({
 })
 const calendar = createCalendar({
   // staff: [],
-  // staff: staffSeed,
+  staff: staffSeed,
   // events: [],
   events: seededEvents,
   // isLoading: true,
   staffPerView: 7,
   // isLoading: true,
-  // hasStaffList: true,
+  hasStaffList: true,
   showCurrentTimeIndicator: true,
   // events: seededEvents,
   minuteBoudaries: 60,
@@ -139,8 +140,8 @@ const calendar = createCalendar({
     onEventClick(event, e) {
       console.log(event)
     },
-    onClickDateTime(dateTime, e) {
-      console.log(dateTime)
+    onClickDateTime(dateTime, _e, staff) {
+      console.log(dateTime, staff)
     },
   },
   selectedDate: toDateString(new Date()),

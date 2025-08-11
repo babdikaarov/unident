@@ -1,6 +1,7 @@
 import CalendarEventExternal from './calendar-event.interface'
 import { DateRange } from '../../types/date-range'
 import CalendarAppSingleton from './calendar-app-singleton'
+import { StaffBase } from './calendar-staff.interface'
 
 export interface CalendarCallbacks {
   onEventClick?: (event: CalendarEventExternal, e: UIEvent) => void
@@ -9,8 +10,12 @@ export interface CalendarCallbacks {
   onSelectedDateUpdate?: (date: string) => void
   onClickDate?: (date: string, e?: UIEvent) => void
   onDoubleClickDate?: (date: string, e?: UIEvent) => void
-  onClickDateTime?: (dateTime: string, e?: UIEvent) => void
-  onDoubleClickDateTime?: (dateTime: string, e?: UIEvent) => void
+  onClickDateTime?: (dateTime: string, e?: UIEvent, staff?: StaffBase) => void
+  onDoubleClickDateTime?: (
+    dateTime: string,
+    e?: UIEvent,
+    staff?: StaffBase
+  ) => void
   onClickAgendaDate?: (date: string, e?: UIEvent) => void
   onDoubleClickAgendaDate?: (date: string, e?: UIEvent) => void
   onClickPlusEvents?: (date: string, e?: UIEvent) => void
