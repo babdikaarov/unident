@@ -4,7 +4,7 @@
     "access": "public"
   },
   "umdName": "SXCalendar",
-  "version": "3.0.32",
+  "version": "3.0.33",
   "description": "Schedule-X calendar component",
   "author": {
     "name": "Tom Österlund",

@@ -231,7 +231,7 @@ export default function TimeAxis() {
       <div className="sx__week-grid__time-axis">
         {/* fixme: add logic for fullweedth */}
         {/* <TimeGridCurrentTimeIndicator $app={$app} date={$app.calendarState.range.value} isWeek /> */}
-        <span className={'sx__week-grid__time-cover'} />
+
         {hours.map((hour, hourIndex) => (
           <div key={hourIndex} className="sx__week-grid__hour">
             {/* {hourCustomComponentFn && hourCCIDs.length > 0 && (
@@ -253,6 +253,7 @@ export default function TimeAxis() {
             })}
           </div>
         ))}
+        {/* <span className={'sx__week-grid__time-cover'} /> */}
       </div>
     </>
   )

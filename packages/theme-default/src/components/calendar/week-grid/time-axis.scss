@@ -12,10 +12,14 @@
   height: var(--sx-week-grid-hour-height);
   border-top: var(--sx-border);
   font-size: var(--sx-font-extra-small);
-  // z-index: 9999;
-  // &:first-child {
-  // visibility: hidden;
-  // }
+
+  &:first-child {
+    .sx__week-grid__minute-indicator {
+      &:first-child {
+        visibility: hidden;
+      }
+    }
+  }
 }
 .sx__week-grid__time-cover {
   position: absolute;

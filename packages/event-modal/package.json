@@ -4,7 +4,7 @@
     "access": "public"
   },
   "umdName": "SXEventModal",
-  "version": "3.0.32",
+  "version": "3.0.33",
   "description": "Plugin for Schedule-X to show a modal when clicking on an event",
   "author": {
     "name": "Tom Österlund",
