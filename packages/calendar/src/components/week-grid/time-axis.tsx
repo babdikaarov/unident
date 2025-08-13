@@ -6,7 +6,6 @@ import {
 } from '../../utils/stateless/time/time-axis/time-axis'
 import { useSignalEffect } from '@preact/signals'
 import { randomStringId } from '@unimed-x/shared/src'
-// import TimeGridCurrentTimeIndicator from './time-grid-current-indicator'
 
 export default function TimeAxis() {
   const $app = useContext(AppContext)
@@ -16,10 +15,11 @@ export default function TimeAxis() {
     minute: number
   }>(getIntervalsPerHour($app.config.minuteBoudaries.value))
 
-  // Store the base grid height (before any minute boundary scaling)
-  const [baseGridHeight, setBaseGridHeight] = useState<number>(
-    $app.config.weekOptions.value.gridHeight
-  )
+  // Store the base grid height per hour (this should be consistent)
+  const [baseHourHeight, setBaseHourHeight] = useState<number>(() => {
+    const hoursPerDay = $app.config.timePointsPerDay / 100
+    return $app.config.weekOptions.value.gridHeight / hoursPerDay
+  })
 
   // Store previous minute boundaries for smooth transitions
   const previousMinuteBoundaries = useRef<number>(
@@ -52,7 +52,7 @@ export default function TimeAxis() {
     )
   })
 
-  // Handle minute boundary changes with smooth scaling
+  // Handle minute boundary changes with proper scaling
   useEffect(() => {
     const currentMinuteBoundaries = $app.config.minuteBoudaries.value
     const previousMinuteBounds = previousMinuteBoundaries.current
@@ -65,7 +65,7 @@ export default function TimeAxis() {
     const animateGridHeightChange = (
       fromHeight: number,
       toHeight: number,
-      duration: number = 200
+      duration: number = 300
     ) => {
       setIsAnimating(true)
       const startTime = performance.now()
@@ -94,107 +94,96 @@ export default function TimeAxis() {
       requestAnimationFrame(animate)
     }
 
-    // Calculate the scaling factor
-    const previousRatio = 60 / previousMinuteBounds // intervals per hour for previous
-    const currentRatio = 60 / currentMinuteBoundaries // intervals per hour for current
-    const scaleFactor = currentRatio / previousRatio
-    const currentGridHeight = $app.config.weekOptions.value.gridHeight
+    // Calculate target height based on minute intervals
+    const currentIntervalsPerHour = 60 / currentMinuteBoundaries
+    const hoursPerDay = $app.config.timePointsPerDay / 100
 
-    // Sensitivity configuration
-    const sensitivity = 0.35 // Range: 0.0 (no change) to 1.0 (full change)
+    // Define minimum height per minute interval for readability
+    const MIN_INTERVAL_HEIGHT = 18 // pixels
+    const MAX_INTERVAL_HEIGHT = 120 // pixels
 
-    // SOLUTION 1: Use base height for consistent scaling (recommended)
-    // Calculate target height based on base height to avoid ratcheting
-    const currentScale = 60 / currentMinuteBoundaries
-    const baseScale = 60 / 15 // Assume 15min as base reference
-    const targetHeightFromBase =
-      baseGridHeight * (currentScale / baseScale) ** sensitivity
+    // Calculate ideal height per interval based on minute boundaries
+    let heightPerInterval: number
 
-    // SOLUTION 2: Alternative - Use logarithmic scaling for symmetric behavior
-    // const adjustedScaleFactor = Math.pow(scaleFactor, sensitivity)
-    // const targetHeight = currentGridHeight * adjustedScaleFactor
+    // Use a scaling approach that ensures readability
+    switch (currentMinuteBoundaries) {
+      case 60:
+        heightPerInterval = 60 // One interval per hour - can be smaller
+        break
+      case 30:
+        heightPerInterval = 50 // Two intervals per hour
+        break
+      case 20:
+        heightPerInterval = 44 // Three intervals per hour
+        break
+      case 15:
+        heightPerInterval = 30 // Four intervals per hour
+        break
+      case 10:
+        heightPerInterval = 28 // Six intervals per hour
+        break
+      case 5:
+        heightPerInterval = 25 // Twelve intervals per hour
+        break
+      default:
+        // For any other value, calculate dynamically
+        heightPerInterval = Math.max(
+          MIN_INTERVAL_HEIGHT,
+          Math.min(MAX_INTERVAL_HEIGHT, 300 / currentIntervalsPerHour)
+        )
+    }
 
-    // SOLUTION 3: Alternative - Store and use absolute height mapping
-    // const heightSteps = {
-    //   60: baseGridHeight * 0.5,
-    //   30: baseGridHeight * 0.7,
-    //   15: baseGridHeight * 1.0,
-    //   10: baseGridHeight * 1.3,
-    //   5: baseGridHeight * 1.8
-    // }
-    // const targetHeight = heightSteps[currentMinuteBoundaries] || targetHeightFromBase
-
-    // Use base-height solution for consistent scaling
-    const targetHeight = targetHeightFromBase
-
-    // Safety bounds
-    const MIN_HEIGHT_RATIO = 0.3
-    const MAX_HEIGHT_RATIO = 3.0
-    const boundedTargetHeight = Math.max(
-      baseGridHeight * MIN_HEIGHT_RATIO,
-      Math.min(baseGridHeight * MAX_HEIGHT_RATIO, targetHeight)
+    // Ensure minimum and maximum bounds
+    heightPerInterval = Math.max(
+      MIN_INTERVAL_HEIGHT,
+      Math.min(MAX_INTERVAL_HEIGHT, heightPerInterval)
     )
 
+    // Calculate total grid height
+    const totalIntervals = hoursPerDay * currentIntervalsPerHour
+    const targetHeight = totalIntervals * heightPerInterval
+
+    // Get current height for animation
+    const currentGridHeight = $app.config.weekOptions.value.gridHeight
+
     // Debug logging
+    console.log('=== Minute Boundary Change ===')
     console.log(
       `Minute boundaries: ${previousMinuteBounds} -> ${currentMinuteBoundaries}`
     )
+    console.log(`Intervals per hour: ${currentIntervalsPerHour}`)
+    console.log(`Hours per day: ${hoursPerDay}`)
+    console.log(`Total intervals: ${totalIntervals}`)
+    console.log(`Height per interval: ${heightPerInterval}px`)
+    console.log(`Current height: ${currentGridHeight.toFixed(0)}px`)
+    console.log(`Target height: ${targetHeight.toFixed(0)}px`)
     console.log(
-      `Ratios: ${previousRatio.toFixed(2)} -> ${currentRatio.toFixed(2)}`
+      `Change: ${((targetHeight / currentGridHeight - 1) * 100).toFixed(1)}%`
     )
-    console.log(`Raw scale factor: ${scaleFactor.toFixed(3)}`)
-    console.log(`Base height: ${baseGridHeight.toFixed(0)}`)
-    console.log(
-      `Current scale: ${currentScale.toFixed(2)}, Base scale: ${baseScale.toFixed(2)}`
-    )
-    console.log(
-      `Scale ratio: ${(currentScale / baseScale).toFixed(3)} -> Powered: ${((currentScale / baseScale) ** sensitivity).toFixed(3)}`
-    )
-    console.log(
-      `Direction: ${scaleFactor > 1 ? 'INCREASING' : 'DECREASING'} height`
-    )
-    console.log(
-      `Height: ${currentGridHeight.toFixed(0)} -> ${boundedTargetHeight.toFixed(0)}`
-    )
-    console.log('---')
+    console.log('=============================')
 
     // Animate the change
-    animateGridHeightChange(currentGridHeight, boundedTargetHeight)
+    animateGridHeightChange(currentGridHeight, targetHeight)
 
     // Update the previous minute boundaries
     previousMinuteBoundaries.current = currentMinuteBoundaries
 
-    // Update base height if this is the first change
-    if (
-      Math.abs(baseGridHeight - $app.config.weekOptions.value.gridHeight) < 10
-    ) {
-      // If current height is close to what we think is base, recalculate base
-      const estimatedBase =
-        currentGridHeight /
-        (60 / previousMinuteBounds / baseScale) ** sensitivity
-      setBaseGridHeight(estimatedBase)
-    }
+    // Update base hour height for reference
+    setBaseHourHeight(targetHeight / hoursPerDay)
   }, [$app.config.minuteBoudaries.value])
 
-  // Update base grid height when week options change externally (like zoom)
+  // Handle external grid height changes (like zoom)
   useEffect(() => {
-    const currentMinuteBoundaries = $app.config.minuteBoudaries.value
     const currentGridHeight = $app.config.weekOptions.value.gridHeight
 
-    // Only update base height if we're not currently animating a minute boundary change
+    // Only update base height if we're not currently animating
     if (!isAnimating) {
-      // Calculate what the base height should be for current minute boundaries
-      const currentScale = 60 / currentMinuteBoundaries
-      const baseScale = 60 / 15 // Use consistent base scale
+      const hoursPerDay = $app.config.timePointsPerDay / 100
+      const newBaseHourHeight = currentGridHeight / hoursPerDay
+      setBaseHourHeight(newBaseHourHeight)
 
-      // Reverse the scaling to get the base height
-      const calculatedBaseHeight =
-        currentGridHeight / (currentScale / baseScale) ** 0.35
-      setBaseGridHeight(calculatedBaseHeight)
-
-      console.log(`External height change detected: ${currentGridHeight}`)
       console.log(
-        `Calculated base height: ${calculatedBaseHeight.toFixed(0)} (for ${currentMinuteBoundaries}min intervals)`
+        `External height change: ${currentGridHeight}px (${newBaseHourHeight.toFixed(1)}px per hour)`
       )
     }
   }, [$app.config.weekOptions.value.gridHeight])

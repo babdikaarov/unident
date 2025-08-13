@@ -86,12 +86,12 @@ const calendar = createCalendar({
   events: seededEvents,
   // isLoading: true,
   staffPerView: 7,
-  showDayNumber: false,
+  // showDayNumber: false,
   // isLoading: true,
   hasStaffList: true,
   showCurrentTimeIndicator: true,
   // events: seededEvents,
-  minuteBoudaries: 60,
+
   plugins: [
     createViewMonthAgenda(),
     createEventRecurrencePlugin(),
@@ -115,8 +115,14 @@ const calendar = createCalendar({
   translations: mergeLocales(translations, {
     enUS: {},
   }),
+  // weekOptions: {
+  //   eventWidth: 95,
+  // },
+  minuteBoudaries: 60,
   weekOptions: {
-    eventWidth: 95,
+    timeAxisFormatOptions: { hour: '2-digit', minute: '2-digit' },
+    eventOverlap: false,
+    gridHeight: 1950,
   },
   firstDayOfWeek: 1,
   views: [
