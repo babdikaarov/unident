@@ -51,27 +51,30 @@ export default function DateAxis({ week }: props) {
 
   return (
     <>
-      <div className="sx__week-grid__date-axis">
-        {week.map((date, idx) => (
-          <div className={getClassNames(date)} data-date={toDateString(date)}>
-            {weekGridDateCustomComponentFn && (
-              <div data-ccid={weekGridDateCCIDs[0][idx]} />
-            )}
+      {$app.calendarState.view.value === 'day' &&
+      !$app.config.showDayNumber.value ? null : (
+        <div className="sx__week-grid__date-axis">
+          {week.map((date, idx) => (
+            <div className={getClassNames(date)} data-date={toDateString(date)}>
+              {weekGridDateCustomComponentFn && (
+                <div data-ccid={weekGridDateCCIDs[0][idx]} />
+              )}
 
-            {!weekGridDateCustomComponentFn && (
-              <>
-                <div className="sx__week-grid__day-name">
-                  {getDayNameShort(date, $app.config.locale.value)}
-                </div>
+              {!weekGridDateCustomComponentFn && (
+                <>
+                  <div className="sx__week-grid__day-name">
+                    {getDayNameShort(date, $app.config.locale.value)}
+                  </div>
 
-                <div className="sx__week-grid__date-number">
-                  {date.getDate()}
-                </div>
-              </>
-            )}
-          </div>
-        ))}
-      </div>
+                  <div className="sx__week-grid__date-number">
+                    {date.getDate()}
+                  </div>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </>
   )
 }

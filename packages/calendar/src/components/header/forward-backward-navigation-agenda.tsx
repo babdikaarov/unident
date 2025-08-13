@@ -88,7 +88,6 @@ export default function ForwardBackwardNavigationAgenda() {
           direction={'previous'}
           buttonText={$app.translate('Previous period')}
         />
-        <TodayButton />
         <Chevron
           disabled={
             !!(

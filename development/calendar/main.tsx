@@ -86,6 +86,7 @@ const calendar = createCalendar({
   events: seededEvents,
   // isLoading: true,
   staffPerView: 7,
+  showDayNumber: false,
   // isLoading: true,
   hasStaffList: true,
   showCurrentTimeIndicator: true,

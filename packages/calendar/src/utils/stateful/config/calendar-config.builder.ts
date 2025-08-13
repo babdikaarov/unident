@@ -28,7 +28,9 @@ import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-v
 import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 
-export default class CalendarConfigBuilder implements Builder<CalendarConfigInternal> {
+export default class CalendarConfigBuilder
+  implements Builder<CalendarConfigInternal>
+{
   locale: string | undefined
   firstDayOfWeek: WeekDay | undefined
   defaultView: ViewName | undefined
@@ -46,6 +48,7 @@ export default class CalendarConfigBuilder implements Builder<CalendarConfigInte
   plugins: Plugins = {}
   isDark: boolean | undefined = false
   hasStaffList: boolean | undefined = false
+  showDayNumber: boolean | undefined = true
   isResponsive: boolean | undefined = true
   callbacks: CalendarCallbacks | undefined
   minDate: string | undefined
@@ -104,6 +107,7 @@ export default class CalendarConfigBuilder implements Builder<CalendarConfigInte
       this.isLoading,
       this.showCurrentTimeIndicator,
       this.hasStaffList,
+      this.showDayNumber,
       this.isResponsive,
       this.callbacks,
       {},
@@ -114,7 +118,7 @@ export default class CalendarConfigBuilder implements Builder<CalendarConfigInte
       this.translations,
       this.showWeekNumbers,
       this.minuteBoudaries || 60,
-      this.staffPerView || 7,
+      this.staffPerView || 7
     )
   }
 
@@ -194,6 +198,10 @@ export default class CalendarConfigBuilder implements Builder<CalendarConfigInte
   }
   withHasStaffList(hasStaffList: boolean | undefined): CalendarConfigBuilder {
     this.hasStaffList = hasStaffList
+    return this
+  }
+  withShowDayNumber(showDayNumber: boolean | undefined): CalendarConfigBuilder {
+    this.showDayNumber = showDayNumber
     return this
   }
   withIsLoading(isLoading: boolean | undefined): CalendarConfigBuilder {

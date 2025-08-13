@@ -26,6 +26,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
   calendars: Signal<Record<string, CalendarType>>
   isDark: Signal<boolean>
   hasStaffList: Signal<boolean>
+  showDayNumber: Signal<boolean>
   isLoading: Signal<boolean>
   showCurrentTimeIndicator: Signal<boolean>
   minDate: Signal<string | undefined>
@@ -52,6 +53,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     isLoading: boolean = false,
     showCurrentTimeIndicator: boolean = false,
     hasStaffList: boolean = false,
+    showDayNumber: boolean = true,
 
     public isResponsive: boolean = true,
     public callbacks = {},
@@ -65,7 +67,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     translations: Record<string, Language> = {},
     showWeekNumbers: boolean = false,
     minuteBoudaries: number = 60,
-    staffPerView: number = 1,
+    staffPerView: number = 1
   ) {
     this.locale = signal(locale)
     this.firstDayOfWeek = signal(firstDayOfWeek)
@@ -75,6 +77,7 @@ export default class CalendarConfigImpl implements CalendarConfigInternal {
     this.calendars = signal(calendars)
     this.isDark = signal(isDark)
     this.hasStaffList = signal(hasStaffList)
+    this.showDayNumber = signal(showDayNumber)
     this.minDate = signal(minDate)
     this.maxDate = signal(maxDate)
     this.monthGridOptions = signal(monthGridOptions)
