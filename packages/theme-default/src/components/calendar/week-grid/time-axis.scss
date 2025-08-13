@@ -50,6 +50,12 @@
   position: relative;
   width: 100%;
 }
+.sx__week-grid__minute-indicator_for_staff {
+  height: calc(var(--sx-week-grid-hour-height) / 12);
+  // border-top: var(--sx-border);
+  position: relative;
+  width: 100%;
+}
 
 .sx__minute-label {
   font-size: 10px;
@@ -57,4 +63,29 @@
   left: -25px;
   top: -0.5em;
   color: var(--sx-color-neutral);
+}
+
+.sx__week-grid__minute-indicator_for_staff:hover {
+  background-color: grey;
+  opacity: 0.3;
+}
+
+.sx__week-grid__time-axis_staff {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  // right: 0;
+  top: var(--sx-week-grid-offset-top);
+  width: 100%;
+}
+
+.sx__week-grid__hour_staff {
+  position: relative;
+  height: var(--sx-week-grid-hour-height);
+  border-top: var(--sx-border);
+  font-size: var(--sx-font-extra-small);
+  // z-index: 9999;
+  // &:first-child {
+  // visibility: hidden;
+  // }
 }

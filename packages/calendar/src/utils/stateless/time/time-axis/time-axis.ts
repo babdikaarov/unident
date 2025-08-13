@@ -38,10 +38,10 @@ export const getIntervalsPerHour = (
   minute: number
 } => {
   const count = Math.floor(60 / intervalMinutes)
-  document.documentElement.style.setProperty(
-    '--sx-minute-interval',
-    count.toString()
-  )
+  // document.documentElement.style.setProperty(
+  //   '--sx-minute-interval',
+  //   count.toString()
+  // )
   return {
     array: Array.from({ length: count }, (_, i) => i),
     minute: intervalMinutes,

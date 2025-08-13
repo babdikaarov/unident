@@ -102,13 +102,13 @@ const calendar = createCalendar({
     eventsServicePlugin,
     calendarControls,
     staffService,
-    new ZoomInPlugin(calendarControls, {
-      zoomFactor: 1, // Initial zoom (default: 1)
-      minZoom: 1, // Minimum zoom (default: 0.5)
-      maxZoom: 6, // Maximum zoom (default: 2)
-      zoomStep: 0.05, // Step per scroll (default: 0.2)
-      baseGridHeight: 1200, // Base height in px (default: 900)
-    }),
+    // new ZoomInPlugin(calendarControls, {
+    //   zoomFactor: 1, // Initial zoom (default: 1)
+    //   minZoom: 1, // Minimum zoom (default: 0.5)
+    //   maxZoom: 6, // Maximum zoom (default: 2)
+    //   zoomStep: 0.05, // Step per scroll (default: 0.2)
+    //   baseGridHeight: 1200, // Base height in px (default: 900)
+    // }),
   ],
 
   translations: mergeLocales(translations, {
@@ -140,16 +140,19 @@ const calendar = createCalendar({
     onEventClick(event, e) {
       console.log(event)
     },
-    onClickDateTime(dateTime, _e, staff) {
+    // onClickDateTime(dateTime, _e, staff) {
+    //   console.log(dateTime, staff)
+    // },
+    onClickFiveMinuteRange(dateTime, _e, staff) {
       console.log(dateTime, staff)
     },
   },
   selectedDate: toDateString(new Date()),
   calendars: colors,
-  // dayBoundaries: {
-  //   start: '07:00',
-  //   end: '24:00',
-  // },
+  dayBoundaries: {
+    start: '07:00',
+    end: '23:00',
+  },
 
   locale: 'ru-RU',
 })

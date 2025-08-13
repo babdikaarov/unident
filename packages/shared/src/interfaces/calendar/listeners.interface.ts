@@ -11,6 +11,11 @@ export interface CalendarCallbacks {
   onClickDate?: (date: string, e?: UIEvent) => void
   onDoubleClickDate?: (date: string, e?: UIEvent) => void
   onClickDateTime?: (dateTime: string, e?: UIEvent, staff?: StaffBase) => void
+  onClickFiveMinuteRange?: (
+    dateTime: string,
+    e?: UIEvent,
+    staff?: StaffBase
+  ) => void
   onDoubleClickDateTime?: (
     dateTime: string,
     e?: UIEvent,

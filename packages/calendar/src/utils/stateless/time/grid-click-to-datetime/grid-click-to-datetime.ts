@@ -1,4 +1,6 @@
 import CalendarAppSingleton from '@unimed-x/shared/src/interfaces/calendar/calendar-app-singleton'
+import { toDateTimeString } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/date-to-strings'
+import { toJSDate } from '@unimed-x/shared/src/utils/stateless/time/format-conversion/format-conversion'
 import { addTimePointsToDateTime } from '@unimed-x/shared/src/utils/stateless/time/time-points/string-conversion'
 
 export const getClickDateTime = (
@@ -21,4 +23,16 @@ export const getClickDateTime = (
   )
 
   return addTimePointsToDateTime(dayStartDateTime, clickTimePointsIntoDay)
+}
+export const roundMinutesToNearest5 = (dateTimeString: string): string => {
+  const jsDate = toJSDate(dateTimeString) // convert string to Date
+  const minutes = jsDate.getMinutes()
+
+  // Round down to nearest multiple of 5
+  const rounded = Math.floor(minutes / 5) * 5
+  jsDate.setMinutes(rounded)
+  jsDate.setSeconds(0)
+  jsDate.setMilliseconds(0)
+
+  return toDateTimeString(jsDate)
 }

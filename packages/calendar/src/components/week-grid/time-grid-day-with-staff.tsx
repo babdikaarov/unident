@@ -8,14 +8,18 @@ import { timeStringFromTimePoints } from '@unimed-x/shared/src/utils/stateless/t
 import { setTimeInDateTimeString } from '@unimed-x/shared/src/utils/stateless/time/date-time-mutation/date-time-mutation'
 import { addDays } from '@unimed-x/shared/src/utils/stateless/time/date-time-mutation/adding'
 import { DayBoundariesDateTime } from '@unimed-x/shared/src/types/day-boundaries-date-time'
-import { getClickDateTime } from '../../utils/stateless/time/grid-click-to-datetime/grid-click-to-datetime'
+import {
+  getClickDateTime,
+  roundMinutesToNearest5,
+} from '../../utils/stateless/time/grid-click-to-datetime/grid-click-to-datetime'
 import { getLocalizedDate } from '@unimed-x/shared/src/utils/stateless/time/date-time-localization/get-time-stamp'
 import { getClassNameForWeekday } from '../../utils/stateless/get-class-name-for-weekday'
 import { toJSDate } from '@unimed-x/shared/src'
 import TimeGridBackgroundEvent from './background-event'
 import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
-import { useComputed } from '@preact/signals'
+import { useComputed, useSignalEffect } from '@preact/signals'
 import { StaffBase } from '@unimed-x/shared/src/interfaces/calendar/calendar-staff.interface'
+import { getTimeAxisHours } from '../../utils/stateless/time/time-axis/time-axis'
 
 type props = {
   calendarEvents: CalendarEventInternal[]
@@ -34,6 +38,9 @@ export default function TimeGridDayWithStaff({
    * */
   const [mouseDownOnChild, setMouseDownOnChild] = useState<boolean>(false)
   const $app = useContext(AppContext)
+
+  const [hours, setHours] = useState<number[]>([])
+  const fiveMinuteGrid = Array.from({ length: 60 / 5 }, (_, i) => i)
 
   const timeStringFromDayBoundary = timeStringFromTimePoints(
     $app.config.dayBoundaries.value.start
@@ -69,8 +76,24 @@ export default function TimeGridDayWithStaff({
     if (!callback || mouseDownOnChild) return
 
     const clickDateTime = getClickDateTime(e, $app, dayStartDateTime)
+
     if (clickDateTime) {
       callback(clickDateTime, e, staff)
+    }
+  }
+  const handleOnClickFiveMinutes = (
+    e: MouseEvent,
+    staff: StaffBase,
+    callback:
+      | ((dateTime: string, e?: UIEvent, staff?: StaffBase) => void)
+      | undefined
+  ) => {
+    if (!callback || mouseDownOnChild) return
+
+    const clickDateTime = getClickDateTime(e, $app, dayStartDateTime)
+    if (clickDateTime) {
+      const fiveMinuteRangeData = roundMinutesToNearest5(clickDateTime)
+      callback(fiveMinuteRangeData, e, staff)
     }
   }
 
@@ -103,6 +126,14 @@ export default function TimeGridDayWithStaff({
     return newClassNames
   })
 
+  useSignalEffect(() => {
+    const newHours = getTimeAxisHours(
+      $app.config.dayBoundaries.value,
+      $app.config.isHybridDay
+    )
+    setHours(newHours)
+  })
+
   return $app.staffList.getStaffListOnView().map((staff) => (
     <>
       <div
@@ -120,6 +151,27 @@ export default function TimeGridDayWithStaff({
         onTouchEnd={handlePointerUp}
         onMouseDown={handleMouseDown}
       >
+        <div className="sx__week-grid__time-axis_staff">
+          {hours.map((hour, hourIndex) => (
+            <div key={hourIndex} className="sx__week-grid__hour_staff">
+              {fiveMinuteGrid.map((_, i) => {
+                return (
+                  <div
+                    key={i}
+                    className={'sx__week-grid__minute-indicator_for_staff'}
+                    onClick={(e) => {
+                      handleOnClickFiveMinutes(
+                        e,
+                        staff,
+                        $app.config.callbacks.onClickFiveMinuteRange
+                      )
+                    }}
+                  ></div>
+                )
+              })}
+            </div>
+          ))}
+        </div>
         {backgroundEvents.map((event) => (
           <>
             <TimeGridBackgroundEvent backgroundEvent={event} date={date} />

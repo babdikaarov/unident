@@ -54,16 +54,11 @@
 }
 
 .sx__time-grid-day-staff {
-  // position: absolute;
-  // top: -100px;
-  height: 100px;
-  // min-width: calc(calc(100% / 5) - 20px);
-  // border: solid 1px grey;
   width: 100%;
 }
 .sx__time-grid-day-staff-wrapper {
   display: flex;
-  height: 100px;
+  min-height: 50px;
   padding-inline: var(--sx-calendar-week-grid-padding-left);
   position: relative;
   width: 100%;
