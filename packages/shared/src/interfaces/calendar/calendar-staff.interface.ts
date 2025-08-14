@@ -25,6 +25,7 @@ export default abstract class CalendarStaff<T extends StaffBase = StaffBase> {
 
   // New getter methods instead of direct signal access
   abstract getStaffList(): T[]
+  abstract getStaffListFull(): T[]
   abstract getStaffListOnView(): T[]
   abstract getStaffById(id: string): T | undefined
   abstract canNavigateNext(): boolean

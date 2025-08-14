@@ -19,6 +19,7 @@ export interface StaffService extends PluginBase<string> {
   filterStaff<T extends StaffBase>(predicate: (staff: T) => boolean): void
 
   // Data access methods (generic)
+  getStaffListFull<T extends StaffBase>(): T[]
   getStaffList<T extends StaffBase>(): T[]
   getStaffListOnView<T extends StaffBase>(): T[]
   getStaffById<T extends StaffBase>(id: string): T | undefined

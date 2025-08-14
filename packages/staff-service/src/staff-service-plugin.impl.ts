@@ -67,6 +67,10 @@ class StaffServicePluginImpl implements StaffService {
     if (!this.$app) this.throwNotInitializedError()
     return this.$app.staffList.getStaffListOnView() as T[]
   }
+  getStaffListFull<T extends StaffBase>(): T[] {
+    if (!this.$app) this.throwNotInitializedError()
+    return this.$app.staffList.getStaffListFull() as T[]
+  }
 
   getStaffById<T extends StaffBase>(id: string): T | undefined {
     if (!this.$app) this.throwNotInitializedError()

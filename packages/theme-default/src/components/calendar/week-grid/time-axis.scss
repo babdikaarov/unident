@@ -10,7 +10,7 @@
 .sx__week-grid__hour {
   position: relative;
   height: var(--sx-week-grid-hour-height);
-  border-top: var(--sx-border);
+  // border-top: var(--sx-border);
   font-size: var(--sx-font-extra-small);
 
   &:first-child {

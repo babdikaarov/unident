@@ -146,6 +146,9 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
   const getStaffListOnView = (): T[] => {
     return [...listOnView.value] // return defensive copy
   }
+  const getStaffListFull = (): T[] => {
+    return originalList.value
+  }
 
   const getStaffById = (id: string): T | undefined => {
     return list.value.find((staff) => staff.id === id)
@@ -176,5 +179,6 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
     getStaffList,
     getStaffListOnView,
     getStaffById,
+    getStaffListFull,
   }
 }
