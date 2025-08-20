@@ -83,13 +83,14 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
           <div className="sx__week-wrapper" id={id}>
             <div className="sx__week-header">
               <div className="sx__week-header-content">
-                {$app.staffList.hasList.value ? null : (
+                {$app.config.hasStaffList.value ? null : (
                   <DateAxis
                     week={Object.values(week.value).map((day) =>
                       toJSDate(day.date)
                     )}
                   />
                 )}
+
                 {!$app.config.hasStaffList.value ||
                 $app.calendarState.view.value !== 'week' ? (
                   <div

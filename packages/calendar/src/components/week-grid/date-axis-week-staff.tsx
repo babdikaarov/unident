@@ -51,7 +51,7 @@ export default function DateAxisWeekStaff({ week }: props) {
 
   return (
     <>
-      {!$app.config.showDayNumber.value ? null : (
+      {
         <div className="sx__week-grid__date-axis-staff">
           {week.map((date, idx) => (
             <div className={getClassNames(date)} data-date={toDateString(date)}>
@@ -73,7 +73,7 @@ export default function DateAxisWeekStaff({ week }: props) {
             </div>
           ))}
         </div>
-      )}
+      }
     </>
   )
 }
