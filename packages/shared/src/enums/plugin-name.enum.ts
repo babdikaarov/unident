@@ -6,4 +6,5 @@ export enum PluginName {
   Resize = 'resize',
   CalendarControls = 'calendarControls',
   CurrentTime = 'currentTime',
+  StaffServicePlugin = 'staffServicePlugintTime',
 }

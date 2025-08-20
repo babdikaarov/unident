@@ -73,6 +73,7 @@ export default interface CalendarConfigInternal extends Config {
   hasStaffList: Signal<boolean>
   showDayNumber: Signal<boolean>
   staffPerView: Signal<number>
+  staffPerViewWeek: Signal<number>
   minDate: Signal<string | undefined>
   maxDate: Signal<string | undefined>
   monthGridOptions: Signal<MonthGridOptions>
@@ -120,6 +121,7 @@ interface ReducedCalendarConfigInternal
     | 'isLoading'
     | 'showCurrentTimeIndicator'
     | 'staffPerView'
+    | 'staffPerViewWeek'
     | 'showDayNumber'
   > {}
 
@@ -128,6 +130,7 @@ export interface CalendarConfigExternal
   datePicker?: CalendarDatePickerConfigExternal
   events?: CalendarEventExternal[]
   staffPerView?: number
+  staffPerViewWeek?: number
   showDayNumber?: boolean
   backgroundEvents?: BackgroundEvent[]
   dayBoundaries?: DayBoundariesExternal

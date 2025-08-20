@@ -8,6 +8,7 @@ export interface StaffService extends PluginBase<string> {
 
   // Configuration methods
   setStaffPerView(count: number): void
+  setStaffPerViewWeek(count: number): void
 
   // Staff management methods (generic)
   setStaffList<T extends StaffBase>(staffList: T[]): void
@@ -22,6 +23,7 @@ export interface StaffService extends PluginBase<string> {
   getStaffListFull<T extends StaffBase>(): T[]
   getStaffList<T extends StaffBase>(): T[]
   getStaffListOnView<T extends StaffBase>(): T[]
+  getStaffListOnViewWeek<T extends StaffBase>(): T[]
   getStaffById<T extends StaffBase>(id: string): T | undefined
 
   // Utility methods for state access

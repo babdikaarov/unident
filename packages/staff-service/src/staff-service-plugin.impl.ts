@@ -2,12 +2,16 @@ import { CalendarAppSingleton } from '@unimed-x/shared/src'
 import { definePlugin } from '@unimed-x/shared/src/utils/stateless/calendar/define-plugin'
 import { StaffService } from '@unimed-x/shared/src/interfaces/staff-service/staff-service.interface'
 import { StaffBase } from '@unimed-x/shared/src/interfaces/calendar/calendar-staff.interface'
-
+import { PluginName } from '@unimed-x/shared/src/enums/plugin-name.enum'
 class StaffServicePluginImpl implements StaffService {
-  name = 'StaffServicePlugin'
+  name = PluginName.StaffServicePlugin
   $app!: CalendarAppSingleton
 
-  beforeRender($app: CalendarAppSingleton) {
+  beforeRender($app: CalendarAppSingleton): void {
+    this.$app = $app
+  }
+
+  onRender($app: CalendarAppSingleton): void {
     this.$app = $app
   }
 
@@ -24,6 +28,10 @@ class StaffServicePluginImpl implements StaffService {
   setStaffPerView(count: number) {
     if (!this.$app) this.throwNotInitializedError()
     this.$app.staffList.setStaffPerView(count)
+  }
+  setStaffPerViewWeek(count: number) {
+    if (!this.$app) this.throwNotInitializedError()
+    this.$app.staffList.setStaffPerViewWeek(count)
   }
 
   setStaffList<T extends StaffBase>(staffList: T[]) {
@@ -66,6 +74,10 @@ class StaffServicePluginImpl implements StaffService {
   getStaffListOnView<T extends StaffBase>(): T[] {
     if (!this.$app) this.throwNotInitializedError()
     return this.$app.staffList.getStaffListOnView() as T[]
+  }
+  getStaffListOnViewWeek<T extends StaffBase>(): T[] {
+    if (!this.$app) this.throwNotInitializedError()
+    return this.$app.staffList.getStaffListOnViewWeek() as T[]
   }
   getStaffListFull<T extends StaffBase>(): T[] {
     if (!this.$app) this.throwNotInitializedError()
@@ -119,5 +131,10 @@ class StaffServicePluginImpl implements StaffService {
 }
 
 export const createStaffServicePlugin = () => {
-  return definePlugin('StaffService', new StaffServicePluginImpl())
+  return definePlugin(
+    PluginName.StaffServicePlugin,
+    new StaffServicePluginImpl() as StaffServicePluginImpl & {
+      name: PluginName.StaffServicePlugin
+    }
+  )
 }

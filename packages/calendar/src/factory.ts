@@ -44,7 +44,7 @@ export const createCalendarAppSingleton = (
     .withConfig(internalConfig)
     .withTimeUnitsImpl(timeUnitsImpl)
     .withDatePickerState(datePickerState)
-    .withStaffList(staffList, config.staffPerView)
+    .withStaffList(staffList, internalConfig)
     .withCalendarEvents(calendarEvents)
     .withDatePickerConfig(datePickerConfig)
     .withCalendarState(calendarState)

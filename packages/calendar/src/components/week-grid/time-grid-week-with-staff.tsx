@@ -22,14 +22,17 @@ import { StaffBase } from '@unimed-x/shared/src/interfaces/calendar/calendar-sta
 import { getTimeAxisHours } from '../../utils/stateless/time/time-axis/time-axis'
 import { Week } from '../../types/week'
 import TimeGridDay from './time-grid-day'
+import DateAxis from './date-axis'
 
 type props = {
+  staff: StaffBase
   calendarEvents: CalendarEventInternal[]
   backgroundEvents: BackgroundEvent[]
   date: string
 }
 
-export default function TimeGridDayWithStaff({
+export default function TimeGridWeekWithStaff({
+  staff,
   calendarEvents,
   date,
   backgroundEvents,
@@ -136,11 +139,12 @@ export default function TimeGridDayWithStaff({
     setHours(newHours)
   })
 
-  return $app.staffList.getStaffListOnView().map((staff) => (
+  return (
     <>
       <div
         className={classNames.value.join(' ')}
         data-time-grid-date={date}
+        data-staff={staff.firstName}
         onClick={(e) =>
           handleOnClick(e, staff, $app.config.callbacks.onClickDateTime)
         }
@@ -153,7 +157,6 @@ export default function TimeGridDayWithStaff({
         onTouchEnd={handlePointerUp}
         onMouseDown={handleMouseDown}
       >
-      
         <div className="sx__week-grid__time-axis_staff">
           {hours.map((hour, hourIndex) => (
             <div key={hourIndex} className="sx__week-grid__hour_staff">
@@ -180,6 +183,7 @@ export default function TimeGridDayWithStaff({
             <TimeGridBackgroundEvent backgroundEvent={event} date={date} />
           </>
         ))}
+
         {eventsWithConcurrency.map((event) => {
           if (event.withStaff && event.withStaff.id === staff.id) {
             return (
@@ -194,5 +198,5 @@ export default function TimeGridDayWithStaff({
         })}
       </div>
     </>
-  ))
+  )
 }

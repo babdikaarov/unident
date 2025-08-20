@@ -10,7 +10,7 @@ type props = {
   week: WeekWithDates
 }
 
-export default function DateAxis({ week }: props) {
+export default function DateAxisWeekStaff({ week }: props) {
   const $app = useContext(AppContext)
 
   const getClassNames = (date: Date) => {
@@ -52,7 +52,7 @@ export default function DateAxis({ week }: props) {
   return (
     <>
       {!$app.config.showDayNumber.value ? null : (
-        <div className="sx__week-grid__date-axis">
+        <div className="sx__week-grid__date-axis-staff">
           {week.map((date, idx) => (
             <div className={getClassNames(date)} data-date={toDateString(date)}>
               {weekGridDateCustomComponentFn && (

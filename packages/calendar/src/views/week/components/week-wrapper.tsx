@@ -12,12 +12,13 @@ import { sortEventsByStartAndEnd } from '../../../utils/stateless/events/sort-by
 import DateGridDay from '../../../components/week-grid/date-grid-day'
 import { useComputed } from '@preact/signals'
 import { filterByRange } from '../../../utils/stateless/events/filter-by-range'
-import TimeGridDayWithStaff from '../../../components/week-grid/time-grid-day-with-staff'
 import Chevron from '@unimed-x/shared/src/components/buttons/chevron'
 import { useEffect, useState } from 'preact/hooks'
 import { getElementByCCID } from '../../../utils/stateless/dom/getters'
 import { randomStringId } from '@unimed-x/shared/src'
 import TimeGridCurrentTimeIndicator from '../../../components/week-grid/time-grid-current-indicator'
+import TimeGridWeekWithStaff from '../../../components/week-grid/time-grid-week-with-staff'
+import DateAxisWeekStaff from '../../../components/week-grid/date-axis-week-staff'
 
 export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   document.documentElement.style.setProperty(
@@ -26,9 +27,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   )
   const timeGridDayStaffConent =
     $app.config._customComponentFns.timeGridDayStaffConent
-  const timeGridDayStaffId = useState(
-    timeGridDayStaffConent ? randomStringId() : undefined
-  )[0]
+
   const noStaffFound = $app.config._customComponentFns.noStaffFound
 
   const noStaffFoundId = useState(
@@ -84,13 +83,15 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
           <div className="sx__week-wrapper" id={id}>
             <div className="sx__week-header">
               <div className="sx__week-header-content">
-                <DateAxis
-                  week={Object.values(week.value).map((day) =>
-                    toJSDate(day.date)
-                  )}
-                />
+                {$app.staffList.hasList.value ? null : (
+                  <DateAxis
+                    week={Object.values(week.value).map((day) =>
+                      toJSDate(day.date)
+                    )}
+                  />
+                )}
                 {!$app.config.hasStaffList.value ||
-                $app.calendarState.view.value !== 'day' ? (
+                $app.calendarState.view.value !== 'week' ? (
                   <div
                     className="sx__date-grid"
                     aria-label={$app.translate(
@@ -116,17 +117,26 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                         onClick={$app.staffList.prev}
                       />
                       <div className="sx__time-grid-day-staff-card">
-                        {$app.staffList.getStaffListOnView().map((staff) => {
-                          return (
-                            <div
-                              className="sx__time-grid-day-staff"
-                              key={staff.id}
-                              data-ccid={staff.id}
-                            >
-                              {!timeGridDayStaffConent && staff.firstName}
-                            </div>
-                          )
-                        })}
+                        {$app.staffList
+                          .getStaffListOnViewWeek()
+                          .map((staff) => {
+                            return (
+                              <div className="sx__time-grid-day-staff-card-inner-wrapper">
+                                <div
+                                  className="sx__time-grid-day-staff"
+                                  key={staff.id}
+                                  data-ccid={staff.id}
+                                >
+                                  {!timeGridDayStaffConent && staff.firstName}
+                                </div>
+                                <DateAxisWeekStaff
+                                  week={Object.values(week.value).map((day) =>
+                                    toJSDate(day.date)
+                                  )}
+                                />
+                              </div>
+                            )
+                          })}
                       </div>
                       <Chevron
                         className="sx__time-grid-day-staff-next"
@@ -151,7 +161,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
             <div className="sx__week-grid">
               <TimeAxis />
               {!$app.config.hasStaffList.value ||
-              $app.calendarState.view.value !== 'day' ? (
+              $app.calendarState.view.value !== 'week' ? (
                 Object.values(week.value).map((day) => (
                   <>
                     <TimeGridDay
@@ -164,20 +174,23 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                 ))
               ) : (
                 <div className="sx__week-grid-staff">
-                  {Object.values(week.value).map((day) => (
-                    <>
-                      <TimeGridCurrentTimeIndicator
-                        $app={$app}
-                        date={day.date}
-                      />
-                      <TimeGridDayWithStaff
-                        calendarEvents={day.timeGridEvents}
-                        backgroundEvents={day.backgroundEvents}
-                        date={day.date}
-                        key={day.date}
-                      />
-                    </>
-                  ))}
+                  {$app.staffList.getStaffListOnViewWeek().map((staff) => {
+                    return Object.values(week.value).map((day) => (
+                      <>
+                        <TimeGridCurrentTimeIndicator
+                          $app={$app}
+                          date={day.date}
+                        />
+                        <TimeGridWeekWithStaff
+                          staff={staff}
+                          calendarEvents={day.timeGridEvents}
+                          backgroundEvents={day.backgroundEvents}
+                          date={day.date}
+                          key={day.date}
+                        />
+                      </>
+                    ))
+                  })}
                 </div>
               )}
             </div>

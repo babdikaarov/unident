@@ -1,15 +1,22 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
-import boundaries from "eslint-plugin-boundaries";
-import {defineConfig, globalIgnores} from "eslint/config";
+import globals from 'globals'
+import pluginJs from '@eslint/js'
+import tseslint from 'typescript-eslint'
+import boundaries from 'eslint-plugin-boundaries'
+import { defineConfig, globalIgnores } from 'eslint/config'
 
 /** @type {import('eslint').Linter.Config[]} */
 export default defineConfig([
-  {languageOptions: {globals: globals.browser}},
+  { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
-  globalIgnores(['node_modules', '**/dist/**', '**/seeded-events.ts', '**/.next', '**/next.config.js', '**/coverage/**']),
+  globalIgnores([
+    'node_modules',
+    '**/dist/**',
+    '**/seeded-events.ts',
+    '**/.next',
+    '**/next.config.js',
+    '**/coverage/**',
+  ]),
   {
     plugins: {
       boundaries,
@@ -23,6 +30,10 @@ export default defineConfig([
         {
           type: 'calendar-controls',
           pattern: 'packages/calendar-controls/*',
+        },
+        {
+          type: 'staff-service',
+          pattern: 'packages/staff-service/*',
         },
         {
           type: 'current-time',
@@ -85,7 +96,7 @@ export default defineConfig([
       },
     },
     rules: {
-      'max-lines': ['error', {max: 300}],
+      'max-lines': ['error', { max: 300 }],
       '@typescript-eslint/no-empty-object-type': 0,
       'boundaries/element-types': [
         2,
@@ -100,6 +111,10 @@ export default defineConfig([
             },
             {
               from: 'calendar-controls',
+              allow: ['shared'],
+            },
+            {
+              from: 'staff-service',
               allow: ['shared'],
             },
             {
@@ -160,6 +175,6 @@ export default defineConfig([
     },
   },
   {
-    files: ["**/*.{js,mjs,cjs,ts}"],
+    files: ['**/*.{js,mjs,cjs,ts}'],
   },
-]);
+])

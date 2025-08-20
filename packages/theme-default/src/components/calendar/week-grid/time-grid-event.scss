@@ -1,7 +1,8 @@
 @use '../../../util/events' as events;
 
 .sx__time-grid-event {
-  width: calc(100% - 10px);
+  z-index: 1;
+  width: calc(100% - 5px);
   padding: var(--sx-spacing-padding1);
   position: absolute;
   border-radius: var(--sx-rounding-extra-small);
@@ -19,8 +20,6 @@
 
   @include events.is-event-new;
 }
-
-
 
 [data-has-dnd='true'] {
   .sx__time-grid-event {

@@ -18,6 +18,8 @@ export const createInternalConfig = (
     .withPlugins(plugins)
     .withIsDark(config.isDark)
     .withHasStaffList(config.hasStaffList)
+    .withStaffPerView(config.staffPerView)
+    .withStaffPerViewWeek(config.staffPerViewWeek)
     .withShowDayNumber(config.showDayNumber)
     .withIsLoading(config.isLoading)
     .withShowCurrentTimeIndicator(config.showCurrentTimeIndicator)

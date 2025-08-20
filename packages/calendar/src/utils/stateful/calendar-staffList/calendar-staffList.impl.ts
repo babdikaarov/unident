@@ -1,38 +1,48 @@
 import { signal, computed } from '@preact/signals'
+import CalendarConfigInternal from '@unimed-x/shared/src/interfaces/calendar/calendar-config'
 import CalendarStaff, {
   StaffBase,
 } from '@unimed-x/shared/src/interfaces/calendar/calendar-staff.interface'
 
 export const createCalendarStaff = <T extends StaffBase = StaffBase>(
   staff: T[],
-  viewCount?: number
+  config: CalendarConfigInternal
 ): CalendarStaff<T> => {
   const originalList = signal<T[]>(staff)
   const list = signal<T[]>(staff)
   const currentStartIndex = signal<number>(0)
-  const initialViewCount = viewCount
-
+  const initialViewCount = config.staffPerView.value
+  const initialViewCountWeek = config.staffPerViewWeek.value
+  const maxPerView = 7
+  const maxPerViewWeek = 2
   // Helper function to calculate proper perView based on current list
   const calculatePerView = (
     currentList: T[],
+    maxAllowed: number,
     requestedCount?: number
   ): number => {
     if (currentList.length === 0) return 1 // minimum 1 as specified
 
-    const defaultCount = requestedCount ?? 7
-    const maxAllowed = 7
+    const defaultCount = requestedCount ?? maxAllowed
 
-    // If list length is less than 7, use list length
-    if (currentList.length < 7) {
+    // If list length is less than maxAllowed, use list length
+    if (currentList.length < maxAllowed) {
       return Math.min(currentList.length, defaultCount)
     }
 
-    // If list length is 7 or more, limit to 7
+    // If list length is maxAllowed or more, limit to maxAllowed
     return Math.min(maxAllowed, defaultCount)
   }
 
   // Initialize staffPerView with proper logic
-  const staffPerView = signal<number>(calculatePerView(staff, viewCount))
+  const staffPerView = signal<number>(
+    calculatePerView(staff, maxPerView, config.staffPerView.value)
+  )
+
+  // Initialize staffPerViewWeek with proper logic
+  const staffPerViewWeek = signal<number>(
+    calculatePerView(staff, maxPerViewWeek, config.staffPerViewWeek.value)
+  )
 
   const hasList = computed(() => list.value.length > 0)
 
@@ -40,6 +50,20 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
     const start = currentStartIndex.value
     const all = list.value
     const perView = staffPerView.value
+    const result: T[] = []
+
+    if (all.length === 0) return result
+
+    for (let i = 0; i < perView; i++) {
+      result.push(all[(start + i) % all.length])
+    }
+    return result
+  })
+
+  const listOnViewWeek = computed(() => {
+    const start = currentStartIndex.value
+    const all = list.value
+    const perView = staffPerViewWeek.value
     const result: T[] = []
 
     if (all.length === 0) return result
@@ -63,7 +87,12 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
 
   // Helper function to update perView and index together
   const syncPerViewAndIndex = (newList: T[]) => {
-    staffPerView.value = calculatePerView(newList, initialViewCount)
+    staffPerView.value = calculatePerView(newList, maxPerView, initialViewCount)
+    staffPerViewWeek.value = calculatePerView(
+      newList,
+      maxPerViewWeek,
+      initialViewCountWeek
+    )
 
     adjustCurrentIndex(newList)
   }
@@ -85,7 +114,13 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
 
   const setStaffPerView = (count: number) => {
     if (count < 1) count = 1 // ensure minimum 1
-    staffPerView.value = calculatePerView(list.value, count)
+    staffPerView.value = calculatePerView(list.value, maxPerView, count)
+    adjustCurrentIndex(list.value)
+  }
+
+  const setStaffPerViewWeek = (count: number) => {
+    if (count < 1) count = 1 // ensure minimum 1
+    staffPerViewWeek.value = calculatePerView(list.value, maxPerView, count)
     adjustCurrentIndex(list.value)
   }
 
@@ -146,6 +181,11 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
   const getStaffListOnView = (): T[] => {
     return [...listOnView.value] // return defensive copy
   }
+
+  const getStaffListOnViewWeek = (): T[] => {
+    return [...listOnViewWeek.value] // return defensive copy
+  }
+
   const getStaffListFull = (): T[] => {
     return originalList.value
   }
@@ -166,9 +206,11 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
     hasList,
     currentStartIndex,
     staffPerView,
+    staffPerViewWeek,
     next,
     prev,
     setStaffPerView,
+    setStaffPerViewWeek,
     setStaffList,
     addStaff,
     canNavigateNext,
@@ -178,6 +220,7 @@ export const createCalendarStaff = <T extends StaffBase = StaffBase>(
     filterStaff,
     getStaffList,
     getStaffListOnView,
+    getStaffListOnViewWeek,
     getStaffById,
     getStaffListFull,
   }

@@ -1,11 +1,11 @@
 {
   "name": "@unimed-x/staff-service",
-  "umdName": "SXEventsService",
-  "version": "3.0.35",
+  "umdName": "SXStaffService",
+  "version": "3.0.37",
   "publishConfig": {
     "access": "public"
   },
-  "description": "Plugin for querying and updating events in the Schedule-x calendar",
+  "description": "Plugin for querying and updating staff in the Schedule-x calendar",
   "author": {
     "name": "Tom Österlund",
     "email": "tom@schedule-x.dev",

@@ -28,9 +28,7 @@ import { InternalViewName } from '@unimed-x/shared/src/enums/calendar/internal-v
 import { BackgroundEvent } from '@unimed-x/shared/src/interfaces/calendar/background-event'
 import { Language } from '@unimed-x/shared/src/types/translations/language.translations'
 
-export default class CalendarConfigBuilder
-  implements Builder<CalendarConfigInternal>
-{
+export default class CalendarConfigBuilder implements Builder<CalendarConfigInternal> {
   locale: string | undefined
   firstDayOfWeek: WeekDay | undefined
   defaultView: ViewName | undefined
@@ -57,6 +55,7 @@ export default class CalendarConfigBuilder
   showCurrentTimeIndicator: boolean | undefined = false
   backgroundEvents: BackgroundEvent[] | undefined
   staffPerView: number | undefined
+  staffPerViewWeek: number | undefined
   theme: string | undefined
   // TODO: Change for V3. Should only be configured from outside
   translations: Record<string, Language> | undefined
@@ -118,7 +117,8 @@ export default class CalendarConfigBuilder
       this.translations,
       this.showWeekNumbers,
       this.minuteBoudaries || 60,
-      this.staffPerView || 7
+      this.staffPerView || 7,
+      this.staffPerViewWeek || 2
     )
   }
 
@@ -198,6 +198,16 @@ export default class CalendarConfigBuilder
   }
   withHasStaffList(hasStaffList: boolean | undefined): CalendarConfigBuilder {
     this.hasStaffList = hasStaffList
+    return this
+  }
+  withStaffPerView(staffPerView: number | undefined): CalendarConfigBuilder {
+    this.staffPerView = staffPerView
+    return this
+  }
+  withStaffPerViewWeek(
+    staffPerViewWeek: number | undefined
+  ): CalendarConfigBuilder {
+    this.staffPerViewWeek = staffPerViewWeek
     return this
   }
   withShowDayNumber(showDayNumber: boolean | undefined): CalendarConfigBuilder {
