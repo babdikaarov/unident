@@ -61,7 +61,7 @@ const fetchStaff = async () => {
 const calendar = createCalendar({
   // staff: [],
   // staff: staffSeed,
-  staff: staffSeed,
+  staff: staffSeed.slice(0, 1),
   // events: [],
   staffPerViewWeek: 10,
   events: seededEvents,
@@ -149,21 +149,4 @@ const calendar = createCalendar({
   locale: 'ru-RU',
 })
 
-// calendar._setCustomComponentFn('navigationStaff', (el, props) => {
-//   const { direction, disabled, onClick } = props
-
-//   // Create custom button content
-//   el.innerHTML = `
-//     <button class="custom-btn" ${disabled ? 'disabled' : ''} >
-//       ${direction === 'previous' ? '← Custom Prev' : 'Custom Next →'}
-//     </button>
-//   `
-
-//   // Add custom styling
-//   el.classList.add('custom-styling')
-
-//   // Add click handler
-//   const button = el.querySelector('.custom-btn')
-//   button?.addEventListener('click', () => onClick()) // Changed 'onclick' to 'click'
-// })
 calendar.render(calendarElement)

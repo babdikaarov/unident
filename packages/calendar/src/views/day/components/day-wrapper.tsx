@@ -91,7 +91,11 @@ export const DayWrapper: PreactViewComponent = ({ $app, id }) => {
         onClick: $app.staffList.next,
       })
     }
-  }, [$app.staffList, $app.staffList.getStaffListOnView()])
+  }, [
+    $app.staffList,
+    $app.staffList.getStaffListOnView(),
+    $app.staffList.currentStartIndex.value,
+  ])
   return (
     <>
       <AppContext.Provider value={$app}>

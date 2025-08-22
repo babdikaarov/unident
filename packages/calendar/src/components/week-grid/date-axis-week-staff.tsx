@@ -47,7 +47,7 @@ export default function DateAxisWeekStaff({ week }: props) {
         })
       })
     }
-  }, [week])
+  }, [week, $app.staffList.currentStartIndexWeek.value])
 
   return (
     <>

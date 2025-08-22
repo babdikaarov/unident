@@ -84,21 +84,25 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
     }
     if (noStaffFound) {
       noStaffFound(getElementByCCID(noStaffFoundId), { $app })
-    }
-    if (navigationStaff) {
-      navigationStaff(getElementByCCID(prevNavId), {
-        direction: 'previous',
-        disabled: !$app.staffList.canNavigatePrevWeek(),
-        onClick: $app.staffList.prevWeek,
-      })
+      if (navigationStaff) {
+        navigationStaff(getElementByCCID(prevNavId), {
+          direction: 'previous',
+          disabled: !$app.staffList.canNavigatePrevWeek(),
+          onClick: $app.staffList.prevWeek,
+        })
 
-      navigationStaff(getElementByCCID(nextNavId), {
-        direction: 'next',
-        disabled: !$app.staffList.canNavigateNextWeek(),
-        onClick: $app.staffList.nextWeek,
-      })
+        navigationStaff(getElementByCCID(nextNavId), {
+          direction: 'next',
+          disabled: !$app.staffList.canNavigateNextWeek(),
+          onClick: $app.staffList.nextWeek,
+        })
+      }
     }
-  }, [$app.staffList, $app.staffList.getStaffListOnViewWeek()])
+  }, [
+    $app.staffList,
+    $app.staffList.getStaffListOnView(),
+    $app.staffList.currentStartIndexWeek.value,
+  ])
 
   return (
     <>

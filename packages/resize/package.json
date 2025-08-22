@@ -4,7 +4,7 @@
     "access": "public"
   },
   "umdName": "SXResize",
-  "version": "3.0.45",
+  "version": "3.0.46",
   "description": "Resize events in the Schedule-X calendar",
   "author": {
     "name": "Tom Österlund",

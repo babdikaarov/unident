@@ -1,7 +1,7 @@
 {
   "name": "@unimed-x/events-service",
   "umdName": "SXEventsService",
-  "version": "3.0.45",
+  "version": "3.0.46",
   "publishConfig": {
     "access": "public"
   },

@@ -88,6 +88,12 @@ export default function CalendarHeader() {
   const handleChangeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     minuteBoudaries.value = Number(e.currentTarget.value)
   }
+  const handleChangeSelect2 = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    $app.staffList.setStaffPerView(Number(e.currentTarget.value))
+  }
+  const handleChangeSelect3 = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    $app.staffList.setStaffPerViewWeek(Number(e.currentTarget.value))
+  }
 
   return (
     <header className={'sx__calendar-header'} data-ccid={headerContentId}>
@@ -131,6 +137,36 @@ export default function CalendarHeader() {
                 <option value={20}>20</option>
                 <option value={30}>30</option>
                 <option value={60}>60</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="staffPerView">Select staffPerView: </label>
+              <select
+                id="staffPerView"
+                name="staffPerView"
+                value={$app.staffList.staffPerView.value}
+                onChange={handleChangeSelect2}
+              >
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+                <option value={4}>4</option>
+                <option value={5}>5</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="staffPerView">Select staffPerViewWeek: </label>
+              <select
+                id="staffPerView"
+                name="staffPerView"
+                value={$app.staffList.staffPerViewWeek.value}
+                onChange={handleChangeSelect3}
+              >
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+                <option value={4}>4</option>
+                <option value={5}>5</option>
               </select>
             </div>
             <button
