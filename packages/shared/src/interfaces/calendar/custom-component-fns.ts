@@ -13,14 +13,13 @@ export type CustomComponentName =
   | 'headerContent'
   | 'interactiveModalAdditionalFields'
   | 'weekGridDate'
+  | 'weekGridDateStaff'
   | 'weekGridHour'
   | 'monthGridDayName'
   | 'monthGridDate'
   | 'timeGridDayStaffConent'
   | 'timeGridDayStaffConentWeek'
   | 'noStaffFound'
-  | 'weekGridDateCustomComponentFn'
-  | 'weekStaffGridDateCustomComponentFn'
   | string
 
 export type CustomComponentFns = {

@@ -148,5 +148,11 @@ const calendar = createCalendar({
 
   locale: 'ru-RU',
 })
-
+calendar._setCustomComponentFn('weekGridDateStaff', (el, data) => {
+  console.log(el, data)
+  // Manipulate the DOM element directly
+  el.innerHTML = `<div>Custom date: ${data.date}</div>`
+  // Or add classes, event listeners, etc.
+  el.classList.add('custom-styling')
+})
 calendar.render(calendarElement)

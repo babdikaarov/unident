@@ -26,7 +26,7 @@ export default function DateAxisWeekStaff({ week }: props) {
   }
 
   const weekStaffGridDateCustomComponentFn =
-    $app.config._customComponentFns.weekGridDate
+    $app.config._customComponentFns.weekGridDateStaff
   const weekGridDateCCIDs = useState(() =>
     Array.from({ length: 7 }, () => `custom-week-grid-date-${randomStringId()}`)
   )

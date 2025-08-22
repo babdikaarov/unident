@@ -1,7 +1,7 @@
 {
   "name": "@unimed-x/prettier-config",
   "main": "src/index.json",
-  "version": "3.0.40",
+  "version": "3.0.41",
   "description": "Schedule-X prettier config",
   "publishConfig": {
     "access": "public"

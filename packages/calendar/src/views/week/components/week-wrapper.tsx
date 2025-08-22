@@ -131,7 +131,11 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                             return (
                               <div className="sx__time-grid-day-staff-card-inner-wrapper">
                                 <div
-                                  className="sx__time-grid-day-staff"
+                                  className={
+                                    timeGridDayStaffConentWeek
+                                      ? 'sx__time-grid-day-staff_week'
+                                      : 'sx__time-grid-day-staff'
+                                  }
                                   key={staff.id}
                                   data-ccid={staff.id}
                                 >
