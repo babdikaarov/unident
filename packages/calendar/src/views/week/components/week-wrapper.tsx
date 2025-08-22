@@ -31,14 +31,16 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
     $app.config._customComponentFns.timeGridDayStaffConentWeek
 
   const navigationStaff = $app.config._customComponentFns.navigationStaff
+  const prevNavId = useState(
+    navigationStaff ? `${randomStringId()}-week` : undefined
+  )[0]
+  const nextNavId = useState(
+    navigationStaff ? `${randomStringId()}-week` : undefined
+  )[0]
 
-  const prevNavId = useState(navigationStaff ? randomStringId() : undefined)[0]
-
-  const nextNavId = useState(navigationStaff ? randomStringId() : undefined)[0]
   const noStaffFound = $app.config._customComponentFns.noStaffFound
-
   const noStaffFoundId = useState(
-    noStaffFound ? randomStringId() : undefined
+    noStaffFound ? `${randomStringId()}-week` : undefined
   )[0]
 
   const week = useComputed(() => {
@@ -73,13 +75,15 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
 
   useEffect(() => {
     if (timeGridDayStaffConent) {
-      $app.staffList.getStaffListOnView().forEach((staff) => {
-        timeGridDayStaffConent(getElementByCCID(staff.id), { staff })
+      $app.staffList.getStaffListOnViewWeek().forEach((staff) => {
+        timeGridDayStaffConent(getElementByCCID(`${staff.id}-week`), { staff })
       })
     }
     if (timeGridDayStaffConentWeek) {
-      $app.staffList.getStaffListOnView().forEach((staff) => {
-        timeGridDayStaffConentWeek(getElementByCCID(staff.id), { staff })
+      $app.staffList.getStaffListOnViewWeek().forEach((staff) => {
+        timeGridDayStaffConentWeek(getElementByCCID(`${staff.id}-week`), {
+          staff,
+        })
       })
     }
     if (noStaffFound) {
@@ -186,7 +190,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                     {navigationStaff ? (
                       <div
                         className="sx__staff-time-grid-day-prev"
-                        data-ccid={`${prevNavId}-week`}
+                        data-ccid={prevNavId}
                       />
                     ) : (
                       <Chevron
@@ -232,7 +236,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                     ) : (
                       <div
                         className="sx__staff-time-grid-day-wrapper"
-                        data-ccid={`${noStaffFoundId}-week`}
+                        data-ccid={noStaffFoundId}
                       >
                         {!noStaffFound && 'no staff privided'}
                       </div>
@@ -240,7 +244,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                     {navigationStaff ? (
                       <div
                         className="sx__staff-time-grid-day-next"
-                        data-ccid={`${nextNavId}-week`}
+                        data-ccid={nextNavId}
                       />
                     ) : (
                       <Chevron
