@@ -27,6 +27,8 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
   )
   const timeGridDayStaffConent =
     $app.config._customComponentFns.timeGridDayStaffConent
+  const timeGridDayStaffConentWeek =
+    $app.config._customComponentFns.timeGridDayStaffConentWeek
 
   const noStaffFound = $app.config._customComponentFns.noStaffFound
 
@@ -68,6 +70,11 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
     if (timeGridDayStaffConent) {
       $app.staffList.getStaffListOnView().forEach((staff) => {
         timeGridDayStaffConent(getElementByCCID(staff.id), { staff })
+      })
+    }
+    if (timeGridDayStaffConentWeek) {
+      $app.staffList.getStaffListOnView().forEach((staff) => {
+        timeGridDayStaffConentWeek(getElementByCCID(staff.id), { staff })
       })
     }
     if (noStaffFound) {
@@ -128,7 +135,9 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                                   key={staff.id}
                                   data-ccid={staff.id}
                                 >
-                                  {!timeGridDayStaffConent && staff.firstName}
+                                  {timeGridDayStaffConentWeek ||
+                                    timeGridDayStaffConent ||
+                                    staff.firstName}
                                 </div>
                                 <DateAxisWeekStaff
                                   week={Object.values(week.value).map((day) =>

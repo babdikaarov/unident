@@ -17,7 +17,9 @@ export type CustomComponentName =
   | 'monthGridDayName'
   | 'monthGridDate'
   | 'timeGridDayStaffConent'
+  | 'timeGridDayStaffConentWeek'
   | 'noStaffFound'
+  | 'weekGridDateCustomComponentFn'
   | string
 
 export type CustomComponentFns = {
