@@ -56,7 +56,10 @@ export default function DateAxisWeekStaff({ week }: props) {
           {week.map((date, idx) => (
             <div className={getClassNames(date)} data-date={toDateString(date)}>
               {weekStaffGridDateCustomComponentFn && (
-                <div data-ccid={weekGridDateCCIDs[0][idx]} />
+                <div
+                  data-ccid={weekGridDateCCIDs[0][idx]}
+                  className={getClassNames(date)}
+                />
               )}
 
               {!weekStaffGridDateCustomComponentFn && (
