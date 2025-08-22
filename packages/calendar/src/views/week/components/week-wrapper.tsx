@@ -98,7 +98,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
         onClick: $app.staffList.nextWeek,
       })
     }
-  }, [$app.staffList, $app.staffList.getStaffListOnView()])
+  }, [$app.staffList, $app.staffList.getStaffListOnViewWeek()])
 
   return (
     <>
