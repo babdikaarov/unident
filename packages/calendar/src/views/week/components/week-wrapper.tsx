@@ -186,7 +186,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                     {navigationStaff ? (
                       <div
                         className="sx__staff-time-grid-day-prev"
-                        data-ccid={prevNavId}
+                        data-ccid={`${prevNavId}-week`}
                       />
                     ) : (
                       <Chevron
@@ -212,7 +212,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                                           : 'sx__staff-time-grid-day-staff'
                                       }
                                       key={staff.id}
-                                      data-ccid={staff.id}
+                                      data-ccid={`${staff.id}-week`}
                                     >
                                       {timeGridDayStaffConentWeek ||
                                         timeGridDayStaffConent ||
@@ -232,7 +232,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                     ) : (
                       <div
                         className="sx__staff-time-grid-day-wrapper"
-                        data-ccid={noStaffFoundId}
+                        data-ccid={`${noStaffFoundId}-week`}
                       >
                         {!noStaffFound && 'no staff privided'}
                       </div>
@@ -240,7 +240,7 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
                     {navigationStaff ? (
                       <div
                         className="sx__staff-time-grid-day-next"
-                        data-ccid={nextNavId}
+                        data-ccid={`${nextNavId}-week`}
                       />
                     ) : (
                       <Chevron
