@@ -25,13 +25,13 @@ export default function DateAxisWeekStaff({ week }: props) {
     return classNames.join(' ')
   }
 
-  const weekGridDateCustomComponentFn =
+  const weekStaffGridDateCustomComponentFn =
     $app.config._customComponentFns.weekGridDate
   const weekGridDateCCIDs = useState(() =>
     Array.from({ length: 7 }, () => `custom-week-grid-date-${randomStringId()}`)
   )
   useEffect(() => {
-    if (weekGridDateCustomComponentFn) {
+    if (weekStaffGridDateCustomComponentFn) {
       week.forEach((date, idx) => {
         const el = document.querySelector(
           `[data-ccid="${weekGridDateCCIDs[0][idx]}"]`
@@ -42,7 +42,7 @@ export default function DateAxisWeekStaff({ week }: props) {
           )
         }
 
-        weekGridDateCustomComponentFn(el, {
+        weekStaffGridDateCustomComponentFn(el, {
           date: toDateString(date),
         })
       })
@@ -55,11 +55,11 @@ export default function DateAxisWeekStaff({ week }: props) {
         <div className="sx__week-grid__date-axis-staff">
           {week.map((date, idx) => (
             <div className={getClassNames(date)} data-date={toDateString(date)}>
-              {weekGridDateCustomComponentFn && (
+              {weekStaffGridDateCustomComponentFn && (
                 <div data-ccid={weekGridDateCCIDs[0][idx]} />
               )}
 
-              {!weekGridDateCustomComponentFn && (
+              {!weekStaffGridDateCustomComponentFn && (
                 <>
                   <div className="sx__week-grid__day-name">
                     {getDayNameShort(date, $app.config.locale.value)}
