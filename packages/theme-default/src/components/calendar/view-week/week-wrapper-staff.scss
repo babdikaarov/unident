@@ -44,21 +44,21 @@
 .sx__staff-time-grid-day-wrapper {
   display: flex;
   min-height: 50px;
-  padding-inline: 6px;
+  // padding-inline: 6px;
   // padding-inline: var(--sx-calendar-week-grid-padding-left);
   position: relative;
   width: 100%;
 }
 
 .sx__staff-time-grid-day-prev {
-  width: var(--sx-calendar-week-grid-padding-left);
+  min-width: var(--sx-calendar-week-grid-padding-left);
   // position: absolute;
   // top: 50%;
   // left: 40px;
   // transform: translate(-50%, -50%);
 }
 .sx__staff-time-grid-day-next {
-  width: var(--sx-calendar-week-grid-padding-left);
+  min-width: var(--sx-calendar-week-grid-padding-left);
   // position: absolute;
   // top: 50%;
   // right: 0px;
