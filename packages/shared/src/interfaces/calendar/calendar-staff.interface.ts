@@ -7,13 +7,15 @@ export type StaffBase = {
 
 export default abstract class CalendarStaff<T extends StaffBase = StaffBase> {
   abstract currentStartIndex: ReturnType<typeof signal<number>>
+  abstract currentStartIndexWeek: ReturnType<typeof signal<number>>
   abstract staffPerView: ReturnType<typeof signal<number>>
   abstract staffPerViewWeek: ReturnType<typeof signal<number>>
   abstract hasList: ReturnType<typeof computed<boolean>>
 
   abstract next(): void
   abstract prev(): void
-
+  abstract nextWeek(): void
+  abstract prevWeek(): void
   abstract setStaffPerView(count: number): void
   abstract setStaffPerViewWeek(count: number): void
 
@@ -33,4 +35,6 @@ export default abstract class CalendarStaff<T extends StaffBase = StaffBase> {
   abstract getStaffById(id: string): T | undefined
   abstract canNavigateNext(): boolean
   abstract canNavigatePrev(): boolean
+  abstract canNavigateNextWeek(): boolean
+  abstract canNavigatePrevWeek(): boolean
 }

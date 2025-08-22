@@ -1,6 +1,5 @@
 .sx__week-wrapper {
   position: relative;
-  // display: flex;
 }
 
 .sx__week-grid {
@@ -44,45 +43,4 @@
   bottom: 0;
   border-bottom: var(--sx-border);
   border-left: 250px solid transparent;
-}
-
-.sx__week-grid-staff {
-  display: flex;
-  position: relative;
-  width: 100%;
-}
-
-.sx__time-grid-day-staff {
-  width: 100%;
-}
-.sx__time-grid-day-staff_week {
-  width: 100%;
-}
-.sx__time-grid-day-staff-wrapper {
-  display: flex;
-  min-height: 50px;
-  padding-inline: var(--sx-calendar-week-grid-padding-left);
-  position: relative;
-  width: 100%;
-}
-
-.sx__time-grid-day-staff-prev {
-  position: absolute;
-  top: 50%;
-  left: 40px;
-  transform: translate(-50%, -50%);
-}
-.sx__time-grid-day-staff-next {
-  position: absolute;
-  top: 50%;
-  right: 0px;
-  transform: translate(-50%, -50%);
-}
-
-.sx__time-grid-day-staff-card {
-  display: flex;
-  width: 100%;
-}
-.sx__time-grid-day-staff-card-inner-wrapper {
-  width: 100%;
 }

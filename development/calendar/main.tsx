@@ -148,11 +148,22 @@ const calendar = createCalendar({
 
   locale: 'ru-RU',
 })
-calendar._setCustomComponentFn('weekGridDateStaff', (el, data) => {
-  console.log(el, data)
-  // Manipulate the DOM element directly
-  el.innerHTML = `<div>Custom date: ${data.date}</div>`
-  // Or add classes, event listeners, etc.
-  el.classList.add('custom-styling')
-})
+
+// calendar._setCustomComponentFn('navigationStaff', (el, props) => {
+//   const { direction, disabled, onClick } = props
+
+//   // Create custom button content
+//   el.innerHTML = `
+//     <button class="custom-btn" ${disabled ? 'disabled' : ''} >
+//       ${direction === 'previous' ? '← Custom Prev' : 'Custom Next →'}
+//     </button>
+//   `
+
+//   // Add custom styling
+//   el.classList.add('custom-styling')
+
+//   // Add click handler
+//   const button = el.querySelector('.custom-btn')
+//   button?.addEventListener('click', () => onClick()) // Changed 'onclick' to 'click'
+// })
 calendar.render(calendarElement)

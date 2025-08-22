@@ -1,0 +1,198 @@
+.sx__staff-week-wrapper {
+  position: relative;
+}
+
+.sx__staff-week-grid {
+  position: relative;
+  padding-inline: var(--sx-calendar-week-grid-padding-left);
+  display: flex;
+  height: var(--sx-week-grid-height);
+}
+
+.sx__staff-week-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--sx-color-background);
+}
+
+.sx__staff-week-header-content {
+  position: relative;
+  display: flex;
+}
+
+.sx__staff-week-header-border {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-bottom: var(--sx-border);
+  border-left: 250px solid transparent;
+}
+
+.sx__staff-week-grid-staff {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.sx__staff-time-grid-day {
+  width: 100%;
+}
+.sx__staff-time-grid-day-week {
+  width: 100%;
+}
+.sx__staff-time-grid-day-wrapper {
+  display: flex;
+  min-height: 50px;
+  padding-inline: 6px;
+  // padding-inline: var(--sx-calendar-week-grid-padding-left);
+  position: relative;
+  width: 100%;
+}
+
+.sx__staff-time-grid-day-prev {
+  width: var(--sx-calendar-week-grid-padding-left);
+  // position: absolute;
+  // top: 50%;
+  // left: 40px;
+  // transform: translate(-50%, -50%);
+}
+.sx__staff-time-grid-day-next {
+  width: var(--sx-calendar-week-grid-padding-left);
+  // position: absolute;
+  // top: 50%;
+  // right: 0px;
+  // transform: translate(-50%, -50%);
+}
+
+.sx__staff-time-grid-day-card {
+  display: flex;
+  width: 100%;
+}
+.sx__staff-time-grid-day-card-inner-wrapper {
+  width: 100%;
+}
+
+// .sx__week-wrapper {
+//   position: relative;
+//   // display: flex;
+// }
+
+// .sx__week-grid {
+//   position: relative;
+//   padding-inline: var(--sx-calendar-week-grid-padding-left);
+//   display: flex;
+//   height: var(--sx-week-grid-height);
+// }
+// .sx_spinner {
+//   position: relative;
+//   top: 50%;
+//   margin: auto;
+//   width: 40px;
+//   height: 40px;
+//   border: 4px solid rgba(0, 0, 0, 0.1); /* Light border */
+//   border-top-color: #3498db; /* Blue spinning part */
+//   border-radius: 50%;
+//   animation: spin 0.4s linear infinite;
+// }
+
+// @keyframes spin {
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// .sx__week-header {
+//   position: sticky;
+//   top: 0;
+//   z-index: 2;
+//   background-color: var(--sx-color-background);
+// }
+
+// .sx__week-header-content {
+//   // display: flex;
+//   position: relative;
+// }
+
+// .sx__week-header-border {
+//   position: absolute;
+//   width: 100%;
+//   bottom: 0;
+//   border-bottom: var(--sx-border);
+//   border-left: 250px solid transparent;
+// }
+
+// .sx__week-grid-staff {
+//   display: flex;
+//   position: relative;
+//   width: 100%;
+// }
+
+// .sx__time-grid-day-staff {
+//   width: 100%;
+// }
+// .sx__time-grid-day-staff_week {
+//   width: 100%;
+// }
+// .sx__time-grid-day-staff-wrapper {
+//   display: flex;
+//   min-height: 50px;
+//   // padding-inline: var(--sx-calendar-week-grid-padding-left);
+//   padding-inline: 6px;
+//   position: relative;
+//   width: 100%;
+// }
+
+// .sx__staff-time-grid-day-prev {
+//   // position: absolute;
+//   width: var(--sx-calendar-week-grid-padding-left);
+//   // top: 50%;
+//   // left: 40px;
+//   // transform: translate(-50%, -50%);
+// }
+// .sx__staff-time-grid-day-next {
+//   width: var(--sx-calendar-week-grid-padding-left);
+//   // position: absolute;
+//   // top: 50%;
+//   // right: 0px;
+//   // transform: translate(-50%, -50%);
+// }
+// .sx__staff-time-grid-day-wrapper {
+//   position: absolute;
+//   width: 100%;
+//   bottom: 0;
+//   border-bottom: var(--sx-border);
+//   border-left: 250px solid transparent;
+// }
+
+// .sx__staff-time-grid-day-card {
+//   display: flex;
+//   width: 100%;
+// }
+// .sx__staff-time-grid-day-card-inner-wrapper {
+//   width: 100%;
+// }
+
+// .sx__staff-time-grid-day-wrapper {
+//   position: relative;
+//   // display: flex;
+// }
+
+// .sx__week-header-content {
+//   // display: flex;
+//   position: relative;
+// }
+
+// .sx__sx__staff-week-header-border {
+//   position: absolute;
+//   width: 100%;
+//   bottom: 0;
+//   border-bottom: var(--sx-border);
+//   border-left: 250px solid transparent;
+// }
+// .sx__staff-week-grid {
+//   position: relative;
+//   padding-inline: var(--sx-calendar-week-grid-padding-left);
+//   display: flex;
+//   height: var(--sx-week-grid-height);
+// }

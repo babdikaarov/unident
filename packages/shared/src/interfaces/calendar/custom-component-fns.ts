@@ -20,6 +20,10 @@ export type CustomComponentName =
   | 'timeGridDayStaffConent'
   | 'timeGridDayStaffConentWeek'
   | 'noStaffFound'
+  | 'navigationStaff'
+  // | 'navigationDay'
+  // | 'navigationWeek'
+  // | 'navigationMonth'
   | string
 
 export type CustomComponentFns = {
