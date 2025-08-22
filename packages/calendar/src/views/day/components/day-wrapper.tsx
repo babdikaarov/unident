@@ -92,9 +92,29 @@ export const DayWrapper: PreactViewComponent = ({ $app, id }) => {
       })
     }
   }, [
+    // Core staff list dependencies
     $app.staffList,
     $app.staffList.getStaffListOnView(),
-    $app.staffList.currentStartIndex.value,
+    $app.staffList.getStaffListOnViewWeek(),
+    $app.staffList.currentStartIndexWeek.value,
+
+    // Navigation state dependencies
+    $app.staffList.canNavigatePrevWeek(),
+    $app.staffList.canNavigateNextWeek(),
+
+    // Custom component function dependencies
+    timeGridDayStaffConent,
+    navigationStaff,
+    noStaffFound,
+
+    // Staff list data dependencies - these are crucial for React portals
+    ...$app.staffList.getStaffListOnView().map((staff) => staff.id),
+    ...$app.staffList.getStaffListOnViewWeek().map((staff) => staff.id),
+
+    // Element ID dependencies
+    prevNavId,
+    nextNavId,
+    noStaffFoundId,
   ])
   return (
     <>

@@ -84,24 +84,45 @@ export const WeekWrapper: PreactViewComponent = ({ $app, id }) => {
     }
     if (noStaffFound) {
       noStaffFound(getElementByCCID(noStaffFoundId), { $app })
-      if (navigationStaff) {
-        navigationStaff(getElementByCCID(prevNavId), {
-          direction: 'previous',
-          disabled: !$app.staffList.canNavigatePrevWeek(),
-          onClick: $app.staffList.prevWeek,
-        })
+    }
+    if (navigationStaff) {
+      navigationStaff(getElementByCCID(prevNavId), {
+        direction: 'previous',
+        disabled: !$app.staffList.canNavigatePrevWeek(),
+        onClick: $app.staffList.prevWeek,
+      })
 
-        navigationStaff(getElementByCCID(nextNavId), {
-          direction: 'next',
-          disabled: !$app.staffList.canNavigateNextWeek(),
-          onClick: $app.staffList.nextWeek,
-        })
-      }
+      navigationStaff(getElementByCCID(nextNavId), {
+        direction: 'next',
+        disabled: !$app.staffList.canNavigateNextWeek(),
+        onClick: $app.staffList.nextWeek,
+      })
     }
   }, [
+    // Core staff list dependencies
     $app.staffList,
     $app.staffList.getStaffListOnView(),
+    $app.staffList.getStaffListOnViewWeek(),
     $app.staffList.currentStartIndexWeek.value,
+
+    // Navigation state dependencies
+    $app.staffList.canNavigatePrevWeek(),
+    $app.staffList.canNavigateNextWeek(),
+
+    // Custom component function dependencies
+    timeGridDayStaffConent,
+    timeGridDayStaffConentWeek,
+    navigationStaff,
+    noStaffFound,
+
+    // Staff list data dependencies - these are crucial for React portals
+    ...$app.staffList.getStaffListOnView().map((staff) => staff.id),
+    ...$app.staffList.getStaffListOnViewWeek().map((staff) => staff.id),
+
+    // Element ID dependencies
+    prevNavId,
+    nextNavId,
+    noStaffFoundId,
   ])
 
   return (
