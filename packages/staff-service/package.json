@@ -1,7 +1,7 @@
 {
   "name": "@unimed-x/staff-service",
   "umdName": "SXStaffService",
-  "version": "3.0.42",
+  "version": "3.0.43",
   "publishConfig": {
     "access": "public"
   },

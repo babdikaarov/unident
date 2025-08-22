@@ -58,7 +58,7 @@ export default function DateAxisWeekStaff({ week }: props) {
               {weekStaffGridDateCustomComponentFn && (
                 <div
                   data-ccid={weekGridDateCCIDs[0][idx]}
-                  className={getClassNames(date)}
+                  className="sx__week-grid__date-axis-staff_customWraper"
                 />
               )}
 
